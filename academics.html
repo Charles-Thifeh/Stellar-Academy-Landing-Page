@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Stellar Scholars Academy - Excellence in Education And Character</title>
+    
+    <meta name="description"
+        content="  Stellar Scholars Academy - Excellence in Education And Character - A premium educational institution fostering growth, innovation, and lifelong learning. Discover where academic excellence meets personal development." />
+    <script>
+        const initApp = () => {
+            const hamburgerBtn = document.getElementById('hambuger-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeIcon = document.getElementById('hamburger-button2');
+            let isOpen = false;
+
+            const toggleMenu = () => {
+                mobileMenu.classList.toggle('hidden')
+                mobileMenu.classList.toggle('flex')
+            }
+
+            hamburgerBtn.addEventListener('click', toggleMenu)
+            mobileMenu.addEventListener('click', toggleMenu)
+        }
+
+
+        document.addEventListener('DOMContentLoaded', initApp)
+    </script>
+</head>
+
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white font-body overflow-x-hidden ">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 text-white">
+        <div class="container w-screen mx-auto px-4">
+            <div class="flex items-center justify-between py-3">
+                <div class="flex items-center space-x-4">
+
+                    <img src="imgs/favicon.png" alt="logo"
+                        class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center">
+
+                    <div>
+                        <h1 class="text-xl font-bold font-serif tracking-wide">
+                            STELLAR SCHOLARS ACADEMY
+                        </h1>
+                    </div>
+                </div>
+                <button id="hambuger-button" class="text-3xl sm:hidden cursor-pointer mx-6">
+                    &#9776;
+                </button>
+                <div class="hidden md:flex space-x-6 text-sm">
+                    <a href="/about.html" class="hover:text-amber-400 transition">About Us</a>
+                    <a href="#academics" class="hover:text-amber-400 transition">Academics</a>
+                    <a href="#admissions" class="hover:text-amber-400 transition">Admissions</a>
+                    <a href="#life" class="hover:text-amber-400 transition">School Life</a>
+                    <a href="#news" class="hover:text-amber-400 transition">News</a>
+                    <a href="#gallery" class="hover:text-amber-400 transition">Gallery</a>
+                </div>
+            </div>
+            <!--Mobile Menu Button-->
+            <section id="mobile-menu" class="sm:hidden hidden">
+                <button id="hambuger-button2" class="text-6xl hidden self-end p-6 m-6">
+                    &times;
+                </button>
+                <nav class="pt-2 pb-3 space-y-1 ">
+                    <a href="about.html"
+                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">About
+                        Us</a>
+                    <a href="academics.html"
+                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Academics</a>
+                    <a href="#"
+                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Admissions</a>
+                    <a href="#School Life"
+                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">School
+                        Life</a>
+                    <a href="#News And Events"
+                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">News
+                        and Events</a>
+                    <a href="#Gallery"
+                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Gallery</a>
+                </nav>
+            </section>
+        </div>
+    </nav>
+
+
+
+    <!-- Hero Section -->
+    <section class="relative py-20 bg-amber-700 bg-opacity-90 text-white overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+                <defs>
+                    <pattern id="academic-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <circle cx="10" cy="10" r="2" fill="currentColor" />
+                         <path d="M10 2L6 8h8l-4-6z" fill="currentColor" opacity="0.5" />
+                    </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#academic-pattern)" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <h1 class="text-7xl font-headline font-semibold mb-6 animate-slide-up ">
+                    Academic Excellence
+                    <span class="text-amber-400 text-5xl block">That Inspires Growth</span>
+                </h1>
+                <p class="text-body-lg text-white mb-8 max-w-3xl mx-auto animate-slide-up"
+                    style="animation-delay: 200ms;">
+                    Our comprehensive curriculum seamlessly blends the robust Nigerian curriculum with the
+                    internationally recognized British framework. This dynamic approach, combined with
+                    innovative teaching methods, ensures our students are uniquely prepared for success on
+                    both local and international stages, nurturing their talents while grounding them in
+                    global excellence. </p>
+
+                <!-- Quick Stats -->
+                <div class="grid md:grid-cols-3 gap-6 m-12 animate-slide-up" style="animation-delay: 400ms;">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                        <div class="text-3xl font-serif  font-semibold text-amber-400 mb-2">100%</div>
+                        <div class="text-gray-300 text-body-sm">Overall Examination Pass Rate</div>
+                    </div>
+    
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                        <div class="text-3xl font-serif  font-semibold text-amber-400 mb-2">15:1</div>
+                        <div class="text-gray-200 text-body-sm">Student-Teacher Ratio</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                        <div class="text-3xl font-serif  font-semibold text-amber-400 mb-2">5+</div>
+                        <div class="text-gray-200 text-body-sm">Extra Curiculum Activites</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
