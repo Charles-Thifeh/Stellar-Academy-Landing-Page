@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Stellar Scholars Academy - Excellence in Education And Character</title>
+
+    <meta name="description"
+        content="  Stellar Scholars Academy - Excellence in Education And Character - A premium educational institution fostering growth, innovation, and lifelong learning. Discover where academic excellence meets personal development." />
+    <script>
+        const initApp = () => {
+            const hamburgerBtn = document.getElementById('hambuger-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeIcon = document.getElementById('hamburger-button2');
+            let isOpen = false;
+
+            const toggleMenu = () => {
+                mobileMenu.classList.toggle('hidden')
+                mobileMenu.classList.toggle('flex')
+            }
+
+            hamburgerBtn.addEventListener('click', toggleMenu)
+            mobileMenu.addEventListener('click', toggleMenu)
+        }
+
+
+        document.addEventListener('DOMContentLoaded', initApp)
+    </script>
+</head>
+
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-body overflow-x-hidden ">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 text-white">
+        <div class="container w-screen mx-auto px-4">
+            <div class="flex items-center justify-between py-3">
+                <div class="flex items-center space-x-4">
+
+                    <img src="imgs/favicon.png" alt="logo"
+                        class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center">
+
+                    <div>
+                        <h1 class="text-xl font-bold font-serif tracking-wide">
+                            STELLAR SCHOLARS ACADEMY
+                        </h1>
+                    </div>
+                </div>
+                <button id="hambuger-button" class="text-3xl sm:hidden cursor-pointer mx-6">
+                    &#9776;
+                </button>
+                <div class="hidden md:flex space-x-6 text-sm">
+                    <a href="/about.html" class="hover:text-amber-400 transition">About Us</a>
+                    <a href="#academics" class="hover:text-amber-400 transition">Academics</a>
+                    <a href="#admissions" class="hover:text-amber-400 transition">Admissions</a>
+                    <a href="#life" class="hover:text-amber-400 transition">School Life</a>
+                    <a href="#news" class="hover:text-amber-400 transition">News</a>
+                    <a href="#gallery" class="hover:text-amber-400 transition">Gallery</a>
+                </div>
+            </div>
+            <!--Mobile Menu Button-->
+            <section id="mobile-menu" class="sm:hidden hidden">
+                <button id="hambuger-button2" class="text-6xl hidden self-end p-6 m-6">
+                    &times;
+                </button>
+                <nav class="pt-2 pb-3 space-y-1 ">
+                    <a href="about.html"
+                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">About
+                        Us</a>
+                    <a href="academics.html"
+                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Academics</a>
+                    <a href="#"
+                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Admissions</a>
+                    <a href="#School Life"
+                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">School
+                        Life</a>
+                    <a href="#News And Events"
+                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">News
+                        and Events</a>
+                    <a href="#Gallery"
+                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Gallery</a>
+                </nav>
+            </section>
+        </div>
+    </nav>
