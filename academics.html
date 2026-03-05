@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Stellar Scholars Academy - Excellence in Education And Character</title>
+
+    <meta name="description"
+        content="  Stellar Scholars Academy - Excellence in Education And Character - A premium educational institution fostering growth, innovation, and lifelong learning. Discover where academic excellence meets personal development." />
+    <script>
+        const initApp = () => {
+            const hamburgerBtn = document.getElementById('hambuger-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeIcon = document.getElementById('hamburger-button2');
+            let isOpen = false;
+
+            const toggleMenu = () => {
+                mobileMenu.classList.toggle('hidden')
+                mobileMenu.classList.toggle('flex')
+            }
+
+            hamburgerBtn.addEventListener('click', toggleMenu)
+            mobileMenu.addEventListener('click', toggleMenu)
+        }
+
+
+        document.addEventListener('DOMContentLoaded', initApp)
+    </script>
+</head>
+
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-body overflow-x-hidden ">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 text-white">
+        <div class="container w-screen mx-auto px-4">
+            <div class="flex items-center justify-between py-3">
+                <div class="flex items-center space-x-4">
+
+                    <img src="imgs/favicon.png" alt="logo"
+                        class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center">
+
+                    <div>
+                        <h1 class="text-xl font-bold font-serif tracking-wide">
+                            STELLAR SCHOLARS ACADEMY
+                        </h1>
+                    </div>
+                </div>
+                <button id="hambuger-button" class="text-3xl sm:hidden cursor-pointer mx-6">
+                    &#9776;
+                </button>
+                <div class="hidden md:flex space-x-6 text-sm">
+                    <a href="/about.html" class="hover:text-amber-400 transition">About Us</a>
+                    <a href="#academics" class="hover:text-amber-400 transition">Academics</a>
+                    <a href="#admissions" class="hover:text-amber-400 transition">Admissions</a>
+                    <a href="#life" class="hover:text-amber-400 transition">School Life</a>
+                    <a href="#news" class="hover:text-amber-400 transition">News</a>
+                    <a href="#gallery" class="hover:text-amber-400 transition">Gallery</a>
+                </div>
+            </div>
+            <!--Mobile Menu Button-->
+            <section id="mobile-menu" class="sm:hidden hidden">
+                <button id="hambuger-button2" class="text-6xl hidden self-end p-6 m-6">
+                    &times;
+                </button>
+                <nav class="pt-2 pb-3 space-y-1 ">
+                    <a href="about.html"
+                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">About
+                        Us</a>
+                    <a href="academics.html"
+                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Academics</a>
+                    <a href="#"
+                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Admissions</a>
+                    <a href="#School Life"
+                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">School
+                        Life</a>
+                    <a href="#News And Events"
+                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">News
+                        and Events</a>
+                    <a href="#Gallery"
+                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Gallery</a>
+                </nav>
+            </section>
+        </div>
+    </nav>
+
+
+
+    <!-- Hero Section -->
+    <section class="relative py-20 bg-amber-700 bg-opacity-90 text-white overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+                <defs>
+                    <pattern id="academic-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <circle cx="10" cy="10" r="2" fill="currentColor" />
+                        <path d="M10 2L6 8h8l-4-6z" fill="currentColor" opacity="0.5" />
+                    </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#academic-pattern)" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <h1 class="text-7xl font-headline font-semibold mb-6 animate-slide-up ">
+                    Academic Excellence
+                    <span class="text-amber-400 text-5xl block">That Inspires Growth</span>
+                </h1>
+                <p class="text-body-lg text-white mb-8 max-w-3xl mx-auto animate-slide-up"
+                    style="animation-delay: 200ms;">
+                    Our comprehensive curriculum seamlessly blends the robust Nigerian curriculum with the
+                    internationally recognized British framework. This dynamic approach, combined with
+                    innovative teaching methods, ensures our students are uniquely prepared for success on
+                    both local and international stages, nurturing their talents while grounding them in
+                    global excellence. </p>
+
+                <!-- Quick Stats -->
+                <div class="grid md:grid-cols-3 gap-6 m-12 animate-slide-up" style="animation-delay: 400ms;">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                        <div class="text-3xl font-serif  font-semibold text-amber-400 mb-2">100%</div>
+                        <div class="text-gray-300 text-body-sm">Overall Examination Pass Rate</div>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                        <div class="text-3xl font-serif  font-semibold text-amber-400 mb-2">15:1</div>
+                        <div class="text-gray-200 text-body-sm">Student-Teacher Ratio</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                        <div class="text-3xl font-serif  font-semibold text-amber-400 mb-2">5+</div>
+                        <div class="text-gray-200 text-body-sm">Extra Curiculum Activites</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grade Level Programs -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif font-semibold text-yellow-600 mb-4">
+                    Programs by Grade Level
+                </h2>
+                <p class="text-body-lg text-text-secondary max-w-3xl mx-auto">
+                    Our carefully designed curriculum grows with your child, building foundational skills
+                    while fostering critical thinking, creativity, and character development at every stage.
+                </p>
+            </div>
+
+            <!-- Elementary School -->
+            <div class="space-y-8">
+                <div class="bg-gray-100 rounded-2xl shadow-card hover:shadow-gray-500 transition-gentle">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center">
+                                <div class="bg-gray-200 p-3 rounded-lg mr-4">
+                                    <svg class="h-8 w-8 text-amber-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-4xl font-serif font-semibold text-amber-600"> Early
+                                        Childhood</h3>
+                                    <p class="text-text-secondary"> </p>
+                                </div>
+                            </div>
+                            <button class="text-amber-700 hover:text-primary-600 transition-micro"
+                                onclick="toggleSection('elementary')">
+                                <svg class="h-6 w-6 transform transition-gentle" id="elementary-icon" fill="none">
+                                </svg>
+                                <svg class="h-6 w-6 transform transition-gentle" id="elementary-icon" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <p class="text-gray-500 mb-6">
+                            At Stellar Scholars Academy, we believe the early years are the most critical window for
+                            fostering a lifelong love of discovery. Our Early Stages program is
+                            designed to transform natural curiosity into a structured foundation for academic
+                            excellence.</br></br>
+
+                            <b class="text-gray-500">Our Philosophy: "Wonder Meet Wisdom"</b></br>
+                            We don't just teach children what to learn; we teach them how to explore. Our curriculum
+                            balances play-based discovery with the essential building blocks of literacy and numeracy.
+                            We create a "brave space" where mistakes are celebrated as milestones and every "why?" is
+                            met with an opportunity to find out.
+                        </p>
+
+                        <!-- Expandable Content -->
+                        <div id="elementary-content" class="hidden">
+                            <div
+                                class="grid md:grid-cols-2 text-body-lg gap-8 pt-6 border-t border-gray-400 border-border">
+                                <div>
+                                    <h4 class="font-cta font-semibold text-gray-600 mb-4">Curriculum
+                                        Highlights</h4>
+                                    <ul class="space-y-3 text-text-secondary">
+                                        <li class="flex items-start ">
+                                            <svg class="h-5 w-5 text-blue-900 mt-0.5 mr-3 flex-shrink-0"
+                                                fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            <span class="text-gray-500">Phonics-based reading with guided literacy
+                                                groups</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-blue-900 mt-0.5 mr-3 flex-shrink-0"
+                                                fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="text-gray-500"> Manipulative-based mathematics with
+                                                problem-solving focus</span>
+
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-blue-900 mt-0.5 mr-3 flex-shrink-0"
+                                                fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="text-gray-500"> Inquiry-based science with hands-on
+                                                experiments</span>
+
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-blue-900 mt-0.5 mr-3 flex-shrink-0"
+                                                fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="text-gray-500"> Social studies through community
+                                                connections</span>
+
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-cta font-semibold text-primary mb-4">Sample Student Work
+                                    </h4>
+
+                                    <br>
+                                    <a href="-form">
+                                        <button
+                                            class="bg-amber-400 text-white px-6 py-2 rounded-lg font-cta font-medium hover:bg-amber-600 transition-micro">
+                                            Apply Now
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
