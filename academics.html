@@ -27,6 +27,20 @@
 
         document.addEventListener('DOMContentLoaded', initApp)
     </script>
+    <script>
+        function toggleSection(sectionId) {
+            const content = document.getElementById(sectionId + '-content');
+            const icon = document.getElementById(sectionId + '-icon');
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
 </head>
 
 <script src="https://cdn.tailwindcss.com"></script>
@@ -92,7 +106,7 @@
     <section class="relative py-20 bg-amber-700 bg-opacity-90 text-white overflow-hidden">
         <!-- Background Pattern -->
         <div class="absolute inset-0 opacity-10">
-            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+            <svg class="w-full h-full text-gray-600" viewBox="0 0 100 100" fill="none">
                 <defs>
                     <pattern id="academic-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
                         <circle cx="10" cy="10" r="2" fill="currentColor" />
@@ -152,7 +166,7 @@
 
             <!-- Elementary School -->
             <div class="space-y-8">
-                <div class="bg-gray-100 rounded-2xl shadow-card hover:shadow-gray-500 transition-gentle">
+                <div class="bg-gray-100 rounded-2xl shadow-card ">
                     <div class="p-8">
                         <div class="flex items-center justify-between mb-6">
                             <div class="flex items-center">
@@ -201,9 +215,9 @@
                                 <div>
                                     <h4 class="font-cta font-semibold text-gray-600 mb-4">Curriculum
                                         Highlights</h4>
-                                    <ul class="space-y-3 text-text-secondary">
+                                    <ul class="space-y-3 text-gray-400">
                                         <li class="flex items-start ">
-                                            <svg class="h-5 w-5 text-blue-900 mt-0.5 mr-3 flex-shrink-0"
+                                            <svg class="h-5 w-5 text-red-900 mt-0.5 mr-3 flex-shrink-0"
                                                 fill="currentColor" viewBox="0 0 20 20">
                                                 <path fill-rule="evenodd"
                                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -213,7 +227,7 @@
                                                 groups</span>
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="h-5 w-5 text-blue-900 mt-0.5 mr-3 flex-shrink-0"
+                                            <svg class="h-5 w-5 text-red-900 mt-0.5 mr-3 flex-shrink-0"
                                                 fill="currentColor" viewBox="0 0 20 20">
                                                 <path fill-rule="evenodd"
                                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -224,7 +238,7 @@
 
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="h-5 w-5 text-blue-900 mt-0.5 mr-3 flex-shrink-0"
+                                            <svg class="h-5 w-5 text-red-900 mt-0.5 mr-3 flex-shrink-0"
                                                 fill="currentColor" viewBox="0 0 20 20">
                                                 <path fill-rule="evenodd"
                                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -235,7 +249,7 @@
 
                                         </li>
                                         <li class="flex items-start">
-                                            <svg class="h-5 w-5 text-blue-900 mt-0.5 mr-3 flex-shrink-0"
+                                            <svg class="h-5 w-5 text-red-900 mt-0.5 mr-3 flex-shrink-0"
                                                 fill="currentColor" viewBox="0 0 20 20">
                                                 <path fill-rule="evenodd"
                                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -246,22 +260,700 @@
 
                                         </li>
                                     </ul>
-                                </div>
+                                    <div>
+                                        <h4 class="font-semibold text-primary mb-4">Sample Student Work</h4>
+                                        <div class="bg-white rounded-lg p-4 shadow-card">
+                                            <img src="imgs/facility (4).jpg" style="height: 300px; width: 600px;"
+                                                alt="Elementary student "
+                                                class="w-full h-32 object-cover rounded-lg mb-3"
+                                               />
+                                            <br>
 
-                                <div>
-                                    <h4 class="font-cta font-semibold text-primary mb-4">Sample Student Work
-                                    </h4>
-
-                                    <br>
-                                    <a href="-form">
-                                        <button
-                                            class="bg-amber-400 text-white px-6 py-2 rounded-lg font-cta font-medium hover:bg-amber-600 transition-micro">
-                                            Apply Now
-                                        </button>
-                                    </a>
+                                            <p class="text-body-sm text-text-secondary">Discovery starts here in our
+                                                Early Childhood Group! Our youngest learners embrace the joy of
+                                                exploration, building essential foundational skills and unleashing their
+                                                creative world. We nurture curiosity, foster confidence, and ensure
+                                                every child is ready for their next step, growing in knowledge and
+                                                character every day.</p>
+                                        </div>
+                                        <br>
+                                        <a href="#">
+                                            <button
+                                                class="bg-amber-400 xt-white px-6 py-2 rounded-lg font-medium hover:bg-amber-600 transition-micro">
+                                                Apply Now
+                                            </button>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+
+                <!-- Middle School -->
+                <div class="bg-gray-100 rounded-2xl shadow-card ">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center">
+                                <div class="bg-gray-200 p-3 rounded-lg mr-4">
+                                    <svg class="h-8 w-8 text-amber-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-4xl font-serif font-semibold text-amber-600">Primary
+                                        School</h3>
+                                    <p class=" text-text-secondary">
+                                        </p>
+                                </div>
+                            </div>
+                            <button class="text-secondary hover:text-secondary-600 transition-micro"
+                                onclick="toggleSection('middle')">
+                                <svg class="h-6 w-6 transform transition-gentle" id="middle-icon" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <p class="text-text-secondary mb-6">
+
+                        </p>
+
+                        <!-- Expandable Content -->
+                        <div id="middle-content" class="hidden">
+                            <div class="grid md:grid-cols-2 gap-8 pt-6 border-t border-border">
+                                <div>
+                                    <h4 class="font-cta font-semibold text-secondary mb-4">Advanced
+                                        Coursework</h4>
+                                    <ul class="space-y-3 text-text-secondary">
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-success mt-0.5 mr-3 flex-shrink-0"
+                                                fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            Pre-Algebra and Algebra I for advanced students
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-success mt-0.5 mr-3 flex-shrink-0"
+                                                fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            Literature circles with classic and contemporary texts
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-success mt-0.5 mr-3 flex-shrink-0"
+                                                fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            Laboratory-based physical and life sciences
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-success mt-0.5 mr-3 flex-shrink-0"
+                                                fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            World cultures and geography with global perspectives
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-cta font-semibold text-secondary mb-4">Learning Outcomes
+                                    </h4>
+                                    <div class="bg-white rounded-lg p-4 shadow-card">
+                                        <div class="mb-4">
+                                            <div class="flex justify-between items-center mb-2">
+                                                <span class="text-body-sm font-medium text-text-primary">Critical
+                                                    Thinking Skills</span>
+                                                <span class="text-body-sm text-secondary">94%</span>
+                                            </div>
+                                            <div class="w-full bg-border rounded-full h-2">
+                                                <div class="bg-secondary h-2 rounded-full" style="width: 94%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-4">
+                                            <div class="flex justify-between items-center mb-2">
+                                                <span class="text-body-sm font-medium text-text-primary">Collaborative
+                                                    Projects</span>
+                                                <span class="text-body-sm text-secondary">91%</span>
+                                            </div>
+                                            <div class="w-full bg-border rounded-full h-2">
+                                                <div class="bg-secondary h-2 rounded-full" style="width: 91%"></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="flex justify-between items-center mb-2">
+                                                <span class="text-body-sm font-medium text-text-primary">Leadership
+                                                    Development</span>
+                                                <span class="text-body-sm text-secondary">88%</span>
+                                            </div>
+                                            <div class="w-full bg-border rounded-full h-2">
+                                                <div class="bg-secondary h-2 rounded-full" style="width: 88%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <!-- High School -->
+                <div class="bg-surface rounded-2xl overflow-hidden shadow-card hover:shadow-hover transition-gentle">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center">
+                                <div class="bg-accent-100 p-3 rounded-lg mr-4">
+                                    <svg class="h-8 w-8 text-accent" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 14l9-5-9-5-9 5 9 5z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-heading font-cta font-semibold text-accent">Middle &
+                                        High School</h3>
+                                    <p class="text-text-secondary"></p>
+                                </div>
+                            </div>
+                            <button class="text-accent hover:text-accent-600 transition-micro"
+                                onclick="toggleSection('high')">
+                                <svg class="h-6 w-6 transform transition-gentle" id="high-icon" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <p class="text-text-secondary mb-6">
+                            The Secondary Education division at Evergreen School is a holistic and rigorous
+                            environment intentionally designed to meet the unique developmental journey of
+                            the adolescent learner—from early adolescence through graduation. We are
+                            committed to nurturing the whole student, guiding them through identity
+                            formation, fostering intellectual curiosity, and developing the ethical
+                            character essential for future leadership. Our goal is to empower every student
+                            to pursue their path of learning, growing, and contributing as a world-class
+                            citizen.
+
+                            Our comprehensive curriculum blends the essential rigor of the Nigerian national
+                            curriculum with the globally recognized British framework, ensuring our students
+                            are prepared for success on both local and international stages. This dynamic
+                            academic foundation, featuring core subjects and varied electives, directly
+                            supports our Mission: To equip learners with essential skills through a
+                            Christ-centered, globally relevant education that fosters a passion for lifelong
+                            learning, ethical character, and innovation. Through our specialized advisory
+                            program, every student benefits from an adult advocate who provides continuous
+                            mentorship, navigating academic choices and emotional growth. By instilling
+                            these Christ-centered values and demanding excellence, the Secondary Division
+                            actively progresses toward our Vision: To be the top educational institution for
+                            developing world-class leaders who are rooted in Christ and skilled in all
+                            wisdom. </p>
+
+                        <!-- Expandable Content -->
+                        <div id="high-content" class="hidden">
+                            <div class="grid md:grid-cols-3 gap-6 pt-6 border-t border-border">
+                                <div>
+                                    <h4 class="font-cta font-semibold text-accent mb-4">AP Course Offerings
+                                    </h4>
+                                    <div class="space-y-2 text-body-sm text-text-secondary">
+                                        <div class="flex justify-between">
+                                            <span>AP Biology</span>
+                                            <span class="text-success">4.2 avg</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span>AP Calculus AB/BC</span>
+                                            <span class="text-success">4.1 avg</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span>AP English Literature</span>
+                                            <span class="text-success">4.3 avg</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span>AP US History</span>
+                                            <span class="text-success">4.0 avg</span>
+                                        </div>
+                                        <div class="text-accent text-body-sm mt-3">+ 43 more AP courses
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-cta font-semibold text-accent mb-4">College Destinations
+                                    </h4>
+                                    <div class="space-y-2 text-body-sm text-text-secondary">
+                                        <div>Stanford University</div>
+                                        <div>Harvard University</div>
+                                        <div>UC Berkeley</div>
+                                        <div>MIT</div>
+                                        <div>Yale University</div>
+                                        <div>UCLA</div>
+                                        <div class="text-accent text-body-sm mt-3">Class of 2024: 147
+                                            graduates</div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-cta font-semibold text-accent mb-4">Graduation
+                                        Requirements</h4>
+                                    <div class="space-y-2 text-body-sm text-text-secondary">
+                                        <div class="flex justify-between">
+                                            <span>English</span>
+                                            <span>4 credits</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span>Mathematics</span>
+                                            <span>4 credits</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span>Science</span>
+                                            <span>3 credits</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span>Social Studies</span>
+                                            <span>3 credits</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span>World Language</span>
+                                            <span>2 credits</span>
+                                        </div>
+                                        <div class="text-accent text-body-sm mt-3">Total: 24 credits minimum
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Academic Calendar -->
+    <section class="py-20 bg-primary-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-display font-headline font-semibold text-primary mb-4">
+                    Academic Calendar 2025-2026
+                </h2>
+                <p class="text-body-lg text-text-secondary max-w-3xl mx-auto">
+                    Stay informed about important dates, assessment periods, and special events throughout
+                    the academic year.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Fall Semester -->
+                <div class="bg-white rounded-xl p-6 shadow-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-accent-100 p-2 rounded-lg mr-3">
+                            <svg class="h-6 w-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-cta font-semibold text-primary">Fall Semester</h3>
+                    </div>
+                    <div class="space-y-3 text-body-sm">
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">First Day</span>
+                            <span class="font-medium">Aug 28, 2024</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Midterms</span>
+                            <span class="font-medium">Oct 14-18</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Finals</span>
+                            <span class="font-medium">Nov 7-20</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Last Day</span>
+                            <span class="font-medium">Dec 12, 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spring Semester -->
+                <div class="bg-white rounded-xl p-6 shadow-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-success/20 p-2 rounded-lg mr-3">
+                            <svg class="h-6 w-6 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-cta font-semibold text-primary">Spring Semester</h3>
+                    </div>
+                    <div class="space-y-3 text-body-sm">
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">First Day</span>
+                            <span class="font-medium">Jan 8, 2026</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Midterms</span>
+                            <span class="font-medium">Mar 3-7</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Finals</span>
+                            <span class="font-medium">May 19-23</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Last Day</span>
+                            <span class="font-medium">May 23, 2026</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Special Events -->
+                <div class="bg-white rounded-xl p-6 shadow-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary-100 p-2 rounded-lg mr-3">
+                            <svg class="h-6 w-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-cta font-semibold text-primary">Special Events</h3>
+                    </div>
+                    <div class="space-y-3 text-body-sm">
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Science Fair</span>
+                            <span class="font-medium">Feb 15</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Spring Musical</span>
+                            <span class="font-medium">Mar 15-17</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Art Exhibition</span>
+                            <span class="font-medium">Apr 12</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Graduation</span>
+                            <span class="font-medium">May 30</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Assessment Periods -->
+                <div class="bg-white rounded-xl p-6 shadow-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-secondary-100 p-2 rounded-lg mr-3">
+                            <svg class="h-6 w-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-cta font-semibold text-primary">AP Exams</h3>
+                    </div>
+                    <div c lass="space-y-3 text-body-sm">
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Registration</span>
+                            <span class="font-medium">Nov 1-15</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Exam Period</span>
+                            <span class="font-medium">May 5-16</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Score Release</span>
+                            <span class="font-medium">July 5</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Late Testing</span>
+                            <span class="font-medium">May 20-22</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Catalog Preview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-display font-headline font-semibold text-primary mb-4">
+                    Course Catalog Overview
+                </h2>
+                <p class="text-body-lg text-text-secondary max-w-3xl mx-auto">
+                    Explore our comprehensive course offerings designed to challenge, inspire, and prepare
+                    students for their future academic and career goals.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Core Requirements -->
+                <div>
+                    <h3 class="text-heading font-cta font-semibold text-primary mb-8">Core Requirements</h3>
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-primary pl-6">
+                            <h4 class="font-cta font-semibold text-primary mb-2">English Language Arts</h4>
+                            <p class="text-text-secondary text-body-sm mb-3">
+                                Comprehensive literacy program emphasizing critical reading, analytical
+                                writing, and effective communication.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-body-sm">Literature
+                                    Analysis</span>
+                                <span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-body-sm">Creative
+                                    Writing</span>
+                                <span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-body-sm">Public
+                                    Speaking</span>
+                            </div>
+                        </div>
+
+                        <div class="border-l-4 border-secondary pl-6">
+                            <h4 class="font-cta font-semibold text-secondary mb-2">Mathematics</h4>
+                            <p class="text-text-secondary text-body-sm mb-3">
+                                Sequential mathematics curriculum from foundational concepts through
+                                advanced calculus and statistics.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="bg-secondary-100 text-secondary px-3 py-1 rounded-full text-body-sm">Algebra
+                                    I & II</span>
+                                <span
+                                    class="bg-secondary-100 text-secondary px-3 py-1 rounded-full text-body-sm">Geometry</span>
+                                <span
+                                    class="bg-secondary-100 text-secondary px-3 py-1 rounded-full text-body-sm">Calculus</span>
+                            </div>
+                        </div>
+
+                        <div class="border-l-4 border-accent pl-6">
+                            <h4 class="font-cta font-semibold text-accent mb-2">Sciences</h4>
+                            <p class="text-text-secondary text-body-sm mb-3">
+                                Laboratory-based science courses fostering inquiry, experimentation, and
+                                scientific reasoning.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="bg-accent-100 text-accent px-3 py-1 rounded-full text-body-sm">Biology</span>
+                                <span
+                                    class="bg-accent-100 text-accent px-3 py-1 rounded-full text-body-sm">Chemistry</span>
+                                <span
+                                    class="bg-accent-100 text-accent px-3 py-1 rounded-full text-body-sm">Physics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Electives & Specializations -->
+                <div>
+                    <h3 class="text-heading font-cta font-semibold text-primary mb-8">Electives &
+                        Specializations</h3>
+                    <div class="space-y-6">
+                        <div class="bg-surface rounded-lg p-6">
+                            <h4 class="font-cta font-semibold text-primary mb-3">World Languages</h4>
+                            <div class="grid grid-cols-2 gap-3 text-body-sm">
+                                <div class="flex items-center">
+                                    <svg class="h-4 w-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    French (I-V)
+                                </div>
+
+
+                                <div class="bg-surface rounded-lg p-6">
+                                    <h4 class="font-cta font-semibold text-primary mb-3">Fine Arts</h4>
+                                    <div class="grid grid-cols-2 gap-3 text-body-sm">
+                                        <div class="flex items-center">
+                                            <svg class="h-4 w-4 text-success mr-2" fill="currentColor"
+                                                viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            Visual Arts
+                                        </div>
+                                        <div class="flex items-center">
+                                            <svg class="h-4 w-4 text-success mr-2" fill="currentColor"
+                                                viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            Music Theory
+                                        </div>
+                                        <div class="flex items-center">
+                                            <svg class="h-4 w-4 text-success mr-2" fill="currentColor"
+                                                viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            Theater Arts
+                                        </div>
+                                        <div class="flex items-center">
+                                            <svg class="h-4 w-4 text-success mr-2" fill="currentColor"
+                                                viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            Digital Media
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-surface rounded-lg p-6">
+                                    <h4 class="font-cta font-semibold text-primary mb-3">Career Pathways
+                                    </h4>
+                                    <div class="space-y-2 text-body-sm text-text-secondary">
+                                        <div>• Pre-Engineering Track</div>
+                                        <div>• Pre-Medical Sciences</div>
+                                        <div>• Business & Entrepreneurship</div>
+                                        <div>• Environmental Science</div>
+                                        <div>• Computer Science & AI</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Download Catalog CTA -->
+                    <div class="text-center mt-12">
+                        <a href="javascript:void(0)"
+                            class="bg-primary hover:bg-primary-600 text-white px-8 py-4 rounded-lg font-cta font-semibold text-body-lg transition-micro inline-flex items-center">
+                            Download Complete Course Catalog
+                            <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+    </section>
+
+    <!-- Academic Calendar -->
+    <section class="py-20 bg-primary-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+
+
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Fall Semester -->
+                <div class="bg-white rounded-xl p-6 shadow-card" style="height: 180px;">
+                    <div class="flex items-center mb-4"><img src="t.png" style="width: 900px;" height="700px">
+
+
+
+                    </div>
+                    <div class="space-y-3 text-body-sm">
+                        <div class="flex justify-between">
+
+                        </div>
+                        <div class="flex justify-between">
+
+                        </div>
+                        <div class="flex justify-between">
+
+                        </div>
+                        <div class="flex justify-between">
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Spring Semester -->
+                <div class="bg-white rounded-xl p-6 shadow-card" style="height: 180px;"> <img src="b.webp"
+                        style="width: 900px;" height="700px">
+                    <div class="flex items-center mb-4">
+
+                        <h3 class="font-cta font-semibold text-primary"></h3>
+                    </div>
+                    <div class="space-y-3 text-body-sm">
+                        <div class="flex justify-between">
+
+                        </div>
+                        <div class="flex justify-between">
+
+                        </div>
+                        <div class="flex justify-between">
+
+                        </div>
+                        <div class="flex justify-between">
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Special Events -->
+                <div class="bg-white rounded-xl p-6 shadow-card" style="height: 180px;"><img src="ra.png"
+                        style="width: 900px;" height="700px">
+                    <div class="flex items-center mb-4">
+
+
+                    </div>
+                    <div class="space-y-3 text-body-sm">
+                        <div class="flex justify-between">
+
+                        </div>
+                        <div class="flex justify-between">
+
+                        </div>
+                        <div class="flex justify-between">
+
+                        </div>
+                        <div class="flex justify-between">
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Assessment Periods -->
+                <div class="bg-white rounded-xl p-6 shadow-card" style="height: 180px;"><img src="cam.png"
+                        style="width: 900px;" height="700px">
+                    <div class="flex items-center mb-4">
+
+
+                    </div>
+                    <div class="space-y-3 text-body-sm">
+                        <div class="flex justify-between">
+
+                        </div>
+                        <div class="flex justify-between">
+
+                        </div>
+                        <div class="flex justify-between">
+
+                        </div>
+                        <div class="flex justify-between">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

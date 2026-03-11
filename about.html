@@ -1,62 +1,938 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light scroll-smooth">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Stellar Scholars Academy - Excellence in Education And Character</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — Stellar Scholars Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500;600&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet">
 
-    <meta name="description"
-        content="  Stellar Scholars Academy - Excellence in Education And Character - A premium educational institution fostering growth, innovation, and lifelong learning. Discover where academic excellence meets personal development." />
-    <script>
-        const initApp = () => {
-            const hamburgerBtn = document.getElementById('hambuger-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const closeIcon = document.getElementById('hamburger-button2');
-            let isOpen = false;
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold: '#C49A2C',
+            'gold-light': '#E8C56A',
+            'gold-dark': '#9A7A1E',
+            maroon: '#7B1A2E',
+            'maroon-light': '#A02040',
+            navy: '#1A2A4A',
+            'navy-light': '#243558',
+            cream: '#FAF6EE',
+            'warm-white': '#FFFDF8',
+          },
+          fontFamily: {
+            playfair: ['"Playfair Display"', 'serif'],
+            cormorant: ['"Cormorant Garamond"', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            lato: ['Lato', 'sans-serif'],
+          },
+          backgroundImage: {
+            'gold-maroon': 'linear-gradient(to right, #C49A2C, #7B1A2E)',
+            'maroon-navy': 'linear-gradient(135deg, #7B1A2E 0%, #1A2A4A 100%)',
+            'hero-pattern': 'repeating-linear-gradient(45deg, rgba(196,154,44,0.04) 0, rgba(196,154,44,0.04) 1px, transparent 0, transparent 24px)',
+            'img-placeholder': 'linear-gradient(135deg, rgba(26,42,74,0.15) 0%, rgba(123,26,46,0.1) 100%)',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(28px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            scaleX: {
+              '0%': { transform: 'scaleX(0)' },
+              '100%': { transform: 'scaleX(1)' },
+            },
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.7s ease both',
+            'fade-up-1': 'fadeUp 0.7s ease 0.12s both',
+            'fade-up-2': 'fadeUp 0.7s ease 0.24s both',
+            'fade-up-3': 'fadeUp 0.7s ease 0.36s both',
+            'fade-up-4': 'fadeUp 0.7s ease 0.48s both',
+            'fade-in': 'fadeIn 0.9s ease both',
+          },
+        },
+      },
+    }
+  </script>
 
-            const toggleMenu = () => {
-                mobileMenu.classList.toggle('hidden')
-                mobileMenu.classList.toggle('flex')
-            }
+  <style>
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
 
-            hamburgerBtn.addEventListener('click', toggleMenu)
-            mobileMenu.addEventListener('click', toggleMenu)
+    ::-webkit-scrollbar-track {
+      background: #f4f0e8;
+    }
+
+    .dark ::-webkit-scrollbar-track {
+      background: #0F1824;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #C49A2C;
+      border-radius: 3px;
+    }
+
+    /* ── Nav link underline ── */
+    .nav-link {
+      position: relative;
+      padding-bottom: 3px;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #C49A2C;
+      transform: scaleX(0);
+      transition: transform 0.2s ease;
+      border-radius: 1px;
+    }
+
+    .nav-link:hover::after {
+      transform: scaleX(1);
+    }
+
+    .nav-link.active::after {
+      transform: scaleX(1);
+    }
+
+
+    /* ── Card top-bar hover ── */
+    .hover-bar {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hover-bar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(to right, #C49A2C, #7B1A2E);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform-origin: left;
+    }
+
+    .hover-bar:hover::before {
+      transform: scaleX(1);
+    }
+
+    /* ── Timeline connector line ── */
+    .timeline-line::before {
+      content: '';
+      position: absolute;
+      left: 19px;
+      top: 48px;
+      bottom: -24px;
+      width: 2px;
+      background: linear-gradient(to bottom, #C49A2C, rgba(196, 154, 44, 0.1));
+    }
+
+    /* ── Diagonal banner pattern ── */
+    .diag-pattern {
+      background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.025) 0, rgba(255, 255, 255, 0.025) 1px, transparent 0, transparent 20px);
+    }
+
+    /* ── Scroll reveal ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  </style>
+</head>
+
+<body
+  class="font-lato bg-warm-white dark:bg-[#0F1824] text-[#4A4A4A] dark:text-[#C8D4E0] overflow-x-hidden transition-colors duration-300">
+
+
+  <!-- NAVBAR-->
+  <nav
+    class="fixed left-0 right-0 z-50 bg-warm-white/95 dark:bg-[#0F1824]/97 backdrop-blur-md border-b border-gold/20 dark:border-gold/10 shadow-[0_2px_16px_rgba(26,42,74,0.07)] dark:shadow-[0_2px_16px_rgba(0,0,0,0.3)] transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-5 lg:px-10 h-[72px] flex items-center justify-between gap-5">
+
+      <!-- Logo-->
+      <a href="index.html" class="flex items-center gap-3 flex-shrink-0 no-underline">
+        <img src="imgs/logo2.jpg" alt="School's logo" class="h-10 w-10">
+         <div class="font-cinzel text-[13px] font-semibold text-navy dark:text-gold-light leading-tight tracking-wide">
+          STELLAR SCHOLARS ACADEMY
+          <span class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5">LUX ET PAX · EST. 2026</span>
+        </div>
+      </a>
+
+      <!-- Nav Links desktop -->
+      <ul class="hidden lg:flex items-center gap-7 list-none">
+        <li><a href="/"
+            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">Home</a></li>
+        <li><a href="academics.html"
+            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">Academics</a>
+        </li>
+        <li><a href="#"
+            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">Admissions</a>
+        </li>
+        <li><a href="#"
+            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">School
+            Life</a></li>
+        <li><a href="#"
+            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">News</a>
+        </li>
+        <li><a href="#"
+            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">Gallery</a>
+        </li>
+      </ul>
+
+      <!-- Actions -->
+   <div class="flex items-center gap-2.5 flex-shrink-0">
+        <a href="#" class="hidden sm:inline-block bg-maroon hover:bg-maroon-light text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all duration-200 hover:-translate-y-px no-underline">Enroll Now</a>
+        <a href="#" class="hidden sm:inline-block border border-gold text-gold hover:bg-gold hover:text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all duration-200 no-underline">Book a Tour</a>
+      <button id="themeBtn" aria-label="Toggle theme"
+        class="w-9 h-9 rounded-full bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-[15px] transition-all duration-300 hover:border-gold hover:rotate-12 cursor-pointer flex-shrink-0">☀️</button>
+      <button id="mobileMenuBtn" aria-label="Open menu"
+        class="lg:hidden w-9 h-9 rounded-sm bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-navy dark:text-gold hover:border-gold cursor-pointer flex-shrink-0">
+        <svg width="18" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="0" y1="1" x2="18" y2="1" />
+          <line x1="0" y1="7" x2="18" y2="7" />
+          <line x1="0" y1="13" x2="18" y2="13" />
+        </svg>
+      </button>
+    </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-warm-white dark:bg-[#0F1824] border-t border-gold/20 px-5 py-4">
+      <ul class="flex flex-col gap-1 list-none mb-4">
+        <li><a href="/"
+            class="block font-lato text-[13px] font-bold text-maroon dark:text-gold py-2.5 border-b border-gold/10 no-underline">Home</a></li>
+        <li><a href="#"
+            class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">Academics</a>
+        </li>
+        <li><a href="#"
+            class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">Admissions</a>
+        </li>
+        <li><a href="#"
+            class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">School
+            Life</a></li>
+        <li><a href="#"
+            class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">News</a>
+        </li>
+        <li><a href="#"
+            class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 no-underline transition-colors">Gallery</a>
+        </li>
+      </ul>
+    </div>
+    <!-- CTA Bar -->
+<!--   <div class="bg-[#4A0000] overflow-hidden">
+      <div class="container w-full mx-auto px-4 py-2 flex justify-end space-x-4">
+        <button class="bg-amber-500 text-white px-6 py-2 text-sm font-semibold hover:bg-amber-600 transition">
+          Enrol Now
+        </button>
+        <button class="bg-red-700 text-white px-6 py-2 text-sm font-semibold hover:bg-red-800 transition">
+          Book a Tour
+        </button>
+      </div>
+    </div>-->
+  </nav>
+
+  <!--PAGE HERO — About Us banner-->
+  <section class="relative bg-navy dark:bg-[#080E18] overflow-hidden">
+    <!-- Background texture -->
+    <div class="absolute inset-0 bg-hero-pattern pointer-events-none opacity-60"></div>
+    <!-- Radial glow -->
+    <div class="absolute inset-0 pointer-events-none"
+      style="background: radial-gradient(ellipse at 20% 60%, rgba(196,154,44,0.08) 0%, transparent 55%), radial-gradient(ellipse at 80% 30%, rgba(123,26,46,0.13) 0%, transparent 50%);">
+    </div>
+
+    <div
+      class="relative z-10 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 py-20 lg:py-28 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+      <!-- Left: text -->
+      <div>
+        <!-- Little Description -->
+        <div
+          class="animate-fade-up flex items-center gap-2 mb-6 font-lato text-[13px] tracking-widest uppercase text-white/40">
+          <a href="index.html" class="hover:text-gold transition-colors no-underline text-white/40">Home</a>
+          <span class="text-gold/50">/</span>
+          <span class="text-gold">About Us</span>
+        </div>
+        <div class="animate-fade-up flex items-center gap-3 mb-4">
+          <span class="w-8 h-px bg-gold flex-shrink-0"></span>
+          <span class="font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold">Our Story</span>
+        </div>
+        <h1 class="animate-fade-up-1 font-playfair font-bold text-white leading-[1.15] mb-6"
+          style="font-size:clamp(36px,4vw,58px)">
+          Shaping Scholars.<br>Building <em class="italic text-gold-light">Character.</em>
+        </h1>
+        <p class="animate-fade-up-2 font-cormorant text-[19px] leading-relaxed text-white/70 max-w-lg mb-8">
+          Since our founding, Stellar Scholars Academy has been devoted to a single purpose — nurturing young minds to
+          become lights in their communities and the world.
+        </p>
+        <div class="animate-fade-up-3 flex flex-wrap gap-3">
+          <a href="#mission"
+            class="inline-block bg-maroon hover:bg-maroon-light text-white font-lato text-[12px] font-bold tracking-widest uppercase px-7 py-3.5 rounded-sm transition-all duration-200 hover:-translate-y-0.5 no-underline">Our
+            Mission</a>
+          <a href="#leadership"
+            class="inline-block border border-white/30 hover:border-gold hover:text-gold text-white font-lato text-[12px] font-bold tracking-widest uppercase px-7 py-3.5 rounded-sm transition-all duration-200 no-underline">A
+            word with the founder.</a>
+        </div>
+      </div>
+
+      <!-- Right: status cards -->
+      <div class="animate-fade-up-2 grid grid-cols-2 gap-4">
+        <div
+          class="bg-white/5 border border-gold/20 rounded-sm p-6 text-center hover:bg-white/[0.08] transition-all duration-300">
+          <div class="font-cinzel text-[38px] font-bold text-gold leading-none mb-2">2026</div>
+          <div class="font-lato text-[10px] tracking-widest uppercase text-white/50">Year Founded</div>
+        </div>
+        <div
+          class="bg-white/5 border border-gold/20 rounded-sm p-6 text-center hover:bg-white/[0.08] transition-all duration-300">
+          <div class="font-cinzel text-[38px] font-bold text-gold leading-none mb-2"></div>
+          <div class="font-lato text-[10px] tracking-widest uppercase text-white/50"></div>
+        </div>
+        <div
+          class="bg-white/5 border border-gold/20 rounded-sm p-6 text-center hover:bg-white/[0.08] transition-all duration-300">
+          <div class="font-cinzel text-[38px] font-bold text-gold leading-none mb-2">100%</div>
+          <div class="font-lato text-[10px] tracking-widest uppercase text-white/50">Dedicated Staff</div>
+        </div>
+        <div
+          class="bg-white/5 border border-gold/20 rounded-sm p-6 text-center hover:bg-white/[0.08] transition-all duration-300">
+          <div class="font-cinzel text-[38px] font-bold text-gold leading-none mb-2">98%</div>
+          <div class="font-lato text-[10px] tracking-widest uppercase text-white/50">Parent Satisfaction</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom wave divider -->
+    <div class="absolute bottom-0 left-0 right-0 overflow-hidden leading-none">
+      <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full"
+        preserveAspectRatio="none">
+        <path d="M0 40 L0 20 Q360 0 720 20 Q1080 40 1440 20 L1440 40 Z" class="fill-warm-white dark:fill-[#0F1824]" />
+      </svg>
+    </div>
+  </section>
+
+  <!--MISSION & VISION-->
+
+  <section id="mission" class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-24">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+      <!-- Image stack -->
+      <div class=" relative pb-8 pr-8">
+        <div
+          class="w-full aspect-[4/3] rounded-sm bg-img-placeholder flex items-center justify-center text-gold text-[56px] min-h-[280px]">
+          <img src="imgs/school-building.jpg" alt="">
+        </div>
+        <!-- Accent image -->
+        <div
+          class="absolute bottom-0 right-0 w-[48%] aspect-square rounded-sm bg-gradient-to-br from-navy to-maroon flex items-center justify-center text-[44px] border-4 border-warm-white dark:border-[#0F1824] shadow-[0_8px_32px_rgba(26,42,74,0.18)]">
+          <img src="imgs/Important.jpg" alt="">
+        </div>
+        <!-- Red accent bar -->
+        <div class="absolute top-6 -left-4 w-2 h-24 bg-red-maroon rounded-full opacity-80"></div>
+      </div>
+
+      <!-- Text -->
+      <div class="reveal-right">
+        <div class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">Mission &
+          Vision</div>
+        <h2
+          class="font-playfair text-[clamp(26px,3vw,40px)] font-bold leading-snug text-navy dark:text-gold-light mb-4">
+          Excellence in Education &amp; Character
+        </h2>
+        <div class="w-16 h-[3px] bg-gold-maroon mb-8"></div>
+
+        <p class="font-cormorant text-[18px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] mb-6">
+          Our mission is to provide a world-class education in a safe and nurturing environment — one that cultivates
+          intellectual excellence, moral integrity, and a lifelong passion for learning.
+        </p>
+        <p class="font-cormorant text-[18px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] mb-8">
+          We envision a school where every scholar is known by name, celebrated in their uniqueness, and equipped to
+          lead with purpose, compassion, and confidence.
+        </p>
+
+        <!-- Mission pillars -->
+        <div class="space-y-4">
+          <div class="flex items-start gap-4">
+            <div
+              class="w-10 h-10 rounded-full bg-gradient-to-br from-gold/20 to-maroon/10 flex items-center justify-center text-[18px] flex-shrink-0 mt-0.5">
+
+
+              <svg version="1.1" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve">
+                <style type="text/css">
+                  .st0 {
+                    fill: none;
+                    stroke: #000000;
+                    stroke-width: 2;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-miterlimit: 10;
+                  }
+                </style>
+                <line class="st0" x1="16" y1="16" x2="22" y2="10" />
+                <polygon class="st0" points="30,6 26,6 26,2 22,6 22,10 26,10 " />
+                <circle class="st0" cx="16" cy="16" r="6" />
+                <path class="st0" d="M27,9c1.3,2,2,4.4,2,7c0,7.2-5.8,13-13,13S3,23.2,3,16S8.8,3,16,3c2.6,0,5,0.7,7,2" />
+              </svg>
+            </div>
+            <div>
+              <div class="font-cinzel text-[12px] font-bold tracking-wide text-navy dark:text-gold-light mb-1">Our
+                Mission</div>
+              <p class="text-[14px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0]">To nurture scholars who are
+                academically exceptional, morally grounded, and socially responsible.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div
+              class="w-10 h-10 rounded-full bg-gradient-to-br from-gold/20 to-maroon/10 flex items-center justify-center text-[18px] flex-shrink-0 mt-0.5">
+              <svg width="24px" height="24px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.671 0a1.161 1.161 0 0 0-1.116 1.123v2.183c1.965-.77 4.285-1.216 6.774-1.216 1.277 0 2.516.117 3.677.349v2.283a17.032 17.032 0 0 0-3.174-.27c-5.187 0-9.523 2.051-10.916 4.8.165-.146.339-.286.518-.424.716-.94 1.788-1.77 3.12-2.427v.704c1.974-.775 4.301-1.221 6.775-1.221 1.277 0 2.516.116 3.677.348v2.284c-1.006-.155-2.09-.27-3.174-.27-5.187 0-9.523 2.051-10.916 4.838.033.066.074.13.11.194.675-1.212 1.91-2.275 3.529-3.077v6.128c1.465.717 3.237 1.224 5.187 1.439a3.91 3.91 0 0 1-2.206-3.523c0-2.206 1.82-3.987 4.064-3.987 2.284 0 4.065 1.781 4.065 3.987 0 2.207-1.78 3.987-4.065 3.987l-.542-.038A15.484 15.484 0 0 1 4.49 14.439l-.038.541c0 .082.005.164.01.245l.028-.399a15.484 15.484 0 0 0 4.065 2.512v2.824c1.97.97 4.503 1.554 7.277 1.554 1.084 0 .774.271-.503.271-6.975 0-12.632-3.49-12.805-7.847-.001.06-.008.121-.008.183 0 2.887 2.412 5.414 6.039 6.835v1.758A1.123 1.123 0 0 0 9.677 24h10.684c.62 0 1.123-.504 1.123-1.084V1.123C21.484.503 20.98 0 20.36 0H9.677a1.161 1.161 0 0 0-.006 0zM2.525 10.35c-.002.06-.009.118-.009.179 0 .588.098 1.146.284 1.7.022-.063.04-.129.065-.19a5.323 5.323 0 0 1-.34-1.69z" />
+              </svg>
+            </div>
+            <div>
+              <div class="font-cinzel text-[12px] font-bold tracking-wide text-navy dark:text-gold-light mb-1">Our
+                Vision</div>
+              <p class="text-[14px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0]">To be the foremost academy of
+                excellence — where every learner becomes a light to their generation.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div
+              class="w-10 h-10 rounded-full bg-gradient-to-br from-gold/20 to-maroon/10 flex items-center justify-center text-[18px] flex-shrink-0 mt-0.5">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class="h-7 w-7"
+	 viewBox="0 0 300.3 300.3" style="enable-background:new 0 0 300.3 300.3;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M295.047,60.329c-31.864-18.033-70.007-21.645-104.653-9.911c-2.428,0.822-4.816,1.719-7.173,2.673
+			c0.457-5.465,1.688-10.856,3.692-15.999c1.44-3.695,0.642-7.889-2.055-10.796c-2.699-2.907-6.821-4.02-10.613-2.859
+			c-30.415,9.293-55.5,31.167-68.823,60.014c-5.2,11.262-8.446,23.056-9.708,35.187l-5.896-5.875
+			C78.41,101.393,63.257,95.132,47.15,95.132C21.152,95.132,0,116.284,0,142.282c0,5.717,4.633,10.35,10.35,10.35h16.604
+			c3.375,0,6.515,1.516,8.62,4.169l0.335,0.421c1.281,1.613,2.092,3.644,2.345,5.878c4.958,43.737,31.434,81.466,70.827,100.924
+			c17.801,8.793,37.398,13.293,57.062,13.293c9.386,0,18.79-1.026,28.02-3.099c28.142-6.322,53.599-22.066,71.684-44.335
+			c2.922-3.598,3.095-8.7,0.424-12.488c-2.67-3.788-7.535-5.338-11.905-3.796c-22.362,7.895-40.416,7.084-53.312,2.423
+			c14.795-5.862,27.769-15.74,37.375-28.636c8.815-11.835,13.388-27.099,12.879-42.977c-0.023-0.706-0.033-1.415-0.033-2.126
+			c0-27.929,16.716-52.8,42.588-63.363c3.671-1.5,6.164-4.966,6.416-8.924C300.532,66.038,298.5,62.283,295.047,60.329z
+			 M124.217,92.131c8.147-17.64,21.694-32.079,38.424-41.387c-0.394,4.303-0.427,8.642-0.104,12.971
+			c-18.995,12.042-34.486,28.902-45.057,49.332C118.867,105.888,121.096,98.891,124.217,92.131z M230.575,142.282
+			c0,0.93,0.016,1.858,0.045,2.785c0.36,11.221-2.762,21.858-8.792,29.953c-9.399,12.618-23.046,21.435-38.427,24.825
+			c-2.701,0.596-5.458,1.012-8.43,1.275c-3.866,0.342-7.217,2.819-8.678,6.416c-1.461,3.596-0.785,7.708,1.749,10.649
+			c10.173,11.808,29.4,22.223,55.53,21.986c-31.04,19.659-70.673,22.407-105.325,5.29c-33.051-16.325-55.267-47.988-59.427-84.694
+			c-0.689-6.089-3.006-11.768-6.709-16.43l-0.333-0.42c-6.049-7.618-15.097-11.986-24.825-11.986h-4.145
+			c4.036-9.455,13.427-16.1,24.341-16.1c10.591,0,20.555,4.117,28.057,11.593l7.458,7.432c8.137,8.109,20.092,11.239,31.195,8.174
+			c8.872-2.448,16.352-8.83,20.518-17.508c12.681-26.398,34.934-46.108,62.658-55.499c22.862-7.744,47.538-7.522,70.042,0.286
+			C244.403,86.825,230.575,113.287,230.575,142.282z"/>
+	</g>
+</g>
+</svg>
+</div>
+            <div>
+              <div class="font-cinzel text-[12px] font-bold tracking-wide text-navy dark:text-gold-light mb-1">Our Motto
+              </div>
+              <p
+                class="text-[14px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] italic font-cormorant text-[16px]">
+                "Lux et Pax" — Light and Peace.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--CORE VALUES-->
+  <section class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-24">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14">
+        <div
+          class="inline-flex items-center justify-center gap-2.5 font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">
+          <span class="w-6 h-px bg-gold"></span>Core Values<span class="w-6 h-px bg-gold"></span>
+        </div>
+        <h2 class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-navy dark:text-gold-light leading-snug">What
+          We Believe In</h2>
+        <div class="w-16 h-[3px] bg-gold-maroon mx-auto mt-5"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Value cards -->
+        <div
+          class="reveal hover-bar bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_4px_24px_rgba(196,154,44,0.15)]">
+          <div
+            class="w-14 h-14 rounded-full bg-gradient-to-br from-gold/20 to-maroon/10 flex items-center justify-center text-[28px] mb-5">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              class="w-9 h-9 text-amber-600" fill="currentColor" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;">
+              <g>
+                <g>
+                  <path d="M406.261,116.87h-83.478V33.391C322.783,14.979,307.803,0,289.391,0h-66.783c-18.412,0-33.391,14.979-33.391,33.391
+			v83.478h-83.478c-18.412,0-33.391,14.979-33.391,33.391v66.783c0,18.412,14.979,33.391,33.391,33.391h83.478v228.174
+			c0,18.412,14.979,33.391,33.391,33.391h66.783c18.412,0,33.391-14.979,33.391-33.391V250.435h83.478
+			c18.412,0,33.391-14.979,33.391-33.391v-66.783C439.652,131.849,424.673,116.87,406.261,116.87z M406.261,217.043H306.087
+			c-9.22,0-16.696,7.475-16.696,16.696v244.87h-66.783v-244.87c0-9.22-7.475-16.696-16.696-16.696H105.739v-66.783h100.174
+			c9.22,0,16.696-7.475,16.696-16.696V33.391h66.783v100.174c0,9.22,7.475,16.696,16.696,16.696h100.174V217.043z" />
+                </g>
+              </g>
+            </svg>
+
+          </div>
+          <div class="font-cinzel text-[13px] font-semibold tracking-wide text-navy dark:text-gold-light mb-3">Faith &
+            Integrity</div>
+          <p class="text-[14px] leading-[1.7] text-[#4A4A4A] dark:text-[#C8D4E0]">We are grounded in strong moral and
+            spiritual values that guide every decision and relationship within our community.</p>
+        </div>
+        <div
+          class="reveal hover-bar bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_4px_24px_rgba(196,154,44,0.15)]">
+          <div
+            class="w-14 h-14 rounded-full bg-gradient-to-br from-gold/20 to-maroon/10 flex items-center justify-center text-[28px] mb-5">
+            <svg class="w-9 h-10 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+            </svg>
+          </div>
+          <div class="font-cinzel text-[13px] font-semibold tracking-wide text-navy dark:text-gold-light mb-3">Academic
+            Excellence</div>
+          <p class="text-[14px] leading-[1.7] text-[#4A4A4A] dark:text-[#C8D4E0]">We hold our scholars to the highest
+            academic standards, inspiring curiosity, critical thinking, and a love for lifelong learning.</p>
+        </div>
+        <div
+          class="reveal hover-bar bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_4px_24px_rgba(196,154,44,0.15)]">
+          <div
+            class="w-14 h-14 rounded-full bg-gradient-to-br from-gold/20 to-maroon/10 flex items-center justify-center text-[28px] mb-5">
+            <svg class="w-9 h-10 text-[red]" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                clip-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="font-cinzel text-[13px] font-semibold tracking-wide text-navy dark:text-gold-light mb-3">Community
+            & Care</div>
+          <p class="text-[14px] leading-[1.7] text-[#4A4A4A] dark:text-[#C8D4E0]">Every scholar, parent, and staff
+            member is a valued member of our family. We thrive together in mutual respect and support.</p>
+        </div>
+        <div
+          class="reveal hover-bar bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_4px_24px_rgba(196,154,44,0.15)]">
+          <div
+            class="w-14 h-14 rounded-full bg-gradient-to-br from-gold/20 to-maroon/10 flex items-center justify-center text-[28px] mb-5">
+            <svg class="w-10 h-10 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+              </path>
+            </svg>
+          </div>
+          <div class="font-cinzel text-[13px] font-semibold tracking-wide text-navy dark:text-gold-light mb-3">Holistic
+            Growth</div>
+          <p class="text-[14px] leading-[1.7] text-[#4A4A4A] dark:text-[#C8D4E0]">We develop the whole child — mind,
+            body, and spirit — through academics, arts, athletics, and character formation.</p>
+        </div>
+        <div
+          class="reveal hover-bar bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_4px_24px_rgba(196,154,44,0.15)]">
+          <div
+            class="w-14 h-14 rounded-full bg-gradient-to-br from-gold/20 to-maroon/10 flex items-center justify-center text-[28px] mb-5">
+
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              class="w-10 h-10 text-amber-600" fill="currentColor" viewBox="0 0 231.5 256">
+              <path
+                d="M211.3,56c11.2,0,20.3,9.1,20.3,20.3s-9.1,20.3-20.3,20.3S191,87.4,191,76.2S200.1,56,211.3,56z M183,86.5
+	c-5.1-3.8-12.4-5.1-19.6-2.3c-12.3,4.8-51.8,21-67.2,27.4c-5.3,2.2-7.9,8.3-5.7,13.7l0,0c2.2,5.4,8.3,7.9,13.7,5.8l30.3-12.3
+	l-14.9,19.9c-1.8,2.5-2.8,4.8-3.4,7.2l-14.4,54.7c-0.1,0.5-0.4,0.9-0.7,1.2l-35.9,34.1c-3.5,3.3-4.5,8.2-3,12.5H0v7.9h173.7
+	c6.5,0,11.8-5.3,11.8-11.8v-42.7c0-6.6-2.5-12.9-6.9-17.7l-24.3-26.2l32.7-43.8C193.4,105.2,191.6,92.9,183,86.5z M161.9,201.6v42.7
+	c0,1.4,0.2,2.7,0.7,3.9H86.2l31.1-29.5c3.6-3.4,6.1-7.7,7.3-12.4l9.4-35.8l27.3,29.4C161.7,200.3,161.9,200.9,161.9,201.6z" />
+              <path d="M120.8,86.2c23.5-1.4,41.3-21.6,39.8-45.1C159.2,17.5,139-0.3,115.5,1.2C92,2.6,74.2,22.9,75.7,46.3
+	C77.1,69.7,97.3,87.6,120.8,86.2z M108.6,34.9c-1.2-2.3,2.2-3.6,3.9-5.3c2.2-2.3,6.9-6.1,6.3-7.5c-0.5-1.5-5.3-5.8-7.9-4.8
+	c-0.5,0-3.6,3.4-4.2,3.9c0-1.2-0.2-1.8-0.2-2.9c0-0.8-1.5-1.4-1.4-2c0.1-1.3,3.4-3.8,4.1-4.8c-0.7-0.4-2.8-2-3.4-1.7
+	c-1.4,0.8-3.2,1.3-4.7,2c0-0.5-0.1-1.1-0.2-1.4c2.9-1.5,6.1-2.6,9.4-3.4l2.9,1.1l2.2,2.3l2.2,2.1c0,0,1.3,0.5,1.8,0.5
+	c0.7-0.1,2.7-2.8,2.7-2.8l-0.9-2.1l-0.1-1.8c5.9,0.5,11.3,2.3,16.2,5.3c-0.8,0.1-1.8,0.2-2.8,0.5c-0.4-0.2-2.7,0.2-2.6,1.2
+	c0.1,0.8,4.1,4,5.9,6.9c1.7,2.9,6.6,4.8,7.5,8c0.9,3.8-0.5,8.7,0.1,13.3c0.7,4.5,5.5,9.1,5.5,9.1s2.2,0.7,3.9,0.2
+	c-1.3,6.6-4.2,12.7-8.8,17.9c-5.1,5.8-11.5,9.8-18.8,11.5c0.9-2.6,2.6-5.1,4.2-6.5c1.4-1.3,3.2-3.6,3.8-5.3c0.7-1.8,1.5-3.4,2.6-5.1
+	c1.3-2.3-4-5.5-5.8-6.1c-3.9-1.4-6.9-3.4-10.2-5.5c-2.5-1.5-10,2-12.8,0.9c-3.8-1.4-5.1-2.6-8.5-4.8c-3.5-2.3-2.5-7.2-2.7-10.8
+	c2.6,0,6.2-1.1,8,0.9c0.5,0.7,2.6,3.4,3.8,2.3C111,39,109.1,35.7,108.6,34.9z M87.8,21.6c0.2,1.8,1.2,3.3,1.2,4.6
+	c0,5.1-0.4,8.2,2.8,12.2c1.3,1.5,1.7,3.9,2.3,5.9c0.7,1.8,2.8,2.7,4.5,3.8c3.2,2.1,6.2,4.7,9.6,6.5c2.2,1.2,3.5,1.8,3.2,4.5
+	c-0.4,2.1-0.4,3.4-1.4,5.3c-0.2,0.7,1.5,4.1,2.1,4.6c1.7,1.4,3.4,2.8,5.2,4.1c2.8,2.1,0,5.1-1.1,8.3c-8.3-0.5-16.2-3.8-22.6-9.4
+	c-7.5-6.6-12-15.9-12.6-25.8C80.1,37,82.3,28.6,87.8,21.6z" />
+            </svg>
+          </div>
+          <div class="font-cinzel text-[13px] font-semibold tracking-wide text-navy dark:text-gold-light mb-3">
+            Responsibility</div>
+          <p class="text-[14px] leading-[1.7] text-[#4A4A4A] dark:text-[#C8D4E0]">We instil in every scholar a deep
+            sense of personal responsibility, accountability, and service to others.</p>
+        </div>
+        <div
+          class="reveal hover-bar bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm p-8 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_4px_24px_rgba(196,154,44,0.15)]">
+          <div
+            class="w-14 h-14 rounded-full bg-gradient-to-br from-gold/20 to-maroon/10 flex items-center justify-center text-[28px] mb-5">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              class="w-10 h-10 text-amber-600" fill="currentColor" viewBox="0 0 231.5 256">
+              <path d="M54.216,31.742c0-16.235,12.988-29.327,29.327-29.327c16.235,0,29.327,13.092,29.327,29.327
+	c-0.105,16.339-13.197,29.326-29.327,29.326C67.308,61.069,54.216,47.977,54.216,31.742z M215.981,157.523h-53.212v-47.551
+	c0-23.166-20.244-41.89-43.023-41.89H48.419c-25.008,0-46.431,21.67-46.419,43.023v87.177C1.971,207.943,8.794,212.988,15.586,213
+	c6.809,0.012,13.586-5.033,13.586-14.718v-84.913h9.057v99.499h88.31v-99.499h9.057l0.092,57.027
+	c-0.061,9.882,6.048,14.091,12.362,14.3h67.93C234.506,184.696,234.506,157.523,215.981,157.523z M215.183,64.279v7.118h-5.571
+	C210.983,67.727,212.928,65.119,215.183,64.279z M208.684,91.292h6.499l0,0V84.35h-7.427
+	C207.844,86.826,208.154,89.169,208.684,91.292z M201.699,94.254c1.989,2.608,4.686,4.731,7.781,6.013
+	c-1.194-1.636-2.211-3.669-2.962-6.013H201.699z M207.712,81.388h7.472l0,0v-7.029h-6.499
+	C208.154,76.525,207.844,78.913,207.712,81.388z M215.183,101.416v-7.118h-5.571C210.983,97.923,212.928,100.576,215.183,101.416z
+	 M204.794,84.35h-6.897c0.177,2.476,0.884,4.819,1.945,6.941h5.836C205.192,89.169,204.882,86.826,204.794,84.35z M209.347,65.517
+	c-3.006,1.282-5.659,3.316-7.604,5.88h4.731C207.225,69.142,208.198,67.153,209.347,65.517z M205.678,74.359h-5.792
+	c-1.105,2.122-1.768,4.509-1.989,7.029h6.897C204.882,78.913,205.192,76.525,205.678,74.359z M254,43.942v101.065h-77.324V41.82
+	l69.808-8.356v10.478H254z M241.135,39.477l-37.137,4.465h37.137V39.477z M239.499,82.847c0-12.6-10.213-22.857-22.857-22.857
+	c-12.6,0-22.857,10.213-22.857,22.857c0,12.6,10.213,22.857,22.857,22.857C229.286,105.66,239.499,95.447,239.499,82.847z
+	 M193.83,117.818v9.107h45.669v-9.107H193.83z M218.145,101.416c2.255-0.796,4.244-3.448,5.615-7.118h-5.615V101.416z
+	 M223.893,100.266c3.095-1.282,5.747-3.36,7.781-6.013h-4.775C226.103,96.597,225.086,98.63,223.893,100.266z M227.651,91.292h5.836
+	c1.061-2.122,1.724-4.465,1.945-6.941h-6.897C228.446,86.826,228.137,89.169,227.651,91.292z M225.617,84.35h-7.472v6.941h6.499
+	C225.175,89.169,225.484,86.826,225.617,84.35z M224.644,74.359h-6.499v7.029h7.472C225.484,78.913,225.175,76.525,224.644,74.359z
+	 M228.535,81.388h6.897c-0.177-2.52-0.884-4.907-1.989-7.029h-5.792C228.181,76.525,228.446,78.913,228.535,81.388z M231.585,71.441
+	c-1.989-2.564-4.598-4.598-7.604-5.88c1.149,1.636,2.122,3.625,2.874,5.88H231.585z M218.145,64.279v7.118h5.615
+	C222.39,67.727,220.4,65.119,218.145,64.279z" />
+            </svg>
+          </div>
+          <div class="font-cinzel text-[13px] font-semibold tracking-wide text-navy dark:text-gold-light mb-3">Global
+            Citizenship</div>
+          <p class="text-[14px] leading-[1.7] text-[#4A4A4A] dark:text-[#C8D4E0]">Our scholars are prepared to engage
+            thoughtfully and compassionately with a diverse and interconnected world.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--SCHOOL HISTORY TIMELINE-->
+  <section class="relative bg-navy dark:bg-[#080E18] px-5 sm:px-10 lg:px-20 py-24 overflow-hidden">
+    <div class="absolute inset-0 diag-pattern pointer-events-none"></div>
+    <div class="absolute inset-0 pointer-events-none"
+      style="background: radial-gradient(ellipse at 80% 50%, rgba(196,154,44,0.06) 0%, transparent 60%);"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <div
+          class="inline-flex items-center justify-center gap-2.5 font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">
+          <span class="w-6 h-px bg-gold"></span>Our Journey<span class="w-6 h-px bg-gold"></span>
+        </div>
+        <h2 class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-white leading-snug">A History of Excellence
+        </h2>
+        <div class="w-16 h-[3px] bg-gold-maroon mx-auto mt-5"></div>
+      </div>
+
+      <!-- Timeline -->
+      <div class="max-w-3xl mx-auto space-y-0">
+
+        <!-- Item -->
+        <div class="reveal relative flex gap-8 pb-10 timeline-line">
+          <div
+            class="flex-shrink-0 w-10 h-10 rounded-full bg-gold border-4 border-navy dark:border-[#080E18] flex items-center justify-center z-10 mt-1">
+            <div class="w-2 h-2 rounded-full bg-navy"></div>
+          </div>
+          <div class="pb-2">
+            <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-1">2024</div>
+            <div class="font-playfair text-[18px] font-bold text-white mb-2">Vision & Planning</div>
+            <p class="text-[14px] leading-relaxed text-white/60">The founders of Stellar Scholars Academy began the
+              vision — a school where faith, excellence, and pastoral care would be inseparable. Land was acquired and
+              planning commenced.</p>
+          </div>
+        </div>
+
+        <div class="reveal relative flex gap-8 pb-10 timeline-line">
+          <div
+            class="flex-shrink-0 w-10 h-10 rounded-full bg-maroon border-4 border-navy dark:border-[#080E18] flex items-center justify-center z-10 mt-1">
+            <div class="w-2 h-2 rounded-full bg-white"></div>
+          </div>
+          <div class="pb-2">
+            <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-1">2025</div>
+            <div class="font-playfair text-[18px] font-bold text-white mb-2">Construction & Staffing</div>
+            <p class="text-[14px] leading-relaxed text-white/60">Our beautiful campus took shape. A rigorous recruitment
+              process brought together an exceptional founding team of educators united by passion and purpose.</p>
+          </div>
+        </div>
+
+        <div class="reveal relative flex gap-8 pb-10 timeline-line">
+          <div
+            class="flex-shrink-0 w-10 h-10 rounded-full bg-gold border-4 border-navy dark:border-[#080E18] flex items-center justify-center z-10 mt-1">
+            <div class="w-2 h-2 rounded-full bg-navy"></div>
+          </div>
+          <div class="pb-2">
+            <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-1">January 2026</div>
+            <div class="font-playfair text-[18px] font-bold text-white mb-2">Grand Opening</div>
+            <p class="text-[14px] leading-relaxed text-white/60">Stellar Scholars Academy opened its doors to its
+              inaugural cohort of scholars — a milestone celebrated with the community, parents, and dignitaries. The
+              dream became reality.</p>
+          </div>
+        </div>
+
+        <div class="reveal relative flex gap-8 pb-0">
+          <div
+            class="flex-shrink-0 w-10 h-10 rounded-full bg-maroon border-4 border-navy dark:border-[#080E18] flex items-center justify-center z-10 mt-1">
+            <div class="w-2 h-2 rounded-full bg-white"></div>
+          </div>
+          <div>
+            <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-1">Today & Beyond</div>
+            <div class="font-playfair text-[18px] font-bold text-white mb-2">Growing Brighter Every Day</div>
+            <p class="text-[14px] leading-relaxed text-white/60">With amazing scholars and a thriving community, SSA
+              continues to raise the bar — expanding programmes, deepening pastoral care, and building the next
+              generation of leaders.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--Diretor's Speech-->
+  <section id="leadership" class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-24">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <div
+          class="inline-flex items-center justify-center gap-2.5 font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">
+          <span class="w-6 h-px bg-gold"></span>Director's Speech<span class="w-6 h-px bg-gold"></span>
+        </div>
+        <h2 class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-navy dark:text-gold-light leading-snug">Meet
+          The Founder</h2>
+        <div class="w-16 h-[3px] bg-gold-maroon mx-auto mt-5 mb-4"></div>
+        <p class="font-cormorant text-[18px] text-[#4A4A4A] dark:text-[#C8D4E0] max-w-xl mx-auto">A passionate and
+          experienced leader united by a shared commitment to every scholar's success.</p>
+      </div>
+
+      <!-- Director's — featured card -->
+      <div
+        class="reveal mb-8 bg-gradient-to-br from-navy to-[#243558] dark:from-[#0d1a30] dark:to-[#162030] border border-gold/25 rounded-sm overflow-hidden">
+        <div class="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-0">
+          <!-- Photo placeholder -->
+          <div
+            class="bg-gradient-to-br from-maroon/80 to-navy flex items-center justify-center min-h-[240px] md:min-h-full relative">
+            <div class="text-[80px] opacity-40"><img src="imgs/Director's Image.jpg" alt="The director"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <div class="bg-gold/20 border border-gold/30 rounded-sm px-3 py-1.5 text-center">
+                <div class="font-cinzel text-[9px] tracking-widest uppercase text-gold">Director, Founder.</div>
+              </div>
+            </div>
+          </div>
+          <!-- Info -->
+          <div class="p-8 lg:p-10 flex flex-col justify-center">
+            <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-2">School's Founder</div>
+            <h3 class="font-playfair text-[28px] font-bold text-white mb-1">Miss. Adaeze</h3>
+            <div class="text-gold-light font-cormorant text-[15px] italic mb-5">M.Ed. Educational Leadership · 5 Years
+              Experience</div>
+            <p class="font-cormorant text-[14px] leading-relaxed text-white/70 mb-6">
+              <b class="text-[25px]">Director's Welcome Address.</b><b><br> Welcom e to Stellar Scholars Academy- a place where learning is purposeful, character is nutured and every child is recognised as a light with limitless potentials.<br>At Stellar Scholars Academy, we are deeply comitted to providing a well-rounded education that blends academic excellence wih positive moral values, creativity, and fun. Our approach to learning is intentional and child centered, ensuring that each learneris supported, challenged, and inspired to grow confidently at their own pace.<br> We believe education goes far beyond the classroom. It is about shaping minds, uilding charaters, preparing learners to thrive in an ever-evolving world. Through a carefully designed curriculum, dedicated educators and a supportive learning environment, we cultivate curiosity, discipline, leadership, and a genuine love for learning. <br> Our school's community is built on partnershi. We value the trust of our parents and guardians and recognse the vitl role collaboration plays ina child's success. Together, we strive to create a safe, inclusive, and enriching environment where every learner is seen, valued, and enlightened.<br> Thank you for visting our website and taking out time to learn about who we are. Welook forward to welcoming you into Stellar Scholars Academ family and walking thismeaningful eduational journey with you.
+              </b>
+            </p>
+            <blockquote class="border-l-[3px] border-gold pl-5 font-playfair text-[17px] italic text-gold-light/80">
+              "Every scholar who walks through our gates leaves our responsibility having been known, loved, and
+              challenged to be their very best."
+            </blockquote>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!--ADMISSION CTA-->
+  <section class="relative bg-maroon-navy text-center px-5 sm:px-10 lg:px-20 py-24 overflow-hidden">
+    <div class="admissions-pattern absolute inset-0 pointer-events-none"></div>
+    <div class="relative z-10 max-w-2xl mx-auto">
+      <div
+        class="inline-flex items-center justify-center gap-2.5 font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">
+        <span class="w-6 h-px bg-gold"></span>Join Our Family<span class="w-6 h-px bg-gold"></span>
+      </div>
+      <h2 class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-white leading-snug mb-4">Become Part of
+        the
+        SSA Story</h2>
+      <p class="font-cormorant text-[20px] text-white/75 leading-relaxed mb-10">We would love to welcome your
+        child into
+        our community of passionate learners and caring educators. Come see SSA for yourself.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#"
+          class="inline-block bg-gold hover:bg-gold-light text-navy font-lato text-[13px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all duration-200 hover:-translate-y-0.5 no-underline">Apply
+          Now</a>
+        <a href="#"
+          class="inline-block border border-white/50 hover:border-gold hover:text-gold text-white font-lato text-[13px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all duration-200 no-underline">Schedule
+          a Visit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════ -->
+  <footer class="bg-navy dark:bg-[#04080F] text-white/65 px-5 sm:px-10 lg:px-20 pt-20 pb-10">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-14">
+      <div>
+        <div class="flex items-center gap-3 mb-5">
+          <div
+            class="w-11 h-11 rounded-full bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center font-cinzel text-[16px] font-bold text-white flex-shrink-0">
+            S</div>
+          <div class="font-cinzel text-[13px] font-semibold tracking-wide text-white leading-tight">
+            STELLAR SCHOLARS ACADEMY
+            <span class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5">LUX ET PAX · EST.
+              2026</span>
+          </div>
+        </div>
+        <p class="text-[13px] leading-[1.7] text-white/50 mb-6">Excellence in Education &amp; Character. We
+          nurture
+          scholars who lead with knowledge, integrity, and compassion.</p>
+        <div class="space-y-2 mb-6">
+          <div class="flex items-start gap-2 text-[13px] text-white/55"><span
+              class="text-gold flex-shrink-0 mt-0.5">📍</span><span>003 Quarantine Dam Road, Anguwan Tasha</span>
+          </div>
+          <div class="flex items-start gap-2 text-[13px] text-white/55"><span class="text-gold">📞</span><span>(0)
+              0355
+              0088</span></div>
+          <div class="flex items-start gap-2 text-[13px] text-white/55"><span
+              class="text-gold">✉️</span><span>info@stellarscholarsacademy.com</span></div>
+        </div>
+        <div class="flex gap-2.5">
+          <a href="#"
+            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[13px] font-bold transition-all no-underline">f</a>
+          <a href="#"
+            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[13px] font-bold transition-all no-underline">t</a>
+          <a href="#"
+            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[11px] font-bold transition-all no-underline">in</a>
+          <a href="#"
+            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center hover:text-navy text-[14px] transition-all no-underline">📸</a>
+        </div>
+      </div>
+      <div>
+        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">About Us
+        </div>
+        <ul class="list-none space-y-2.5">
+          <li><a href="#" class="text-[13px] text-gold no-underline font-bold">Our Mission</a></li>
+          <li><a href="#"
+              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Leadership</a></li>
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">History</a>
+          </li>
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Awards</a>
+          </li>
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">Academics
+        </div>
+        <ul class="list-none space-y-2.5">
+          <li><a href="#"
+              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Pre-School</a></li>
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Primary
+              School</a></li>
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Secondary
+              School</a></li>
+          <li><a href="#"
+              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Admissions</a></li>
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Gallery</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">School Life
+        </div>
+        <ul class="list-none space-y-2.5">
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Sports
+              &amp;
+              Athletics</a></li>
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Arts
+              &amp;
+              Culture</a></li>
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Clubs
+              &amp;
+              Societies</a></li>
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Events
+              Calendar</a></li>
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Parent
+              Portal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="max-w-7xl mx-auto border-t border-white/8 pt-7 flex flex-col sm:flex-row justify-between items-center gap-3 text-[12px] text-white/35">
+      <span>© 2026 Stellar Scholars Academy. All rights reserved.</span>
+      <span>Powered by <a href="https://ticst.com.ng" target="_blank"
+          class="text-gold hover:text-gold-light no-underline">TICST</a> &nbsp;·&nbsp; <a href="#"
+          class="text-gold hover:text-gold-light no-underline">Privacy Policy</a> &nbsp;·&nbsp; <a href="#"
+          class="text-gold hover:text-gold-light no-underline">Terms</a></span>
+    </div>
+  </footer>
+
+  <!--JAVASCRIPT-->
+  <script>
+    // ── Dark / Light Toggle ─────────────────────────────
+    const themeBtn = document.getElementById('themeBtn');
+    const html = document.documentElement;
+    const isDark = () => html.classList.contains('dark');
+
+    function applyTheme(dark) {
+      html.classList.toggle('dark', dark);
+      themeBtn.textContent = dark ? '🌙' : '☀️';
+      themeBtn.title = dark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    }
+    applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
+    themeBtn.addEventListener('click', () => applyTheme(!isDark()));
+
+    // ── Mobile Menu ─────────────────────────────────────
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    // ── Scroll Reveal ───────────────────────────────────
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), (e.target.dataset.delay || 0));
+          revealObserver.unobserve(e.target);
         }
+      });
+    }, { threshold: 0.1 });
 
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach((el, i) => {
+      el.dataset.delay = (i % 4) * 80;
+      revealObserver.observe(el);
+    });
 
-        document.addEventListener('DOMContentLoaded', initApp)
-    </script>
-</head>
+    // ── Shrink navbar on scroll ─────────────────────────
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('shadow-lg', window.scrollY > 40);
+    });
+  </script>
+</body>
 
-<script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body class="bg-gray-100 font-body overflow-x-hidden ">
-    <!-- Navigation -->
-    <nav class="bg-gray-900 text-white">
-        <div class="container w-screen mx-auto px-4">
-            <div class="flex items-center justify-between py-3">
-                <div class="flex items-center space-x-4">
-
-                    <img src="imgs/favicon.png" alt="logo"
-                        class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center">
-
-                    <div>
-                        <h1 class="text-xl font-bold font-serif tracking-wide">
-                            STELLAR SCHOLARS ACADEMY
-                        </h1>
-                    </div>
-                </div>
-                <button id="hambuger-button" class="text-3xl sm:hidden cursor-pointer mx-6">
-                    &#9776;
-                </button>
-                <div class="hidden md:flex space-x-6 text-sm">
-                    <a href="/about.html" class="hover:text-amber-400 transition">About Us</a>
-                    <a href="#academics" class="hover:text-amber-400 transition">Academics</a>
-                    <a href="#admissions" class="hover:text-amber-400 transition">Admissions</a>
-                    <a href="#life" class="hover:text-amber-400 transition">School Life</a>
-                    <a href="#news" class="hover:text-amber-400 transition">News</a>
+</html>er:text-amber-400 transition">News</a>
                     <a href="#gallery" class="hover:text-amber-400 transition">Gallery</a>
                 </div>
             </div>
