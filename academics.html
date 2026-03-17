@@ -1,959 +1,1088 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="light scroll-smooth">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Stellar Scholars Academy - Excellence in Education And Character</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academics — Stellar Scholars Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500;600&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <meta name="description"
-        content="  Stellar Scholars Academy - Excellence in Education And Character - A premium educational institution fostering growth, innovation, and lifelong learning. Discover where academic excellence meets personal development." />
-    <script>
-        const initApp = () => {
-            const hamburgerBtn = document.getElementById('hambuger-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const closeIcon = document.getElementById('hamburger-button2');
-            let isOpen = false;
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold:           '#C49A2C',
+            'gold-light':   '#E8C56A',
+            'gold-dark':    '#9A7A1E',
+            maroon:         '#7B1A2E',
+            'maroon-light': '#A02040',
+            navy:           '#1A2A4A',
+            'navy-light':   '#243558',
+            cream:          '#FAF6EE',
+            'warm-white':   '#FFFDF8',
+          },
+          fontFamily: {
+            playfair:  ['"Playfair Display"', 'serif'],
+            cormorant: ['"Cormorant Garamond"', 'serif'],
+            cinzel:    ['Cinzel', 'serif'],
+            lato:      ['Lato', 'sans-serif'],
+          },
+          backgroundImage: {
+            'gold-maroon':    'linear-gradient(to right, #C49A2C, #7B1A2E)',
+            'maroon-navy':    'linear-gradient(135deg, #7B1A2E 0%, #1A2A4A 100%)',
+            'hero-pattern':   'repeating-linear-gradient(45deg, rgba(196,154,44,0.04) 0, rgba(196,154,44,0.04) 1px, transparent 0, transparent 24px)',
+            'img-placeholder':'linear-gradient(135deg, rgba(26,42,74,0.15) 0%, rgba(123,26,46,0.1) 100%)',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%':   { opacity: '0', transform: 'translateY(28px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+          animation: {
+            'fade-up':   'fadeUp 0.7s ease both',
+            'fade-up-1': 'fadeUp 0.7s ease 0.12s both',
+            'fade-up-2': 'fadeUp 0.7s ease 0.24s both',
+            'fade-up-3': 'fadeUp 0.7s ease 0.36s both',
+          },
+        },
+      },
+    }
+  </script>
 
-            const toggleMenu = () => {
-                mobileMenu.classList.toggle('hidden')
-                mobileMenu.classList.toggle('flex')
-            }
+  <style>
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #f4f0e8; }
+    .dark ::-webkit-scrollbar-track { background: #0F1824; }
+    ::-webkit-scrollbar-thumb { background: #C49A2C; border-radius: 3px; }
 
-            hamburgerBtn.addEventListener('click', toggleMenu)
-            mobileMenu.addEventListener('click', toggleMenu)
-        }
+    /* ── Nav link underline ── */
+    .nav-link { position: relative; padding-bottom: 3px; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+      height: 2px; background: #C49A2C;
+      transform: scaleX(0); transition: transform 0.2s ease; border-radius: 1px;
+    }
+    .nav-link:hover::after { transform: scaleX(1); }
+    .nav-link.active::after { transform: scaleX(1); }
 
+    /* ── Section label ── */
+    .section-label-line { position: relative; padding-left: 36px; }
+    .section-label-line::before {
+      content: ''; position: absolute; left: 0; top: 50%;
+      width: 24px; height: 1px; background: #C49A2C; transform: translateY(-50%);
+    }
 
-        document.addEventListener('DOMContentLoaded', initApp)
-    </script>
-    <script>
-        function toggleSection(sectionId) {
-            const content = document.getElementById(sectionId + '-content');
-            const icon = document.getElementById(sectionId + '-icon');
+    /* ── Hover top-bar card ── */
+    .hover-bar { position: relative; overflow: hidden; }
+    .hover-bar::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(to right, #C49A2C, #7B1A2E);
+      transform: scaleX(0); transition: transform 0.3s ease; transform-origin: left;
+    }
+    .hover-bar:hover::before { transform: scaleX(1); }
 
-            if (content.classList.contains('hidden')) {
-                content.classList.remove('hidden');
-                icon.style.transform = 'rotate(180deg)';
-            } else {
-                content.classList.add('hidden');
-                icon.style.transform = 'rotate(0deg)';
-            }
-        }
-    </script>
+    /* ── Programme tab active state ── */
+    .prog-tab { transition: all 0.2s ease; cursor: pointer; }
+    .prog-tab.active {
+      background: #1A2A4A; color: #fff;
+      border-color: #1A2A4A;
+    }
+    .dark .prog-tab.active {
+      background: #C49A2C; color: #1A2A4A;
+      border-color: #C49A2C;
+    }
+
+    /* ── Programme panel ── */
+    .prog-panel { display: none; }
+    .prog-panel.active { display: block; }
+
+    /* ── Calendar grid stripes ── */
+    .cal-row:nth-child(even) { background: rgba(196,154,44,0.04); }
+    .dark .cal-row:nth-child(even) { background: rgba(196,154,44,0.06); }
+
+    /* ── FAQ accordion ── */
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.25s ease; }
+    .faq-answer.open { max-height: 400px; }
+    .faq-icon { transition: transform 0.3s ease; }
+    .faq-icon.open { transform: rotate(45deg); }
+
+    /* ── Diagonal pattern ── */
+    .diag-pattern {
+      background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.025) 0, rgba(255,255,255,0.025) 1px, transparent 0, transparent 20px);
+    }
+    .admissions-pattern {
+      background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 0, transparent 20px);
+    }
+
+    /* ── Scroll reveal ── */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left  { opacity: 0; transform: translateX(-28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal-left.visible  { opacity: 1; transform: translateX(0); }
+    .reveal-right { opacity: 0; transform: translateX(28px);  transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+    /* ── Subject badge ── */
+    .subject-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: 'Lato', sans-serif; font-size: 12px; font-weight: 700;
+      letter-spacing: 0.04em; padding: 5px 12px; border-radius: 2px;
+      border: 1px solid rgba(196,154,44,0.3);
+      color: #1A2A4A; background: rgba(196,154,44,0.08);
+      transition: all 0.2s;
+    }
+    .dark .subject-badge { color: #E8C56A; background: rgba(196,154,44,0.1); }
+    .subject-badge:hover { background: #C49A2C; color: #fff; border-color: #C49A2C; }
+  </style>
 </head>
 
-<script src="https://cdn.tailwindcss.com"></script>
-</head>
+<body class="font-lato bg-warm-white dark:bg-[#0F1824] text-[#4A4A4A] dark:text-[#C8D4E0] overflow-x-hidden transition-colors duration-300">
 
-<body class="bg-gray-100 font-body overflow-x-hidden ">
-    <!-- Navigation -->
-    <nav class="bg-gray-900 text-white">
-        <div class="container w-screen mx-auto px-4">
-            <div class="flex items-center justify-between py-3">
-                <div class="flex items-center space-x-4">
+  <!-- ══════════════════════════════════════════════════
+       CTA BAR
+  ══════════════════════════════════════════════════ -->
+  <div id="ctaBar" class="w-full bg-maroon dark:bg-[#3a0d1a] text-white text-xs font-lato font-bold tracking-widest uppercase">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <span class="flex items-center gap-2 text-gold-light">
+        <span>🕊️</span>
+        <span class="font-cinzel tracking-widest">2026/2027 Admissions Now Open</span>
+        <span>—</span>
+        <span class="text-white/80 font-normal normal-case tracking-normal font-lato text-xs">Secure your child's place today. Limited spaces available.</span>
+      </span>
+      <div class="flex items-center gap-3 flex-shrink-0">
+        <a href="#" class="bg-gold hover:bg-gold-light text-navy font-bold text-[10px] px-4 py-1.5 rounded-sm tracking-widest uppercase transition-all duration-200 hover:-translate-y-px no-underline">Apply Now</a>
+        <button id="closeCtaBar" class="text-white/50 hover:text-white transition-colors text-base leading-none cursor-pointer" aria-label="Close bar">✕</button>
+      </div>
+    </div>
+  </div>
 
-                    <img src="imgs/favicon.png" alt="logo"
-                        class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center">
+  <!-- ══════════════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════════════ -->
+  <nav id="navbar" class="fixed left-0 right-0 z-50 bg-warm-white/95 dark:bg-[#0F1824]/97 backdrop-blur-md border-b border-gold/20 dark:border-gold/10 shadow-[0_2px_16px_rgba(26,42,74,0.07)] dark:shadow-[0_2px_16px_rgba(0,0,0,0.3)] transition-all duration-300" style="top:36px">
+    <div class="max-w-7xl mx-auto px-5 lg:px-10 h-[72px] flex items-center justify-between gap-5">
 
-                    <div>
-                        <h1 class="text-xl font-bold font-serif tracking-wide">
-                            STELLAR SCHOLARS ACADEMY
-                        </h1>
-                    </div>
-                </div>
-                <button id="hambuger-button" class="text-3xl sm:hidden cursor-pointer mx-6">
-                    &#9776;
-                </button>
-                <div class="hidden md:flex space-x-6 text-sm">
-                    <a href="/about.html" class="hover:text-amber-400 transition">About Us</a>
-                    <a href="#academics" class="hover:text-amber-400 transition">Academics</a>
-                    <a href="#admissions" class="hover:text-amber-400 transition">Admissions</a>
-                    <a href="#life" class="hover:text-amber-400 transition">School Life</a>
-                    <a href="#news" class="hover:text-amber-400 transition">News</a>
-                    <a href="#gallery" class="hover:text-amber-400 transition">Gallery</a>
-                </div>
+      <a href="index.html" class="flex items-center gap-3 flex-shrink-0 no-underline">
+        <svg width="46" height="54" viewBox="0 0 100 115" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+          <path d="M50 4 L94 22 L94 62 Q94 90 50 111 Q6 90 6 62 L6 22 Z" fill="white" stroke="#C49A2C" stroke-width="4"/>
+          <path d="M50 10 L88 26 L88 62 Q88 86 50 105 Q12 86 12 62 L12 26 Z" fill="none" stroke="#C49A2C" stroke-width="1.5" stroke-dasharray="2 1"/>
+          <text x="50" y="35" text-anchor="middle" font-size="13" fill="#C49A2C" font-family="serif">★ ★ ★</text>
+          <text x="50" y="52" text-anchor="middle" font-family="serif" font-size="6.5" fill="#1A2A4A" font-weight="bold" letter-spacing="1">STELLAR SCHOLARS</text>
+          <text x="50" y="63" text-anchor="middle" font-family="serif" font-size="8.5" fill="#1A2A4A" font-weight="bold">ACADEMY</text>
+          <path d="M35 80 Q42 74 50 77 Q58 74 65 80 Q70 86 65 91 Q58 95 50 93 Q42 95 35 91 Q30 86 35 80Z" fill="none" stroke="#C49A2C" stroke-width="1.2"/>
+          <path d="M35 80 Q30 75 32 71 Q37 67 41 71" fill="none" stroke="#C49A2C" stroke-width="1.2"/>
+          <text x="50" y="107" text-anchor="middle" font-family="serif" font-size="7" fill="#C49A2C" font-weight="bold">2026</text>
+        </svg>
+        <div class="font-cinzel text-[13px] font-semibold text-navy dark:text-gold-light leading-tight tracking-wide">
+          STELLAR SCHOLARS ACADEMY
+          <span class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5">LUX ET PAX · EST. 2026</span>
+        </div>
+      </a>
+
+      <ul class="hidden lg:flex items-center gap-7 list-none">
+        <li><a href="ssa-about.html"     class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">About Us</a></li>
+        <li><a href="ssa-academics.html" class="nav-link active font-lato text-[12.5px] font-bold tracking-[0.05em] text-maroon dark:text-gold transition-colors duration-200 no-underline">Academics</a></li>
+        <li><a href="#" class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">Admissions</a></li>
+        <li><a href="#" class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">School Life</a></li>
+        <li><a href="#" class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">News</a></li>
+        <li><a href="#" class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">Gallery</a></li>
+      </ul>
+
+      <div class="flex items-center gap-2.5 flex-shrink-0">
+        <a href="#" class="hidden sm:inline-block bg-maroon hover:bg-maroon-light text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all duration-200 hover:-translate-y-px no-underline">Enroll Now</a>
+        <a href="#" class="hidden sm:inline-block border border-gold text-gold hover:bg-gold hover:text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all duration-200 no-underline">Book a Tour</a>
+        <button id="themeBtn" aria-label="Toggle theme"
+          class="w-9 h-9 rounded-full bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-[15px] transition-all duration-300 hover:border-gold hover:rotate-12 cursor-pointer flex-shrink-0">☀️</button>
+        <button id="mobileMenuBtn" aria-label="Open menu"
+          class="lg:hidden w-9 h-9 rounded-sm bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-navy dark:text-gold hover:border-gold cursor-pointer flex-shrink-0">
+          <svg width="18" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="0" y1="1" x2="18" y2="1"/><line x1="0" y1="7" x2="18" y2="7"/><line x1="0" y1="13" x2="18" y2="13"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden lg:hidden bg-warm-white dark:bg-[#0F1824] border-t border-gold/20 px-5 py-4">
+      <ul class="flex flex-col gap-1 list-none mb-4">
+        <li><a href="ssa-about.html" class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">About Us</a></li>
+        <li><a href="#" class="block font-lato text-[13px] font-bold text-maroon dark:text-gold py-2.5 border-b border-gold/10 no-underline">Academics</a></li>
+        <li><a href="#" class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">Admissions</a></li>
+        <li><a href="#" class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">School Life</a></li>
+        <li><a href="#" class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">News</a></li>
+        <li><a href="#" class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 no-underline transition-colors">Gallery</a></li>
+      </ul>
+      <div class="flex gap-2.5">
+        <a href="#" class="flex-1 text-center bg-maroon hover:bg-maroon-light text-white text-[11px] font-bold font-lato tracking-widest uppercase px-4 py-2.5 rounded-sm transition-all no-underline">Enroll Now</a>
+        <a href="#" class="flex-1 text-center border border-gold text-gold hover:bg-gold hover:text-white text-[11px] font-bold font-lato tracking-widest uppercase px-4 py-2.5 rounded-sm transition-all no-underline">Book a Tour</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════
+       PAGE HERO
+  ══════════════════════════════════════════════════ -->
+  <section class="relative bg-navy dark:bg-[#080E18] overflow-hidden" style="padding-top: calc(36px + 72px)">
+    <div class="absolute inset-0 bg-hero-pattern pointer-events-none opacity-60"></div>
+    <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 15% 60%, rgba(196,154,44,0.09) 0%, transparent 55%), radial-gradient(ellipse at 85% 25%, rgba(123,26,46,0.14) 0%, transparent 50%);"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 py-20 lg:py-28">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <!-- Left text -->
+        <div>
+          <div class="animate-fade-up flex items-center gap-2 mb-6 font-lato text-[11px] tracking-widest uppercase text-white/40">
+            <a href="index.html" class="hover:text-gold transition-colors no-underline text-white/40">Home</a>
+            <span class="text-gold/50">/</span>
+            <span class="text-gold">Academics</span>
+          </div>
+          <div class="animate-fade-up flex items-center gap-3 mb-4">
+            <span class="w-8 h-px bg-gold flex-shrink-0"></span>
+            <span class="font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold">Our Curriculum</span>
+          </div>
+          <h1 class="animate-fade-up-1 font-playfair font-bold text-white leading-[1.15] mb-6" style="font-size:clamp(36px,4vw,58px)">
+            A Curriculum Built<br>for <em class="italic text-gold-light">Every Mind.</em>
+          </h1>
+          <p class="animate-fade-up-2 font-cormorant text-[19px] leading-relaxed text-white/70 max-w-lg mb-8">
+            From our nurturing pre-school through to secondary examination classes, every stage of our academic programme is crafted to challenge, inspire, and celebrate each scholar's unique potential.
+          </p>
+          <div class="animate-fade-up-3 flex flex-wrap gap-3">
+            <a href="#programmes" class="inline-block bg-maroon hover:bg-maroon-light text-white font-lato text-[12px] font-bold tracking-widest uppercase px-7 py-3.5 rounded-sm transition-all duration-200 hover:-translate-y-0.5 no-underline">Explore Programmes</a>
+            <a href="#prospectus" class="inline-block border border-gold text-gold hover:bg-gold hover:text-navy font-lato text-[12px] font-bold tracking-widest uppercase px-7 py-3.5 rounded-sm transition-all duration-200 no-underline flex items-center gap-2">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Prospectus
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: quick-glance stats -->
+        <div class="animate-fade-up-2 grid grid-cols-2 gap-4">
+          <div class="bg-white/5 border border-gold/20 rounded-sm p-6 text-center hover:bg-white/[0.08] transition-all duration-300 group">
+            <div class="text-[36px] mb-2 group-hover:scale-110 transition-transform duration-300">🌱</div>
+            <div class="font-cinzel text-[22px] font-bold text-gold leading-none mb-1">Pre-School</div>
+            <div class="font-lato text-[10px] tracking-widest uppercase text-white/50">Ages 2 – 5</div>
+          </div>
+          <div class="bg-white/5 border border-gold/20 rounded-sm p-6 text-center hover:bg-white/[0.08] transition-all duration-300 group">
+            <div class="text-[36px] mb-2 group-hover:scale-110 transition-transform duration-300">📚</div>
+            <div class="font-cinzel text-[22px] font-bold text-gold leading-none mb-1">Primary</div>
+            <div class="font-lato text-[10px] tracking-widest uppercase text-white/50">Primary 1 – 6</div>
+          </div>
+          <div class="bg-white/5 border border-gold/20 rounded-sm p-6 text-center hover:bg-white/[0.08] transition-all duration-300 group">
+            <div class="text-[36px] mb-2 group-hover:scale-110 transition-transform duration-300">🎓</div>
+            <div class="font-cinzel text-[22px] font-bold text-gold leading-none mb-1">Junior Sec.</div>
+            <div class="font-lato text-[10px] tracking-widest uppercase text-white/50">JSS 1 – 3</div>
+          </div>
+          <div class="bg-white/5 border border-gold/20 rounded-sm p-6 text-center hover:bg-white/[0.08] transition-all duration-300 group">
+            <div class="text-[36px] mb-2 group-hover:scale-110 transition-transform duration-300">🏅</div>
+            <div class="font-cinzel text-[22px] font-bold text-gold leading-none mb-1">Senior Sec.</div>
+            <div class="font-lato text-[10px] tracking-widest uppercase text-white/50">SSS 1 – 3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 right-0 overflow-hidden leading-none">
+      <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full" preserveAspectRatio="none">
+        <path d="M0 40 L0 20 Q360 0 720 20 Q1080 40 1440 20 L1440 40 Z" class="fill-warm-white dark:fill-[#0F1824]"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       PROGRAMME TABS — by grade level
+  ══════════════════════════════════════════════════ -->
+  <section id="programmes" class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-24">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center mb-14">
+        <div class="inline-flex items-center justify-center gap-2.5 font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">
+          <span class="w-6 h-px bg-gold"></span>Programmes by Grade<span class="w-6 h-px bg-gold"></span>
+        </div>
+        <h2 class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-navy dark:text-gold-light leading-snug">Learning at Every Stage</h2>
+        <div class="w-16 h-[3px] bg-gold-maroon mx-auto mt-5 mb-4"></div>
+        <p class="font-cormorant text-[18px] text-[#4A4A4A] dark:text-[#C8D4E0] max-w-xl mx-auto">Each stage of learning is purposefully designed to meet scholars where they are and take them further than they imagined.</p>
+      </div>
+
+      <!-- Tab buttons -->
+      <div class="flex flex-wrap justify-center gap-3 mb-12" id="progTabs">
+        <button data-tab="preschool" class="prog-tab active font-cinzel text-[11px] font-semibold tracking-widest uppercase px-6 py-3 rounded-sm border border-navy/20 dark:border-gold/20 text-navy dark:text-[#C8D4E0] hover:border-navy dark:hover:border-gold">🌱 Pre-School</button>
+        <button data-tab="primary"   class="prog-tab font-cinzel text-[11px] font-semibold tracking-widest uppercase px-6 py-3 rounded-sm border border-navy/20 dark:border-gold/20 text-navy dark:text-[#C8D4E0] hover:border-navy dark:hover:border-gold">📚 Primary</button>
+        <button data-tab="jss"       class="prog-tab font-cinzel text-[11px] font-semibold tracking-widest uppercase px-6 py-3 rounded-sm border border-navy/20 dark:border-gold/20 text-navy dark:text-[#C8D4E0] hover:border-navy dark:hover:border-gold">🎓 Junior Secondary</button>
+        <button data-tab="sss"       class="prog-tab font-cinzel text-[11px] font-semibold tracking-widest uppercase px-6 py-3 rounded-sm border border-navy/20 dark:border-gold/20 text-navy dark:text-[#C8D4E0] hover:border-navy dark:hover:border-gold">🏅 Senior Secondary</button>
+      </div>
+
+      <!-- Tab panels -->
+      <div id="progPanels">
+
+        <!-- PRE-SCHOOL -->
+        <div id="panel-preschool" class="prog-panel active">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div class="reveal-left">
+              <div class="w-full aspect-[4/3] rounded-sm bg-gradient-to-br from-gold/20 to-maroon/10 dark:from-navy dark:to-[#243558] flex items-center justify-center text-[80px] min-h-[260px]">🌱</div>
             </div>
-            <!--Mobile Menu Button-->
-            <section id="mobile-menu" class="sm:hidden hidden">
-                <button id="hambuger-button2" class="text-6xl hidden self-end p-6 m-6">
-                    &times;
-                </button>
-                <nav class="pt-2 pb-3 space-y-1 ">
-                    <a href="about.html"
-                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">About
-                        Us</a>
-                    <a href="academics.html"
-                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Academics</a>
-                    <a href="#"
-                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Admissions</a>
-                    <a href="#School Life"
-                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">School
-                        Life</a>
-                    <a href="#News And Events"
-                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">News
-                        and Events</a>
-                    <a href="#Gallery"
-                        class="hover:text-amber-500 transition border-transparent hover:bg-gray-50 hover:border-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Gallery</a>
-                </nav>
-            </section>
-        </div>
-    </nav>
-
-
-
-    <!-- Hero Section -->
-    <section class="relative py-20 bg-amber-700 bg-opacity-90 text-white overflow-hidden">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0 opacity-10">
-            <svg class="w-full h-full text-gray-600" viewBox="0 0 100 100" fill="none">
-                <defs>
-                    <pattern id="academic-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                        <circle cx="10" cy="10" r="2" fill="currentColor" />
-                        <path d="M10 2L6 8h8l-4-6z" fill="currentColor" opacity="0.5" />
-                    </pattern>
-                </defs>
-                <rect width="100" height="100" fill="url(#academic-pattern)" />
-            </svg>
+            <div class="reveal-right space-y-5">
+              <div>
+                <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-1">Ages 2 – 5 · Nursery 1, 2 &amp; Reception</div>
+                <h3 class="font-playfair text-[28px] font-bold text-navy dark:text-gold-light mb-3">Pre-School Programme</h3>
+                <div class="w-12 h-[3px] bg-gold-maroon mb-4"></div>
+                <p class="font-cormorant text-[17px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0]">Our pre-school is a warm, stimulating haven where the youngest scholars discover the joy of learning through play, exploration, and creative expression. Every activity is intentionally designed to build early literacy, numeracy, social skills, and emotional intelligence.</p>
+              </div>
+              <div>
+                <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-3">Key Focus Areas</div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="subject-badge">🔤 Early Literacy</span>
+                  <span class="subject-badge">🔢 Numeracy</span>
+                  <span class="subject-badge">🎨 Creative Arts</span>
+                  <span class="subject-badge">🎵 Music & Rhyme</span>
+                  <span class="subject-badge">🧩 Problem Solving</span>
+                  <span class="subject-badge">🤸 Motor Skills</span>
+                  <span class="subject-badge">🌍 Environmental Studies</span>
+                  <span class="subject-badge">🙏 Moral Education</span>
+                </div>
+              </div>
+              <div class="grid grid-cols-3 gap-3 pt-2">
+                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
+                  <div class="font-cinzel text-[20px] font-bold text-gold">15</div>
+                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">Max Class Size</div>
+                </div>
+                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
+                  <div class="font-cinzel text-[20px] font-bold text-gold">7am</div>
+                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">School Opens</div>
+                </div>
+                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
+                  <div class="font-cinzel text-[20px] font-bold text-gold">2pm</div>
+                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">Half Day Option</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- PRIMARY -->
+        <div id="panel-primary" class="prog-panel">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div class="reveal-left">
+              <div class="w-full aspect-[4/3] rounded-sm bg-gradient-to-br from-navy/80 to-maroon/40 dark:from-[#0d1a30] dark:to-[#3a1020] flex items-center justify-center text-[80px] min-h-[260px]">📚</div>
+            </div>
+            <div class="reveal-right space-y-5">
+              <div>
+                <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-1">Ages 6 – 11 · Primary 1 – 6</div>
+                <h3 class="font-playfair text-[28px] font-bold text-navy dark:text-gold-light mb-3">Primary School Programme</h3>
+                <div class="w-12 h-[3px] bg-gold-maroon mb-4"></div>
+                <p class="font-cormorant text-[17px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0]">Our primary programme blends rigorous academics with vibrant co-curricular activities. Scholars develop strong foundations in literacy and numeracy while growing in confidence, curiosity, and character through a broad and balanced curriculum aligned with national standards.</p>
+              </div>
+              <div>
+                <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-3">Core Subjects</div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="subject-badge">📖 English Language</span>
+                  <span class="subject-badge">➗ Mathematics</span>
+                  <span class="subject-badge">🔬 Basic Science</span>
+                  <span class="subject-badge">🌍 Social Studies</span>
+                  <span class="subject-badge">💻 ICT</span>
+                  <span class="subject-badge">🎨 Fine Art</span>
+                  <span class="subject-badge">🤸 Physical Education</span>
+                  <span class="subject-badge">🙏 CRS / Islamic Studies</span>
+                  <span class="subject-badge">🗣️ Hausa / French</span>
+                </div>
+              </div>
+              <div class="grid grid-cols-3 gap-3 pt-2">
+                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
+                  <div class="font-cinzel text-[20px] font-bold text-gold">25</div>
+                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">Max Class Size</div>
+                </div>
+                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
+                  <div class="font-cinzel text-[20px] font-bold text-gold">6</div>
+                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">Year Groups</div>
+                </div>
+                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
+                  <div class="font-cinzel text-[20px] font-bold text-gold">BECE</div>
+                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">Exit Assessment</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- JSS -->
+        <div id="panel-jss" class="prog-panel">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div class="reveal-left">
+              <div class="w-full aspect-[4/3] rounded-sm bg-gradient-to-br from-maroon/60 to-navy dark:from-[#3a1020] dark:to-[#0d1a30] flex items-center justify-center text-[80px] min-h-[260px]">🎓</div>
+            </div>
+            <div class="reveal-right space-y-5">
+              <div>
+                <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-1">Ages 12 – 14 · JSS 1 – 3</div>
+                <h3 class="font-playfair text-[28px] font-bold text-navy dark:text-gold-light mb-3">Junior Secondary Programme</h3>
+                <div class="w-12 h-[3px] bg-gold-maroon mb-4"></div>
+                <p class="font-cormorant text-[17px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0]">The Junior Secondary programme prepares scholars for the intellectual rigour of senior school through an expanded subject range, project-based learning, and independent study skills. Students sit the Junior WAEC (BECE) at the end of JSS3, paving the way for senior secondary placement.</p>
+              </div>
+              <div>
+                <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-3">Subjects Offered</div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="subject-badge">📖 English</span>
+                  <span class="subject-badge">➗ Mathematics</span>
+                  <span class="subject-badge">🔬 Integrated Science</span>
+                  <span class="subject-badge">🌍 Social Studies</span>
+                  <span class="subject-badge">📜 History</span>
+                  <span class="subject-badge">🏛️ Civic Education</span>
+                  <span class="subject-badge">💻 Computer Studies</span>
+                  <span class="subject-badge">🔧 Basic Tech</span>
+                  <span class="subject-badge">🎨 Fine Art</span>
+                  <span class="subject-badge">🗣️ French / Hausa</span>
+                </div>
+              </div>
+              <div class="grid grid-cols-3 gap-3 pt-2">
+                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
+                  <div class="font-cinzel text-[20px] font-bold text-gold">30</div>
+                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">Max Class Size</div>
+                </div>
+                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
+                  <div class="font-cinzel text-[20px] font-bold text-gold">3</div>
+                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">Year Groups</div>
+                </div>
+                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
+                  <div class="font-cinzel text-[20px] font-bold text-gold">BECE</div>
+                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">Exit Exam</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SSS -->
+        <div id="panel-sss" class="prog-panel">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div class="reveal-left">
+              <div class="w-full aspect-[4/3] rounded-sm bg-gradient-to-br from-gold/30 to-navy dark:from-[#2a1f00] dark:to-[#0d1a30] flex items-center justify-center text-[80px] min-h-[260px]">🏅</div>
+            </div>
+            <div class="reveal-right space-y-5">
+              <div>
+                <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-1">Ages 15 – 17 · SSS 1 – 3</div>
+                <h3 class="font-playfair text-[28px] font-bold text-navy dark:text-gold-light mb-3">Senior Secondary Programme</h3>
+                <div class="w-12 h-[3px] bg-gold-maroon mb-4"></div>
+                <p class="font-cormorant text-[17px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0]">Our Senior Secondary programme offers three specialist tracks — Science, Arts &amp; Humanities, and Commercial — each preparing scholars for WAEC and NECO examinations, university entrance, and purposeful adult life. Class sizes are kept deliberately small to maximise teacher attention.</p>
+              </div>
+              <div class="space-y-3">
+                <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-2">Specialist Tracks</div>
+                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4">
+                  <div class="font-cinzel text-[11px] font-bold tracking-wide text-navy dark:text-gold-light mb-2">🔬 Science Track</div>
+                  <div class="flex flex-wrap gap-1.5">
+                    <span class="subject-badge">Physics</span><span class="subject-badge">Chemistry</span><span class="subject-badge">Biology</span><span class="subject-badge">Further Maths</span><span class="subject-badge">Agricultural Sci.</span>
+                  </div>
+                </div>
+                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4">
+                  <div class="font-cinzel text-[11px] font-bold tracking-wide text-navy dark:text-gold-light mb-2">📜 Arts &amp; Humanities</div>
+                  <div class="flex flex-wrap gap-1.5">
+                    <span class="subject-badge">Literature</span><span class="subject-badge">History</span><span class="subject-badge">Government</span><span class="subject-badge">French</span><span class="subject-badge">Fine Art</span>
+                  </div>
+                </div>
+                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4">
+                  <div class="font-cinzel text-[11px] font-bold tracking-wide text-navy dark:text-gold-light mb-2">💼 Commercial Track</div>
+                  <div class="flex flex-wrap gap-1.5">
+                    <span class="subject-badge">Economics</span><span class="subject-badge">Accounting</span><span class="subject-badge">Commerce</span><span class="subject-badge">Business Studies</span>
+                  </div>
+                </div>
+              </div>
+              <div class="grid grid-cols-3 gap-3 pt-1">
+                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
+                  <div class="font-cinzel text-[20px] font-bold text-gold">25</div>
+                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">Max Class Size</div>
+                </div>
+                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
+                  <div class="font-cinzel text-[20px] font-bold text-gold">3</div>
+                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">Specialist Tracks</div>
+                </div>
+                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
+                  <div class="font-cinzel text-[20px] font-bold text-gold">WAEC</div>
+                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">/ NECO Exit</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end progPanels -->
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       CURRICULUM APPROACH
+  ══════════════════════════════════════════════════ -->
+  <section class="relative bg-navy dark:bg-[#080E18] px-5 sm:px-10 lg:px-20 py-24 overflow-hidden">
+    <div class="absolute inset-0 diag-pattern pointer-events-none"></div>
+    <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 75% 50%, rgba(196,154,44,0.07) 0%, transparent 60%);"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center justify-center gap-2.5 font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">
+          <span class="w-6 h-px bg-gold"></span>Our Approach<span class="w-6 h-px bg-gold"></span>
+        </div>
+        <h2 class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-white leading-snug">How We Teach</h2>
+        <div class="w-16 h-[3px] bg-gold-maroon mx-auto mt-5"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="reveal bg-white/5 border border-gold/15 rounded-sm p-8 transition-all duration-300 hover:bg-white/[0.08] hover:border-gold">
+          <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center text-[22px] mb-5">🧠</div>
+          <div class="font-cinzel text-[12.5px] font-semibold tracking-wide text-gold mb-3">Inquiry-Based Learning</div>
+          <p class="text-[14px] leading-[1.75] text-white/60">Scholars are taught to ask questions, investigate problems, and draw conclusions — building genuine understanding rather than rote memorisation.</p>
+        </div>
+        <div class="reveal bg-white/5 border border-gold/15 rounded-sm p-8 transition-all duration-300 hover:bg-white/[0.08] hover:border-gold">
+          <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center text-[22px] mb-5">👥</div>
+          <div class="font-cinzel text-[12.5px] font-semibold tracking-wide text-gold mb-3">Collaborative Classrooms</div>
+          <p class="text-[14px] leading-[1.75] text-white/60">Small class sizes and group-based projects develop communication, teamwork, and leadership skills alongside academic knowledge.</p>
+        </div>
+        <div class="reveal bg-white/5 border border-gold/15 rounded-sm p-8 transition-all duration-300 hover:bg-white/[0.08] hover:border-gold">
+          <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center text-[22px] mb-5">💻</div>
+          <div class="font-cinzel text-[12.5px] font-semibold tracking-wide text-gold mb-3">Technology Integration</div>
+          <p class="text-[14px] leading-[1.75] text-white/60">Our modern computer lab and in-class digital resources ensure scholars are confident, responsible, and skilled digital citizens.</p>
+        </div>
+        <div class="reveal bg-white/5 border border-gold/15 rounded-sm p-8 transition-all duration-300 hover:bg-white/[0.08] hover:border-gold">
+          <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center text-[22px] mb-5">📊</div>
+          <div class="font-cinzel text-[12.5px] font-semibold tracking-wide text-gold mb-3">Continuous Assessment</div>
+          <p class="text-[14px] leading-[1.75] text-white/60">Regular formative assessments, termly reports, and parent conferences ensure every scholar's progress is tracked, celebrated, and supported.</p>
+        </div>
+        <div class="reveal bg-white/5 border border-gold/15 rounded-sm p-8 transition-all duration-300 hover:bg-white/[0.08] hover:border-gold">
+          <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center text-[22px] mb-5">🌱</div>
+          <div class="font-cinzel text-[12.5px] font-semibold tracking-wide text-gold mb-3">Differentiated Instruction</div>
+          <p class="text-[14px] leading-[1.75] text-white/60">Teachers are trained to adapt their methods to diverse learning styles and abilities, ensuring no scholar is left behind or unchallenged.</p>
+        </div>
+        <div class="reveal bg-white/5 border border-gold/15 rounded-sm p-8 transition-all duration-300 hover:bg-white/[0.08] hover:border-gold">
+          <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center text-[22px] mb-5">🏆</div>
+          <div class="font-cinzel text-[12.5px] font-semibold tracking-wide text-gold mb-3">Excellence & Recognition</div>
+          <p class="text-[14px] leading-[1.75] text-white/60">From termly honour rolls to annual awards, we celebrate academic achievement and positive character as equally worthy of recognition.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       ACADEMIC CALENDAR
+  ══════════════════════════════════════════════════ -->
+  <section class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-24">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-16 items-start">
+
+        <!-- Left -->
+        <div class="reveal-left">
+          <div class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">2025 / 2026 School Year</div>
+          <h2 class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-navy dark:text-gold-light leading-snug mb-4">Academic Calendar</h2>
+          <div class="w-16 h-[3px] bg-gold-maroon mb-6"></div>
+          <p class="font-cormorant text-[18px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] mb-8">Our academic year is divided into three terms. Each term is a full and enriching experience with a balance of rigorous study, assessments, co-curricular activities, and community events.</p>
+
+          <div class="space-y-4">
+            <!-- Term summary cards -->
+            <div class="bg-white dark:bg-[#1A2840] border border-gold/20 rounded-sm p-5 flex items-center gap-4 hover:shadow-[0_4px_20px_rgba(196,154,44,0.12)] transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-maroon flex items-center justify-center font-cinzel text-white font-bold text-[13px] flex-shrink-0">T1</div>
+              <div>
+                <div class="font-cinzel text-[11px] font-bold tracking-wide text-navy dark:text-gold-light">First Term</div>
+                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">September – December 2025</div>
+                <div class="text-[11px] text-gold mt-0.5">14 Weeks · Resumes 8 Sep</div>
+              </div>
+            </div>
+            <div class="bg-white dark:bg-[#1A2840] border border-gold/20 rounded-sm p-5 flex items-center gap-4 hover:shadow-[0_4px_20px_rgba(196,154,44,0.12)] transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-navy flex items-center justify-center font-cinzel text-white font-bold text-[13px] flex-shrink-0">T2</div>
+              <div>
+                <div class="font-cinzel text-[11px] font-bold tracking-wide text-navy dark:text-gold-light">Second Term</div>
+                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">January – April 2026</div>
+                <div class="text-[11px] text-gold mt-0.5">13 Weeks · Resumes 12 Jan</div>
+              </div>
+            </div>
+            <div class="bg-white dark:bg-[#1A2840] border border-gold/20 rounded-sm p-5 flex items-center gap-4 hover:shadow-[0_4px_20px_rgba(196,154,44,0.12)] transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-gold flex items-center justify-center font-cinzel text-navy font-bold text-[13px] flex-shrink-0">T3</div>
+              <div>
+                <div class="font-cinzel text-[11px] font-bold tracking-wide text-navy dark:text-gold-light">Third Term</div>
+                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">May – July 2026</div>
+                <div class="text-[11px] text-gold mt-0.5">11 Weeks · Resumes 4 May</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: detailed events table -->
+        <div class="reveal-right">
+          <div class="bg-white dark:bg-[#1A2840] border border-gold/20 rounded-sm overflow-hidden">
+            <div class="bg-navy dark:bg-[#0d1a30] px-6 py-4 flex items-center justify-between">
+              <div class="font-cinzel text-[13px] font-semibold tracking-wide text-white">Key Dates &amp; Events</div>
+              <div class="font-lato text-[10px] tracking-widest uppercase text-gold">2025 – 2026</div>
+            </div>
+
+            <div class="divide-y divide-gold/10">
+              <!-- Row -->
+              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
+                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">8 Sep 2025</div>
+                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">First Term Resumes</div>
+              </div>
+              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
+                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">17 Oct 2025</div>
+                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">First Term Mid-Term Break</div>
+              </div>
+              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
+                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">24 Oct 2025</div>
+                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Mid-Term Break Ends</div>
+              </div>
+              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
+                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">14 Nov 2025</div>
+                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">First Term Examinations Begin</div>
+              </div>
+              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
+                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">5 Dec 2025</div>
+                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Prize-Giving &amp; Carol Service</div>
+              </div>
+              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
+                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">12 Dec 2025</div>
+                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">First Term Closes</div>
+              </div>
+              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
+                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">12 Jan 2026</div>
+                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Second Term Resumes</div>
+              </div>
+              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
+                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">14 Feb 2026</div>
+                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Founder's Day Celebration</div>
+              </div>
+              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
+                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">20 Feb 2026</div>
+                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Second Term Mid-Term Break</div>
+              </div>
+              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
+                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">14 Mar 2026</div>
+                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Sports Day</div>
+              </div>
+              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
+                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">3 Apr 2026</div>
+                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Second Term Closes</div>
+              </div>
+              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
+                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">4 May 2026</div>
+                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Third Term Resumes</div>
+              </div>
+              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
+                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">Jun 2026</div>
+                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">WAEC / NECO Examinations</div>
+              </div>
+              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
+                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">17 Jul 2026</div>
+                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Graduation &amp; Closing Ceremony</div>
+              </div>
+            </div>
+
+            <div class="px-6 py-4 bg-gold/8 dark:bg-gold/5 border-t border-gold/20">
+              <a href="#" class="inline-flex items-center gap-2 text-gold hover:text-gold-dark font-lato text-[12px] font-bold tracking-wide uppercase transition-colors no-underline">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download Full Calendar (PDF)
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       DOWNLOADABLE PROSPECTUS
+  ══════════════════════════════════════════════════ -->
+  <section id="prospectus" class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-24">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal bg-gradient-to-br from-navy to-[#243558] dark:from-[#080E18] dark:to-[#0d1a30] border border-gold/25 rounded-sm overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-0">
+
+          <!-- Left content -->
+          <div class="p-10 lg:p-14">
+            <div class="flex items-center gap-3 mb-5">
+              <span class="w-8 h-px bg-gold flex-shrink-0"></span>
+              <span class="font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold">School Prospectus</span>
+            </div>
+            <h2 class="font-playfair text-[clamp(24px,3vw,38px)] font-bold text-white leading-snug mb-4">
+              Everything You Need<br>to Know About SSA
+            </h2>
+            <p class="font-cormorant text-[18px] leading-relaxed text-white/70 max-w-lg mb-8">
+              Our comprehensive prospectus covers every aspect of school life — academic programmes, fees structure, admission requirements, pastoral care, extra-curricular activities, and more.
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10">
+              <div class="bg-white/5 border border-gold/15 rounded-sm p-3 text-center">
+                <div class="text-[22px] mb-1">📋</div>
+                <div class="font-lato text-[10px] tracking-widest uppercase text-white/60">Programmes</div>
+              </div>
+              <div class="bg-white/5 border border-gold/15 rounded-sm p-3 text-center">
+                <div class="text-[22px] mb-1">💰</div>
+                <div class="font-lato text-[10px] tracking-widest uppercase text-white/60">Fees Guide</div>
+              </div>
+              <div class="bg-white/5 border border-gold/15 rounded-sm p-3 text-center">
+                <div class="text-[22px] mb-1">🏫</div>
+                <div class="font-lato text-[10px] tracking-widest uppercase text-white/60">Facilities</div>
+              </div>
+              <div class="bg-white/5 border border-gold/15 rounded-sm p-3 text-center">
+                <div class="text-[22px] mb-1">📅</div>
+                <div class="font-lato text-[10px] tracking-widest uppercase text-white/60">Calendar</div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-3">
+              <a href="#" class="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy font-lato text-[13px] font-bold tracking-widest uppercase px-8 py-4 rounded-sm transition-all duration-200 hover:-translate-y-0.5 no-underline">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download Prospectus
+              </a>
+              <a href="#" class="inline-flex items-center gap-2 border border-white/30 hover:border-gold hover:text-gold text-white font-lato text-[13px] font-bold tracking-widest uppercase px-8 py-4 rounded-sm transition-all duration-200 no-underline">
+                Request by Email
+              </a>
+            </div>
+          </div>
+
+          <!-- Right decorative -->
+          <div class="hidden lg:flex items-center justify-center bg-white/[0.03] border-l border-gold/15 px-16 py-12">
             <div class="text-center">
-                <h1 class="text-7xl font-headline font-semibold mb-6 animate-slide-up ">
-                    Academic Excellence
-                    <span class="text-amber-400 text-5xl block">That Inspires Growth</span>
-                </h1>
-                <p class="text-body-lg text-white mb-8 max-w-3xl mx-auto animate-slide-up"
-                    style="animation-delay: 200ms;">
-                    Our comprehensive curriculum seamlessly blends the robust Nigerian curriculum with the
-                    internationally recognized British framework. This dynamic approach, combined with
-                    innovative teaching methods, ensures our students are uniquely prepared for success on
-                    both local and international stages, nurturing their talents while grounding them in
-                    global excellence. </p>
-
-                <!-- Quick Stats -->
-                <div class="grid md:grid-cols-3 gap-6 m-12 animate-slide-up" style="animation-delay: 400ms;">
-                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                        <div class="text-3xl font-serif  font-semibold text-amber-400 mb-2">100%</div>
-                        <div class="text-gray-300 text-body-sm">Overall Examination Pass Rate</div>
-                    </div>
-
-                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                        <div class="text-3xl font-serif  font-semibold text-amber-400 mb-2">15:1</div>
-                        <div class="text-gray-200 text-body-sm">Student-Teacher Ratio</div>
-                    </div>
-                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                        <div class="text-3xl font-serif  font-semibold text-amber-400 mb-2">5+</div>
-                        <div class="text-gray-200 text-body-sm">Extra Curiculum Activites</div>
-                    </div>
+              <div class="w-28 h-36 bg-white/10 border border-gold/30 rounded-sm mx-auto flex items-center justify-center mb-4 relative shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+                <span class="text-[52px]">📘</span>
+                <div class="absolute -top-2 -right-2 w-8 h-8 bg-gold rounded-full flex items-center justify-center">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1A2A4A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 </div>
+              </div>
+              <div class="font-cinzel text-[11px] tracking-widest uppercase text-white/50">SSA Prospectus</div>
+              <div class="font-lato text-[10px] text-gold mt-1">2025 / 2026 Edition</div>
             </div>
+          </div>
+
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Grade Level Programs -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-serif font-semibold text-yellow-600 mb-4">
-                    Programs by Grade Level
-                </h2>
-                <p class="text-body-lg text-text-secondary max-w-3xl mx-auto">
-                    Our carefully designed curriculum grows with your child, building foundational skills
-                    while fostering critical thinking, creativity, and character development at every stage.
-                </p>
-            </div>
-
-            <!-- Elementary School -->
-            <div class="space-y-8">
-                <div class="bg-gray-100 rounded-2xl shadow-card ">
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="flex items-center">
-                                <div class="bg-gray-200 p-3 rounded-lg mr-4">
-                                    <svg class="h-8 w-8 text-amber-600" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="text-4xl font-serif font-semibold text-amber-600"> Early
-                                        Childhood</h3>
-                                    <p class="text-text-secondary"> </p>
-                                </div>
-                            </div>
-                            <button class="text-amber-700 hover:text-primary-600 transition-micro"
-                                onclick="toggleSection('elementary')">
-                                <svg class="h-6 w-6 transform transition-gentle" id="elementary-icon" fill="none">
-                                </svg>
-                                <svg class="h-6 w-6 transform transition-gentle" id="elementary-icon" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </button>
-                        </div>
-
-                        <p class="text-gray-500 mb-6">
-                            At Stellar Scholars Academy, we believe the early years are the most critical window for
-                            fostering a lifelong love of discovery. Our Early Stages program is
-                            designed to transform natural curiosity into a structured foundation for academic
-                            excellence.</br></br>
-
-                            <b class="text-gray-500">Our Philosophy: "Wonder Meet Wisdom"</b></br>
-                            We don't just teach children what to learn; we teach them how to explore. Our curriculum
-                            balances play-based discovery with the essential building blocks of literacy and numeracy.
-                            We create a "brave space" where mistakes are celebrated as milestones and every "why?" is
-                            met with an opportunity to find out.
-                        </p>
-
-                        <!-- Expandable Content -->
-                        <div id="elementary-content" class="hidden">
-                            <div
-                                class="grid md:grid-cols-2 text-body-lg gap-8 pt-6 border-t border-gray-400 border-border">
-                                <div>
-                                    <h4 class="font-cta font-semibold text-gray-600 mb-4">Curriculum
-                                        Highlights</h4>
-                                    <ul class="space-y-3 text-gray-400">
-                                        <li class="flex items-start ">
-                                            <svg class="h-5 w-5 text-red-900 mt-0.5 mr-3 flex-shrink-0"
-                                                fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd"
-                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                                    clip-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-gray-500">Phonics-based reading with guided literacy
-                                                groups</span>
-                                        </li>
-                                        <li class="flex items-start">
-                                            <svg class="h-5 w-5 text-red-900 mt-0.5 mr-3 flex-shrink-0"
-                                                fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd"
-                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                            <span class="text-gray-500"> Manipulative-based mathematics with
-                                                problem-solving focus</span>
-
-                                        </li>
-                                        <li class="flex items-start">
-                                            <svg class="h-5 w-5 text-red-900 mt-0.5 mr-3 flex-shrink-0"
-                                                fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd"
-                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                            <span class="text-gray-500"> Inquiry-based science with hands-on
-                                                experiments</span>
-
-                                        </li>
-                                        <li class="flex items-start">
-                                            <svg class="h-5 w-5 text-red-900 mt-0.5 mr-3 flex-shrink-0"
-                                                fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd"
-                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                            <span class="text-gray-500"> Social studies through community
-                                                connections</span>
-
-                                        </li>
-                                    </ul>
-                                    <div>
-                                        <h4 class="font-semibold text-primary mb-4">Sample Student Work</h4>
-                                        <div class="bg-white rounded-lg p-4 shadow-card">
-                                            <img src="imgs/facility (4).jpg" style="height: 300px; width: 600px;"
-                                                alt="Elementary student "
-                                                class="w-full h-32 object-cover rounded-lg mb-3"
-                                               />
-                                            <br>
-
-                                            <p class="text-body-sm text-text-secondary">Discovery starts here in our
-                                                Early Childhood Group! Our youngest learners embrace the joy of
-                                                exploration, building essential foundational skills and unleashing their
-                                                creative world. We nurture curiosity, foster confidence, and ensure
-                                                every child is ready for their next step, growing in knowledge and
-                                                character every day.</p>
-                                        </div>
-                                        <br>
-                                        <a href="#">
-                                            <button
-                                                class="bg-amber-400 xt-white px-6 py-2 rounded-lg font-medium hover:bg-amber-600 transition-micro">
-                                                Apply Now
-                                            </button>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Middle School -->
-                <div class="bg-gray-100 rounded-2xl shadow-card ">
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="flex items-center">
-                                <div class="bg-gray-200 p-3 rounded-lg mr-4">
-                                    <svg class="h-8 w-8 text-amber-600" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="text-4xl font-serif font-semibold text-amber-600">Primary
-                                        School</h3>
-                                    <p class=" text-text-secondary">
-                                        </p>
-                                </div>
-                            </div>
-                            <button class="text-secondary hover:text-secondary-600 transition-micro"
-                                onclick="toggleSection('middle')">
-                                <svg class="h-6 w-6 transform transition-gentle" id="middle-icon" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </button>
-                        </div>
-
-                        <p class="text-text-secondary mb-6">
-
-                        </p>
-
-                        <!-- Expandable Content -->
-                        <div id="middle-content" class="hidden">
-                            <div class="grid md:grid-cols-2 gap-8 pt-6 border-t border-border">
-                                <div>
-                                    <h4 class="font-cta font-semibold text-secondary mb-4">Advanced
-                                        Coursework</h4>
-                                    <ul class="space-y-3 text-text-secondary">
-                                        <li class="flex items-start">
-                                            <svg class="h-5 w-5 text-success mt-0.5 mr-3 flex-shrink-0"
-                                                fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd"
-                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                            Pre-Algebra and Algebra I for advanced students
-                                        </li>
-                                        <li class="flex items-start">
-                                            <svg class="h-5 w-5 text-success mt-0.5 mr-3 flex-shrink-0"
-                                                fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd"
-                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                            Literature circles with classic and contemporary texts
-                                        </li>
-                                        <li class="flex items-start">
-                                            <svg class="h-5 w-5 text-success mt-0.5 mr-3 flex-shrink-0"
-                                                fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd"
-                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                            Laboratory-based physical and life sciences
-                                        </li>
-                                        <li class="flex items-start">
-                                            <svg class="h-5 w-5 text-success mt-0.5 mr-3 flex-shrink-0"
-                                                fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd"
-                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                            World cultures and geography with global perspectives
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div>
-                                    <h4 class="font-cta font-semibold text-secondary mb-4">Learning Outcomes
-                                    </h4>
-                                    <div class="bg-white rounded-lg p-4 shadow-card">
-                                        <div class="mb-4">
-                                            <div class="flex justify-between items-center mb-2">
-                                                <span class="text-body-sm font-medium text-text-primary">Critical
-                                                    Thinking Skills</span>
-                                                <span class="text-body-sm text-secondary">94%</span>
-                                            </div>
-                                            <div class="w-full bg-border rounded-full h-2">
-                                                <div class="bg-secondary h-2 rounded-full" style="width: 94%"></div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-4">
-                                            <div class="flex justify-between items-center mb-2">
-                                                <span class="text-body-sm font-medium text-text-primary">Collaborative
-                                                    Projects</span>
-                                                <span class="text-body-sm text-secondary">91%</span>
-                                            </div>
-                                            <div class="w-full bg-border rounded-full h-2">
-                                                <div class="bg-secondary h-2 rounded-full" style="width: 91%"></div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="flex justify-between items-center mb-2">
-                                                <span class="text-body-sm font-medium text-text-primary">Leadership
-                                                    Development</span>
-                                                <span class="text-body-sm text-secondary">88%</span>
-                                            </div>
-                                            <div class="w-full bg-border rounded-full h-2">
-                                                <div class="bg-secondary h-2 rounded-full" style="width: 88%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-                <!-- High School -->
-                <div class="bg-surface rounded-2xl overflow-hidden shadow-card hover:shadow-hover transition-gentle">
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="flex items-center">
-                                <div class="bg-accent-100 p-3 rounded-lg mr-4">
-                                    <svg class="h-8 w-8 text-accent" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 14l9-5-9-5-9 5 9 5z" />
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="text-heading font-cta font-semibold text-accent">Middle &
-                                        High School</h3>
-                                    <p class="text-text-secondary"></p>
-                                </div>
-                            </div>
-                            <button class="text-accent hover:text-accent-600 transition-micro"
-                                onclick="toggleSection('high')">
-                                <svg class="h-6 w-6 transform transition-gentle" id="high-icon" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </button>
-                        </div>
-
-                        <p class="text-text-secondary mb-6">
-                            The Secondary Education division at Evergreen School is a holistic and rigorous
-                            environment intentionally designed to meet the unique developmental journey of
-                            the adolescent learner—from early adolescence through graduation. We are
-                            committed to nurturing the whole student, guiding them through identity
-                            formation, fostering intellectual curiosity, and developing the ethical
-                            character essential for future leadership. Our goal is to empower every student
-                            to pursue their path of learning, growing, and contributing as a world-class
-                            citizen.
-
-                            Our comprehensive curriculum blends the essential rigor of the Nigerian national
-                            curriculum with the globally recognized British framework, ensuring our students
-                            are prepared for success on both local and international stages. This dynamic
-                            academic foundation, featuring core subjects and varied electives, directly
-                            supports our Mission: To equip learners with essential skills through a
-                            Christ-centered, globally relevant education that fosters a passion for lifelong
-                            learning, ethical character, and innovation. Through our specialized advisory
-                            program, every student benefits from an adult advocate who provides continuous
-                            mentorship, navigating academic choices and emotional growth. By instilling
-                            these Christ-centered values and demanding excellence, the Secondary Division
-                            actively progresses toward our Vision: To be the top educational institution for
-                            developing world-class leaders who are rooted in Christ and skilled in all
-                            wisdom. </p>
-
-                        <!-- Expandable Content -->
-                        <div id="high-content" class="hidden">
-                            <div class="grid md:grid-cols-3 gap-6 pt-6 border-t border-border">
-                                <div>
-                                    <h4 class="font-cta font-semibold text-accent mb-4">AP Course Offerings
-                                    </h4>
-                                    <div class="space-y-2 text-body-sm text-text-secondary">
-                                        <div class="flex justify-between">
-                                            <span>AP Biology</span>
-                                            <span class="text-success">4.2 avg</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span>AP Calculus AB/BC</span>
-                                            <span class="text-success">4.1 avg</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span>AP English Literature</span>
-                                            <span class="text-success">4.3 avg</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span>AP US History</span>
-                                            <span class="text-success">4.0 avg</span>
-                                        </div>
-                                        <div class="text-accent text-body-sm mt-3">+ 43 more AP courses
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <h4 class="font-cta font-semibold text-accent mb-4">College Destinations
-                                    </h4>
-                                    <div class="space-y-2 text-body-sm text-text-secondary">
-                                        <div>Stanford University</div>
-                                        <div>Harvard University</div>
-                                        <div>UC Berkeley</div>
-                                        <div>MIT</div>
-                                        <div>Yale University</div>
-                                        <div>UCLA</div>
-                                        <div class="text-accent text-body-sm mt-3">Class of 2024: 147
-                                            graduates</div>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <h4 class="font-cta font-semibold text-accent mb-4">Graduation
-                                        Requirements</h4>
-                                    <div class="space-y-2 text-body-sm text-text-secondary">
-                                        <div class="flex justify-between">
-                                            <span>English</span>
-                                            <span>4 credits</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span>Mathematics</span>
-                                            <span>4 credits</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span>Science</span>
-                                            <span>3 credits</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span>Social Studies</span>
-                                            <span>3 credits</span>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <span>World Language</span>
-                                            <span>2 credits</span>
-                                        </div>
-                                        <div class="text-accent text-body-sm mt-3">Total: 24 credits minimum
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- ══════════════════════════════════════════════════
+       FAQ
+  ══════════════════════════════════════════════════ -->
+  <section class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-24">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-14">
+        <div class="inline-flex items-center justify-center gap-2.5 font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">
+          <span class="w-6 h-px bg-gold"></span>FAQs<span class="w-6 h-px bg-gold"></span>
         </div>
-    </section>
+        <h2 class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-navy dark:text-gold-light leading-snug">Frequently Asked Questions</h2>
+        <div class="w-16 h-[3px] bg-gold-maroon mx-auto mt-5 mb-4"></div>
+        <p class="font-cormorant text-[18px] text-[#4A4A4A] dark:text-[#C8D4E0]">Can't find your answer? <a href="#" class="text-gold hover:text-gold-dark no-underline font-semibold">Contact us directly.</a></p>
+      </div>
 
+      <div class="space-y-3" id="faqContainer">
 
-
-
-    <!-- Academic Calendar -->
-    <section class="py-20 bg-primary-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-display font-headline font-semibold text-primary mb-4">
-                    Academic Calendar 2025-2026
-                </h2>
-                <p class="text-body-lg text-text-secondary max-w-3xl mx-auto">
-                    Stay informed about important dates, assessment periods, and special events throughout
-                    the academic year.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Fall Semester -->
-                <div class="bg-white rounded-xl p-6 shadow-card">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-accent-100 p-2 rounded-lg mr-3">
-                            <svg class="h-6 w-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                        </div>
-                        <h3 class="font-cta font-semibold text-primary">Fall Semester</h3>
-                    </div>
-                    <div class="space-y-3 text-body-sm">
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">First Day</span>
-                            <span class="font-medium">Aug 28, 2024</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Midterms</span>
-                            <span class="font-medium">Oct 14-18</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Finals</span>
-                            <span class="font-medium">Nov 7-20</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Last Day</span>
-                            <span class="font-medium">Dec 12, 2025</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Spring Semester -->
-                <div class="bg-white rounded-xl p-6 shadow-card">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-success/20 p-2 rounded-lg mr-3">
-                            <svg class="h-6 w-6 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                        </div>
-                        <h3 class="font-cta font-semibold text-primary">Spring Semester</h3>
-                    </div>
-                    <div class="space-y-3 text-body-sm">
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">First Day</span>
-                            <span class="font-medium">Jan 8, 2026</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Midterms</span>
-                            <span class="font-medium">Mar 3-7</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Finals</span>
-                            <span class="font-medium">May 19-23</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Last Day</span>
-                            <span class="font-medium">May 23, 2026</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Special Events -->
-                <div class="bg-white rounded-xl p-6 shadow-card">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-primary-100 p-2 rounded-lg mr-3">
-                            <svg class="h-6 w-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                            </svg>
-                        </div>
-                        <h3 class="font-cta font-semibold text-primary">Special Events</h3>
-                    </div>
-                    <div class="space-y-3 text-body-sm">
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Science Fair</span>
-                            <span class="font-medium">Feb 15</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Spring Musical</span>
-                            <span class="font-medium">Mar 15-17</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Art Exhibition</span>
-                            <span class="font-medium">Apr 12</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Graduation</span>
-                            <span class="font-medium">May 30</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Assessment Periods -->
-                <div class="bg-white rounded-xl p-6 shadow-card">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-secondary-100 p-2 rounded-lg mr-3">
-                            <svg class="h-6 w-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                            </svg>
-                        </div>
-                        <h3 class="font-cta font-semibold text-primary">AP Exams</h3>
-                    </div>
-                    <div c lass="space-y-3 text-body-sm">
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Registration</span>
-                            <span class="font-medium">Nov 1-15</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Exam Period</span>
-                            <span class="font-medium">May 5-16</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Score Release</span>
-                            <span class="font-medium">July 5</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Late Testing</span>
-                            <span class="font-medium">May 20-22</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- FAQ Item -->
+        <div class="reveal faq-item bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer">
+            <span class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light">What curriculum does SSA follow?</span>
+            <span class="faq-icon text-gold text-[22px] font-light flex-shrink-0 leading-none">+</span>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="font-cormorant text-[16px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] pb-5">SSA follows the Nigerian National Curriculum as prescribed by the Federal Ministry of Education, enriched with our own pastoral programme, co-curricular activities, and character development modules. At the senior secondary level, scholars are prepared for WAEC and NECO external examinations.</p>
+          </div>
         </div>
-    </section>
 
-    <!-- Course Catalog Preview -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-display font-headline font-semibold text-primary mb-4">
-                    Course Catalog Overview
-                </h2>
-                <p class="text-body-lg text-text-secondary max-w-3xl mx-auto">
-                    Explore our comprehensive course offerings designed to challenge, inspire, and prepare
-                    students for their future academic and career goals.
-                </p>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Core Requirements -->
-                <div>
-                    <h3 class="text-heading font-cta font-semibold text-primary mb-8">Core Requirements</h3>
-                    <div class="space-y-6">
-                        <div class="border-l-4 border-primary pl-6">
-                            <h4 class="font-cta font-semibold text-primary mb-2">English Language Arts</h4>
-                            <p class="text-text-secondary text-body-sm mb-3">
-                                Comprehensive literacy program emphasizing critical reading, analytical
-                                writing, and effective communication.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-body-sm">Literature
-                                    Analysis</span>
-                                <span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-body-sm">Creative
-                                    Writing</span>
-                                <span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-body-sm">Public
-                                    Speaking</span>
-                            </div>
-                        </div>
-
-                        <div class="border-l-4 border-secondary pl-6">
-                            <h4 class="font-cta font-semibold text-secondary mb-2">Mathematics</h4>
-                            <p class="text-text-secondary text-body-sm mb-3">
-                                Sequential mathematics curriculum from foundational concepts through
-                                advanced calculus and statistics.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span
-                                    class="bg-secondary-100 text-secondary px-3 py-1 rounded-full text-body-sm">Algebra
-                                    I & II</span>
-                                <span
-                                    class="bg-secondary-100 text-secondary px-3 py-1 rounded-full text-body-sm">Geometry</span>
-                                <span
-                                    class="bg-secondary-100 text-secondary px-3 py-1 rounded-full text-body-sm">Calculus</span>
-                            </div>
-                        </div>
-
-                        <div class="border-l-4 border-accent pl-6">
-                            <h4 class="font-cta font-semibold text-accent mb-2">Sciences</h4>
-                            <p class="text-text-secondary text-body-sm mb-3">
-                                Laboratory-based science courses fostering inquiry, experimentation, and
-                                scientific reasoning.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span
-                                    class="bg-accent-100 text-accent px-3 py-1 rounded-full text-body-sm">Biology</span>
-                                <span
-                                    class="bg-accent-100 text-accent px-3 py-1 rounded-full text-body-sm">Chemistry</span>
-                                <span
-                                    class="bg-accent-100 text-accent px-3 py-1 rounded-full text-body-sm">Physics</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Electives & Specializations -->
-                <div>
-                    <h3 class="text-heading font-cta font-semibold text-primary mb-8">Electives &
-                        Specializations</h3>
-                    <div class="space-y-6">
-                        <div class="bg-surface rounded-lg p-6">
-                            <h4 class="font-cta font-semibold text-primary mb-3">World Languages</h4>
-                            <div class="grid grid-cols-2 gap-3 text-body-sm">
-                                <div class="flex items-center">
-                                    <svg class="h-4 w-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd"
-                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    French (I-V)
-                                </div>
-
-
-                                <div class="bg-surface rounded-lg p-6">
-                                    <h4 class="font-cta font-semibold text-primary mb-3">Fine Arts</h4>
-                                    <div class="grid grid-cols-2 gap-3 text-body-sm">
-                                        <div class="flex items-center">
-                                            <svg class="h-4 w-4 text-success mr-2" fill="currentColor"
-                                                viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd"
-                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                            Visual Arts
-                                        </div>
-                                        <div class="flex items-center">
-                                            <svg class="h-4 w-4 text-success mr-2" fill="currentColor"
-                                                viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd"
-                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                            Music Theory
-                                        </div>
-                                        <div class="flex items-center">
-                                            <svg class="h-4 w-4 text-success mr-2" fill="currentColor"
-                                                viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd"
-                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                            Theater Arts
-                                        </div>
-                                        <div class="flex items-center">
-                                            <svg class="h-4 w-4 text-success mr-2" fill="currentColor"
-                                                viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd"
-                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                            Digital Media
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="bg-surface rounded-lg p-6">
-                                    <h4 class="font-cta font-semibold text-primary mb-3">Career Pathways
-                                    </h4>
-                                    <div class="space-y-2 text-body-sm text-text-secondary">
-                                        <div>• Pre-Engineering Track</div>
-                                        <div>• Pre-Medical Sciences</div>
-                                        <div>• Business & Entrepreneurship</div>
-                                        <div>• Environmental Science</div>
-                                        <div>• Computer Science & AI</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Download Catalog CTA -->
-                    <div class="text-center mt-12">
-                        <a href="javascript:void(0)"
-                            class="bg-primary hover:bg-primary-600 text-white px-8 py-4 rounded-lg font-cta font-semibold text-body-lg transition-micro inline-flex items-center">
-                            Download Complete Course Catalog
-                            <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-    </section>
-
-    <!-- Academic Calendar -->
-    <section class="py-20 bg-primary-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-
-
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Fall Semester -->
-                <div class="bg-white rounded-xl p-6 shadow-card" style="height: 180px;">
-                    <div class="flex items-center mb-4"><img src="t.png" style="width: 900px;" height="700px">
-
-
-
-                    </div>
-                    <div class="space-y-3 text-body-sm">
-                        <div class="flex justify-between">
-
-                        </div>
-                        <div class="flex justify-between">
-
-                        </div>
-                        <div class="flex justify-between">
-
-                        </div>
-                        <div class="flex justify-between">
-
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <!-- Spring Semester -->
-                <div class="bg-white rounded-xl p-6 shadow-card" style="height: 180px;"> <img src="b.webp"
-                        style="width: 900px;" height="700px">
-                    <div class="flex items-center mb-4">
-
-                        <h3 class="font-cta font-semibold text-primary"></h3>
-                    </div>
-                    <div class="space-y-3 text-body-sm">
-                        <div class="flex justify-between">
-
-                        </div>
-                        <div class="flex justify-between">
-
-                        </div>
-                        <div class="flex justify-between">
-
-                        </div>
-                        <div class="flex justify-between">
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Special Events -->
-                <div class="bg-white rounded-xl p-6 shadow-card" style="height: 180px;"><img src="ra.png"
-                        style="width: 900px;" height="700px">
-                    <div class="flex items-center mb-4">
-
-
-                    </div>
-                    <div class="space-y-3 text-body-sm">
-                        <div class="flex justify-between">
-
-                        </div>
-                        <div class="flex justify-between">
-
-                        </div>
-                        <div class="flex justify-between">
-
-                        </div>
-                        <div class="flex justify-between">
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Assessment Periods -->
-                <div class="bg-white rounded-xl p-6 shadow-card" style="height: 180px;"><img src="cam.png"
-                        style="width: 900px;" height="700px">
-                    <div class="flex items-center mb-4">
-
-
-                    </div>
-                    <div class="space-y-3 text-body-sm">
-                        <div class="flex justify-between">
-
-                        </div>
-                        <div class="flex justify-between">
-
-                        </div>
-                        <div class="flex justify-between">
-
-                        </div>
-                        <div class="flex justify-between">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="reveal faq-item bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer">
+            <span class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light">How many pupils are in each class?</span>
+            <span class="faq-icon text-gold text-[22px] font-light flex-shrink-0 leading-none">+</span>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="font-cormorant text-[16px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] pb-5">We deliberately keep our class sizes small to maximise individual attention. Pre-school classes hold a maximum of 15 pupils, primary classes up to 25, and secondary classes between 25 and 30. This ensures every scholar receives the focus they deserve.</p>
+          </div>
         </div>
-    </section>
+
+        <div class="reveal faq-item bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer">
+            <span class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light">When are school reports issued?</span>
+            <span class="faq-icon text-gold text-[22px] font-light flex-shrink-0 leading-none">+</span>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="font-cormorant text-[16px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] pb-5">Comprehensive academic reports are issued at the end of every term alongside a parent-teacher conference opportunity. Continuous assessment scores are shared throughout the term, and parents can request progress meetings at any time through the school office.</p>
+          </div>
+        </div>
+
+        <div class="reveal faq-item bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer">
+            <span class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light">Does SSA offer extra-curricular activities?</span>
+            <span class="faq-icon text-gold text-[22px] font-light flex-shrink-0 leading-none">+</span>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="font-cormorant text-[16px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] pb-5">Absolutely. We offer a rich programme of clubs and activities including debating, chess, drama, music, visual arts, football, athletics, coding club, and more. Extra-curricular participation is encouraged as part of our commitment to holistic development.</p>
+          </div>
+        </div>
+
+        <div class="reveal faq-item bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer">
+            <span class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light">What are the school hours?</span>
+            <span class="faq-icon text-gold text-[22px] font-light flex-shrink-0 leading-none">+</span>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="font-cormorant text-[16px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] pb-5">The school gate opens at 7:00am. Formal lessons begin at 8:00am. Primary school closes at 2:00pm, while secondary school closes at 3:30pm. An after-school care programme is available until 5:30pm for an additional fee.</p>
+          </div>
+        </div>
+
+        <div class="reveal faq-item bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer">
+            <span class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light">Is there a school uniform?</span>
+            <span class="faq-icon text-gold text-[22px] font-light flex-shrink-0 leading-none">+</span>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="font-cormorant text-[16px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] pb-5">Yes. SSA scholars wear a distinctive white and maroon uniform that reflects our school colours and values of purity and purpose. Full uniform details, including sportswear, are available in our prospectus and from the school office upon enrolment.</p>
+          </div>
+        </div>
+
+        <div class="reveal faq-item bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden">
+          <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer">
+            <span class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light">How do I apply for a place?</span>
+            <span class="faq-icon text-gold text-[22px] font-light flex-shrink-0 leading-none">+</span>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="font-cormorant text-[16px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] pb-5">Applications can be made online via our Admissions page or by visiting the school office in person. You will need to complete the application form, submit the required documents, and attend an informal assessment session. We recommend applying early as places fill quickly.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       ADMISSIONS CTA
+  ══════════════════════════════════════════════════ -->
+  <section class="relative bg-maroon-navy text-center px-5 sm:px-10 lg:px-20 py-24 overflow-hidden">
+    <div class="admissions-pattern absolute inset-0 pointer-events-none"></div>
+    <div class="relative z-10 max-w-2xl mx-auto">
+      <div class="inline-flex items-center justify-center gap-2.5 font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">
+        <span class="w-6 h-px bg-gold"></span>Ready to Join?<span class="w-6 h-px bg-gold"></span>
+      </div>
+      <h2 class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-white leading-snug mb-4">Begin Your Scholar's Journey</h2>
+      <p class="font-cormorant text-[20px] text-white/75 leading-relaxed mb-10">Our admissions team is ready to guide your family every step of the way. Apply today or visit us to see SSA in action.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#" class="inline-block bg-gold hover:bg-gold-light text-navy font-lato text-[13px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all duration-200 hover:-translate-y-0.5 no-underline">Apply Now</a>
+        <a href="#" class="inline-block border border-white/50 hover:border-gold hover:text-gold text-white font-lato text-[13px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all duration-200 no-underline">Schedule a Visit</a>
+      </div>
+    </div>
+  </section>
+
+  <!--FOOTER-->
+  <footer class="bg-navy dark:bg-[#04080F] text-white/65 px-5 sm:px-10 lg:px-20 pt-20 pb-10">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-14">
+
+      <!-- Brand col -->
+      <div>
+        <div class="flex items-center gap-3 mb-5">
+          <div
+            class="w-11 h-11 rounded-full bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center font-cinzel text-[16px] font-bold text-white flex-shrink-0">
+            <img src="imgs/logo2.jpg" alt="Logo">
+          </div>
+          <div class="font-cinzel text-[13px] font-semibold tracking-wide text-white leading-tight">
+            STELLAR SCHOLARS ACADEMY
+            <span class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5">LUX ET PAX · EST. 2026</span>
+          </div>
+        </div>
+        <p class="text-[13px] leading-[1.7] text-white/50 mb-6">Excellence in Education &amp; Character. We nurture
+          scholars who lead with knowledge, integrity, and compassion.</p>
+        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2">
+          <span class="text-gold flex-shrink-0 mt-0.5"><svg width="16" height="16" fill="currentColor"
+              viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2c-4.4 0-8 3.6-8 8 0 5.4 7 11.5 7.3 11.8.2.1.5.2.7.2.2 0 .5-.1.7-.2.3-.3 7.3-6.4 7.3-11.8 0-4.4-3.6-8-8-8zm0 17.7c-2.1-2-6-6.3-6-9.7 0-3.3 2.7-6 6-6s6 2.7 6 6-3.9 7.7-6 9.7zM12 6c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
+                fill="#0D0D0D" />
+            </svg></span>
+          <span>Off Lagos - Ibadan Expy, Ojora Street, Orimerunmu, Sagamu 110113, Ogun State</span>
+        </div>
+        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2">
+          <span class="text-gold flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+              class="bi bi-telephone" viewBox="0 0 16 16">
+              <path
+                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+            </svg></span>
+          <span> 0706 737 4352</span>
+        </div>
+        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-6">
+          <span class="text-gold flex-shrink-0">✉️</span>
+          <span>info@stellarscholarsacademy.com</span>
+        </div>
+        <div class="flex gap-2.5">
+          <a href="#"
+            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[13px] font-bold transition-all duration-200 no-underline"><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook"
+              viewBox="0 0 16 16">
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+            </svg></a>
+          <a href="#"
+            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[13px] font-bold transition-all duration-200 no-underline"><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok"
+              viewBox="0 0 16 16">
+              <path
+                d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
+            </svg></a>
+          <a href="https://ng.linkedin.com/company/stellar-scholars-academy1"
+            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[11px] font-bold transition-all duration-200 no-underline"><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin"
+              viewBox="0 0 16 16">
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+            </svg></a>
+          <a href="https://www.instagram.com/stellarscholarsacademyikoyi/"
+            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center hover:text-navy text-[14px] transition-all duration-200 no-underline"><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+            </svg></a>
+        </div>
+      </div>
+
+      <!-- Links cols -->
+      <div>
+        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">About Us</div>
+        <ul class="list-none space-y-2.5">
+          <li><a href="about.html" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Our
+              Mission</a></li>
+          <li><a href="about.html"
+              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Leadership</a></li>
+          <li><a href="about.html" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">History</a>
+          </li>
+          <li><a href="about.html" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Awards</a>
+          </li>
+          <li><a href="about.html" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">Academics</div>
+        <ul class="list-none space-y-2.5">
+          <li><a href="academics.html"
+              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Pre-School</a></li>
+          <li><a href="academics.html" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Primary
+              School</a></li>
+          <li><a href="academics.html" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Secondary
+              School</a></li>
+          <li><a href="#"
+              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Admissions</a></li>
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Gallery</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">School Life</div>
+        <ul class="list-none space-y-2.5">
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Sports &amp;
+              Athletics</a></li>
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Arts &amp;
+              Culture</a></li>
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Clubs &amp;
+              Societies</a></li>
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Events
+              Calendar</a></li>
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Parent
+              Portal</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer bottom -->
+    <div
+      class="max-w-7xl mx-auto border-t border-white/8 pt-7 flex flex-col sm:flex-row justify-between items-center gap-3 text-[12px] text-white/35">
+      <span>© 2026 Stellar Scholars Academy. All rights reserved.</span>
+      <span>Powered by <a href="https://ticst.com.ng" target="_blank"
+          class="text-gold hover:text-gold-light transition-colors no-underline">TICST</a> &nbsp;·&nbsp; <a href="#"
+          class="text-gold hover:text-gold-light transition-colors no-underline">Privacy Policy</a> &nbsp;·&nbsp; <a
+          href="#" class="text-gold hover:text-gold-light transition-colors no-underline">Terms</a></span>
+    </div>
+  </footer>
+  
+  <!-- ══════════════════════════════════════════════════
+       JAVASCRIPT
+  ══════════════════════════════════════════════════ -->
+  <script>
+    // ── CTA Bar ─────────────────────────────
+    const ctaBar  = document.getElementById('ctaBar');
+    const navbar  = document.getElementById('navbar');
+    document.getElementById('closeCtaBar').addEventListener('click', () => {
+      ctaBar.classList.add('hidden');
+      navbar.style.top = '0px';
+    });
+    navbar.style.top = '36px';
+
+    // ── Dark / Light ─────────────────────────
+    const themeBtn = document.getElementById('themeBtn');
+    const html = document.documentElement;
+    const isDark = () => html.classList.contains('dark');
+    function applyTheme(dark) {
+      html.classList.toggle('dark', dark);
+      themeBtn.textContent = dark ? '🌙' : '☀️';
+      themeBtn.title = dark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    }
+    applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
+    themeBtn.addEventListener('click', () => applyTheme(!isDark()));
+
+    // ── Mobile Menu ──────────────────────────
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    // ── Programme Tabs ───────────────────────
+    const tabs   = document.querySelectorAll('.prog-tab');
+    const panels = document.querySelectorAll('.prog-panel');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        tabs.forEach(t => t.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        const panel = document.getElementById('panel-' + target);
+        if (panel) {
+          panel.classList.add('active');
+          // Re-trigger scroll reveal for newly shown panel
+          panel.querySelectorAll('.reveal-left, .reveal-right, .reveal').forEach(el => {
+            if (!el.classList.contains('visible')) {
+              setTimeout(() => el.classList.add('visible'), 80);
+            }
+          });
+        }
+      });
+    });
+
+    // ── FAQ Accordion ────────────────────────
+    document.querySelectorAll('.faq-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const item   = trigger.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon   = trigger.querySelector('.faq-icon');
+        const isOpen = answer.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+        document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('open'));
+
+        // Open clicked if it was closed
+        if (!isOpen) {
+          answer.classList.add('open');
+          icon.classList.add('open');
+        }
+      });
+    });
+
+    // ── Scroll Reveal ────────────────────────
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), Number(e.target.dataset.delay) || 0);
+          revealObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach((el, i) => {
+      el.dataset.delay = (i % 4) * 75;
+      revealObs.observe(el);
+    });
+
+    // ── Navbar shrink on scroll ──────────────
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('shadow-lg', window.scrollY > 40);
+    });
+  </script>
+</body>
+</html>
