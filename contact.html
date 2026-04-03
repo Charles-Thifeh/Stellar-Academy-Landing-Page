@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en" class="light scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Stellar Scholars Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500;600&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold:          '#C49A2C',
+            'gold-light':  '#E8C56A',
+            'gold-dark':   '#9A7A1E',
+            maroon:        '#7B1A2E',
+            'maroon-light':'#A02040',
+            navy:          '#1A2A4A',
+            'navy-light':  '#243558',
+            cream:         '#FAF6EE',
+            'warm-white':  '#FFFDF8',
+          },
+          fontFamily: {
+            playfair:  ['"Playfair Display"', 'serif'],
+            cormorant: ['"Cormorant Garamond"', 'serif'],
+            cinzel:    ['Cinzel', 'serif'],
+            lato:      ['Lato', 'sans-serif'],
+          },
+          backgroundImage: {
+            'gold-maroon':  'linear-gradient(to right, #C49A2C, #7B1A2E)',
+            'maroon-navy':  'linear-gradient(135deg, #7B1A2E 0%, #1A2A4A 100%)',
+            'hero-pattern': 'repeating-linear-gradient(45deg, rgba(196,154,44,0.04) 0, rgba(196,154,44,0.04) 1px, transparent 0, transparent 24px)',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%':   { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+          animation: {
+            'fade-up':   'fadeUp 0.7s ease both',
+            'fade-up-1': 'fadeUp 0.7s ease 0.1s both',
+            'fade-up-2': 'fadeUp 0.7s ease 0.2s both',
+            'fade-up-3': 'fadeUp 0.7s ease 0.3s both',
+            'fade-up-4': 'fadeUp 0.7s ease 0.4s both',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #f4f0e8; }
+    .dark ::-webkit-scrollbar-track { background: #0F1824; }
+    ::-webkit-scrollbar-thumb { background: #C49A2C; border-radius: 3px; }
+
+    .nav-link { position: relative; padding-bottom: 3px; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+      height: 2px; background: #C49A2C;
+      transform: scaleX(0); transition: transform 0.2s ease; border-radius: 1px;
+    }
+    .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
+
+    .section-label-line { position: relative; padding-left: 36px; }
+    .section-label-line::before {
+      content: ''; position: absolute; left: 0; top: 50%;
+      width: 24px; height: 1px; background: #C49A2C; transform: translateY(-50%);
+    }
+
+    .hover-bar { position: relative; overflow: hidden; }
+    .hover-bar::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(to right, #C49A2C, #7B1A2E);
+      transform: scaleX(0); transition: transform 0.3s ease;
+    }
+    .hover-bar:hover::before { transform: scaleX(1); }
+
+    .admissions-pattern {
+      background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 0, transparent 20px);
+    }
+    .diag-pattern {
+      background-image: repeating-linear-gradient(135deg, rgba(196,154,44,0.05) 0, rgba(196,154,44,0.05) 1px, transparent 0, transparent 28px);
+    }
+
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Form */
+    .form-input {
+      width: 100%;
+      background: white;
+      border: 1px solid rgba(196,154,44,0.25);
+      border-radius: 2px;
+      padding: 12px 16px;
+      font-family: 'Lato', sans-serif;
+      font-size: 14px;
+      color: #2A2A2A;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+    .dark .form-input {
+      background: #1A2A4A;
+      border-color: rgba(196,154,44,0.2);
+      color: #C8D4E0;
+    }
+    .form-input:focus {
+      border-color: #C49A2C;
+      box-shadow: 0 0 0 3px rgba(196,154,44,0.08);
+    }
+    .form-input::placeholder { color: #aaa; }
+    .dark .form-input::placeholder { color: #6A7A8A; }
+    select.form-input { cursor: pointer; }
+
+    /* Map container */
+    .map-container {
+      position: relative;
+      background: linear-gradient(135deg, #1A2A4A 0%, #243558 50%, #7B1A2E 100%);
+      overflow: hidden;
+    }
+    .map-container::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        repeating-linear-gradient(0deg, rgba(196,154,44,0.06) 0, rgba(196,154,44,0.06) 1px, transparent 0, transparent 40px),
+        repeating-linear-gradient(90deg, rgba(196,154,44,0.06) 0, rgba(196,154,44,0.06) 1px, transparent 0, transparent 40px);
+    }
+
+    /* Dept card active */
+    .dept-card { cursor: pointer; transition: all 0.2s; }
+    .dept-card.active { border-color: #C49A2C !important; background: rgba(196,154,44,0.06); }
+    .dept-card.active .dept-icon { background: #C49A2C; color: #1A2A4A; }
+
+    /* Office hours row */
+    .oh-row:hover { background: rgba(196,154,44,0.04); }
+    .dark .oh-row:hover { background: rgba(196,154,44,0.06); }
+  </style>
+</head>
+
+<body class="font-lato bg-warm-white dark:bg-[#0F1824] text-[#4A4A4A] dark:text-[#C8D4E0] overflow-x-hidden transition-colors duration-300">
+
+  <!-- ══════════════════ CTA BAR ══════════════════ -->
+  <div id="ctaBar" class="w-full bg-maroon dark:bg-[#3a0d1a] text-white text-xs font-lato font-bold tracking-widest uppercase">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <span class="flex items-center gap-2 text-gold-light">
+        <span>🕊️</span>
+        <span class="font-cinzel tracking-widest">2026/2027 Admissions Now Open</span>
+        <span>—</span>
+        <span class="text-white/80 font-normal normal-case tracking-normal font-lato text-xs">Secure your child's place today. Limited spaces available.</span>
+      </span>
+      <div class="flex items-center gap-3 flex-shrink-0">
+        <a href="ssa-admissions.html#apply" class="bg-gold hover:bg-gold-light text-navy font-bold text-[10px] px-4 py-1.5 rounded-sm tracking-widest uppercase transition-all hover:-translate-y-px">Apply Now</a>
+        <button id="closeCtaBar" class="text-white/50 hover:text-white transition-colors text-base leading-none">✕</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ NAVBAR ══════════════════ -->
+  <nav id="navbar" class="fixed left-0 right-0 z-50 bg-warm-white/95 dark:bg-[#0F1824]/97 backdrop-blur-md border-b border-gold/20 dark:border-gold/10 transition-all duration-300" style="top:36px">
+    <div class="max-w-7xl mx-auto px-5 lg:px-10 h-[72px] flex items-center justify-between gap-5">
+      <a href="index.html" class="flex items-center gap-3 flex-shrink-0 no-underline">
+        <svg width="46" height="54" viewBox="0 0 100 115" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+          <path d="M50 4 L94 22 L94 62 Q94 90 50 111 Q6 90 6 62 L6 22 Z" fill="white" stroke="#C49A2C" stroke-width="4"/>
+          <path d="M50 10 L88 26 L88 62 Q88 86 50 105 Q12 86 12 62 L12 26 Z" fill="none" stroke="#C49A2C" stroke-width="1.5" stroke-dasharray="2 1"/>
+          <text x="50" y="35" text-anchor="middle" font-size="13" fill="#C49A2C" font-family="serif">★ ★ ★</text>
+          <text x="50" y="52" text-anchor="middle" font-family="serif" font-size="6.5" fill="#1A2A4A" font-weight="bold" letter-spacing="1">STELLAR SCHOLARS</text>
+          <text x="50" y="63" text-anchor="middle" font-family="serif" font-size="8.5" fill="#1A2A4A" font-weight="bold">ACADEMY</text>
+          <path d="M35 80 Q42 74 50 77 Q58 74 65 80 Q70 86 65 91 Q58 95 50 93 Q42 95 35 91 Q30 86 35 80Z" fill="none" stroke="#C49A2C" stroke-width="1.2"/>
+          <path d="M35 80 Q30 75 32 71 Q37 67 41 71" fill="none" stroke="#C49A2C" stroke-width="1.2"/>
+          <text x="50" y="107" text-anchor="middle" font-family="serif" font-size="7" fill="#C49A2C" font-weight="bold">2026</text>
+        </svg>
+        <div class="font-cinzel text-[13px] font-semibold text-navy dark:text-gold-light leading-tight tracking-wide">
+          STELLAR SCHOLARS ACADEMY
+          <span class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5">LUX ET PAX · EST. 2026</span>
+        </div>
+      </a>
+
+      <ul class="hidden lg:flex items-center gap-7 list-none">
+        <li><a href="ssa-about.html"      class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">About Us</a></li>
+        <li><a href="ssa-academics.html"  class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">Academics</a></li>
+        <li><a href="ssa-admissions.html" class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">Admissions</a></li>
+        <li><a href="#"                   class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">School Life</a></li>
+        <li><a href="ssa-news.html"       class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">News</a></li>
+        <li><a href="ssa-gallery.html"    class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">Gallery</a></li>
+      </ul>
+
+      <div class="flex items-center gap-2.5 flex-shrink-0">
+        <a href="ssa-admissions.html#apply" class="hidden sm:inline-block bg-maroon hover:bg-maroon-light text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all hover:-translate-y-px no-underline">Enroll Now</a>
+        <a href="#"                         class="hidden sm:inline-block border border-gold text-gold hover:bg-gold hover:text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all no-underline">Book a Tour</a>
+        <button id="themeBtn" class="w-9 h-9 rounded-full bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-[15px] transition-all hover:border-gold hover:rotate-12 cursor-pointer flex-shrink-0">☀️</button>
+        <button id="mobileMenuBtn" class="lg:hidden w-9 h-9 rounded-sm bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-navy dark:text-gold transition-all hover:border-gold cursor-pointer flex-shrink-0">
+          <svg width="18" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="0" y1="1" x2="18" y2="1"/><line x1="0" y1="7" x2="18" y2="7"/><line x1="0" y1="13" x2="18" y2="13"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden lg:hidden bg-warm-white dark:bg-[#0F1824] border-t border-gold/20 px-5 py-4">
+      <ul class="flex flex-col gap-1 list-none mb-4">
+        <li><a href="ssa-about.html"      class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">About Us</a></li>
+        <li><a href="ssa-academics.html"  class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">Academics</a></li>
+        <li><a href="ssa-admissions.html" class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">Admissions</a></li>
+        <li><a href="#"                   class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">School Life</a></li>
+        <li><a href="ssa-news.html"       class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">News</a></li>
+        <li><a href="ssa-gallery.html"    class="block font-lato text-[13px] font-bold py-2.5 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">Gallery</a></li>
+      </ul>
+      <div class="flex gap-2.5">
+        <a href="ssa-admissions.html#apply" class="flex-1 text-center bg-maroon text-white text-[11px] font-bold font-lato tracking-widest uppercase px-4 py-2.5 rounded-sm no-underline">Enroll Now</a>
+        <a href="#"                         class="flex-1 text-center border border-gold text-gold text-[11px] font-bold font-lato tracking-widest uppercase px-4 py-2.5 rounded-sm no-underline">Book a Tour</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       PAGE HERO
+  ══════════════════════════════════════════ -->
+  <section class="bg-navy dark:bg-[#080E18] diag-pattern relative overflow-hidden" style="padding-top: calc(36px + 72px)">
+    <div class="absolute inset-0 bg-hero-pattern pointer-events-none opacity-60"></div>
+    <div class="absolute top-0 right-0 w-[450px] h-[450px] rounded-full bg-gradient-to-bl from-gold/8 to-transparent pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-gradient-to-tr from-maroon/20 to-transparent pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 py-20 lg:py-28">
+      <div class="max-w-2xl">
+        <div class="animate-fade-up flex items-center gap-2 mb-8 text-[11px] font-lato tracking-widest uppercase text-white/40">
+          <a href="index.html" class="hover:text-gold transition-colors no-underline text-white/40">Home</a>
+          <span class="text-gold/50">›</span>
+          <span class="text-gold">Contact Us</span>
+        </div>
+        <div class="animate-fade-up-1 section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">We're Here for You</div>
+        <h1 class="animate-fade-up-2 font-playfair font-bold text-white leading-tight mb-6" style="font-size:clamp(36px,4.5vw,56px)">
+          Get in Touch With<br><em class="italic text-gold-light">Our Team</em>
+        </h1>
+        <p class="animate-fade-up-3 font-cormorant text-[19px] text-white/65 leading-relaxed mb-10">
+          Whether you have a question about admissions, fees, academics, or just want to say hello — our team is ready to help. Reach us by phone, email, or in person.
+        </p>
+        <div class="animate-fade-up-4 flex flex-wrap gap-6">
+          <a href="tel:+2340355008800" class="flex items-center gap-2 text-gold-light hover:text-gold transition-colors no-underline font-lato text-[13px] font-bold">
+            <span class="text-xl">📞</span> (0) 0355 0088
+          </a>
+          <a href="mailto:info@stellarscholars.edu.ng" class="flex items-center gap-2 text-gold-light hover:text-gold transition-colors no-underline font-lato text-[13px] font-bold">
+            <span class="text-xl">✉️</span> info@stellarscholars.edu.ng
+          </a>
+          <span class="flex items-center gap-2 text-white/50 font-lato text-[13px]">
+            <span class="text-xl">🕐</span> Mon – Fri, 7:30 AM – 4:30 PM
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CONTACT FORM + INFO PANEL
+  ══════════════════════════════════════════ -->
+  <section id="contact" class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-24">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+
+      <!-- Left: info panel -->
+      <div class="lg:col-span-2 space-y-8 reveal">
+
+        <!-- Address card -->
+        <div class="hover-bar bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6">
+          <div class="flex items-start gap-4">
+            <div class="dept-icon w-11 h-11 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center text-xl flex-shrink-0 transition-all">📍</div>
+            <div>
+              <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-1">Our Location</div>
+              <p class="font-cormorant text-[17px] text-[#4A4A4A] dark:text-[#C8D4E0] leading-relaxed">003 Quarantine Dam Road,<br>Anguwan Tasha, Kaduna State,<br>Nigeria</p>
+              <a href="https://maps.google.com/?q=Anguwan+Tasha+Kaduna" target="_blank" class="inline-block mt-3 font-lato text-[11px] font-bold tracking-widest uppercase text-gold hover:text-gold-dark transition-colors no-underline">Get Directions →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone card -->
+        <div class="hover-bar bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6">
+          <div class="flex items-start gap-4">
+            <div class="dept-icon w-11 h-11 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center text-xl flex-shrink-0 transition-all">📞</div>
+            <div>
+              <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-2">Phone</div>
+              <div class="space-y-1.5">
+                <a href="tel:+2340355008800" class="block font-lato text-[14px] font-bold text-navy dark:text-gold-light hover:text-maroon dark:hover:text-gold transition-colors no-underline">(0) 0355 0088</a>
+                <a href="tel:+2348012345678" class="block font-lato text-[14px] text-[#5A5A5A] dark:text-[#A0B0C0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">0801 234 5678</a>
+                <a href="https://wa.me/2348012345678" target="_blank" class="inline-flex items-center gap-2 mt-2 bg-green-600/10 hover:bg-green-600/20 border border-green-600/25 text-green-700 dark:text-green-400 font-lato text-[11px] font-bold tracking-widest uppercase px-3 py-1.5 rounded-sm transition-all no-underline">
+                  💬 WhatsApp Us
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email card -->
+        <div class="hover-bar bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6">
+          <div class="flex items-start gap-4">
+            <div class="dept-icon w-11 h-11 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center text-xl flex-shrink-0 transition-all">✉️</div>
+            <div>
+              <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-2">Email</div>
+              <div class="space-y-1.5">
+                <a href="mailto:info@stellarscholars.edu.ng"       class="block font-lato text-[13px] text-navy dark:text-gold-light hover:text-maroon dark:hover:text-gold transition-colors no-underline">info@stellarscholars.edu.ng</a>
+                <a href="mailto:admissions@stellarscholars.edu.ng" class="block font-lato text-[13px] text-[#5A5A5A] dark:text-[#A0B0C0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">admissions@stellarscholars.edu.ng</a>
+                <a href="mailto:finance@stellarscholars.edu.ng"    class="block font-lato text-[13px] text-[#5A5A5A] dark:text-[#A0B0C0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">finance@stellarscholars.edu.ng</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social -->
+        <div class="bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6">
+          <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-4">Follow Us</div>
+          <div class="flex gap-3">
+            <a href="#" class="flex-1 flex items-center justify-center gap-1.5 bg-[#1877f2]/10 hover:bg-[#1877f2]/20 border border-[#1877f2]/20 text-[#1877f2] font-lato text-[11px] font-bold tracking-wide uppercase py-2.5 rounded-sm transition-all no-underline">f Facebook</a>
+            <a href="#" class="flex-1 flex items-center justify-center gap-1.5 bg-pink-500/10 hover:bg-pink-500/20 border border-pink-400/20 text-pink-600 dark:text-pink-300 font-lato text-[11px] font-bold tracking-wide uppercase py-2.5 rounded-sm transition-all no-underline">📷 Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: contact form -->
+      <div class="lg:col-span-3 reveal" data-delay="150">
+        <div class="bg-warm-white dark:bg-[#1A2A4A]/30 border border-gold/20 dark:border-gold/10 rounded-sm p-8 lg:p-10">
+          <div class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-2">Send Us a Message</div>
+          <h2 class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(22px,2.5vw,30px)] mb-7">How Can We Help?</h2>
+
+          <div id="contactForm" class="space-y-5">
+
+            <!-- Name + phone -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5">Full Name <span class="text-maroon">*</span></label>
+                <input type="text" id="cName" placeholder="Your full name" class="form-input" />
+              </div>
+              <div>
+                <label class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5">Phone Number</label>
+                <input type="tel" id="cPhone" placeholder="e.g. 0801 234 5678" class="form-input" />
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5">Email Address <span class="text-maroon">*</span></label>
+              <input type="email" id="cEmail" placeholder="your@email.com" class="form-input" />
+            </div>
+
+            <!-- Department -->
+            <div>
+              <label class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5">Department / Subject <span class="text-maroon">*</span></label>
+              <select id="cDept" class="form-input">
+                <option value="" disabled selected>Select a department</option>
+                <option>General Enquiry</option>
+                <option>Admissions</option>
+                <option>Finance & Fees</option>
+                <option>Academic Affairs</option>
+                <option>Student Welfare & Pastoral</option>
+                <option>Sports & Extra-Curricular</option>
+                <option>IT / Technical Support</option>
+                <option>Press & Media</option>
+              </select>
+            </div>
+
+            <!-- Message -->
+            <div>
+              <label class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5">Your Message <span class="text-maroon">*</span></label>
+              <textarea id="cMessage" rows="5" placeholder="Write your message here…" class="form-input resize-none"></textarea>
+            </div>
+
+            <!-- Submit -->
+            <div class="pt-1">
+              <button onclick="submitContact()" class="w-full bg-maroon hover:bg-maroon-light text-white font-lato text-[13px] font-bold tracking-widest uppercase py-4 rounded-sm transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(123,26,46,0.35)] cursor-pointer">
+                Send Message →
+              </button>
+              <p class="text-center font-cormorant text-[14px] text-[#9A9A9A] mt-3">We respond to all enquiries within 1–2 working days.</p>
+            </div>
+
+            <!-- Success -->
+            <div id="contactSuccess" class="hidden bg-gold/8 border border-gold/25 rounded-sm p-6 text-center">
+              <div class="text-3xl mb-2">✅</div>
+              <div class="font-cinzel text-[12px] tracking-widest uppercase text-gold mb-1">Message Received!</div>
+              <p class="font-cormorant text-[17px] text-[#4A4A4A] dark:text-[#C8D4E0]">Thank you for reaching out. A member of our team will be in touch within 1–2 working days.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       DEPARTMENT CONTACTS
+  ══════════════════════════════════════════ -->
+  <section id="departments" class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-24">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <div class="section-label-line inline-block font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">Reach the Right Team</div>
+        <h2 class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(24px,3vw,38px)] mb-4">Department Contacts</h2>
+        <div class="w-16 h-[3px] bg-gold-maroon mx-auto mb-5"></div>
+        <p class="font-cormorant text-[18px] text-[#5A5A5A] dark:text-[#A0B0C0] max-w-lg mx-auto">For faster assistance, contact the relevant department directly.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+        <div class="dept-card hover-bar bg-cream dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6 text-center hover:-translate-y-1 hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)] reveal">
+          <div class="dept-icon w-14 h-14 rounded-full bg-gold/15 border border-gold/25 flex items-center justify-center text-2xl mx-auto mb-4 transition-all">🎓</div>
+          <div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2">Admissions</div>
+          <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed mb-4">Enrolment enquiries, applications, assessments & open days.</p>
+          <a href="mailto:admissions@stellarscholars.edu.ng" class="block font-lato text-[12px] text-navy dark:text-gold-light hover:text-maroon dark:hover:text-gold transition-colors no-underline mb-1 break-all">admissions@<br>stellarscholars.edu.ng</a>
+          <a href="tel:+2348012345678" class="font-lato text-[12px] text-[#7A7A7A] dark:text-[#7A8A9A] hover:text-maroon transition-colors no-underline">0801 234 5678 ext. 1</a>
+        </div>
+
+        <div class="dept-card hover-bar bg-cream dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6 text-center hover:-translate-y-1 hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)] reveal" data-delay="80">
+          <div class="dept-icon w-14 h-14 rounded-full bg-gold/15 border border-gold/25 flex items-center justify-center text-2xl mx-auto mb-4 transition-all">💰</div>
+          <div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2">Finance</div>
+          <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed mb-4">School fees, payment plans, receipts & financial queries.</p>
+          <a href="mailto:finance@stellarscholars.edu.ng" class="block font-lato text-[12px] text-navy dark:text-gold-light hover:text-maroon dark:hover:text-gold transition-colors no-underline mb-1 break-all">finance@<br>stellarscholars.edu.ng</a>
+          <a href="tel:+2348012345678" class="font-lato text-[12px] text-[#7A7A7A] dark:text-[#7A8A9A] hover:text-maroon transition-colors no-underline">0801 234 5678 ext. 2</a>
+        </div>
+
+        <div class="dept-card hover-bar bg-cream dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6 text-center hover:-translate-y-1 hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)] reveal" data-delay="160">
+          <div class="dept-icon w-14 h-14 rounded-full bg-gold/15 border border-gold/25 flex items-center justify-center text-2xl mx-auto mb-4 transition-all">📚</div>
+          <div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2">Academic Affairs</div>
+          <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed mb-4">Results, timetables, curriculum queries & learning support.</p>
+          <a href="mailto:academics@stellarscholars.edu.ng" class="block font-lato text-[12px] text-navy dark:text-gold-light hover:text-maroon dark:hover:text-gold transition-colors no-underline mb-1 break-all">academics@<br>stellarscholars.edu.ng</a>
+          <a href="tel:+2348012345678" class="font-lato text-[12px] text-[#7A7A7A] dark:text-[#7A8A9A] hover:text-maroon transition-colors no-underline">0801 234 5678 ext. 3</a>
+        </div>
+
+        <div class="dept-card hover-bar bg-cream dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6 text-center hover:-translate-y-1 hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)] reveal" data-delay="240">
+          <div class="dept-icon w-14 h-14 rounded-full bg-gold/15 border border-gold/25 flex items-center justify-center text-2xl mx-auto mb-4 transition-all">🤝</div>
+          <div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2">Student Welfare</div>
+          <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed mb-4">Pastoral care, safeguarding, counselling & wellbeing support.</p>
+          <a href="mailto:welfare@stellarscholars.edu.ng" class="block font-lato text-[12px] text-navy dark:text-gold-light hover:text-maroon dark:hover:text-gold transition-colors no-underline mb-1 break-all">welfare@<br>stellarscholars.edu.ng</a>
+          <a href="tel:+2348012345678" class="font-lato text-[12px] text-[#7A7A7A] dark:text-[#7A8A9A] hover:text-maroon transition-colors no-underline">0801 234 5678 ext. 4</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       MAP + OFFICE HOURS
+  ══════════════════════════════════════════ -->
+  <section class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-24">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+      <!-- Map (styled placeholder — swap for real embed) -->
+      <div class="lg:col-span-2 reveal">
+        <div class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-5">Find Us</div>
+        <h2 class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(22px,2.5vw,30px)] mb-6">Our Location</h2>
+
+        <div class="map-container rounded-sm h-[380px] flex flex-col items-center justify-center relative">
+          <!-- Grid lines give a map feel -->
+          <!-- Pin -->
+          <div class="relative z-10 flex flex-col items-center">
+            <div class="w-16 h-16 rounded-full bg-maroon border-4 border-gold flex items-center justify-center text-3xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] mb-2">📍</div>
+            <div class="bg-navy/90 backdrop-blur-sm border border-gold/30 rounded-sm px-5 py-3 text-center shadow-xl">
+              <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-0.5">Stellar Scholars Academy</div>
+              <div class="font-cormorant text-[15px] text-white/75">003 Quarantine Dam Road, Anguwan Tasha</div>
+            </div>
+            <div class="mt-4 flex gap-3">
+              <a href="https://maps.google.com/?q=Anguwan+Tasha+Kaduna" target="_blank"
+                 class="bg-gold hover:bg-gold-light text-navy font-lato text-[11px] font-bold tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all no-underline">
+                Open in Google Maps
+              </a>
+              <a href="https://waze.com/ul?ll=10.52,7.44&navigate=yes" target="_blank"
+                 class="border border-white/30 hover:border-gold text-white hover:text-gold font-lato text-[11px] font-bold tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all no-underline">
+                Open in Waze
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Directions -->
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 rounded-sm p-4">
+            <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-2">🚗 By Car</div>
+            <p class="font-cormorant text-[15px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed">From Kaduna city centre, take the Barnawa Road heading south. Turn onto Quarantine Dam Road — the school gate is on your right, marked by the blue SSA signboard.</p>
+          </div>
+          <div class="bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 rounded-sm p-4">
+            <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-2">🚌 By Bus / Keke</div>
+            <p class="font-cormorant text-[15px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed">Board any bus or keke-napep heading to Anguwan Tasha from Barnawa Junction. Alight at Quarantine Dam bus stop — the school is a 3-minute walk.</p>
+          </div>
+          <div class="bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 rounded-sm p-4">
+            <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-2">🅿️ Parking</div>
+            <p class="font-cormorant text-[15px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed">Free parking is available within the school compound. Visitor parking is clearly signposted to the left of the main gate. Security will direct you on arrival.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Office Hours -->
+      <div class="reveal" data-delay="120">
+        <div class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-5">When to Visit</div>
+        <h2 class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(20px,2vw,26px)] mb-6">Office Hours</h2>
+
+        <div class="bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden mb-6">
+          <div class="bg-gold/10 border-b border-gold/15 px-5 py-3">
+            <div class="font-cinzel text-[10px] font-bold tracking-widest uppercase text-gold">Main Office</div>
+          </div>
+          <div class="divide-y divide-gold/10">
+            <div class="oh-row flex justify-between px-5 py-3 transition-colors">
+              <span class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Monday – Friday</span>
+              <span class="font-lato text-[13px] font-bold text-navy dark:text-gold-light">7:30 AM – 4:30 PM</span>
+            </div>
+            <div class="oh-row flex justify-between px-5 py-3 transition-colors">
+              <span class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Saturday</span>
+              <span class="font-lato text-[13px] font-bold text-navy dark:text-gold-light">9:00 AM – 12:00 PM</span>
+            </div>
+            <div class="oh-row flex justify-between px-5 py-3 transition-colors">
+              <span class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Sunday</span>
+              <span class="font-lato text-[13px] font-bold text-[#8A8A8A]">Closed</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden mb-6">
+          <div class="bg-gold/10 border-b border-gold/15 px-5 py-3">
+            <div class="font-cinzel text-[10px] font-bold tracking-widest uppercase text-gold">Admissions Office</div>
+          </div>
+          <div class="divide-y divide-gold/10">
+            <div class="oh-row flex justify-between px-5 py-3 transition-colors">
+              <span class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Monday – Friday</span>
+              <span class="font-lato text-[13px] font-bold text-navy dark:text-gold-light">8:00 AM – 3:00 PM</span>
+            </div>
+            <div class="oh-row flex justify-between px-5 py-3 transition-colors">
+              <span class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Saturday</span>
+              <span class="font-lato text-[13px] font-bold text-navy dark:text-gold-light">9:00 AM – 12:00 PM</span>
+            </div>
+            <div class="oh-row flex justify-between px-5 py-3 transition-colors">
+              <span class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Sunday</span>
+              <span class="font-lato text-[13px] font-bold text-[#8A8A8A]">Closed</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Holiday notice -->
+        <div class="bg-gold/8 border border-gold/25 rounded-sm p-4 flex gap-3 items-start">
+          <span class="text-xl flex-shrink-0">⚠️</span>
+          <div>
+            <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-1">During School Holidays</div>
+            <p class="font-cormorant text-[15px] text-[#4A4A4A] dark:text-[#C8D4E0] leading-relaxed">The main office operates reduced hours (9 AM – 12 PM, Mon–Fri) during term breaks. Email responses may be slower during this period.</p>
+          </div>
+        </div>
+
+        <!-- Quick contact -->
+        <div class="mt-6 space-y-3">
+          <a href="ssa-admissions.html#apply" class="block w-full text-center bg-maroon hover:bg-maroon-light text-white font-lato text-[12px] font-bold tracking-widest uppercase py-3.5 rounded-sm transition-all hover:-translate-y-0.5 no-underline">Apply for Admission →</a>
+          <a href="tel:+2340355008800" class="block w-full text-center border border-gold/50 hover:border-gold text-gold hover:bg-gold/5 font-lato text-[12px] font-bold tracking-widest uppercase py-3.5 rounded-sm transition-all no-underline">📞 Call Us Now</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FINAL CTA
+  ══════════════════════════════════════════ -->
+  <section class="bg-maroon-navy admissions-pattern relative overflow-hidden px-5 sm:px-10 lg:px-20 py-24">
+    <div class="absolute inset-0 bg-hero-pattern pointer-events-none opacity-40"></div>
+    <div class="relative z-10 max-w-3xl mx-auto text-center reveal">
+      <div class="text-5xl mb-5">🕊️</div>
+      <div class="font-cinzel text-[11px] tracking-[0.2em] uppercase text-gold mb-4">Always Here for You</div>
+      <h2 class="font-playfair font-bold text-white text-[clamp(26px,3.5vw,44px)] leading-snug mb-5">
+        Ready to Take the<br><em class="italic text-gold-light">Next Step?</em>
+      </h2>
+      <p class="font-cormorant text-[19px] text-white/65 leading-relaxed max-w-xl mx-auto mb-10">
+        Whether you're ready to apply, want to book a tour, or simply have a question — our team is always happy to help.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="ssa-admissions.html#apply" class="inline-block bg-gold hover:bg-gold-light text-navy font-lato text-[12px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(196,154,44,0.4)] no-underline">Apply Now</a>
+        <a href="#contact"                  class="inline-block border border-white/35 hover:border-gold hover:text-gold text-white font-lato text-[12px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all no-underline">Send a Message</a>
+        <a href="tel:+2340355008800"        class="inline-block border border-white/35 hover:border-gold hover:text-gold text-white font-lato text-[12px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all no-underline">Call Us Directly</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="bg-navy dark:bg-[#080E18] px-5 sm:px-10 lg:px-20 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+      <div>
+        <div class="flex items-center gap-3 mb-5">
+          <svg width="38" height="44" viewBox="0 0 100 115" fill="none">
+            <path d="M50 4 L94 22 L94 62 Q94 90 50 111 Q6 90 6 62 L6 22 Z" fill="#1A2A4A" stroke="#C49A2C" stroke-width="4"/>
+            <text x="50" y="35" text-anchor="middle" font-size="13" fill="#C49A2C" font-family="serif">★ ★ ★</text>
+            <text x="50" y="62" text-anchor="middle" font-family="serif" font-size="7.5" fill="#C49A2C" font-weight="bold">STELLAR SCHOLARS</text>
+            <text x="50" y="107" text-anchor="middle" font-family="serif" font-size="7" fill="#C49A2C" font-weight="bold">2026</text>
+          </svg>
+          <div class="font-cinzel text-[12px] font-semibold text-white leading-tight">STELLAR SCHOLARS<span class="block text-[9px] text-gold tracking-[0.1em] mt-0.5">ACADEMY · LUX ET PAX</span></div>
+        </div>
+        <p class="font-cormorant text-[15px] leading-[1.7] text-white/50 mb-6">Excellence in Education &amp; Character.</p>
+        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2"><span class="text-gold">📍</span><span>003 Quarantine Dam Road, Anguwan Tasha</span></div>
+        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2"><span class="text-gold">📞</span><span>(0) 0355 0088</span></div>
+        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-6"><span class="text-gold">✉️</span><span>info@stellarscholars.edu.ng</span></div>
+        <div class="flex gap-2.5">
+          <a href="#" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[13px] font-bold transition-all no-underline">f</a>
+          <a href="#" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[13px] font-bold transition-all no-underline">t</a>
+          <a href="#" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[11px] font-bold transition-all no-underline">in</a>
+          <a href="#" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center hover:text-navy text-[14px] transition-all no-underline">▶</a>
+        </div>
+      </div>
+      <div>
+        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">About Us</div>
+        <ul class="list-none space-y-2.5">
+          <li><a href="ssa-about.html" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Our Mission</a></li>
+          <li><a href="ssa-about.html" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Leadership</a></li>
+          <li><a href="ssa-about.html" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">History</a></li>
+          <li><a href="ssa-contact.html" class="text-[13px] text-gold hover:text-gold-light transition-colors no-underline">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">Academics</div>
+        <ul class="list-none space-y-2.5">
+          <li><a href="ssa-academics.html"  class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Pre-School</a></li>
+          <li><a href="ssa-academics.html"  class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Primary School</a></li>
+          <li><a href="ssa-academics.html"  class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Secondary School</a></li>
+          <li><a href="ssa-admissions.html" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Admissions</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">Quick Links</div>
+        <ul class="list-none space-y-2.5">
+          <li><a href="ssa-news.html"            class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">News &amp; Events</a></li>
+          <li><a href="ssa-gallery.html"         class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Gallery</a></li>
+          <li><a href="ssa-admissions.html#apply" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Apply Now</a></li>
+          <li><a href="#"                        class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Parent Portal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto border-t border-white/8 pt-7 flex flex-col sm:flex-row justify-between items-center gap-3 text-[12px] text-white/35">
+      <span>© 2026 Stellar Scholars Academy. All rights reserved.</span>
+      <span>Powered by <a href="https://ticst.com.ng" target="_blank" class="text-gold hover:text-gold-light no-underline">TICST</a> &nbsp;·&nbsp; <a href="#" class="text-gold hover:text-gold-light no-underline">Privacy Policy</a> &nbsp;·&nbsp; <a href="#" class="text-gold hover:text-gold-light no-underline">Terms</a></span>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════
+       JAVASCRIPT
+  ══════════════════════════════════════════ -->
+  <script>
+    // Theme
+  const themeBtn = document.getElementById('themeBtn');
+    const html = document.documentElement;
+    const isDark = () => html.classList.contains('dark');
+    function applyTheme(dark) {
+      html.classList.toggle('dark', dark);
+      themeBtn.innerHTML = dark ? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path  fill="rgb(255, 212, 59)" d="M303.3 112.7C196.2 121.2 112 210.8 112 320C112 434.9 205.1 528 320 528C353.3 528 384.7 520.2 412.6 506.3C309.2 482.9 232 390.5 232 280C232 214.2 259.4 154.9 303.3 112.7zM64 320C64 178.6 178.6 64 320 64C339.4 64 358.4 66.2 376.7 70.3C386.6 72.5 394 80.8 395.2 90.8C396.4 100.8 391.2 110.6 382.1 115.2C321.5 145.4 280 207.9 280 280C280 381.6 362.4 464 464 464C469 464 473.9 463.8 478.8 463.4C488.9 462.6 498.4 468.2 502.6 477.5C506.8 486.8 504.6 497.6 497.3 504.6C451.3 548.8 388.8 576 320 576C178.6 576 64 461.4 64 320z"/></svg>' : '<svg xmlns="http://www.w3.org/2000/svg" height="23" width="23" viewBox="0 0 640 640"><path fill="rgb(255, 212, 59)" d="M320 32C328 32 335.4 36 339.9 42.6L398.7 130L502.1 109.8C509.9 108.3 518 110.7 523.7 116.4C529.4 122.1 531.8 130.2 530.3 138L510 241.3L597.4 300.1C604 304.5 608 312 608 320C608 328 604 335.4 597.4 339.9L510 398.7L530.2 502C531.7 509.8 529.3 517.9 523.6 523.6C517.9 529.3 509.8 531.7 502 530.2L398.7 510L339.9 597.4C335.4 604 328 608 320 608C312 608 304.6 604 300.1 597.4L241.3 510L137.9 530.2C130.1 531.7 122 529.3 116.3 523.6C110.6 517.9 108.2 509.8 109.7 502L130 398.7L42.6 339.9C36 335.4 32 328 32 320C32 312 36 304.6 42.6 300.1L130 241.3L109.8 137.9C108.3 130.1 110.7 122 116.4 116.3C122.1 110.6 130.2 108.2 138 109.7L241.3 129.9L300.1 42.5L301.9 40.2C306.4 35 313 32 320 32zM272.2 170C266.8 178 257.2 182 247.7 180.2L163.7 163.8L180.1 247.8C181.9 257.3 177.9 266.9 169.9 272.3L99 320L170 367.8C178 373.2 182 382.8 180.2 392.3L163.8 476.3L247.8 459.9L251.3 459.5C259.6 459.1 267.6 463.1 272.3 470.1L320.1 541.1L367.9 470.1L370.1 467.3C375.7 461.2 384.1 458.3 392.4 460L476.4 476.4L460 392.4C458.2 382.9 462.2 373.3 470.2 367.9L541.2 320.1L470.2 272.3C462.2 266.9 458.2 257.3 460 247.8L476.4 163.8L392.4 180.2C382.9 182 373.3 178 367.9 170L320.1 99L272.3 170zM320 440C253.7 440 200 386.3 200 320C200 253.7 253.7 200 320 200C386.3 200 440 253.7 440 320C440 386.3 386.3 440 320 440zM320 248C280.2 248 248 280.2 248 320C248 359.8 280.2 392 320 392C359.8 392 392 359.8 392 320C392 280.2 359.8 248 320 248z"/></svg>';
+      themeBtn.title = dark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    }
+    applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
+    themeBtn.addEventListener('click', () => applyTheme(!isDark()));
+    // ── Mobile Menu ──────────────────────────
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Scroll reveal
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), parseInt(e.target.dataset.delay || 0));
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    // Navbar shadow
+    window.addEventListener('scroll', () => navbar.classList.toggle('shadow-lg', window.scrollY > 40));
+
+    // Contact form submit
+    function submitContact() {
+      const fields = [
+        { id: 'cName', label: 'name' },
+        { id: 'cEmail', label: 'email' },
+        { id: 'cDept', label: 'department' },
+        { id: 'cMessage', label: 'message' },
+      ];
+      let valid = true;
+      fields.forEach(f => {
+        const el = document.getElementById(f.id);
+        if (!el.value.trim()) { el.style.borderColor = '#7B1A2E'; valid = false; }
+        else el.style.borderColor = '';
+      });
+      if (!valid) { alert('Please fill in all required fields.'); return; }
+
+      const form = document.getElementById('contactForm');
+      form.style.transition = 'all 0.3s ease';
+      form.style.opacity = '0';
+      form.style.transform = 'translateY(-10px)';
+      setTimeout(() => {
+        form.style.display = 'none';
+        document.getElementById('contactSuccess').classList.remove('hidden');
+      }, 300);
+    }
+  </script>
+
+</body>
+</html>

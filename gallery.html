@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en" class="light scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Stellar Scholars Academy</title>
+  <link rel="shortcut icon" href="imgs/logo2.jpg" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500;600&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold:           '#C49A2C',
+            'gold-light':   '#E8C56A',
+            'gold-dark':    '#9A7A1E',
+            maroon:         '#7B1A2E',
+            'maroon-light': '#A02040',
+            navy:           '#1A2A4A',
+            'navy-light':   '#243558',
+            cream:          '#FAF6EE',
+            'warm-white':   '#FFFDF8',
+          },
+          fontFamily: {
+            playfair:  ['"Playfair Display"', 'serif'],
+            cormorant: ['"Cormorant Garamond"', 'serif'],
+            cinzel:    ['Cinzel', 'serif'],
+            lato:      ['Lato', 'sans-serif'],
+          },
+          backgroundImage: {
+            'gold-maroon':  'linear-gradient(to right, #C49A2C, #7B1A2E)',
+            'maroon-navy':  'linear-gradient(135deg, #7B1A2E 0%, #1A2A4A 100%)',
+            'hero-pattern': 'repeating-linear-gradient(45deg, rgba(196,154,44,0.04) 0, rgba(196,154,44,0.04) 1px, transparent 0, transparent 24px)',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%':   { opacity: '0', transform: 'translateY(28px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              '0%':   { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            scaleIn: {
+              '0%':   { opacity: '0', transform: 'scale(0.94)' },
+              '100%': { opacity: '1', transform: 'scale(1)' },
+            },
+          },
+          animation: {
+            'fade-up':   'fadeUp 0.7s ease both',
+            'fade-up-1': 'fadeUp 0.7s ease 0.12s both',
+            'fade-up-2': 'fadeUp 0.7s ease 0.24s both',
+            'fade-up-3': 'fadeUp 0.7s ease 0.36s both',
+            'fade-in':   'fadeIn 0.5s ease both',
+            'scale-in':  'scaleIn 0.4s ease both',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #f4f0e8; }
+    .dark ::-webkit-scrollbar-track { background: #0F1824; }
+    ::-webkit-scrollbar-thumb { background: #C49A2C; border-radius: 3px; }
+
+    /* ── Nav link underline ── */
+    .nav-link { position: relative; padding-bottom: 3px; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+      height: 2px; background: #C49A2C;
+      transform: scaleX(0); transition: transform 0.2s ease; border-radius: 1px;
+    }
+    .nav-link:hover::after  { transform: scaleX(1); }
+    .nav-link.active::after { transform: scaleX(1); }
+
+    /* ── Section label ── */
+    .section-label-line { position: relative; padding-left: 36px; }
+    .section-label-line::before {
+      content: ''; position: absolute; left: 0; top: 50%;
+      width: 24px; height: 1px; background: #C49A2C; transform: translateY(-50%);
+    }
+
+    /* ── Filter tab ── */
+    .filter-tab {
+      cursor: pointer; transition: all 0.2s ease;
+      font-family: 'Cinzel', serif; font-size: 11px; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 9px 20px; border-radius: 2px;
+      border: 1.5px solid rgba(196,154,44,0.25);
+      color: #4A4A4A;
+    }
+    .dark .filter-tab { color: #C8D4E0; border-color: rgba(196,154,44,0.2); }
+    .filter-tab:hover { border-color: #C49A2C; color: #C49A2C; }
+    .filter-tab.active {
+      background: #1A2A4A; color: #fff; border-color: #1A2A4A;
+    }
+    .dark .filter-tab.active {
+      background: #C49A2C; color: #1A2A4A; border-color: #C49A2C;
+    }
+
+    /* ── Gallery grid item ── */
+    .gallery-item {
+      overflow: hidden; border-radius: 3px; cursor: pointer;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(26,42,74,0.18); }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+    .gallery-item:hover img { transform: scale(1.06); }
+
+    /* ── Photo overlay on hover ── */
+    .gallery-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(26,42,74,0.85) 0%, rgba(26,42,74,0.1) 55%, transparent 100%);
+      opacity: 0; transition: opacity 0.3s ease;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 16px;
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-overlay-icon {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.7);
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(196,154,44,0.9);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: all 0.3s ease;
+    }
+    .gallery-item:hover .gallery-overlay-icon { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+
+    /* ── Masonry-style grid ── */
+    .gallery-masonry {
+      columns: 4;
+      column-gap: 12px;
+    }
+    @media (max-width: 1024px) { .gallery-masonry { columns: 3; } }
+    @media (max-width: 640px)  { .gallery-masonry { columns: 2; } }
+    @media (max-width: 400px)  { .gallery-masonry { columns: 1; } }
+
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    /* ── Grid items hidden/shown for filtering ── */
+    .gallery-item.hidden-item {
+      display: none;
+    }
+
+    /* ── Lightbox ── */
+    #lightbox {
+      position: fixed; inset: 0; z-index: 9999;
+      background: rgba(8, 14, 24, 0.96);
+      display: none; align-items: center; justify-content: center;
+      padding: 20px;
+      backdrop-filter: blur(8px);
+    }
+    #lightbox.open { display: flex; animation: fadeIn 0.25s ease both; }
+    #lightbox img {
+      max-width: 90vw; max-height: 85vh;
+      object-fit: contain; border-radius: 3px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+      animation: scaleIn 0.3s ease both;
+    }
+    #lightbox-caption {
+      position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
+      font-family: 'Cormorant Garamond', serif; font-size: 15px; font-style: italic;
+      color: rgba(255,255,255,0.7); text-align: center; white-space: nowrap;
+    }
+    #lightbox-close {
+      position: absolute; top: 20px; right: 24px;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: rgba(196,154,44,0.2); border: 1.5px solid rgba(196,154,44,0.4);
+      color: #E8C56A; font-size: 20px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s; line-height: 1;
+    }
+    #lightbox-close:hover { background: #C49A2C; color: #fff; }
+    #lightbox-prev, #lightbox-next {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(196,154,44,0.15); border: 1.5px solid rgba(196,154,44,0.3);
+      color: #E8C56A; font-size: 20px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s;
+    }
+    #lightbox-prev { left: 20px; }
+    #lightbox-next { right: 20px; }
+    #lightbox-prev:hover, #lightbox-next:hover { background: #C49A2C; color: #fff; }
+    #lightbox-counter {
+      position: absolute; top: 24px; left: 50%; transform: translateX(-50%);
+      font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.15em;
+      color: rgba(196,154,44,0.7); text-transform: uppercase;
+    }
+
+    /* ── Pixieset embed iframe ── */
+    .pixieset-frame {
+      width: 100%; border: none;
+      min-height: 600px; border-radius: 3px;
+    }
+
+    /* ── Diagonal / pattern ── */
+    .diag-pattern {
+      background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.025) 0, rgba(255,255,255,0.025) 1px, transparent 0, transparent 20px);
+    }
+    .admissions-pattern {
+      background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 0, transparent 20px);
+    }
+
+    /* ── Scroll reveal ── */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left  { opacity: 0; transform: translateX(-28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal-left.visible  { opacity: 1; transform: translateX(0); }
+    .reveal-right { opacity: 0; transform: translateX(28px);  transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+    /* ── Hover bar card ── */
+    .hover-bar { position: relative; overflow: hidden; }
+    .hover-bar::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(to right, #C49A2C, #7B1A2E);
+      transform: scaleX(0); transition: transform 0.3s ease; transform-origin: left;
+    }
+    .hover-bar:hover::before { transform: scaleX(1); }
+  </style>
+</head>
+
+<body class="font-lato bg-warm-white dark:bg-[#0F1824] text-[#4A4A4A] dark:text-[#C8D4E0] overflow-x-hidden transition-colors duration-300">
+
+  <!-- Lghtbox -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <div id="lightbox-counter">1 / 12</div>
+    <button id="lightbox-close" aria-label="Close">✕</button>
+    <button id="lightbox-prev" aria-label="Previous">‹</button>
+    <img id="lightbox-img" src="" alt="" />
+    <button id="lightbox-next" aria-label="Next">›</button>
+    <div id="lightbox-caption"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════ -->
+  <nav id="navbar" class="fixed left-0 right-0 z-50 bg-warm-white/95 dark:bg-[#0F1824]/97 backdrop-blur-md border-b border-gold/20 dark:border-gold/10 shadow-[0_2px_16px_rgba(26,42,74,0.07)] dark:shadow-[0_2px_16px_rgba(0,0,0,0.3)] transition-all duration-300" >
+    <div class="max-w-7xl mx-auto px-5 lg:px-10 h-[72px] flex items-center justify-between gap-5">
+
+      <a href="index.html" class="flex items-center gap-3 flex-shrink-0 no-underline">
+        <img src="imgs/logo2.jpg" alt="Logo" class="h-11 w-11">
+      </a>
+
+      <ul class="hidden lg:flex items-center gap-7 list-none">
+        <li><a href="index.html"     class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">Home</a></li>
+        <li><a href="about.html"     class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">About Us</a></li>
+        <li><a href="academics.html" class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">Academics</a></li>
+        <li><a href="#"                  class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">Admissions</a></li>
+        <li><a href="#"                  class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">School Life</a></li>
+        <li><a href="#"                  class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">News</a></li>
+        <li><a href="gallery.html"   class="nav-link active font-lato text-[12.5px] font-bold tracking-[0.05em] text-maroon dark:text-gold transition-colors duration-200 no-underline">Gallery</a></li>
+      </ul>
+
+      <div class="flex items-center gap-2.5 flex-shrink-0">
+        <a href="#" class="hidden sm:inline-block bg-maroon hover:bg-maroon-light text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all duration-200 hover:-translate-y-px no-underline">Enroll Now</a>
+        <a href="#" class="hidden sm:inline-block border border-gold text-gold hover:bg-gold hover:text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all duration-200 no-underline">Book a Tour</a>
+        <button id="themeBtn" aria-label="Toggle theme"
+          class="w-9 h-9 rounded-full bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-[15px] transition-all duration-300 hover:border-gold hover:rotate-12 cursor-pointer flex-shrink-0"><svg version="1.1" viewBox="144 144 512 512" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs> <clipPath id="d"> <path d="m388 148.09h24v120.91h-24z"></path> </clipPath> <clipPath id="c"> <path d="m531 388h120.9v24h-120.9z"></path> </clipPath> <clipPath id="b"> <path d="m148.09 388h120.91v24h-120.91z"></path> </clipPath> <clipPath id="a"> <path d="m388 531h24v120.9h-24z"></path> </clipPath> </defs> <path d="m306.95 291.43c3.7266 5.1406 10.883 6.2461 16.02 2.5703 5.1406-3.7266 6.2461-10.883 2.5703-16.02l-57.586-79.199c-3.7266-5.1406-10.883-6.2969-16.02-2.5703-5.1406 3.7266-6.2461 10.883-2.5703 16.02z"></path> <path d="m345.03 268c1.9648 5.9961 8.4141 9.3203 14.461 7.3555 6.0469-1.9648 9.3203-8.4141 7.3555-14.461l-30.23-93.105c-1.9648-6.0469-8.4141-9.3203-14.461-7.3555s-9.3203 8.4141-7.3555 14.461z"></path> <path d="m198.78 267.95 79.199 57.535c5.1406 3.7266 12.293 2.5703 16.02-2.5703 3.7266-5.1406 2.5703-12.293-2.5703-16.02l-79.195-57.484c-5.1406-3.7266-12.293-2.5703-16.02 2.5703-3.7305 5.0859-2.5742 12.293 2.5664 15.969z"></path> <g clip-path="url(#d)"> <path d="m400 268.96c6.3477 0 11.488-5.1406 11.488-11.488l-0.003906-97.887c0-6.3477-5.1367-11.488-11.484-11.488s-11.488 5.1406-11.488 11.488v97.891c0 6.3477 5.1406 11.484 11.488 11.484z"></path> </g> <path d="m477.03 294c5.1406 3.7266 12.293 2.5703 16.02-2.5703l57.535-79.199c3.7266-5.1406 2.5703-12.293-2.5703-16.02-5.1406-3.7266-12.293-2.5703-16.02 2.5703l-57.484 79.199c-3.7266 5.0859-2.5703 12.293 2.5195 16.02z"></path> <path d="m506 322.96c3.7266 5.1406 10.883 6.2461 16.02 2.5703l79.199-57.535c5.1406-3.7266 6.2461-10.883 2.5703-16.02-3.7266-5.1406-10.883-6.2969-16.02-2.5703l-79.199 57.535c-5.1406 3.7266-6.25 10.883-2.5703 16.02z"></path> <path d="m440.5 275.36c6.0469 1.9648 12.496-1.3594 14.461-7.3555l30.23-93.105c1.9648-6.0469-1.3594-12.496-7.3555-14.461-6.0469-1.9648-12.496 1.3594-14.461 7.3555l-30.23 93.105c-1.9648 6.0469 1.3125 12.496 7.3555 14.461z"></path> <path d="m524.64 359.49c1.9648 6.0469 8.4141 9.3203 14.461 7.3555l93.105-30.23c6.0469-1.9648 9.3203-8.4141 7.3555-14.461s-8.4141-9.3203-14.461-7.3555l-93.105 30.23c-5.9961 1.9648-9.3203 8.4648-7.3555 14.461z"></path> <path d="m400 282.01c-32.598 0-62.07 13.199-83.43 34.562-21.363 21.359-34.562 50.832-34.562 83.43s13.199 62.07 34.562 83.43c21.363 21.363 50.836 34.562 83.43 34.562 32.598 0 62.07-13.199 83.43-34.562 21.363-21.363 34.562-50.836 34.562-83.43 0-32.598-13.199-62.07-34.562-83.43-21.363-21.363-50.836-34.562-83.43-34.562zm67.207 185.2c-17.18 17.18-40.961 27.809-67.207 27.809-26.25 0-49.977-10.629-67.207-27.809-17.18-17.18-27.859-40.961-27.859-67.207 0-26.25 10.629-49.977 27.859-67.207 17.18-17.18 40.961-27.859 67.207-27.859 26.25 0 49.977 10.629 67.207 27.859 17.18 17.18 27.809 40.961 27.809 67.207s-10.629 49.977-27.809 67.207z"></path> <path d="m167.79 336.62 93.105 30.23c6.0469 1.9648 12.496-1.3594 14.461-7.3555s-1.3594-12.496-7.3555-14.461l-93.105-30.23c-6.0469-1.9648-12.496 1.3594-14.461 7.3555-1.9648 6.0469 1.3594 12.496 7.3555 14.461z"></path> <path d="m275.36 440.5c-1.9648-6.0469-8.4141-9.3203-14.461-7.3555l-93.105 30.23c-6.0469 1.9648-9.3203 8.4141-7.3555 14.461 1.9648 5.9961 8.4141 9.3203 14.461 7.3555l93.105-30.23c5.9961-1.9648 9.3203-8.4648 7.3555-14.461z"></path> <path d="m601.22 532.05-79.199-57.535c-5.1406-3.7266-12.293-2.5703-16.02 2.5703s-2.5703 12.293 2.5703 16.02l79.199 57.535c5.1406 3.7266 12.293 2.5703 16.02-2.5703 3.7305-5.1367 2.5703-12.34-2.5703-16.02z"></path> <path d="m454.96 532c-1.9648-6.0469-8.4141-9.3203-14.461-7.3555s-9.3203 8.4141-7.3555 14.461l30.23 93.105c1.9648 6.0469 8.4141 9.3203 14.461 7.3555 5.9961-1.9648 9.3203-8.4141 7.3555-14.461z"></path> <path d="m493.05 508.57c-3.7266-5.1406-10.883-6.2461-16.02-2.5703-5.1406 3.7266-6.2461 10.883-2.5703 16.02l57.535 79.199c3.7266 5.1406 10.883 6.2969 16.02 2.5703 5.1406-3.7266 6.2969-10.883 2.5703-16.02z"></path> <path d="m632.2 463.38-93.105-30.23c-6.0469-1.9648-12.496 1.3594-14.461 7.3555-1.9648 6.0469 1.3594 12.496 7.3555 14.461l93.105 30.23c6.0469 1.9648 12.496-1.3594 14.461-7.3555 1.9648-6-1.3594-12.496-7.3555-14.461z"></path> <g clip-path="url(#c)"> <path d="m640.42 388.51h-97.891c-6.3477 0-11.488 5.1406-11.488 11.488s5.1406 11.488 11.488 11.488h97.891c6.3477 0 11.488-5.1406 11.488-11.488-0.003906-6.3477-5.1406-11.488-11.488-11.488z"></path> </g> <path d="m322.96 506c-5.1406-3.7266-12.293-2.5703-16.02 2.5703l-57.535 79.199c-3.7266 5.1406-2.5703 12.293 2.5703 16.02 5.1406 3.7266 12.293 2.5703 16.02-2.5703l57.535-79.199c3.6797-5.0859 2.5195-12.293-2.5703-16.02z"></path> <g clip-path="url(#b)"> <path d="m268.96 400c0-6.3477-5.1406-11.488-11.488-11.488h-97.887c-6.3477 0-11.488 5.1406-11.488 11.488s5.1406 11.488 11.488 11.488h97.891c6.3477-0.003906 11.484-5.1406 11.484-11.488z"></path> </g> <g clip-path="url(#a)"> <path d="m400 531.04c-6.3477 0-11.488 5.1406-11.488 11.488v97.891c0 6.3477 5.1406 11.488 11.488 11.488s11.488-5.1406 11.488-11.488l-0.003906-97.891c0-6.3477-5.1367-11.488-11.484-11.488z"></path> </g> <path d="m294 477.03c-3.7266-5.1406-10.883-6.2461-16.02-2.5703l-79.199 57.586c-5.1406 3.7266-6.2969 10.883-2.5703 16.02 3.7266 5.1406 10.883 6.2969 16.02 2.5703l79.199-57.535c5.1406-3.7773 6.25-10.934 2.5703-16.07z"></path> <path d="m359.49 524.64c-6.0469-1.9648-12.496 1.3594-14.461 7.3555l-30.23 93.105c-1.9648 6.0469 1.3594 12.496 7.3555 14.461s12.496-1.3594 14.461-7.3555l30.23-93.105c1.9648-6.0469-1.3086-12.496-7.3555-14.461z"></path> </g></svg></button>
+        <button id="mobileMenuBtn" aria-label="Open menu"
+          class="lg:hidden w-9 h-9 rounded-sm bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-navy dark:text-gold hover:border-gold cursor-pointer flex-shrink-0">
+          <svg width="18" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="0" y1="1" x2="18" y2="1"/><line x1="0" y1="7" x2="18" y2="7"/><line x1="0" y1="13" x2="18" y2="13"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden lg:hidden bg-warm-white dark:bg-[#0F1824] border-t border-gold/20 px-5 py-4">
+      <ul class="flex flex-col gap-1 list-none mb-4">
+        <li><a href="index.html" class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">Home</a></li>
+        <li><a href="about.html" class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">About Us</a></li>
+        <li><a href="academics.html" class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">Academics</a></li>
+        <li><a href="#" class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">Admissions</a></li>
+        <li><a href="#"  class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">School Life</a></li>
+        <li><a href="#"  class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">News</a></li>
+        <li><a href="gallery"   class="block font-lato text-[13px] font-bold text-maroon dark:text-gold py-2.5 no-underline">Gallery</a></li>
+      </ul>
+      <div class="flex gap-2.5">
+        <a href="#" class="flex-1 text-center bg-maroon hover:bg-maroon-light text-white text-[11px] font-bold font-lato tracking-widest uppercase px-4 py-2.5 rounded-sm transition-all no-underline">Enroll Now</a>
+        <a href="#" class="flex-1 text-center border border-gold text-gold hover:bg-gold hover:text-white text-[11px] font-bold font-lato tracking-widest uppercase px-4 py-2.5 rounded-sm transition-all no-underline">Book a Tour</a>
+      </div>
+    </div>
+  </nav>
+
+  <!--
+       PAGE HERO
+  ══════════════════════════════════════════ -->
+  <section class="relative bg-navy dark:bg-[#080E18] overflow-hidden" style="padding-top: calc(36px + 72px)">
+    <div class="absolute inset-0 bg-hero-pattern pointer-events-none opacity-60"></div>
+    <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 20% 60%, rgba(196,154,44,0.09) 0%, transparent 55%), radial-gradient(ellipse at 85% 25%, rgba(123,26,46,0.14) 0%, transparent 50%);"></div>
+
+    <!-- Decorative background photo strip -->
+    <div class="absolute inset-0 z-0 opacity-10 overflow-hidden">
+      <div class="flex h-full gap-1">
+        <div class="flex-1 bg-gradient-to-b from-maroon/40 to-navy"></div>
+        <div class="flex-1 bg-gradient-to-b from-navy to-maroon/30"></div>
+        <div class="flex-1 bg-gradient-to-b from-maroon/20 to-navy"></div>
+        <div class="hidden sm:block flex-1 bg-gradient-to-b from-navy to-maroon/40"></div>
+      </div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 py-20 lg:py-28">
+      <div class="max-w-2xl">
+        <!-- Breadcrumb -->
+        <div class="animate-fade-up flex items-center gap-2 mb-6 font-lato text-[11px] tracking-widest uppercase text-white/40">
+          <a href="ssa-tailwind.html" class="hover:text-gold transition-colors no-underline text-white/40">Home</a>
+          <span class="text-gold/50">/</span>
+          <span class="text-gold">Gallery</span>
+        </div>
+
+        <div class="animate-fade-up flex items-center gap-3 mb-4">
+          <span class="w-8 h-px bg-gold flex-shrink-0"></span>
+          <span class="font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold">School Life in Pictures</span>
+        </div>
+        <h1 class="animate-fade-up-1 font-playfair font-bold text-white leading-[1.15] mb-6" style="font-size:clamp(36px,4vw,58px)">
+          Moments That<br><em class="italic text-gold-light">Define Us.</em>
+        </h1>
+        <p class="animate-fade-up-2 font-cormorant text-[19px] leading-relaxed text-white/70 max-w-lg mb-10">
+          Every photograph here tells the story of a scholar growing, a teacher inspiring, and a community thriving. Welcome to life at Stellar Scholars Academy.
+        </p>
+
+        <!-- Quick stats row -->
+        <div class="animate-fade-up-3 flex flex-wrap gap-8 pt-8 border-t border-white/10">
+          <div>
+            <div class="font-cinzel text-[24px] font-bold text-gold">120+</div>
+            <div class="font-lato text-[10px] tracking-widest uppercase text-white/45 mt-1">Photos &amp; Albums</div>
+          </div>
+          <div>
+            <div class="font-cinzel text-[24px] font-bold text-gold">8</div>
+            <div class="font-lato text-[10px] tracking-widest uppercase text-white/45 mt-1">Event Collections</div>
+          </div>
+          <div>
+            <div class="font-cinzel text-[24px] font-bold text-gold">2026</div>
+            <div class="font-lato text-[10px] tracking-widest uppercase text-white/45 mt-1">Inaugural Year</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 right-0 overflow-hidden leading-none">
+      <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full" preserveAspectRatio="none">
+        <path d="M0 40 L0 20 Q360 0 720 20 Q1080 40 1440 20 L1440 40 Z" class="fill-warm-white dark:fill-[#0F1824]"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FILTERABLE PHOTO GALLERY
+  ══════════════════════════════════════════ -->
+  <section class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-20">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Header + filter bar -->
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-10">
+        <div>
+          <div class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-3">Browse Photos</div>
+          <h2 class="font-playfair text-[clamp(24px,2.8vw,38px)] font-bold text-navy dark:text-gold-light leading-snug">School Life Gallery</h2>
+          <div class="w-14 h-[3px] bg-gold-maroon mt-4"></div>
+        </div>
+        <!-- View toggle -->
+        <div class="flex items-center gap-2 flex-shrink-0">
+          <span class="font-lato text-[11px] tracking-widest uppercase text-[#888] dark:text-[#7A90A8]">View:</span>
+          <button id="viewGrid" class="w-9 h-9 border border-gold/30 rounded-sm flex items-center justify-center text-gold hover:bg-gold hover:text-white transition-all duration-200" title="Grid view">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="0" width="7" height="7"/><rect x="9" y="0" width="7" height="7"/><rect x="0" y="9" width="7" height="7"/><rect x="9" y="9" width="7" height="7"/></svg>
+          </button>
+          <button id="viewMasonry" class="w-9 h-9 border border-gold/30 rounded-sm flex items-center justify-center text-[#888] dark:text-[#7A90A8] hover:border-gold hover:text-gold transition-all duration-200" title="Masonry view">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="0" width="4" height="9"/><rect x="6" y="0" width="4" height="6"/><rect x="12" y="0" width="4" height="11"/><rect x="0" y="11" width="4" height="5"/><rect x="6" y="8" width="4" height="8"/><rect x="12" y="13" width="4" height="3"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="flex flex-wrap gap-2 mb-10" id="filterTabs">
+        <button class="filter-tab active" data-filter="all">All Photos</button>
+        <button class="filter-tab" data-filter="classes">Classroom Life</button>
+        <button class="filter-tab" data-filter="sports">Sports Day</button>
+        <button class="filter-tab" data-filter="events">Events</button>
+        <button class="filter-tab" data-filter="arts">Arts &amp; Culture</button>
+        <button class="filter-tab" data-filter="campus">Campus</button>
+        <button class="filter-tab" data-filter="graduation">Graduation</button>
+      </div>
+
+      <!-- COUNT indicator -->
+      <div class="mb-6 font-lato text-[12px] tracking-wide text-[#888] dark:text-[#7A90A8]">
+        Showing <span id="photoCount" class="text-gold font-bold">24</span> photos
+      </div>
+
+      <!-- ── GRID VIEW (default) ── -->
+      <div id="gridView" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+
+        <!-- Photo items — data-cat for filtering, data-src for lightbox, data-caption -->
+        <!-- Row 1 — wide featured -->
+        <div class="gallery-item col-span-2 row-span-2 h-[320px] sm:h-[400px]" data-cat="events" data-src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80" data-caption="Open Day — April 2026">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80" alt="Open Day" loading="lazy"/>
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold">Events</div>
+            <div class="font-playfair text-[14px] text-white font-bold">Open Day — April 2026</div>
+          </div>
+        </div>
+
+        <div class="gallery-item h-[190px]" data-cat="classes" data-src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80" data-caption="Primary 3 — Mathematics">
+          <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80" alt="Classroom" loading="lazy"/>
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold">Classroom Life</div>
+            <div class="font-playfair text-[13px] text-white font-bold">Primary 3 — Mathematics</div>
+          </div>
+        </div>
+
+        <div class="gallery-item h-[190px]" data-cat="sports" data-src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80" data-caption="Sports Day — March 2026">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80" alt="Sports Day" loading="lazy"/>
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold">Sports Day</div>
+            <div class="font-playfair text-[13px] text-white font-bold">Sports Day — March 2026</div>
+          </div>
+        </div>
+
+        <!-- Row 2 continued -->
+        <div class="gallery-item h-[190px]" data-cat="arts" data-src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80" data-caption="Art Exhibition — Term 2">
+          <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80" alt="Art Exhibition" loading="lazy"/>
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold">Arts &amp; Culture</div>
+            <div class="font-playfair text-[13px] text-white font-bold">Art Exhibition — Term 2</div>
+          </div>
+        </div>
+
+        <div class="gallery-item h-[190px]" data-cat="campus" data-src="https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80" data-caption="Our Campus — Main Block">
+          <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80" alt="Campus" loading="lazy"/>
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold">Campus</div>
+            <div class="font-playfair text-[13px] text-white font-bold">Main Block</div>
+          </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="gallery-item h-[220px]" data-cat="classes" data-src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600&q=80" data-caption="Library — Independent Study">
+          <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600&q=80" alt="Library" loading="lazy"/>
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold">Classroom Life</div>
+            <div class="font-playfair text-[13px] text-white font-bold">Library — Independent Study</div>
+          </div>
+        </div>
+
+        <div class="gallery-item h-[220px]" data-cat="sports" data-src="https://images.unsplash.com/photo-1551958219-acbc595b90ec?w=600&q=80" data-caption="Football Tournament">
+          <img src="https://images.unsplash.com/photo-1551958219-acbc595b90ec?w=600&q=80" alt="Football" loading="lazy"/>
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold">Sports Day</div>
+            <div class="font-playfair text-[13px] text-white font-bold">Football Tournament</div>
+          </div>
+        </div>
+
+        <div class="gallery-item col-span-2 h-[220px]" data-cat="graduation" data-src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80" data-caption="Inaugural Graduation Ceremony 2026">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80" alt="Graduation" loading="lazy"/>
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold">Graduation</div>
+            <div class="font-playfair text-[15px] text-white font-bold">Inaugural Graduation Ceremony 2026</div>
+          </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="gallery-item h-[200px]" data-cat="arts" data-src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600&q=80" data-caption="Music & Performing Arts">
+          <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600&q=80" alt="Music" loading="lazy"/>
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold">Arts &amp; Culture</div>
+            <div class="font-playfair text-[13px] text-white font-bold">Music &amp; Performing Arts</div>
+          </div>
+        </div>
+
+        <div class="gallery-item h-[200px]" data-cat="campus" data-src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80" data-caption="Science Laboratory">
+          <img src="https://images.unsplash.com/photo-1532094349884-543559373b53?w=600&q=80" alt="Science Lab" loading="lazy"/>
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold">Campus</div>
+            <div class="font-playfair text-[13px] text-white font-bold">Science Laboratory</div>
+          </div>
+        </div>
+
+        <div class="gallery-item h-[200px]" data-cat="events" data-src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" data-caption="Founders Day Celebration">
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="Founders Day" loading="lazy"/>
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold">Events</div>
+            <div class="font-playfair text-[13px] text-white font-bold">Founders Day Celebration</div>
+          </div>
+        </div>
+
+        <div class="gallery-item h-[200px]" data-cat="classes" data-src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80" data-caption="JSS2 — English Literature">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80" alt="English Class" loading="lazy"/>
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+            <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold">Classroom Life</div>
+            <div class="font-playfair text-[13px] text-white font-bold">JSS2 — English Literature</div>
+          </div>
+        </div>
+
+      </div><!-- end gridView -->
+
+      <!-- ── MASONRY VIEW (hidden by default) ── -->
+      <div id="masonryView" class="gallery-masonry hidden">
+        <!-- Items duplicated for masonry — JS populates dynamically -->
+      </div>
+
+      <!-- Load more -->
+      <div class="text-center mt-12">
+        <button id="loadMoreBtn" class="inline-flex items-center gap-2 border border-gold text-gold hover:bg-gold hover:text-navy font-lato text-[12px] font-bold tracking-widest uppercase px-10 py-3.5 rounded-sm transition-all duration-200">
+          Load More Photos
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       PIXIESET FULL GALLERY EMBED
+  ══════════════════════════════════════════ -->
+  <section id="pixieset-gallery" class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-24">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center justify-center gap-2.5 font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">
+          <span class="w-6 h-px bg-gold"></span>Full Photo Library<span class="w-6 h-px bg-gold"></span>
+        </div>
+        <h2 class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-navy dark:text-gold-light leading-snug">Browse All Albums on Pixieset</h2>
+        <div class="w-16 h-[3px] bg-gold-maroon mx-auto mt-5 mb-4"></div>
+        <p class="font-cormorant text-[18px] text-[#4A4A4A] dark:text-[#C8D4E0] max-w-xl mx-auto">Our complete photo library — including high-resolution downloads for parents — is hosted on Pixieset. Browse, favourite, and download your child's memorable moments.</p>
+      </div>
+
+      <!-- Pixieset embed container -->
+      <div class="reveal bg-white dark:bg-[#1A2840] border border-gold/20 rounded-sm overflow-hidden shadow-[0_8px_32px_rgba(26,42,74,0.1)]">
+
+        <!-- Header bar -->
+        <div class="bg-navy dark:bg-[#0d1a30] px-6 py-4 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-gold flex items-center justify-center font-cinzel text-navy font-bold text-[12px]">S</div>
+            <div>
+              <div class="font-cinzel text-[12px] font-semibold tracking-wide text-white">Stellar Scholars Academy</div>
+              <div class="font-lato text-[10px] text-gold/70 tracking-widest uppercase">Pixieset Photo Library</div>
+            </div>
+          </div>
+          <a href="https://stellarscholars.pixieset.com" target="_blank" rel="noopener"
+            class="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy font-lato text-[11px] font-bold tracking-widest uppercase px-5 py-2 rounded-sm transition-all duration-200 no-underline">
+            Open in Pixieset
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+
+        <!-- ─── PIXIESET EMBED ───────────────────────────────────────
+             Replace the src below with your actual Pixieset gallery URL.
+             Pixieset embed format:
+               https://[your-username].pixieset.com/[gallery-slug]/?embed=1
+             You can also use a direct iframe from the Pixieset Share > Embed panel.
+        ─────────────────────────────────────────────────────────── -->
+        <div class="relative" style="padding-bottom:60%; height:0; overflow:hidden;">
+          <iframe
+            id="pixiesetFrame"
+            src="https://stellarscholars.pixieset.com/?embed=1"
+            class="absolute top-0 left-0 w-full h-full border-none"
+            allowfullscreen
+            loading="lazy"
+            title="Stellar Scholars Academy — Pixieset Gallery">
+          </iframe>
+          <!-- Fallback shown if Pixieset URL hasn't been configured -->
+          <div id="pixiesetFallback" class="absolute inset-0 flex flex-col items-center justify-center bg-cream dark:bg-[#162030] gap-5 p-8">
+            <div class="text-[64px]">📸</div>
+            <div class="text-center">
+              <div class="font-playfair text-[20px] font-bold text-navy dark:text-gold-light mb-2">Pixieset Gallery</div>
+              <p class="font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0] max-w-sm">
+                Replace the <code class="bg-gold/10 text-gold px-1.5 py-0.5 rounded text-[13px]">src</code> in the iframe above with your Pixieset gallery embed URL to display the full photo library here.
+              </p>
+            </div>
+            <a href="https://pixieset.com" target="_blank" rel="noopener"
+              class="inline-flex items-center gap-2 bg-navy dark:bg-gold hover:bg-navy-light dark:hover:bg-gold-light text-white dark:text-navy font-lato text-[12px] font-bold tracking-widest uppercase px-8 py-3 rounded-sm transition-all duration-200 no-underline">
+              Visit Pixieset
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Album grid previews beneath embed -->
+        <div class="border-t border-gold/15 p-6">
+          <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-4">Recent Albums</div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+            <a href="https://stellarscholars.pixieset.com" target="_blank" rel="noopener" class="group block no-underline">
+              <div class="aspect-square rounded-sm overflow-hidden bg-gradient-to-br from-navy to-maroon/50 mb-2 relative">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=200&q=70" alt="Open Day" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all group-hover:scale-105 duration-300"/>
+                <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-all"></div>
+              </div>
+              <div class="font-lato text-[11px] font-bold text-navy dark:text-gold-light group-hover:text-gold transition-colors">Open Day</div>
+              <div class="font-lato text-[10px] text-[#888] dark:text-[#7A90A8]">14 photos</div>
+            </a>
+            <a href="https://stellarscholars.pixieset.com" target="_blank" rel="noopener" class="group block no-underline">
+              <div class="aspect-square rounded-sm overflow-hidden bg-gradient-to-br from-maroon to-navy/70 mb-2 relative">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&q=70" alt="Sports Day" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all group-hover:scale-105 duration-300"/>
+                <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-all"></div>
+              </div>
+              <div class="font-lato text-[11px] font-bold text-navy dark:text-gold-light group-hover:text-gold transition-colors">Sports Day</div>
+              <div class="font-lato text-[10px] text-[#888] dark:text-[#7A90A8]">32 photos</div>
+            </a>
+            <a href="https://stellarscholars.pixieset.com" target="_blank" rel="noopener" class="group block no-underline">
+              <div class="aspect-square rounded-sm overflow-hidden bg-gradient-to-br from-gold/30 to-navy mb-2 relative">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=200&q=70" alt="Graduation" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all group-hover:scale-105 duration-300"/>
+                <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-all"></div>
+              </div>
+              <div class="font-lato text-[11px] font-bold text-navy dark:text-gold-light group-hover:text-gold transition-colors">Graduation</div>
+              <div class="font-lato text-[10px] text-[#888] dark:text-[#7A90A8]">28 photos</div>
+            </a>
+            <a href="https://stellarscholars.pixieset.com" target="_blank" rel="noopener" class="group block no-underline">
+              <div class="aspect-square rounded-sm overflow-hidden bg-gradient-to-br from-navy to-gold/20 mb-2 relative">
+                <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=200&q=70" alt="Arts" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all group-hover:scale-105 duration-300"/>
+                <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-all"></div>
+              </div>
+              <div class="font-lato text-[11px] font-bold text-navy dark:text-gold-light group-hover:text-gold transition-colors">Arts &amp; Culture</div>
+              <div class="font-lato text-[10px] text-[#888] dark:text-[#7A90A8]">19 photos</div>
+            </a>
+            <a href="https://stellarscholars.pixieset.com" target="_blank" rel="noopener" class="group block no-underline">
+              <div class="aspect-square rounded-sm overflow-hidden bg-gradient-to-br from-maroon/50 to-navy mb-2 relative">
+                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=200&q=70" alt="Events" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all group-hover:scale-105 duration-300"/>
+                <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-all"></div>
+              </div>
+              <div class="font-lato text-[11px] font-bold text-navy dark:text-gold-light group-hover:text-gold transition-colors">School Events</div>
+              <div class="font-lato text-[10px] text-[#888] dark:text-[#7A90A8]">22 photos</div>
+            </a>
+            <a href="https://stellarscholars.pixieset.com" target="_blank" rel="noopener" class="group block no-underline">
+              <div class="aspect-square rounded-sm overflow-hidden bg-gradient-to-br from-navy/80 to-maroon/30 mb-2 relative">
+                <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=200&q=70" alt="Campus" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all group-hover:scale-105 duration-300"/>
+                <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-all"></div>
+              </div>
+              <div class="font-lato text-[11px] font-bold text-navy dark:text-gold-light group-hover:text-gold transition-colors">Campus Tour</div>
+              <div class="font-lato text-[10px] text-[#888] dark:text-[#7A90A8]">11 photos</div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ENTRANCE ASSESSMENT INFO -->
+  <section id="assessment" class="relative bg-navy dark:bg-[#080E18] px-5 sm:px-10 lg:px-20 py-24 overflow-hidden">
+    <div class="absolute inset-0 diag-pattern pointer-events-none"></div>
+    <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 80% 50%, rgba(196,154,44,0.07) 0%, transparent 60%);"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Left text -->
+        <div class="reveal-left">
+          <div class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">Join SSA</div>
+          <h2 class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-white leading-snug mb-4">
+            Entrance Assessment<br><em class="italic text-gold-light">What to Expect</em>
+          </h2>
+          <div class="w-16 h-[3px] bg-gold-maroon mb-6"></div>
+          <p class="font-cormorant text-[18px] leading-relaxed text-white/70 mb-8">
+            Our entrance assessment is designed to help us understand each child's strengths, learning style, and readiness — not to exclude, but to ensure every scholar is placed in the right year group to thrive.
+          </p>
+
+          <!-- Assessment steps -->
+          <div class="space-y-5">
+            <div class="flex items-start gap-4">
+              <div class="w-9 h-9 rounded-full bg-gold flex items-center justify-center font-cinzel text-navy font-bold text-[13px] flex-shrink-0 mt-0.5">1</div>
+              <div>
+                <div class="font-cinzel text-[12px] font-bold tracking-wide text-gold-light mb-1">Submit Application</div>
+                <p class="text-[14px] leading-relaxed text-white/60">Complete the online application form and submit the required documents including birth certificate, immunisation record, and previous school reports.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-9 h-9 rounded-full bg-maroon flex items-center justify-center font-cinzel text-white font-bold text-[13px] flex-shrink-0 mt-0.5">2</div>
+              <div>
+                <div class="font-cinzel text-[12px] font-bold tracking-wide text-gold-light mb-1">Invitation to Assess</div>
+                <p class="text-[14px] leading-relaxed text-white/60">Shortlisted applicants are invited for a friendly, informal assessment session held on campus. Parents/guardians are welcome to attend.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-9 h-9 rounded-full bg-gold flex items-center justify-center font-cinzel text-navy font-bold text-[13px] flex-shrink-0 mt-0.5">3</div>
+              <div>
+                <div class="font-cinzel text-[12px] font-bold tracking-wide text-gold-light mb-1">The Assessment Day</div>
+                <p class="text-[14px] leading-relaxed text-white/60">Children participate in age-appropriate literacy, numeracy, and oral activities. Our pastoral team also conducts a brief parent interview to understand the family's expectations.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-9 h-9 rounded-full bg-maroon flex items-center justify-center font-cinzel text-white font-bold text-[13px] flex-shrink-0 mt-0.5">4</div>
+              <div>
+                <div class="font-cinzel text-[12px] font-bold tracking-wide text-gold-light mb-1">Offer &amp; Enrolment</div>
+                <p class="text-[14px] leading-relaxed text-white/60">Successful applicants receive a formal offer letter within 5 working days. Upon acceptance and payment of the enrolment fee, your scholar's place is secured.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3 mt-10">
+            <a href="#" class="inline-block bg-gold hover:bg-gold-light text-navy font-lato text-[12px] font-bold tracking-widest uppercase px-8 py-3.5 rounded-sm transition-all duration-200 hover:-translate-y-0.5 no-underline">Apply Now</a>
+            <a href="ssa-academics.html#prospectus" class="inline-block border border-white/30 hover:border-gold hover:text-gold text-white font-lato text-[12px] font-bold tracking-widest uppercase px-8 py-3.5 rounded-sm transition-all duration-200 no-underline">Download Prospectus</a>
+          </div>
+        </div>
+
+        <!-- Right: info cards -->
+        <div class="reveal-right grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="hover-bar bg-white/5 border border-gold/15 rounded-sm p-6 transition-all duration-300 hover:bg-white/[0.08]">
+            <div class="text-[28px] mb-3">📅</div>
+            <div class="font-cinzel text-[12px] font-semibold tracking-wide text-gold mb-2">Assessment Dates</div>
+            <p class="text-[13px] leading-relaxed text-white/60">Held every Saturday morning during term time. Next available session: <span class="text-gold-light font-semibold">14 March 2026</span></p>
+          </div>
+          <div class="hover-bar bg-white/5 border border-gold/15 rounded-sm p-6 transition-all duration-300 hover:bg-white/[0.08]">
+            <div class="text-[28px] mb-3">⏱️</div>
+            <div class="font-cinzel text-[12px] font-semibold tracking-wide text-gold mb-2">Duration</div>
+            <p class="text-[13px] leading-relaxed text-white/60">Pre-School: 45 minutes<br/>Primary: 1.5 hours<br/>Secondary: 2 hours including interview</p>
+          </div>
+          <div class="hover-bar bg-white/5 border border-gold/15 rounded-sm p-6 transition-all duration-300 hover:bg-white/[0.08]">
+            <div class="text-[28px] mb-3">📋</div>
+            <div class="font-cinzel text-[12px] font-semibold tracking-wide text-gold mb-2">What to Bring</div>
+            <p class="text-[13px] leading-relaxed text-white/60">Birth certificate, last 2 school reports, immunisation card, and 2 passport photographs.</p>
+          </div>
+          <div class="hover-bar bg-white/5 border border-gold/15 rounded-sm p-6 transition-all duration-300 hover:bg-white/[0.08]">
+            <div class="text-[28px] mb-3">💰</div>
+            <div class="font-cinzel text-[12px] font-semibold tracking-wide text-gold mb-2">Assessment Fee</div>
+            <p class="text-[13px] leading-relaxed text-white/60">A non-refundable assessment fee of ₦5,000 is payable at registration. This is waived for siblings of current scholars.</p>
+          </div>
+          <div class="sm:col-span-2 hover-bar bg-white/5 border border-gold/15 rounded-sm p-6 transition-all duration-300 hover:bg-white/[0.08]">
+            <div><svg xmlns="http://www.w3.org/2000/svg"
+              class="w-16 h-16" viewBox="0 0 32 32">
+              <path
+                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+            </svg></div>
+            <div class="font-cinzel text-[12px] font-semibold tracking-wide text-gold mb-2">Book Your Assessment Slot</div>
+            <p class="text-[13px] leading-relaxed text-white/60 mb-3">Call us on <span class="text-gold-light">+234 706 737 4352</span> or email <span class="text-gold-light">admissions@stellarscholarsacademy.com</span> to reserve your child's assessment date. Spaces are limited — book early to avoid disappointment.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ADMISSIONS CTA
+  ══════════════════════════════════════════ -->
+  <section class="relative bg-maroon-navy text-center px-5 sm:px-10 lg:px-20 py-24 overflow-hidden">
+    <div class="admissions-pattern absolute inset-0 pointer-events-none"></div>
+    <div class="relative z-10 max-w-2xl mx-auto">
+      <div class="inline-flex items-center justify-center gap-2.5 font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">
+        <span class="w-6 h-px bg-gold"></span>Come See Us<span class="w-6 h-px bg-gold"></span>
+      </div>
+      <h2 class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-white leading-snug mb-4">A Picture Says a Thousand Words.<br>A Visit Says Even More.</h2>
+      <p class="font-cormorant text-[20px] text-white/75 leading-relaxed mb-10">Book a tour and experience the warmth, energy, and excellence of Stellar Scholars Academy in person.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#" class="inline-block bg-gold hover:bg-gold-light text-navy font-lato text-[13px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all duration-200 hover:-translate-y-0.5 no-underline">Book a Tour</a>
+        <a href="admissions.html" class="inline-block border border-white/50 hover:border-gold hover:text-gold text-white font-lato text-[13px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all duration-200 no-underline">Apply Now</a>
+      </div>
+    </div>
+  </section>
+ <!--FOOTER-->
+  <footer class="bg-navy dark:bg-[#04080F] text-white/65 px-5 sm:px-10 lg:px-20 pt-20 pb-10">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-14">
+
+      <!-- Brand col -->
+      <div>
+        <div class="flex items-center gap-3 mb-5">
+          <div
+            class="w-11 h-11 rounded-full bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center font-cinzel text-[16px] font-bold text-white flex-shrink-0">
+            <img src="imgs/logo2.jpg" alt="Logo">
+          </div>
+          <div class="font-cinzel text-[13px] font-semibold tracking-wide text-white leading-tight">
+            STELLAR SCHOLARS ACADEMY
+            <span class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5">LUX ET PAX · EST. 2026</span>
+          </div>
+        </div>
+        <p class="text-[13px] leading-[1.7] text-white/50 mb-6">Excellence in Education &amp; Character. We nurture
+          scholars who lead with knowledge, integrity, and compassion.</p>
+        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2">
+          <span class="text-gold flex-shrink-0 mt-0.5"><svg width="16" height="16" fill="currentColor"
+              viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2c-4.4 0-8 3.6-8 8 0 5.4 7 11.5 7.3 11.8.2.1.5.2.7.2.2 0 .5-.1.7-.2.3-.3 7.3-6.4 7.3-11.8 0-4.4-3.6-8-8-8zm0 17.7c-2.1-2-6-6.3-6-9.7 0-3.3 2.7-6 6-6s6 2.7 6 6-3.9 7.7-6 9.7zM12 6c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
+                fill="#0D0D0D" />
+            </svg></span>
+          <span>Off Lagos - Ibadan Expy, Ojora Street, Orimerunmu, Sagamu 110113, Ogun State</span>
+        </div>
+        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2">
+          <span class="text-gold flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+              class="bi bi-telephone" viewBox="0 0 16 16">
+              <path
+                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+            </svg></span>
+          <span> 0706 737 4352</span>
+        </div>
+        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-6">
+          <span class="text-gold flex-shrink-0">✉️</span>
+          <span>info@stellarscholarsacademy.com</span>
+        </div>
+        <div class="flex gap-2.5">
+          <a href="#"
+            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[13px] font-bold transition-all duration-200 no-underline"><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook"
+              viewBox="0 0 16 16">
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+            </svg></a>
+          <a href="#"
+            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[13px] font-bold transition-all duration-200 no-underline"><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok"
+              viewBox="0 0 16 16">
+              <path
+                d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
+            </svg></a>
+          <a href="https://ng.linkedin.com/company/stellar-scholars-academy1"
+            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[11px] font-bold transition-all duration-200 no-underline"><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin"
+              viewBox="0 0 16 16">
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+            </svg></a>
+          <a href="https://www.instagram.com/stellarscholarsacademyikoyi/"
+            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center hover:text-navy text-[14px] transition-all duration-200 no-underline"><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+            </svg></a>
+        </div>
+      </div>
+
+      <!-- Links cols -->
+      <div>
+        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">About Us</div>
+        <ul class="list-none space-y-2.5">
+          <li><a href="about.html" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Our
+              Mission</a></li>
+          <li><a href="about.html"
+              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Leadership</a></li>
+          <li><a href="about.html"
+              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">History</a>
+          </li>
+          <li><a href="about.html"
+              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Awards</a>
+          </li>
+          <li><a href="about.html"
+              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">Academics</div>
+        <ul class="list-none space-y-2.5">
+          <li><a href="academics.html"
+              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Pre-School</a></li>
+          <li><a href="academics.html"
+              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Primary
+              School</a></li>
+          <li><a href="academics.html"
+              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Secondary
+              School</a></li>
+          <li><a href="#"
+              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Admissions</a></li>
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Gallery</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">School Life</div>
+        <ul class="list-none space-y-2.5">
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Sports &amp;
+              Athletics</a></li>
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Arts &amp;
+              Culture</a></li>
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Clubs &amp;
+              Societies</a></li>
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Events
+              Calendar</a></li>
+          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Parent
+              Portal</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer bottom -->
+    <div
+      class="max-w-7xl mx-auto border-t border-white/8 pt-7 flex flex-col sm:flex-row justify-between items-center gap-3 text-[12px] text-white/35">
+      <span>© 2026 Stellar Scholars Academy. All rights reserved.</span>
+      <span>Powered by <a href="https://ticst.com.ng" target="_blank"
+          class="text-gold hover:text-gold-light transition-colors no-underline"><img
+            src="imgs/ticst transparent - blue.png" class="tect-green-800" alt="company's-logo"></a> &nbsp;·&nbsp; <a
+          href="#" class="text-gold hover:text-gold-light transition-colors no-underline">Privacy Policy</a>
+        &nbsp;·&nbsp; <a href="#"
+          class="text-gold hover:text-gold-light transition-colors no-underline">Terms</a></span>
+    </div>
+  </footer>
+  <!-- ══════════════════════════════════════════
+       JAVASCRIPT
+  ══════════════════════════════════════════ -->
+  <script>
+    // ── Dark / Light ─────────────────────────
+   const themeBtn = document.getElementById('themeBtn');
+    const html = document.documentElement;
+    const isDark = () => html.classList.contains('dark');
+    function applyTheme(dark) {
+      html.classList.toggle('dark', dark);
+      themeBtn.innerHTML = dark ? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path  fill="rgb(255, 212, 59)" d="M303.3 112.7C196.2 121.2 112 210.8 112 320C112 434.9 205.1 528 320 528C353.3 528 384.7 520.2 412.6 506.3C309.2 482.9 232 390.5 232 280C232 214.2 259.4 154.9 303.3 112.7zM64 320C64 178.6 178.6 64 320 64C339.4 64 358.4 66.2 376.7 70.3C386.6 72.5 394 80.8 395.2 90.8C396.4 100.8 391.2 110.6 382.1 115.2C321.5 145.4 280 207.9 280 280C280 381.6 362.4 464 464 464C469 464 473.9 463.8 478.8 463.4C488.9 462.6 498.4 468.2 502.6 477.5C506.8 486.8 504.6 497.6 497.3 504.6C451.3 548.8 388.8 576 320 576C178.6 576 64 461.4 64 320z"/></svg>' : '<svg xmlns="http://www.w3.org/2000/svg" height="23" width="23" viewBox="0 0 640 640"><path fill="rgb(255, 212, 59)" d="M320 32C328 32 335.4 36 339.9 42.6L398.7 130L502.1 109.8C509.9 108.3 518 110.7 523.7 116.4C529.4 122.1 531.8 130.2 530.3 138L510 241.3L597.4 300.1C604 304.5 608 312 608 320C608 328 604 335.4 597.4 339.9L510 398.7L530.2 502C531.7 509.8 529.3 517.9 523.6 523.6C517.9 529.3 509.8 531.7 502 530.2L398.7 510L339.9 597.4C335.4 604 328 608 320 608C312 608 304.6 604 300.1 597.4L241.3 510L137.9 530.2C130.1 531.7 122 529.3 116.3 523.6C110.6 517.9 108.2 509.8 109.7 502L130 398.7L42.6 339.9C36 335.4 32 328 32 320C32 312 36 304.6 42.6 300.1L130 241.3L109.8 137.9C108.3 130.1 110.7 122 116.4 116.3C122.1 110.6 130.2 108.2 138 109.7L241.3 129.9L300.1 42.5L301.9 40.2C306.4 35 313 32 320 32zM272.2 170C266.8 178 257.2 182 247.7 180.2L163.7 163.8L180.1 247.8C181.9 257.3 177.9 266.9 169.9 272.3L99 320L170 367.8C178 373.2 182 382.8 180.2 392.3L163.8 476.3L247.8 459.9L251.3 459.5C259.6 459.1 267.6 463.1 272.3 470.1L320.1 541.1L367.9 470.1L370.1 467.3C375.7 461.2 384.1 458.3 392.4 460L476.4 476.4L460 392.4C458.2 382.9 462.2 373.3 470.2 367.9L541.2 320.1L470.2 272.3C462.2 266.9 458.2 257.3 460 247.8L476.4 163.8L392.4 180.2C382.9 182 373.3 178 367.9 170L320.1 99L272.3 170zM320 440C253.7 440 200 386.3 200 320C200 253.7 253.7 200 320 200C386.3 200 440 253.7 440 320C440 386.3 386.3 440 320 440zM320 248C280.2 248 248 280.2 248 320C248 359.8 280.2 392 320 392C359.8 392 392 359.8 392 320C392 280.2 359.8 248 320 248z"/></svg>';
+      themeBtn.title = dark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    }
+    applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
+    themeBtn.addEventListener('click', () => applyTheme(!isDark()));
+    // ── Mobile Menu ──────────────────────────
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // ── Mobile Menu ──────────────────────────
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    // ── Scroll reveal ────────────────────────
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), Number(e.target.dataset.delay) || 0);
+          revealObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach((el, i) => {
+      el.dataset.delay = (i % 4) * 80;
+      revealObs.observe(el);
+    });
+
+    // ── Navbar shadow on scroll ───────────────
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('shadow-lg', window.scrollY > 40);
+    });
+
+    // ── Gallery filter ───────────────────────
+    const filterTabs   = document.querySelectorAll('.filter-tab');
+    const galleryItems = document.querySelectorAll('#gridView .gallery-item');
+    const photoCount   = document.getElementById('photoCount');
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const filter = tab.dataset.filter;
+        let count = 0;
+        galleryItems.forEach(item => {
+          const match = filter === 'all' || item.dataset.cat === filter;
+          item.classList.toggle('hidden-item', !match);
+          if (match) count++;
+        });
+        photoCount.textContent = count;
+      });
+    });
+
+    // ── View toggle (Grid / Masonry) ─────────
+    const gridView    = document.getElementById('gridView');
+    const masonryView = document.getElementById('masonryView');
+    const btnGrid     = document.getElementById('viewGrid');
+    const btnMasonry  = document.getElementById('viewMasonry');
+
+    function buildMasonry() {
+      masonryView.innerHTML = '';
+      galleryItems.forEach(item => {
+        if (!item.classList.contains('hidden-item')) {
+          const clone = item.cloneNode(true);
+          clone.className = 'masonry-item gallery-item';
+          clone.style.height = 'auto';
+          clone.querySelector('img').style.height = 'auto';
+          clone.querySelector('img').style.maxHeight = '360px';
+          masonryView.appendChild(clone);
+        }
+      });
+      // Re-attach lightbox listeners for cloned items
+      attachLightbox(masonryView.querySelectorAll('.gallery-item'));
+    }
+
+    btnGrid.addEventListener('click', () => {
+      gridView.classList.remove('hidden');
+      masonryView.classList.add('hidden');
+      btnGrid.classList.add('text-gold', 'bg-gold/10');
+      btnMasonry.classList.remove('text-gold', 'bg-gold/10');
+    });
+
+    btnMasonry.addEventListener('click', () => {
+      masonryView.classList.remove('hidden');
+      gridView.classList.add('hidden');
+      btnMasonry.classList.add('text-gold', 'bg-gold/10');
+      btnGrid.classList.remove('text-gold', 'bg-gold/10');
+      buildMasonry();
+    });
+
+    // ── Lightbox ─────────────────────────────
+    const lightbox   = document.getElementById('lightbox');
+    const lbImg      = document.getElementById('lightbox-img');
+    const lbCaption  = document.getElementById('lightbox-caption');
+    const lbCounter  = document.getElementById('lightbox-counter');
+    const lbClose    = document.getElementById('lightbox-close');
+    const lbPrev     = document.getElementById('lightbox-prev');
+    const lbNext     = document.getElementById('lightbox-next');
+
+    let lbItems = [];
+    let lbCurrent = 0;
+
+    function openLightbox(items, idx) {
+      lbItems   = Array.from(items).filter(i => !i.classList.contains('hidden-item'));
+      lbCurrent = lbItems.indexOf(items[idx]) >= 0 ? lbItems.indexOf(items[idx]) : idx;
+      showLbImage(lbCurrent);
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function showLbImage(idx) {
+      const item = lbItems[idx];
+      if (!item) return;
+      lbImg.src          = item.dataset.src || item.querySelector('img').src;
+      lbImg.alt          = item.dataset.caption || '';
+      lbCaption.textContent = item.dataset.caption || '';
+      lbCounter.textContent = `${idx + 1} / ${lbItems.length}`;
+      lbCurrent = idx;
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+      lbImg.src = '';
+    }
+
+    function attachLightbox(items) {
+      items.forEach((item, idx) => {
+        item.addEventListener('click', () => openLightbox(items, idx));
+      });
+    }
+
+    // Attach to grid items
+    attachLightbox(galleryItems);
+
+    lbClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+
+    lbPrev.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showLbImage((lbCurrent - 1 + lbItems.length) % lbItems.length);
+    });
+    lbNext.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showLbImage((lbCurrent + 1) % lbItems.length);
+    });
+
+    document.addEventListener('keydown', e => {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape')      closeLightbox();
+      if (e.key === 'ArrowLeft')   showLbImage((lbCurrent - 1 + lbItems.length) % lbItems.length);
+      if (e.key === 'ArrowRight')  showLbImage((lbCurrent + 1) % lbItems.length);
+    });
+
+    // ── Load More (stub) ─────────────────────
+    document.getElementById('loadMoreBtn').addEventListener('click', function() {
+      this.textContent = 'All photos loaded';
+      this.disabled = true;
+      this.classList.add('opacity-50', 'cursor-not-allowed');
+    });
+
+    // ── Pixieset fallback check ───────────────
+    // Hide fallback if iframe loads successfully
+    const pxFrame = document.getElementById('pixiesetFrame');
+    if (pxFrame) {
+      pxFrame.addEventListener('load', () => {
+        const fb = document.getElementById('pixiesetFallback');
+        // Only hide if the src points to a real URL (not the placeholder)
+        if (!pxFrame.src.includes('stellarscholars.pixieset.com')) {
+          if (fb) fb.style.display = 'flex';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
