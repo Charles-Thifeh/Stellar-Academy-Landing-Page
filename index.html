@@ -673,6 +673,66 @@
     </div>
   </section>
 
+  <style>
+    .pixieset-frame {
+      width: 100%; border: none;
+      min-height: 600px; border-radius: 3px;
+    }
+
+    /* ── Scroll reveal ── */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left  { opacity: 0; transform: translateX(-28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal-left.visible  { opacity: 1; transform: translateX(0); }
+    .reveal-right { opacity: 0; transform: translateX(28px);  transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+  </style>
+  <section id="pixieset-gallery" class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-24">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center justify-center gap-2.5 font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">
+          <span class="w-6 h-px bg-gold"></span>Full Photo Library<span class="w-6 h-px bg-gold"></span>
+        </div>
+        <h2 class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-navy dark:text-gold-light leading-snug">Browse All Albums on Pixieset</h2>
+        <div class="w-16 h-[3px] bg-gold-maroon mx-auto mt-5 mb-4"></div>
+        <p class="font-cormorant text-[18px] text-[#4A4A4A] dark:text-[#C8D4E0] max-w-xl mx-auto">Our complete photo library — including high-resolution downloads for parents — is hosted on Pixieset. Browse, favourite, and download your child's memorable moments.</p>
+      </div>
+
+      <!-- Pixieset embed container -->
+      <div class="bg-white dark:bg-[#1A2840] border border-gold/20 rounded-sm overflow-hidden shadow-[0_8px_32px_rgba(26,42,74,0.1)]">
+
+        <!-- Header bar -->
+        <div class="bg-navy dark:bg-[#0d1a30] px-6 py-4 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-gold flex items-center justify-center font-cinzel text-navy font-bold text-[12px]">S</div>
+            <div>
+              <div class="font-cinzel text-[12px] font-semibold tracking-wide text-white">Stellar Scholars Academy</div>
+              <div class="font-lato text-[10px] text-gold/70 tracking-widest uppercase">Pixieset Photo Library</div>
+            </div>
+          </div>
+          <a href="https://stellarscholarsacademy.pixieset.com/schooltour/" target="_blank" rel="noopener"
+            class="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy font-lato text-[11px] font-bold tracking-widest uppercase px-5 py-2 rounded-sm transition-all duration-200 no-underline">
+            Open in Pixieset
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+
+        <div class="relative" style="padding-bottom:60%; height:0; overflow:hidden;">
+          <iframe
+            id="pixiesetFrame"
+            src="https://stellarscholarsacademy.pixieset.com/schooltour/"
+            class="absolute top-0 left-0 w-full h-full border-none"
+            allowfullscreen
+            loading="lazy"
+            title="Stellar Scholars Academy — Pixieset Gallery">
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ══════════════════════════════════════════
        NEWS & EVENTS
   ══════════════════════════════════════════ -->
@@ -931,6 +991,19 @@
         navbar.classList.remove('shadow-lg');
       }
     });
+
+    // ── Pixieset fallback check ───────────────
+    // Hide fallback if iframe loads successfully
+    const pxFrame = document.getElementById('pixiesetFrame');
+    if (pxFrame) {
+      pxFrame.addEventListener('load', () => {
+        const fb = document.getElementById('pixiesetFallback');
+        // Only hide if the src points to a real URL (not the placeholder)
+        if (!pxFrame.src.includes('stellarscholars.pixieset.com')) {
+          if (fb) fb.style.display = 'flex';
+        }
+      });
+    }
   </script>
 </body>
 
