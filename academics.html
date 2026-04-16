@@ -1,1350 +1,2442 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="light scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Academics — Stellar Scholars Academy</title>
-  <link rel="shortcut icon" href="imgs/logo2.jpg" type="image/x-icon">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500;600&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
-    rel="stylesheet">
+    <title>
+      Stellar Scholars Academy | Excellence in Education & Character | Ogun
+      State, Nigeria
+    </title>
 
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            gold: '#C49A2C',
-            'gold-light': '#E8C56A',
-            'gold-dark': '#9A7A1E',
-            maroon: '#7B1A2E',
-            'maroon-light': '#A02040',
-            navy: '#1A2A4A',
-            'navy-light': '#243558',
-            cream: '#FAF6EE',
-            'warm-white': '#FFFDF8',
-          },
-          fontFamily: {
-            playfair: ['"Playfair Display"', 'serif'],
-            cormorant: ['"Cormorant Garamond"', 'serif'],
-            cinzel: ['Cinzel', 'serif'],
-            lato: ['Lato', 'sans-serif'],
-          },
-          backgroundImage: {
-            'gold-maroon': 'linear-gradient(to right, #C49A2C, #7B1A2E)',
-            'maroon-navy': 'linear-gradient(135deg, #7B1A2E 0%, #1A2A4A 100%)',
-            'hero-pattern': 'repeating-linear-gradient(45deg, rgba(196,154,44,0.04) 0, rgba(196,154,44,0.04) 1px, transparent 0, transparent 24px)',
-            'img-placeholder': 'linear-gradient(135deg, rgba(26,42,74,0.15) 0%, rgba(123,26,46,0.1) 100%)',
-          },
-          keyframes: {
-            fadeUp: {
-              '0%': { opacity: '0', transform: 'translateY(28px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' },
+    <meta
+      name="description"
+      content="Stellar Scholars Academy offers world-class Pre-School, Grade School, and Secondary School education in Obafemi Owode, Ogun State. Nurturing minds and building futures through academic excellence, pastoral care, and strong values. 2026/2027 Admissions now open."
+    />
+
+    <meta
+      name="keywords"
+      content="Stellar Scholars Academy, best school in Ogun State, private school Nigeria, secondary school Obafemi Owode, grade school Nigeria, pre-school Ogun State, top rated school Nigeria, admissions 2026, Ikoyi daycare, SSA Nigeria"
+    />
+
+    <meta name="author" content="Stellar Scholars Academy" />
+    <meta name="robots" content="academics, follow" />
+    <link
+      rel="canonical"
+      href="https://stellarscholarsacademy.com.ng/academics.html"
+    />
+
+    <!-- ✅ OPEN GRAPH (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://stellarscholarsacademy.com.ng/academics.html"
+    />
+    <meta
+      property="og:title"
+      content="Stellar Scholars Academy | Every Learner is a Light"
+    />
+    <meta
+      property="og:description"
+      content="A nurturing school community in Ogun State, Nigeria, where every scholar discovers their unique potential. Pre-School, Grade & Secondary School. Admissions open for 2026/2027."
+    />
+    <meta
+      property="og:image"
+      content="https://stellarscholarsacademy.com.ng/imgs/logo2.jpg"
+    />
+    <meta property="og:image:alt" content="Stellar Scholars Academy Logo" />
+    <meta property="og:site_name" content="Stellar Scholars Academy" />
+    <meta property="og:locale" content="en_NG" />
+
+    <!-- ✅ TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Stellar Scholars Academy | Excellence in Education & Character"
+    />
+    <meta
+      name="twitter:description"
+      content="Nurturing scholars in Ogun State, Nigeria with academic excellence, pastoral care, and strong values. Pre-School to Secondary School. 2026/2027 Admissions now open."
+    />
+    <meta
+      name="twitter:image"
+      content="https://stellarscholarsacademy.com.ng/imgs/logo2.jpg"
+    />
+
+    <!-- ✅ GEO / LOCAL SEO -->
+    <meta name="geo.region" content="NG-OG" />
+    <meta name="geo.placename" content="Obafemi Owode, Ogun State, Nigeria" />
+    <meta name="ICBM" content="6.9965, 3.5986" />
+
+    <!-- ✅ STRUCTURED DATA (JSON-LD) — paste inside a <script> tag -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "School",
+        "name": "Stellar Scholars Academy",
+        "url": "https://stellarscholarsacademy.com.ng",
+        "logo": "https://stellarscholarsacademy.com.ng/imgs/logo2.jpg",
+        "description": "Excellence in Education & Character. Stellar Scholars Academy nurtures scholars who lead with knowledge, integrity, and compassion.",
+        "telephone": "+2347067374352",
+        "email": "stellarscholarsacademy@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Obafemi Owode L.G.A",
+          "addressRegion": "Ogun State",
+          "addressCountry": "NG"
+        },
+        "foundingDate": "2026",
+        "slogan": "Every Learner is a Light",
+        "hasMap": "https://stellarscholarsacademy.com.ng",
+        "sameAs": []
+      }
+    </script>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500;600&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              gold: "#C49A2C",
+              "gold-light": "#E8C56A",
+              "gold-dark": "#9A7A1E",
+              maroon: "#7B1A2E",
+              "maroon-light": "#A02040",
+              navy: "#1A2A4A",
+              "navy-light": "#243558",
+              cream: "#FAF6EE",
+              "warm-white": "#FFFDF8",
+            },
+            fontFamily: {
+              playfair: ['"Playfair Display"', "serif"],
+              cormorant: ['"Cormorant Garamond"', "serif"],
+              cinzel: ["Cinzel", "serif"],
+              lato: ["Lato", "sans-serif"],
+            },
+            backgroundImage: {
+              "gold-maroon": "linear-gradient(to right, #C49A2C, #7B1A2E)",
+              "maroon-navy":
+                "linear-gradient(135deg, #7B1A2E 0%, #1A2A4A 100%)",
+              "hero-pattern":
+                "repeating-linear-gradient(45deg, rgba(196,154,44,0.04) 0, rgba(196,154,44,0.04) 1px, transparent 0, transparent 24px)",
+              "img-placeholder":
+                "linear-gradient(135deg, rgba(26,42,74,0.15) 0%, rgba(123,26,46,0.1) 100%)",
+            },
+            keyframes: {
+              fadeUp: {
+                "0%": { opacity: "0", transform: "translateY(28px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+            },
+            animation: {
+              "fade-up": "fadeUp 0.7s ease both",
+              "fade-up-1": "fadeUp 0.7s ease 0.12s both",
+              "fade-up-2": "fadeUp 0.7s ease 0.24s both",
+              "fade-up-3": "fadeUp 0.7s ease 0.36s both",
             },
           },
-          animation: {
-            'fade-up': 'fadeUp 0.7s ease both',
-            'fade-up-1': 'fadeUp 0.7s ease 0.12s both',
-            'fade-up-2': 'fadeUp 0.7s ease 0.24s both',
-            'fade-up-3': 'fadeUp 0.7s ease 0.36s both',
-          },
         },
-      },
-    }
-  </script>
-
-  <style>
-    /* ── Scrollbar ── */
-    ::-webkit-scrollbar {
-      width: 6px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: #f4f0e8;
-    }
-
-    .dark ::-webkit-scrollbar-track {
-      background: #0F1824;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: #C49A2C;
-      border-radius: 3px;
-    }
-
-    /* ── Nav link underline ── */
-    .nav-link {
-      position: relative;
-      padding-bottom: 3px;
-    }
-
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: #C49A2C;
-      transform: scaleX(0);
-      transition: transform 0.2s ease;
-      border-radius: 1px;
-    }
-
-    .nav-link:hover::after {
-      transform: scaleX(1);
-    }
-
-    .nav-link.active::after {
-      transform: scaleX(1);
-    }
-
-    /* ── Section label ── */
-    .section-label-line {
-      position: relative;
-      padding-left: 36px;
-    }
-
-    .section-label-line::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 50%;
-      width: 24px;
-      height: 1px;
-      background: #C49A2C;
-      transform: translateY(-50%);
-    }
-
-    /* ── Hover top-bar card ── */
-    .hover-bar {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hover-bar::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(to right, #C49A2C, #7B1A2E);
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-      transform-origin: left;
-    }
-
-    .hover-bar:hover::before {
-      transform: scaleX(1);
-    }
-
-    /* ── Programme tab active state ── */
-    .prog-tab {
-      transition: all 0.2s ease;
-      cursor: pointer;
-    }
-
-    .prog-tab.active {
-      background: #1A2A4A;
-      color: #fff;
-      border-color: #1A2A4A;
-    }
-
-    .dark .prog-tab.active {
-      background: #C49A2C;
-      color: #1A2A4A;
-      border-color: #C49A2C;
-    }
-
-    /* ── Programme panel ── */
-    .prog-panel {
-      display: none;
-    }
-
-    .prog-panel.active {
-      display: block;
-    }
-
-    /* ── Calendar grid stripes ── */
-    .cal-row:nth-child(even) {
-      background: rgba(196, 154, 44, 0.04);
-    }
-
-    .dark .cal-row:nth-child(even) {
-      background: rgba(196, 154, 44, 0.06);
-    }
-
-    /* ── FAQ accordion ── */
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.35s ease, padding 0.25s ease;
-    }
-
-    .faq-answer.open {
-      max-height: 400px;
-    }
-
-    .faq-icon {
-      transition: transform 0.3s ease;
-    }
-
-    .faq-icon.open {
-      transform: rotate(45deg);
-    }
-
-    /* ── Diagonal pattern ── */
-    .diag-pattern {
-      background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.025) 0, rgba(255, 255, 255, 0.025) 1px, transparent 0, transparent 20px);
-    }
-
-    .admissions-pattern {
-      background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03) 0, rgba(255, 255, 255, 0.03) 1px, transparent 0, transparent 20px);
-    }
-
-    /* ── Scroll reveal ── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .reveal-left {
-      opacity: 0;
-      transform: translateX(-28px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .reveal-left.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    .reveal-right {
-      opacity: 0;
-      transform: translateX(28px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .reveal-right.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    /* ── Subject badge ── */
-    .subject-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-family: 'Lato', sans-serif;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      padding: 5px 12px;
-      border-radius: 2px;
-      border: 1px solid rgba(196, 154, 44, 0.3);
-      color: #1A2A4A;
-      background: rgba(196, 154, 44, 0.08);
-      transition: all 0.2s;
-    }
-
-    .dark .subject-badge {
-      color: #E8C56A;
-      background: rgba(196, 154, 44, 0.1);
-    }
-
-    .subject-badge:hover {
-      background: #C49A2C;
-      color: #fff;
-      border-color: #C49A2C;
-    }
-  </style>
-</head>
-
-<body
-  class="font-lato bg-warm-white dark:bg-[#0F1824] text-[#4A4A4A] dark:text-[#C8D4E0] overflow-x-hidden transition-colors duration-300">
-
-  <!-- NAVBAR-->
-  <nav id="navbar"
-    class="fixed left-0 right-0 z-50 bg-warm-white/90 dark:bg-[#0F1824]/50 backdrop-blur-md border-b border-gold/20 dark:border-gold/10 shadow-[0_2px_16px_rgba(26,42,74,0.07)] dark:shadow-[0_2px_16px_rgba(0,0,0,0.3)] transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-5 lg:px-10 h-[72px] flex items-center justify-between gap-5">
-
-      <a href="index.html" class="flex items-center gap-3 flex-shrink-0 no-underline">
-        <img src="imgs/logo2.jpg" alt="Logo" class="h-11 w-11">
-        <div class="font-cinzel text-[13px] font-semibold hidden lg:block text-navy dark:text-gold-light leading-tight tracking-wide">
-          STELLAR SCHOLARS ACADEMY
-          <span class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5">LUX ET PAX · EST. 2026</span>
-        </div>
-      </a>
-
-      <ul class="hidden lg:flex items-center gap-7 list-none">
-        <li><a href="index.html"
-            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">Home
-            Us</a></li>
-        <li><a href="about.html"
-            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] transition-colors duration-200 no-underline">About Us</a>
-        </li>
-        <li><a href="admissions.html"
-            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">Admissions</a>
-        </li>
-        <li><a href="school-life.html"
-            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">School
-            Life</a></li>
-        <li><a href="news.html"
-            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">News</a>
-        </li>
-        <li><a href="gallery.html"
-            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">Gallery</a>
-        </li>
-      </ul>
-
-      <div class="flex items-center gap-2.5 flex-shrink-0">
-        <a href="admissions.html#apply"
-          class="hidden sm:inline-block bg-maroon hover:bg-maroon-light text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all duration-200 hover:-translate-y-px no-underline">Enroll
-          Now</a>
-        <a href="contact.html#contact"
-          class="hidden sm:inline-block border border-gold text-gold hover:bg-gold hover:text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all duration-200 no-underline">Book
-          a Tour</a>
-        <button id="themeBtn" aria-label="Toggle theme"
-          class="w-9 h-9 rounded-full bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-[15px] transition-all duration-300 hover:border-gold hover:rotate-12 cursor-pointer flex-shrink-0"></button>
-        <button id="mobileMenuBtn" aria-label="Open menu"
-          class="lg:hidden w-9 h-9 rounded-sm bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-navy dark:text-gold hover:border-gold cursor-pointer flex-shrink-0">
-          <svg width="18" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-            <line x1="0" y1="1" x2="18" y2="1" />
-            <line x1="0" y1="7" x2="18" y2="7" />
-            <line x1="0" y1="13" x2="18" y2="13" />
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    <div id="mobileMenu" class="hidden lg:hidden bg-warm-white dark:bg-[#0F1824] border-t border-gold/20 px-5 py-4">
-      <ul class="flex flex-col gap-1 list-none mb-4">
-        <li><a href="index.html"
-            class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">Home</a></li>
-        <li><a href="about.html"
-            class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">About Us</a></li>
-        <li><a href="admissions.html"
-            class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">Admissions</a>
-        </li>
-        <li><a href="school-life.html"
-            class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">School
-            Life</a></li>
-        <li><a href="news.html"
-            class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">News</a>
-        </li>
-        <li><a href="gallery.html"
-            class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 no-underline transition-colors">Gallery</a>
-        </li>
-      </ul>
-      <div class="flex gap-2.5">
-        <a href="#"
-          class="flex-1 text-center bg-maroon hover:bg-maroon-light text-white text-[11px] font-bold font-lato tracking-widest uppercase px-4 py-2.5 rounded-sm transition-all no-underline">Enroll
-          Now</a>
-        <a href="#"
-          class="flex-1 text-center border border-gold text-gold hover:bg-gold hover:text-white text-[11px] font-bold font-lato tracking-widest uppercase px-4 py-2.5 rounded-sm transition-all no-underline">Book
-          a Tour</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- PAGE HERO-->
-  <section class="relative bg-navy dark:bg-[#080E18] overflow-hidden" style="padding-top: calc(36px + 72px)">
-    <div class="absolute inset-0 bg-hero-pattern pointer-events-none opacity-60"></div>
-    <div class="absolute inset-0 pointer-events-none"
-      style="background:radial-gradient(ellipse at 15% 60%, rgba(196,154,44,0.09) 0%, transparent 55%), radial-gradient(ellipse at 85% 25%, rgba(123,26,46,0.14) 0%, transparent 50%);">
-    </div>
-
-    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 py-20 lg:py-28">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-        <!-- Left text -->
-        <div>
-          <div
-            class="animate-fade-up flex items-center gap-2 mb-6 font-lato text-[11px] tracking-widest uppercase text-white/40">
-            <a href="index.html" class="hover:text-gold transition-colors no-underline text-white/40">Home</a>
-            <span class="text-gold/50">/</span>
-            <span class="text-gold">Academics</span>
-          </div>
-          <div class="animate-fade-up flex items-center gap-3 mb-4">
-            <span class="w-8 h-px bg-gold flex-shrink-0"></span>
-            <span class="font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold">Our Curriculum</span>
-          </div>
-          <h1 class="animate-fade-up-1 font-playfair font-bold text-white leading-[1.15] mb-6"
-            style="font-size:clamp(36px,4vw,58px)">
-            A Curriculum Built<br>for <em class="italic text-gold-light">Every Mind.</em>
-          </h1>
-          <p class="animate-fade-up-2 font-cormorant text-[19px] leading-relaxed text-white/70 max-w-lg mb-8">
-            From our nurturing pre-school through to secondary examination classes, every stage of our academic
-            programme is crafted to challenge, inspire, and celebrate each scholar's unique potential.
-          </p>
-          <div class="animate-fade-up-3 flex flex-wrap gap-3">
-            <a href="#programmes"
-              class="inline-block bg-maroon hover:bg-maroon-light text-white font-lato text-[12px] font-bold tracking-widest uppercase px-7 py-3.5 rounded-sm transition-all duration-200 hover:-translate-y-0.5 no-underline">Explore
-              Programmes</a>
-            <a href="#prospectus"
-              class="inline-block border border-gold text-gold hover:bg-gold hover:text-navy font-lato text-[12px] font-bold tracking-widest uppercase px-7 py-3.5 rounded-sm transition-all duration-200 no-underline flex items-center gap-2">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <polyline points="7 10 12 15 17 10" />
-                <line x1="12" y1="15" x2="12" y2="3" />
-              </svg>
-              Download Prospectus
-            </a>
-          </div>
-        </div>
-
-        <!-- Right: quick-glance stats -->
-        <div class="animate-fade-up-2 grid grid-cols-2 gap-4">
-          <div
-            class="bg-white/5 border border-gold/20 rounded-sm p-6 text-center hover:bg-white/[0.08] transition-all duration-300 group">
-            <div class="text-[36px] mx-20 mb-3 group-hover:scale-110 transition-transform duration-300"><svg width="50px" height="50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"> <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--> <path fill="white" d="M576 96C576 204.1 499.4 294.3 397.6 315.4C389.7 257.3 363.6 205 325.1 164.5C365.2 104 433.9 64 512 64L544 64C561.7 64 576 78.3 576 96zM64 160C64 142.3 78.3 128 96 128L128 128C251.7 128 352 228.3 352 352L352 544C352 561.7 337.7 576 320 576C302.3 576 288 561.7 288 544L288 384C164.3 384 64 283.7 64 160z"/></svg></div>
-            <div class="font-cinzel text-[22px] font-bold text-gold leading-none mb-1">Pre-School</div>
-            <div class="font-lato text-[10px] tracking-widest uppercase text-white/50">Ages 2 – 5</div>
-          </div>
-          <div
-            class="bg-white/5 border border-gold/20 rounded-sm p-6 text-center hover:bg-white/[0.08] transition-all duration-300 group">
-            <div class=" group-hover:scale-110 transition-transform duration-300"><svg
-                xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-8 w-8" viewBox="0 0 16 16">
-                <path
-                  d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
-              </svg></div>
-            <div class="font-cinzel text-[22px] font-bold text-gold leading-none mb-1">Grade</div>
-            <div class="font-lato text-[10px] tracking-widest uppercase text-white/50">Grade 1 – 6</div>
-          </div>
-          <div
-            class="bg-white/5 border border-gold/20 rounded-sm p-6 text-center hover:bg-white/[0.08] transition-all duration-300 group">
-            <div class="text-[36px] mb-2 group-hover:scale-110 transition-transform duration-300"></div>
-            <div class="font-cinzel text-[22px] font-bold text-gold leading-none mb-1">Junior Sec.</div>
-            <div class="font-lato text-[10px] tracking-widest uppercase text-white/50">JSS 1 – 3</div>
-          </div>
-          <div
-            class="bg-white/5 border border-gold/20 rounded-sm p-6 text-center hover:bg-white/[0.08] transition-all duration-300 group">
-            <div class="text-[36px] mb-2 group-hover:scale-110 transition-transform duration-300"></div>
-            <div class="font-cinzel text-[22px] font-bold text-gold leading-none mb-1">Senior Sec.</div>
-            <div class="font-lato text-[10px] tracking-widest uppercase text-white/50">SSS 1 – 3</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="absolute bottom-0 left-0 right-0 overflow-hidden leading-none">
-      <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full"
-        preserveAspectRatio="none">
-        <path d="M0 40 L0 20 Q360 0 720 20 Q1080 40 1440 20 L1440 40 Z" class="fill-warm-white dark:fill-[#0F1824]" />
-      </svg>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════════
-       PROGRAMME TABS — by grade level
-  ══════════════════════════════════════════════════ -->
-  <section id="programmes" class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-24">
-    <div class="max-w-7xl mx-auto">
-
-      <div class="text-center mb-14">
-        <div
-          class="inline-flex items-center justify-center gap-2.5 font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">
-          <span class="w-6 h-px bg-gold"></span>Programmes by Grade<span class="w-6 h-px bg-gold"></span>
-        </div>
-        <h2 class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-navy dark:text-gold-light leading-snug">
-          Learning at Every Stage</h2>
-        <div class="w-16 h-[3px] bg-gold-maroon mx-auto mt-5 mb-4"></div>
-        <p class="font-cormorant text-[18px] text-[#4A4A4A] dark:text-[#C8D4E0] max-w-xl mx-auto">Each stage of learning
-          is purposefully designed to meet scholars where they are and take them further than they imagined.</p>
-      </div>
-
-      <!-- Tab buttons -->
-      <div class="flex flex-wrap justify-center gap-3 mb-12" id="progTabs">
-        <button data-tab="preschool"
-          class="prog-tab active font-cinzel text-[11px] font-semibold tracking-widest uppercase px-6 py-3 rounded-sm border border-navy/20 dark:border-gold/20 text-navy dark:text-[#C8D4E0] hover:border-navy dark:hover:border-gold">
-          Pre-School</button>
-        <button data-tab="Grade"
-          class="prog-tab font-cinzel text-[11px] font-semibold tracking-widest uppercase px-6 py-3 rounded-sm border border-navy/20 dark:border-gold/20 text-navy dark:text-[#C8D4E0] hover:border-navy dark:hover:border-gold">
-          Grade</button>
-        <button data-tab="jss"
-          class="prog-tab font-cinzel text-[11px] font-semibold tracking-widest uppercase px-6 py-3 rounded-sm border border-navy/20 dark:border-gold/20 text-navy dark:text-[#C8D4E0] hover:border-navy dark:hover:border-gold">
-          Junior Secondary</button>
-        <button data-tab="sss"
-          class="prog-tab font-cinzel text-[11px] font-semibold tracking-widest uppercase px-6 py-3 rounded-sm border border-navy/20 dark:border-gold/20 text-navy dark:text-[#C8D4E0] hover:border-navy dark:hover:border-gold">
-          Senior Secondary</button>
-      </div>
-
-      <!-- Tab panels -->
-      <div id="progPanels">
-
-        <!-- PRE-SCHOOL -->
-        <div id="panel-preschool" class="prog-panel active">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div class="reveal-left">
-              <div
-                class="w-full aspect-[4/3] rounded-sm bg-gradient-to-br from-gold/20 to-maroon/10 dark:from-navy dark:to-[#243558] flex items-center justify-center text-[80px] min-h-[260px]">
-                <img src="imgs/facility (4).jpg" alt="pre-school students" class="" width="420px" height="350px"></div>
-            </div>
-            <div class="reveal-right space-y-5">
-              <div>
-                <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-1">Ages 2 – 5 · Nursery 1, 2
-                  &amp; Reception</div>
-                <h3 class="font-playfair text-[28px] font-bold text-navy dark:text-gold-light mb-3">Pre-School Programme
-                </h3>
-                <div class="w-12 h-[3px] bg-gold-maroon mb-4"></div>
-                <p class="font-cormorant text-[17px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0]">Our pre-school
-                  is a warm, stimulating haven where the youngest scholars discover the joy of learning through play,
-                  exploration, and creative expression. Every activity is intentionally designed to build early
-                  literacy, numeracy, social skills, and emotional intelligence.</p>
-              </div>
-              <div>
-                <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-3">Key Focus Areas</div>
-                <div class="flex flex-wrap gap-2">
-                  <span class="subject-badge"> Early Literacy</span>
-                  <span class="subject-badge"> Numeracy</span>
-                  <span class="subject-badge"> Creative Arts</span>
-                  <span class="subject-badge"> Music & Rhyme</span>
-                  <span class="subject-badge"> Problem Solving</span>
-                  <span class="subject-badge"> Motor Skills</span>
-                  <span class="subject-badge"> Environmental Studies</span>
-                  <span class="subject-badge"> Moral Education</span>
-                </div>
-              </div>
-              <div class="grid grid-cols-3 gap-3 pt-2">
-                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
-                  <div class="font-cinzel text-[20px] font-bold text-gold">15</div>
-                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">Max Class Size</div>
-                </div>
-                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
-                  <div class="font-cinzel text-[20px] font-bold text-gold">7am</div>
-                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">School Opens</div>
-                </div>
-                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
-                  <div class="font-cinzel text-[20px] font-bold text-gold">2pm</div>
-                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">Half Day Option</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Grade -->
-        <div id="panel-Grade" class="prog-panel">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div class="reveal-left">
-              <div
-                class="w-full aspect-[4/3] rounded-sm bg-gradient-to-br from-navy/80 to-maroon/40 dark:from-[#0d1a30] dark:to-[#3a1020] flex items-center justify-center text-[80px] min-h-[260px]">
-                </div>
-            </div>
-            <div class="reveal-right space-y-5">
-              <div>
-                <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-1">Ages 6 – 11 · Grade 1 –
-                  6</div>
-                <h3 class="font-playfair text-[28px] font-bold text-navy dark:text-gold-light mb-3">Grade School
-                  Programme</h3>
-                <div class="w-12 h-[3px] bg-gold-maroon mb-4"></div>
-                <p class="font-cormorant text-[17px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0]">Our Grade
-                  programme blends rigorous academics with vibrant co-curricular activities. Scholars develop strong
-                  foundations in literacy and numeracy while growing in confidence, curiosity, and character through a
-                  broad and balanced curriculum aligned with national standards.</p>
-              </div>
-              <div>
-                <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-3">Core Subjects</div>
-                <div class="flex flex-wrap gap-2">
-                  <span class="subject-badge"> English Language</span>
-                  <span class="subject-badge"> Mathematics</span>
-                  <span class="subject-badge"> Basic Science</span>
-                  <span class="subject-badge"> Social Studies</span>
-                  <span class="subject-badge"> ICT</span>
-                  <span class="subject-badge"> Fine Art</span>
-                  <span class="subject-badge"> Physical Education</span>
-                  <span class="subject-badge"> CRS / Islamic Studies</span>
-                  <span class="subject-badge"> Hausa / French</span>
-                </div>
-              </div>
-              <div class="grid grid-cols-3 gap-3 pt-2">
-                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
-                  <div class="font-cinzel text-[20px] font-bold text-gold">25</div>
-                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">Max Class Size</div>
-                </div>
-                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
-                  <div class="font-cinzel text-[20px] font-bold text-gold">6</div>
-                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">Year Groups</div>
-                </div>
-                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
-                  <div class="font-cinzel text-[20px] font-bold text-gold">BECE</div>
-                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">Exit Assessment</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- JSS -->
-        <div id="panel-jss" class="prog-panel">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div class="reveal-left">
-              <div
-                class="w-full aspect-[4/3] rounded-sm bg-gradient-to-br from-maroon/60 to-navy dark:from-[#3a1020] dark:to-[#0d1a30] flex items-center justify-center text-[80px] min-h-[260px]">
-                🎓</div>
-            </div>
-            <div class="reveal-right space-y-5">
-              <div>
-                <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-1">Ages 12 – 14 · JSS 1 – 3
-                </div>
-                <h3 class="font-playfair text-[28px] font-bold text-navy dark:text-gold-light mb-3">Junior Secondary
-                  Programme</h3>
-                <div class="w-12 h-[3px] bg-gold-maroon mb-4"></div>
-                <p class="font-cormorant text-[17px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0]">The Junior
-                  Secondary programme prepares scholars for the intellectual rigour of senior school through an expanded
-                  subject range, project-based learning, and independent study skills. Students sit the Junior WAEC
-                  (BECE) at the end of JSS3, paving the way for senior secondary placement.</p>
-              </div>
-              <div>
-                <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-3">Subjects Offered</div>
-                <div class="flex flex-wrap gap-2">
-                  <span class="subject-badge"> English</span>
-                  <span class="subject-badge"> Mathematics</span>
-                  <span class="subject-badge"> Integrated Science</span>
-                  <span class="subject-badge"> Social Studies</span>
-                  <span class="subject-badge"> History</span>
-                  <span class="subject-badge"> Civic Education</span>
-                  <span class="subject-badge"> Computer Studies</span>
-                  <span class="subject-badge"> Basic Tech</span>
-                  <span class="subject-badge"> Fine Art</span>
-                  <span class="subject-badge"> French / Hausa</span>
-                </div>
-              </div>
-              <div class="grid grid-cols-3 gap-3 pt-2">
-                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
-                  <div class="font-cinzel text-[20px] font-bold text-gold">30</div>
-                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">Max Class Size</div>
-                </div>
-                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
-                  <div class="font-cinzel text-[20px] font-bold text-gold">3</div>
-                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">Year Groups</div>
-                </div>
-                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
-                  <div class="font-cinzel text-[20px] font-bold text-gold">BECE</div>
-                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">Exit Exam</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- SSS -->
-        <div id="panel-sss" class="prog-panel">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div class="reveal-left">
-              <div
-                class="w-full aspect-[4/3] rounded-sm bg-gradient-to-br from-gold/30 to-navy dark:from-[#2a1f00] dark:to-[#0d1a30] flex items-center justify-center text-[80px] min-h-[260px]">
-                🏅</div>
-            </div>
-            <div class="reveal-right space-y-5">
-              <div>
-                <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-1">Ages 15 – 17 · SSS 1 – 3
-                </div>
-                <h3 class="font-playfair text-[28px] font-bold text-navy dark:text-gold-light mb-3">Senior Secondary
-                  Programme</h3>
-                <div class="w-12 h-[3px] bg-gold-maroon mb-4"></div>
-                <p class="font-cormorant text-[17px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0]">Our Senior
-                  Secondary programme offers three specialist tracks — Science, Arts &amp; Humanities, and Commercial —
-                  each preparing scholars for WAEC and NECO examinations, university entrance, and purposeful adult
-                  life. Class sizes are kept deliberately small to maximise teacher attention.</p>
-              </div>
-              <div class="space-y-3">
-                <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-2">Specialist Tracks</div>
-                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4">
-                  <div class="font-cinzel text-[11px] font-bold tracking-wide text-navy dark:text-gold-light mb-2">
-                    Science Track</div>
-                  <div class="flex flex-wrap gap-1.5">
-                    <span class="subject-badge">Physics</span><span class="subject-badge">Chemistry</span><span
-                      class="subject-badge">Biology</span><span class="subject-badge">Further Maths</span><span
-                      class="subject-badge">Agricultural Sci.</span>
-                  </div>
-                </div>
-                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4">
-                  <div class="font-cinzel text-[11px] font-bold tracking-wide text-navy dark:text-gold-light mb-2">
-                    Arts &amp; Humanities</div>
-                  <div class="flex flex-wrap gap-1.5">
-                    <span class="subject-badge">Literature</span><span class="subject-badge">History</span><span
-                      class="subject-badge">Government</span><span class="subject-badge">French</span><span
-                      class="subject-badge">Fine Art</span>
-                  </div>
-                </div>
-                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4">
-                  <div class="font-cinzel text-[11px] font-bold tracking-wide text-navy dark:text-gold-light mb-2">
-                    Commercial Track</div>
-                  <div class="flex flex-wrap gap-1.5">
-                    <span class="subject-badge">Economics</span><span class="subject-badge">Accounting</span><span
-                      class="subject-badge">Commerce</span><span class="subject-badge">Business Studies</span>
-                  </div>
-                </div>
-              </div>
-              <div class="grid grid-cols-3 gap-3 pt-1">
-                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
-                  <div class="font-cinzel text-[20px] font-bold text-gold">25</div>
-                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">Max Class Size</div>
-                </div>
-                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
-                  <div class="font-cinzel text-[20px] font-bold text-gold">3</div>
-                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">Specialist Tracks</div>
-                </div>
-                <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center">
-                  <div class="font-cinzel text-[20px] font-bold text-gold">WAEC</div>
-                  <div class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5">/ NECO Exit</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- end progPanels -->
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════════
-       CURRICULUM APPROACH
-  ══════════════════════════════════════════════════ -->
-  <section class="relative bg-navy dark:bg-[#080E18] px-5 sm:px-10 lg:px-20 py-24 overflow-hidden">
-    <div class="absolute inset-0 diag-pattern pointer-events-none"></div>
-    <div class="absolute inset-0 pointer-events-none"
-      style="background:radial-gradient(ellipse at 75% 50%, rgba(196,154,44,0.07) 0%, transparent 60%);"></div>
-    <div class="relative z-10 max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <div
-          class="inline-flex items-center justify-center gap-2.5 font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">
-          <span class="w-6 h-px bg-gold"></span>Our Approach<span class="w-6 h-px bg-gold"></span>
-        </div>
-        <h2 class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-white leading-snug">How We Teach</h2>
-        <div class="w-16 h-[3px] bg-gold-maroon mx-auto mt-5"></div>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div
-          class="reveal bg-white/5 border border-gold/15 rounded-sm p-8 transition-all duration-300 hover:bg-white/[0.08] hover:border-gold">
-          <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center text-[22px] mb-5"></div>
-          <div class="font-cinzel text-[12.5px] font-semibold tracking-wide text-gold mb-3">Inquiry-Based Learning</div>
-          <p class="text-[14px] leading-[1.75] text-white/60">Scholars are taught to ask questions, investigate
-            problems, and draw conclusions — building genuine understanding rather than rote memorisation.</p>
-        </div>
-        <div
-          class="reveal bg-white/5 border border-gold/15 rounded-sm p-8 transition-all duration-300 hover:bg-white/[0.08] hover:border-gold">
-          <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center text-[22px] mb-5"></div>
-          <div class="font-cinzel text-[12.5px] font-semibold tracking-wide text-gold mb-3">Collaborative Classrooms
-          </div>
-          <p class="text-[14px] leading-[1.75] text-white/60">Small class sizes and group-based projects develop
-            communication, teamwork, and leadership skills alongside academic knowledge.</p>
-        </div>
-        <div
-          class="reveal bg-white/5 border border-gold/15 rounded-sm p-8 transition-all duration-300 hover:bg-white/[0.08] hover:border-gold">
-          <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center text-[22px] mb-5"></div>
-          <div class="font-cinzel text-[12.5px] font-semibold tracking-wide text-gold mb-3">Technology Integration</div>
-          <p class="text-[14px] leading-[1.75] text-white/60">Our modern computer lab and in-class digital resources
-            ensure scholars are confident, responsible, and skilled digital citizens.</p>
-        </div>
-        <div
-          class="reveal bg-white/5 border border-gold/15 rounded-sm p-8 transition-all duration-300 hover:bg-white/[0.08] hover:border-gold">
-          <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center text-[22px] mb-5"></div>
-          <div class="font-cinzel text-[12.5px] font-semibold tracking-wide text-gold mb-3">Continuous Assessment</div>
-          <p class="text-[14px] leading-[1.75] text-white/60">Regular formative assessments, termly reports, and parent
-            conferences ensure every scholar's progress is tracked, celebrated, and supported.</p>
-        </div>
-        <div
-          class="reveal bg-white/5 border border-gold/15 rounded-sm p-8 transition-all duration-300 hover:bg-white/[0.08] hover:border-gold">
-          <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center text-[22px] mb-5"></div>
-          <div class="font-cinzel text-[12.5px] font-semibold tracking-wide text-gold mb-3">Differentiated Instruction
-          </div>
-          <p class="text-[14px] leading-[1.75] text-white/60">Teachers are trained to adapt their methods to diverse
-            learning styles and abilities, ensuring no scholar is left behind or unchallenged.</p>
-        </div>
-        <div
-          class="reveal bg-white/5 border border-gold/15 rounded-sm p-8 transition-all duration-300 hover:bg-white/[0.08] hover:border-gold">
-          <div class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center text-[22px] mb-5"></div>
-          <div class="font-cinzel text-[12.5px] font-semibold tracking-wide text-gold mb-3">Excellence & Recognition
-          </div>
-          <p class="text-[14px] leading-[1.75] text-white/60">From termly honour rolls to annual awards, we celebrate
-            academic achievement and positive character as equally worthy of recognition.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════════
-       ACADEMIC CALENDAR
-  ══════════════════════════════════════════════════ -->
-  <section class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-24">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-16 items-start">
-
-        <!-- Left -->
-        <div class="reveal-left">
-          <div class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">2025 / 2026
-            School Year</div>
-          <h2
-            class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-navy dark:text-gold-light leading-snug mb-4">
-            Academic Calendar</h2>
-          <div class="w-16 h-[3px] bg-gold-maroon mb-6"></div>
-          <p class="font-cormorant text-[18px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] mb-8">Our academic
-            year is divided into three terms. Each term is a full and enriching experience with a balance of rigorous
-            study, assessments, co-curricular activities, and community events.</p>
-
-          <div class="space-y-4">
-            <!-- Term summary cards -->
-            <div
-              class="bg-white dark:bg-[#1A2840] border border-gold/20 rounded-sm p-5 flex items-center gap-4 hover:shadow-[0_4px_20px_rgba(196,154,44,0.12)] transition-all duration-300">
-              <div
-                class="w-12 h-12 rounded-full bg-maroon flex items-center justify-center font-cinzel text-white font-bold text-[13px] flex-shrink-0">
-                T1</div>
-              <div>
-                <div class="font-cinzel text-[11px] font-bold tracking-wide text-navy dark:text-gold-light">First Term
-                </div>
-                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">September – December 2025</div>
-                <div class="text-[11px] text-gold mt-0.5">14 Weeks · Resumes September</div>
-              </div>
-            </div>
-            <div
-              class="bg-white dark:bg-[#1A2840] border border-gold/20 rounded-sm p-5 flex items-center gap-4 hover:shadow-[0_4px_20px_rgba(196,154,44,0.12)] transition-all duration-300">
-              <div
-                class="w-12 h-12 rounded-full bg-navy flex items-center justify-center font-cinzel text-white font-bold text-[13px] flex-shrink-0">
-                T2</div>
-              <div>
-                <div class="font-cinzel text-[11px] font-bold tracking-wide text-navy dark:text-gold-light">Second Term
-                </div>
-                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">January – April 2026</div>
-                <div class="text-[11px] text-gold mt-0.5">13 Weeks · Resumes January</div>
-              </div>
-            </div>
-            <div
-              class="bg-white dark:bg-[#1A2840] border border-gold/20 rounded-sm p-5 flex items-center gap-4 hover:shadow-[0_4px_20px_rgba(196,154,44,0.12)] transition-all duration-300">
-              <div
-                class="w-12 h-12 rounded-full bg-gold flex items-center justify-center font-cinzel text-navy font-bold text-[13px] flex-shrink-0">
-                T3</div>
-              <div>
-                <div class="font-cinzel text-[11px] font-bold tracking-wide text-navy dark:text-gold-light">Third Term
-                </div>
-                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">May – July</div>
-                <div class="text-[11px] text-gold mt-0.5">11 Weeks · Resumes  May</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: detailed events table -->
-        <div class="reveal-right">
-          <div class="bg-white dark:bg-[#1A2840] border border-gold/20 rounded-sm overflow-hidden">
-            <div class="bg-navy dark:bg-[#0d1a30] px-6 py-4 flex items-center justify-between">
-              <div class="font-cinzel text-[13px] font-semibold tracking-wide text-white">Key Dates &amp; Events</div>
-            </div>
-
-            <div class="divide-y divide-gold/10">
-              <!-- Row -->
-              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
-                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">First Week of September</div>
-                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">First Term Resumes</div>
-              </div>
-              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
-                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">Third week of October</div>
-                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">First Term Mid-Term Break</div>
-              </div>
-              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
-                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">Last week of October</div>
-                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Mid-Term Break Ends</div>
-              </div>
-              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
-                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">Second Week of November</div>
-                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">First Term Examinations Begin</div>
-              </div>
-              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
-                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">First Week of December</div>
-                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Prize-Giving &amp; Carol Service</div>
-              </div>
-              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
-                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">Second Week of December</div>
-                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">First Term Closes</div>
-              </div>
-              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
-                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">Second Week of January</div>
-                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Second Term Resumes</div>
-              </div>
-              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
-                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">Third Week Feb 2026</div>
-                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Second Term Mid-Term Break</div>
-              </div>
-              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
-                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">Second Week of March</div>
-                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Sports Day</div>
-              </div>
-              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
-                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">First Week of April</div>
-                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Second Term Closes</div>
-              </div>
-              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
-                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">First Week of May</div>
-                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Third Term Resumes</div>
-              </div>
-              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
-                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">The Month Of June</div>
-                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">WAEC / NECO Examinations</div>
-              </div>
-              <div class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center">
-                <div class="font-cinzel text-[10px] tracking-wide text-gold font-semibold">Second Week of July</div>
-                <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Graduation &amp; Closing Ceremony</div>
-              </div>
-            </div>
-
-            <div class="px-6 py-4 bg-gold/8 dark:bg-gold/5 border-t border-gold/20">
-              <a href="#"
-                class="inline-flex items-center gap-2 text-gold hover:text-gold-dark font-lato text-[12px] font-bold tracking-wide uppercase transition-colors no-underline">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                  <polyline points="7 10 12 15 17 10" />
-                  <line x1="12" y1="15" x2="12" y2="3" />
-                </svg>
-                Download Full Calendar (PDF)
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════════
-       DOWNLOADABLE PROSPECTUS
-  ══════════════════════════════════════════════════ -->
-  <section id="prospectus" class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-24">
-    <div class="max-w-7xl mx-auto">
+      };
+    </script>
+
+    <style>
+      /* ── Scrollbar ── */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f4f0e8;
+      }
+
+      .dark ::-webkit-scrollbar-track {
+        background: #0f1824;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #c49a2c;
+        border-radius: 3px;
+      }
+
+      /* ── Nav link underline ── */
+      .nav-link {
+        position: relative;
+        padding-bottom: 3px;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #c49a2c;
+        transform: scaleX(0);
+        transition: transform 0.2s ease;
+        border-radius: 1px;
+      }
+
+      .nav-link:hover::after {
+        transform: scaleX(1);
+      }
+
+      .nav-link.active::after {
+        transform: scaleX(1);
+      }
+
+      /* ── Section label ── */
+      .section-label-line {
+        position: relative;
+        padding-left: 36px;
+      }
+
+      .section-label-line::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 24px;
+        height: 1px;
+        background: #c49a2c;
+        transform: translateY(-50%);
+      }
+
+      /* ── Hover top-bar card ── */
+      .hover-bar {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hover-bar::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(to right, #c49a2c, #7b1a2e);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+        transform-origin: left;
+      }
+
+      .hover-bar:hover::before {
+        transform: scaleX(1);
+      }
+
+      /* ── Programme tab active state ── */
+      .prog-tab {
+        transition: all 0.2s ease;
+        cursor: pointer;
+      }
+
+      .prog-tab.active {
+        background: #1a2a4a;
+        color: #fff;
+        border-color: #1a2a4a;
+      }
+
+      .dark .prog-tab.active {
+        background: #c49a2c;
+        color: #1a2a4a;
+        border-color: #c49a2c;
+      }
+
+      /* ── Programme panel ── */
+      .prog-panel {
+        display: none;
+      }
+
+      .prog-panel.active {
+        display: block;
+      }
+
+      /* ── Calendar grid stripes ── */
+      .cal-row:nth-child(even) {
+        background: rgba(196, 154, 44, 0.04);
+      }
+
+      .dark .cal-row:nth-child(even) {
+        background: rgba(196, 154, 44, 0.06);
+      }
+
+      /* ── FAQ accordion ── */
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.35s ease,
+          padding 0.25s ease;
+      }
+
+      .faq-answer.open {
+        max-height: 400px;
+      }
+
+      .faq-icon {
+        transition: transform 0.3s ease;
+      }
+
+      .faq-icon.open {
+        transform: rotate(45deg);
+      }
+
+      /* ── Diagonal pattern ── */
+      .diag-pattern {
+        background-image: repeating-linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 0.025) 0,
+          rgba(255, 255, 255, 0.025) 1px,
+          transparent 0,
+          transparent 20px
+        );
+      }
+
+      .admissions-pattern {
+        background-image: repeating-linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 0.03) 0,
+          rgba(255, 255, 255, 0.03) 1px,
+          transparent 0,
+          transparent 20px
+        );
+      }
+
+      /* ── Scroll reveal ── */
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .reveal-left {
+        opacity: 0;
+        transform: translateX(-28px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+
+      .reveal-left.visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .reveal-right {
+        opacity: 0;
+        transform: translateX(28px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+
+      .reveal-right.visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      /* ── Subject badge ── */
+      .subject-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-family: "Lato", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        padding: 5px 12px;
+        border-radius: 2px;
+        border: 1px solid rgba(196, 154, 44, 0.3);
+        color: #1a2a4a;
+        background: rgba(196, 154, 44, 0.08);
+        transition: all 0.2s;
+      }
+
+      .dark .subject-badge {
+        color: #e8c56a;
+        background: rgba(196, 154, 44, 0.1);
+      }
+
+      .subject-badge:hover {
+        background: #c49a2c;
+        color: #fff;
+        border-color: #c49a2c;
+      }
+    </style>
+  </head>
+
+  <body
+    class="font-lato bg-warm-white dark:bg-[#0F1824] text-[#4A4A4A] dark:text-[#C8D4E0] overflow-x-hidden transition-colors duration-300"
+  >
+    <!-- NAVBAR-->
+    <nav
+      id="navbar"
+      class="fixed left-0 right-0 z-50 bg-warm-white/90 dark:bg-[#0F1824]/50 backdrop-blur-md border-b border-gold/20 dark:border-gold/10 shadow-[0_2px_16px_rgba(26,42,74,0.07)] dark:shadow-[0_2px_16px_rgba(0,0,0,0.3)] transition-all duration-300"
+    >
       <div
-        class="reveal bg-gradient-to-br from-navy to-[#243558] dark:from-[#080E18] dark:to-[#0d1a30] border border-gold/25 rounded-sm overflow-hidden">
-        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-0">
+        class="max-w-7xl mx-auto px-5 lg:px-10 h-[72px] flex items-center justify-between gap-5"
+      >
+        <a
+          href="index.html"
+          class="flex items-center gap-3 flex-shrink-0 no-underline"
+        >
+          <img src="imgs/logo2.jpg" alt="Logo" class="h-11 w-11" />
+          <div
+            class="font-cinzel text-[13px] font-semibold hidden lg:block text-navy dark:text-gold-light leading-tight tracking-wide"
+          >
+            STELLAR SCHOLARS ACADEMY
+            <span
+              class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5"
+              >LUX ET PAX · EST. 2026</span
+            >
+          </div>
+        </a>
 
-          <!-- Left content -->
-          <div class="p-10 lg:p-14">
-            <div class="flex items-center gap-3 mb-5">
+        <ul class="hidden lg:flex items-center gap-7 list-none">
+          <li>
+            <a
+              href="index.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline"
+              >Home Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="about.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] transition-colors duration-200 no-underline"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="admissions.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline"
+              >Admissions</a
+            >
+          </li>
+          <li>
+            <a
+              href="school-life.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline"
+              >School Life</a
+            >
+          </li>
+          <li>
+            <a
+              href="news.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline"
+              >News</a
+            >
+          </li>
+          <li>
+            <a
+              href="gallery.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline"
+              >Gallery</a
+            >
+          </li>
+        </ul>
+
+        <div class="flex items-center gap-2.5 flex-shrink-0">
+          <a
+            href="admissions.html#apply"
+            class="hidden sm:inline-block bg-maroon hover:bg-maroon-light text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all duration-200 hover:-translate-y-px no-underline"
+            >Enroll Now</a
+          >
+          <a
+            href="contact.html#contact"
+            class="hidden sm:inline-block border border-gold text-gold hover:bg-gold hover:text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all duration-200 no-underline"
+            >Book a Tour</a
+          >
+          <button
+            id="themeBtn"
+            aria-label="Toggle theme"
+            class="w-9 h-9 rounded-full bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-[15px] transition-all duration-300 hover:border-gold hover:rotate-12 cursor-pointer flex-shrink-0"
+          ></button>
+          <button
+            id="mobileMenuBtn"
+            aria-label="Open menu"
+            class="lg:hidden w-9 h-9 rounded-sm bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-navy dark:text-gold hover:border-gold cursor-pointer flex-shrink-0"
+          >
+            <svg
+              width="18"
+              height="14"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <line x1="0" y1="1" x2="18" y2="1" />
+              <line x1="0" y1="7" x2="18" y2="7" />
+              <line x1="0" y1="13" x2="18" y2="13" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="mobileMenu"
+        class="hidden lg:hidden bg-warm-white dark:bg-[#0F1824] border-t border-gold/20 px-5 py-4"
+      >
+        <ul class="flex flex-col gap-1 list-none mb-4">
+          <li>
+            <a
+              href="index.html"
+              class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="about.html"
+              class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="admissions.html"
+              class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors"
+              >Admissions</a
+            >
+          </li>
+          <li>
+            <a
+              href="school-life.html"
+              class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors"
+              >School Life</a
+            >
+          </li>
+          <li>
+            <a
+              href="news.html"
+              class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors"
+              >News</a
+            >
+          </li>
+          <li>
+            <a
+              href="gallery.html"
+              class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 no-underline transition-colors"
+              >Gallery</a
+            >
+          </li>
+        </ul>
+        <div class="flex gap-2.5">
+          <a
+            href="#"
+            class="flex-1 text-center bg-maroon hover:bg-maroon-light text-white text-[11px] font-bold font-lato tracking-widest uppercase px-4 py-2.5 rounded-sm transition-all no-underline"
+            >Enroll Now</a
+          >
+          <a
+            href="#"
+            class="flex-1 text-center border border-gold text-gold hover:bg-gold hover:text-white text-[11px] font-bold font-lato tracking-widest uppercase px-4 py-2.5 rounded-sm transition-all no-underline"
+            >Book a Tour</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- PAGE HERO-->
+    <section
+      class="relative bg-navy dark:bg-[#080E18] overflow-hidden"
+      style="padding-top: calc(36px + 72px)"
+    >
+      <div
+        class="absolute inset-0 bg-hero-pattern pointer-events-none opacity-60"
+      ></div>
+      <div
+        class="absolute inset-0 pointer-events-none"
+        style="
+          background:
+            radial-gradient(
+              ellipse at 15% 60%,
+              rgba(196, 154, 44, 0.09) 0%,
+              transparent 55%
+            ),
+            radial-gradient(
+              ellipse at 85% 25%,
+              rgba(123, 26, 46, 0.14) 0%,
+              transparent 50%
+            );
+        "
+      ></div>
+
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 py-20 lg:py-28"
+      >
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <!-- Left text -->
+          <div>
+            <div
+              class="animate-fade-up flex items-center gap-2 mb-6 font-lato text-[11px] tracking-widest uppercase text-white/40"
+            >
+              <a
+                href="index.html"
+                class="hover:text-gold transition-colors no-underline text-white/40"
+                >Home</a
+              >
+              <span class="text-gold/50">/</span>
+              <span class="text-gold">Academics</span>
+            </div>
+            <div class="animate-fade-up flex items-center gap-3 mb-4">
               <span class="w-8 h-px bg-gold flex-shrink-0"></span>
-              <span class="font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold">School Prospectus</span>
+              <span
+                class="font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold"
+                >Our Curriculum</span
+              >
             </div>
-            <h2 class="font-playfair text-[clamp(24px,3vw,38px)] font-bold text-white leading-snug mb-4">
-              Everything You Need<br>to Know About SSA
-            </h2>
-            <p class="font-cormorant text-[18px] leading-relaxed text-white/70 max-w-lg mb-8">
-              Our comprehensive prospectus covers every aspect of school life — academic programmes, fees structure,
-              admission requirements, pastoral care, extra-curricular activities, and more.
+            <h1
+              class="animate-fade-up-1 font-playfair font-bold text-white leading-[1.15] mb-6"
+              style="font-size: clamp(36px, 4vw, 58px)"
+            >
+              A Curriculum Built<br />for
+              <em class="italic text-gold-light">Every Mind.</em>
+            </h1>
+            <p
+              class="animate-fade-up-2 font-cormorant text-[19px] leading-relaxed text-white/70 max-w-lg mb-8"
+            >
+              From our nurturing pre-school through to secondary examination
+              classes, every stage of our academic programme is crafted to
+              challenge, inspire, and celebrate each scholar's unique potential.
             </p>
-
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10">
-              <div class="bg-white/5 border border-gold/15 rounded-sm p-3 text-center">
-                <div class="text-[22px] mb-1"></div>
-                <div class="font-lato text-[10px] tracking-widest uppercase text-white/60">Programmes</div>
-              </div>
-              <div class="bg-white/5 border border-gold/15 rounded-sm p-3 text-center">
-                <div class="text-[22px] mb-1"></div>
-                <div class="font-lato text-[10px] tracking-widest uppercase text-white/60">Fees Guide</div>
-              </div>
-              <div class="bg-white/5 border border-gold/15 rounded-sm p-3 text-center">
-                <div class="text-[22px] mb-1"></div>
-                <div class="font-lato text-[10px] tracking-widest uppercase text-white/60">Facilities</div>
-              </div>
-              <div class="bg-white/5 border border-gold/15 rounded-sm p-3 text-center">
-                <div class="text-[22px] mb-1"></div>
-                <div class="font-lato text-[10px] tracking-widest uppercase text-white/60">Calendar</div>
-              </div>
-            </div>
-
-            <div class="flex flex-wrap gap-3">
-              <a href="#"
-                class="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy font-lato text-[13px] font-bold tracking-widest uppercase px-8 py-4 rounded-sm transition-all duration-200 hover:-translate-y-0.5 no-underline">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" stroke-linejoin="round">
+            <div class="animate-fade-up-3 flex flex-wrap gap-3">
+              <a
+                href="#programmes"
+                class="inline-block bg-maroon hover:bg-maroon-light text-white font-lato text-[12px] font-bold tracking-widest uppercase px-7 py-3.5 rounded-sm transition-all duration-200 hover:-translate-y-0.5 no-underline"
+                >Explore Programmes</a
+              >
+              <a
+                href="#prospectus"
+                class="inline-block border border-gold text-gold hover:bg-gold hover:text-navy font-lato text-[12px] font-bold tracking-widest uppercase px-7 py-3.5 rounded-sm transition-all duration-200 no-underline flex items-center gap-2"
+              >
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                   <polyline points="7 10 12 15 17 10" />
                   <line x1="12" y1="15" x2="12" y2="3" />
                 </svg>
                 Download Prospectus
               </a>
-              <a href="contact.html#contact"
-                class="inline-flex items-center gap-2 border border-white/30 hover:border-gold hover:text-gold text-white font-lato text-[13px] font-bold tracking-widest uppercase px-8 py-4 rounded-sm transition-all duration-200 no-underline">
-                Request by Email
-              </a>
+            </div>
+          </div>
+
+          <!-- Right: quick-glance stats -->
+          <div class="animate-fade-up-2 grid grid-cols-2 gap-4">
+            <div
+              class="bg-white/5 border border-gold/20 rounded-sm p-6 text-center hover:bg-white/[0.08] transition-all duration-300 group"
+            >
+              <div
+                class="text-[36px] mx-20 mb-3 group-hover:scale-110 transition-transform duration-300"
+              >
+                <svg
+                  width="50px"
+                  height="50px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 640"
+                >
+                  <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                  <path
+                    fill="white"
+                    d="M576 96C576 204.1 499.4 294.3 397.6 315.4C389.7 257.3 363.6 205 325.1 164.5C365.2 104 433.9 64 512 64L544 64C561.7 64 576 78.3 576 96zM64 160C64 142.3 78.3 128 96 128L128 128C251.7 128 352 228.3 352 352L352 544C352 561.7 337.7 576 320 576C302.3 576 288 561.7 288 544L288 384C164.3 384 64 283.7 64 160z"
+                  />
+                </svg>
+              </div>
+              <div
+                class="font-cinzel text-[22px] font-bold text-gold leading-none mb-1"
+              >
+                Pre-School
+              </div>
+              <div
+                class="font-lato text-[10px] tracking-widest uppercase text-white/50"
+              >
+                Ages 2 – 5
+              </div>
+            </div>
+            <div
+              class="bg-white/5 border border-gold/20 rounded-sm p-6 text-center hover:bg-white/[0.08] transition-all duration-300 group"
+            >
+              <div
+                class="group-hover:scale-110 transition-transform duration-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="h-8 w-8"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"
+                  />
+                </svg>
+              </div>
+              <div
+                class="font-cinzel text-[22px] font-bold text-gold leading-none mb-1"
+              >
+                Grade
+              </div>
+              <div
+                class="font-lato text-[10px] tracking-widest uppercase text-white/50"
+              >
+                Grade 1 – 6
+              </div>
+            </div>
+            <div
+              class="bg-white/5 border border-gold/20 rounded-sm p-6 text-center hover:bg-white/[0.08] transition-all duration-300 group"
+            >
+              <div
+                class="text-[36px] mb-2 group-hover:scale-110 transition-transform duration-300"
+              ></div>
+              <div
+                class="font-cinzel text-[22px] font-bold text-gold leading-none mb-1"
+              >
+                Junior Sec.
+              </div>
+              <div
+                class="font-lato text-[10px] tracking-widest uppercase text-white/50"
+              >
+                JSS 1 – 3
+              </div>
+            </div>
+            <div
+              class="bg-white/5 border border-gold/20 rounded-sm p-6 text-center hover:bg-white/[0.08] transition-all duration-300 group"
+            >
+              <div
+                class="text-[36px] mb-2 group-hover:scale-110 transition-transform duration-300"
+              ></div>
+              <div
+                class="font-cinzel text-[22px] font-bold text-gold leading-none mb-1"
+              >
+                Senior Sec.
+              </div>
+              <div
+                class="font-lato text-[10px] tracking-widest uppercase text-white/50"
+              >
+                SSS 1 – 3
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ══════════════════════════════════════════════════
-       FAQ
-  ══════════════════════════════════════════════════ -->
-  <section class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-24">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-14">
-        <div
-          class="inline-flex items-center justify-center gap-2.5 font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">
-          <span class="w-6 h-px bg-gold"></span>FAQs<span class="w-6 h-px bg-gold"></span>
-        </div>
-        <h2 class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-navy dark:text-gold-light leading-snug">
-          Frequently Asked Questions</h2>
-        <div class="w-16 h-[3px] bg-gold-maroon mx-auto mt-5 mb-4"></div>
-        <p class="font-cormorant text-[18px] text-[#4A4A4A] dark:text-[#C8D4E0]">Can't find your answer? <a href="#"
-            class="text-gold hover:text-gold-dark no-underline font-semibold">Contact us directly.</a></p>
+      <div
+        class="absolute bottom-0 left-0 right-0 overflow-hidden leading-none"
+      >
+        <svg
+          viewBox="0 0 1440 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-full"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0 40 L0 20 Q360 0 720 20 Q1080 40 1440 20 L1440 40 Z"
+            class="fill-warm-white dark:fill-[#0F1824]"
+          />
+        </svg>
       </div>
+    </section>
 
-      <div class="space-y-3" id="faqContainer">
-
-        <!-- FAQ Item -->
-        <div
-          class="reveal faq-item bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden">
-          <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer">
-            <span class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light">What curriculum does SSA
-              follow?</span>
-            <span class="faq-icon text-gold text-[22px] font-light flex-shrink-0 leading-none">+</span>
-          </button>
-          <div class="faq-answer px-6">
-            <p class="font-cormorant text-[16px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] pb-5">SSA follows
-              the Nigerian National Curriculum as prescribed by the Federal Ministry of Education, enriched with our own
-              pastoral programme, co-curricular activities, and character development modules. At the senior secondary
-              level, scholars are prepared for WAEC and NECO external examinations.</p>
+    <!-- ══════════════════════════════════════════════════
+       PROGRAMME TABS — by grade level
+  ══════════════════════════════════════════════════ -->
+    <section
+      id="programmes"
+      class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-24"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-14">
+          <div
+            class="inline-flex items-center justify-center gap-2.5 font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4"
+          >
+            <span class="w-6 h-px bg-gold"></span>Programmes by Grade<span
+              class="w-6 h-px bg-gold"
+            ></span>
           </div>
+          <h2
+            class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-navy dark:text-gold-light leading-snug"
+          >
+            Learning at Every Stage
+          </h2>
+          <div class="w-16 h-[3px] bg-gold-maroon mx-auto mt-5 mb-4"></div>
+          <p
+            class="font-cormorant text-[18px] text-[#4A4A4A] dark:text-[#C8D4E0] max-w-xl mx-auto"
+          >
+            Each stage of learning is purposefully designed to meet scholars
+            where they are and take them further than they imagined.
+          </p>
         </div>
 
-        <div
-          class="reveal faq-item bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden">
-          <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer">
-            <span class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light">How many pupils are in each
-              class?</span>
-            <span class="faq-icon text-gold text-[22px] font-light flex-shrink-0 leading-none">+</span>
+        <!-- Tab buttons -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12" id="progTabs">
+          <button
+            data-tab="preschool"
+            class="prog-tab active font-cinzel text-[11px] font-semibold tracking-widest uppercase px-6 py-3 rounded-sm border border-navy/20 dark:border-gold/20 text-navy dark:text-[#C8D4E0] hover:border-navy dark:hover:border-gold"
+          >
+            Pre-School
           </button>
-          <div class="faq-answer px-6">
-            <p class="font-cormorant text-[16px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] pb-5">We
-              deliberately keep our class sizes small to maximise individual attention. Pre-school classes hold a
-              maximum of 15 pupils, Grade classes up to 25, and secondary classes between 25 and 30. This ensures
-              every scholar receives the focus they deserve.</p>
-          </div>
+          <button
+            data-tab="Grade"
+            class="prog-tab font-cinzel text-[11px] font-semibold tracking-widest uppercase px-6 py-3 rounded-sm border border-navy/20 dark:border-gold/20 text-navy dark:text-[#C8D4E0] hover:border-navy dark:hover:border-gold"
+          >
+            Grade
+          </button>
+          <button
+            data-tab="jss"
+            class="prog-tab font-cinzel text-[11px] font-semibold tracking-widest uppercase px-6 py-3 rounded-sm border border-navy/20 dark:border-gold/20 text-navy dark:text-[#C8D4E0] hover:border-navy dark:hover:border-gold"
+          >
+            Junior Secondary
+          </button>
+          <button
+            data-tab="sss"
+            class="prog-tab font-cinzel text-[11px] font-semibold tracking-widest uppercase px-6 py-3 rounded-sm border border-navy/20 dark:border-gold/20 text-navy dark:text-[#C8D4E0] hover:border-navy dark:hover:border-gold"
+          >
+            Senior Secondary
+          </button>
         </div>
 
-        <div
-          class="reveal faq-item bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden">
-          <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer">
-            <span class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light">When are school reports
-              issued?</span>
-            <span class="faq-icon text-gold text-[22px] font-light flex-shrink-0 leading-none">+</span>
-          </button>
-          <div class="faq-answer px-6">
-            <p class="font-cormorant text-[16px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] pb-5">Comprehensive
-              academic reports are issued at the end of every term alongside a parent-teacher conference opportunity.
-              Continuous assessment scores are shared throughout the term, and parents can request progress meetings at
-              any time through the school office.</p>
+        <!-- Tab panels -->
+        <div id="progPanels">
+          <!-- PRE-SCHOOL -->
+          <div id="panel-preschool" class="prog-panel active">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              <div class="reveal-left">
+                <div
+                  class="w-full aspect-[4/3] rounded-sm bg-gradient-to-br from-gold/20 to-maroon/10 dark:from-navy dark:to-[#243558] flex items-center justify-center text-[80px] min-h-[260px]"
+                >
+                  <img
+                    src="imgs/facility (4).jpg"
+                    alt="pre-school students"
+                    class=""
+                    width="420px"
+                    height="350px"
+                  />
+                </div>
+              </div>
+              <div class="reveal-right space-y-5">
+                <div>
+                  <div
+                    class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-1"
+                  >
+                    Ages 2 – 5 · Nursery 1, 2 &amp; Reception
+                  </div>
+                  <h3
+                    class="font-playfair text-[28px] font-bold text-navy dark:text-gold-light mb-3"
+                  >
+                    Pre-School Programme
+                  </h3>
+                  <div class="w-12 h-[3px] bg-gold-maroon mb-4"></div>
+                  <p
+                    class="font-cormorant text-[17px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >
+                    Our pre-school is a warm, stimulating haven where the
+                    youngest scholars discover the joy of learning through play,
+                    exploration, and creative expression. Every activity is
+                    intentionally designed to build early literacy, numeracy,
+                    social skills, and emotional intelligence.
+                  </p>
+                </div>
+                <div>
+                  <div
+                    class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-3"
+                  >
+                    Key Focus Areas
+                  </div>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="subject-badge"> Early Literacy</span>
+                    <span class="subject-badge"> Numeracy</span>
+                    <span class="subject-badge"> Creative Arts</span>
+                    <span class="subject-badge"> Music & Rhyme</span>
+                    <span class="subject-badge"> Problem Solving</span>
+                    <span class="subject-badge"> Motor Skills</span>
+                    <span class="subject-badge"> Environmental Studies</span>
+                    <span class="subject-badge"> Moral Education</span>
+                  </div>
+                </div>
+                <div class="grid grid-cols-3 gap-3 pt-2">
+                  <div
+                    class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center"
+                  >
+                    <div class="font-cinzel text-[20px] font-bold text-gold">
+                      15
+                    </div>
+                    <div
+                      class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5"
+                    >
+                      Max Class Size
+                    </div>
+                  </div>
+                  <div
+                    class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center"
+                  >
+                    <div class="font-cinzel text-[20px] font-bold text-gold">
+                      7am
+                    </div>
+                    <div
+                      class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5"
+                    >
+                      School Opens
+                    </div>
+                  </div>
+                  <div
+                    class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center"
+                  >
+                    <div class="font-cinzel text-[20px] font-bold text-gold">
+                      2pm
+                    </div>
+                    <div
+                      class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5"
+                    >
+                      Half Day Option
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grade -->
+          <div id="panel-Grade" class="prog-panel">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              <div class="reveal-left">
+                <div
+                  class="w-full aspect-[4/3] rounded-sm bg-gradient-to-br from-navy/80 to-maroon/40 dark:from-[#0d1a30] dark:to-[#3a1020] flex items-center justify-center text-[80px] min-h-[260px]"
+                ></div>
+              </div>
+              <div class="reveal-right space-y-5">
+                <div>
+                  <div
+                    class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-1"
+                  >
+                    Ages 6 – 11 · Grade 1 – 6
+                  </div>
+                  <h3
+                    class="font-playfair text-[28px] font-bold text-navy dark:text-gold-light mb-3"
+                  >
+                    Grade School Programme
+                  </h3>
+                  <div class="w-12 h-[3px] bg-gold-maroon mb-4"></div>
+                  <p
+                    class="font-cormorant text-[17px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >
+                    Our Grade programme blends rigorous academics with vibrant
+                    co-curricular activities. Scholars develop strong
+                    foundations in literacy and numeracy while growing in
+                    confidence, curiosity, and character through a broad and
+                    balanced curriculum aligned with national standards.
+                  </p>
+                </div>
+                <div>
+                  <div
+                    class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-3"
+                  >
+                    Core Subjects
+                  </div>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="subject-badge"> English Language</span>
+                    <span class="subject-badge"> Mathematics</span>
+                    <span class="subject-badge"> Basic Science</span>
+                    <span class="subject-badge"> Social Studies</span>
+                    <span class="subject-badge"> ICT</span>
+                    <span class="subject-badge"> Fine Art</span>
+                    <span class="subject-badge"> Physical Education</span>
+                    <span class="subject-badge"> CRS / Islamic Studies</span>
+                    <span class="subject-badge"> Hausa / French</span>
+                  </div>
+                </div>
+                <div class="grid grid-cols-3 gap-3 pt-2">
+                  <div
+                    class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center"
+                  >
+                    <div class="font-cinzel text-[20px] font-bold text-gold">
+                      25
+                    </div>
+                    <div
+                      class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5"
+                    >
+                      Max Class Size
+                    </div>
+                  </div>
+                  <div
+                    class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center"
+                  >
+                    <div class="font-cinzel text-[20px] font-bold text-gold">
+                      6
+                    </div>
+                    <div
+                      class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5"
+                    >
+                      Year Groups
+                    </div>
+                  </div>
+                  <div
+                    class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center"
+                  >
+                    <div class="font-cinzel text-[20px] font-bold text-gold">
+                      BECE
+                    </div>
+                    <div
+                      class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5"
+                    >
+                      Exit Assessment
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- JSS -->
+          <div id="panel-jss" class="prog-panel">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              <div class="reveal-left">
+                <div
+                  class="w-full aspect-[4/3] rounded-sm bg-gradient-to-br from-maroon/60 to-navy dark:from-[#3a1020] dark:to-[#0d1a30] flex items-center justify-center text-[80px] min-h-[260px]"
+                >
+                  🎓
+                </div>
+              </div>
+              <div class="reveal-right space-y-5">
+                <div>
+                  <div
+                    class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-1"
+                  >
+                    Ages 12 – 14 · JSS 1 – 3
+                  </div>
+                  <h3
+                    class="font-playfair text-[28px] font-bold text-navy dark:text-gold-light mb-3"
+                  >
+                    Junior Secondary Programme
+                  </h3>
+                  <div class="w-12 h-[3px] bg-gold-maroon mb-4"></div>
+                  <p
+                    class="font-cormorant text-[17px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >
+                    The Junior Secondary programme prepares scholars for the
+                    intellectual rigour of senior school through an expanded
+                    subject range, project-based learning, and independent study
+                    skills. Students sit the Junior WAEC (BECE) at the end of
+                    JSS3, paving the way for senior secondary placement.
+                  </p>
+                </div>
+                <div>
+                  <div
+                    class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-3"
+                  >
+                    Subjects Offered
+                  </div>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="subject-badge"> English</span>
+                    <span class="subject-badge"> Mathematics</span>
+                    <span class="subject-badge"> Integrated Science</span>
+                    <span class="subject-badge"> Social Studies</span>
+                    <span class="subject-badge"> History</span>
+                    <span class="subject-badge"> Civic Education</span>
+                    <span class="subject-badge"> Computer Studies</span>
+                    <span class="subject-badge"> Basic Tech</span>
+                    <span class="subject-badge"> Fine Art</span>
+                    <span class="subject-badge"> French / Hausa</span>
+                  </div>
+                </div>
+                <div class="grid grid-cols-3 gap-3 pt-2">
+                  <div
+                    class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center"
+                  >
+                    <div class="font-cinzel text-[20px] font-bold text-gold">
+                      30
+                    </div>
+                    <div
+                      class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5"
+                    >
+                      Max Class Size
+                    </div>
+                  </div>
+                  <div
+                    class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center"
+                  >
+                    <div class="font-cinzel text-[20px] font-bold text-gold">
+                      3
+                    </div>
+                    <div
+                      class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5"
+                    >
+                      Year Groups
+                    </div>
+                  </div>
+                  <div
+                    class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center"
+                  >
+                    <div class="font-cinzel text-[20px] font-bold text-gold">
+                      BECE
+                    </div>
+                    <div
+                      class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5"
+                    >
+                      Exit Exam
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SSS -->
+          <div id="panel-sss" class="prog-panel">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              <div class="reveal-left">
+                <div
+                  class="w-full aspect-[4/3] rounded-sm bg-gradient-to-br from-gold/30 to-navy dark:from-[#2a1f00] dark:to-[#0d1a30] flex items-center justify-center text-[80px] min-h-[260px]"
+                >
+                  🏅
+                </div>
+              </div>
+              <div class="reveal-right space-y-5">
+                <div>
+                  <div
+                    class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-1"
+                  >
+                    Ages 15 – 17 · SSS 1 – 3
+                  </div>
+                  <h3
+                    class="font-playfair text-[28px] font-bold text-navy dark:text-gold-light mb-3"
+                  >
+                    Senior Secondary Programme
+                  </h3>
+                  <div class="w-12 h-[3px] bg-gold-maroon mb-4"></div>
+                  <p
+                    class="font-cormorant text-[17px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >
+                    Our Senior Secondary programme offers three specialist
+                    tracks — Science, Arts &amp; Humanities, and Commercial —
+                    each preparing scholars for WAEC and NECO examinations,
+                    university entrance, and purposeful adult life. Class sizes
+                    are kept deliberately small to maximise teacher attention.
+                  </p>
+                </div>
+                <div class="space-y-3">
+                  <div
+                    class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-2"
+                  >
+                    Specialist Tracks
+                  </div>
+                  <div
+                    class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4"
+                  >
+                    <div
+                      class="font-cinzel text-[11px] font-bold tracking-wide text-navy dark:text-gold-light mb-2"
+                    >
+                      Science Track
+                    </div>
+                    <div class="flex flex-wrap gap-1.5">
+                      <span class="subject-badge">Physics</span
+                      ><span class="subject-badge">Chemistry</span
+                      ><span class="subject-badge">Biology</span
+                      ><span class="subject-badge">Further Maths</span
+                      ><span class="subject-badge">Agricultural Sci.</span>
+                    </div>
+                  </div>
+                  <div
+                    class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4"
+                  >
+                    <div
+                      class="font-cinzel text-[11px] font-bold tracking-wide text-navy dark:text-gold-light mb-2"
+                    >
+                      Arts &amp; Humanities
+                    </div>
+                    <div class="flex flex-wrap gap-1.5">
+                      <span class="subject-badge">Literature</span
+                      ><span class="subject-badge">History</span
+                      ><span class="subject-badge">Government</span
+                      ><span class="subject-badge">French</span
+                      ><span class="subject-badge">Fine Art</span>
+                    </div>
+                  </div>
+                  <div
+                    class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4"
+                  >
+                    <div
+                      class="font-cinzel text-[11px] font-bold tracking-wide text-navy dark:text-gold-light mb-2"
+                    >
+                      Commercial Track
+                    </div>
+                    <div class="flex flex-wrap gap-1.5">
+                      <span class="subject-badge">Economics</span
+                      ><span class="subject-badge">Accounting</span
+                      ><span class="subject-badge">Commerce</span
+                      ><span class="subject-badge">Business Studies</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid grid-cols-3 gap-3 pt-1">
+                  <div
+                    class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center"
+                  >
+                    <div class="font-cinzel text-[20px] font-bold text-gold">
+                      25
+                    </div>
+                    <div
+                      class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5"
+                    >
+                      Max Class Size
+                    </div>
+                  </div>
+                  <div
+                    class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center"
+                  >
+                    <div class="font-cinzel text-[20px] font-bold text-gold">
+                      3
+                    </div>
+                    <div
+                      class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5"
+                    >
+                      Specialist Tracks
+                    </div>
+                  </div>
+                  <div
+                    class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-4 text-center"
+                  >
+                    <div class="font-cinzel text-[20px] font-bold text-gold">
+                      WAEC
+                    </div>
+                    <div
+                      class="text-[11px] text-[#888] dark:text-[#7A90A8] mt-0.5"
+                    >
+                      / NECO Exit
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <!-- end progPanels -->
+      </div>
+    </section>
 
-        <div
-          class="reveal faq-item bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden">
-          <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer">
-            <span class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light">Does SSA offer
-              extra-curricular activities?</span>
-            <span class="faq-icon text-gold text-[22px] font-light flex-shrink-0 leading-none">+</span>
-          </button>
-          <div class="faq-answer px-6">
-            <p class="font-cormorant text-[16px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] pb-5">Absolutely. We
-              offer a rich programme of clubs and activities including debating, chess, drama, music, visual arts,
-              football, athletics, coding club, and more. Extra-curricular participation is encouraged as part of our
-              commitment to holistic development.</p>
+    <!-- ══════════════════════════════════════════════════
+       CURRICULUM APPROACH
+  ══════════════════════════════════════════════════ -->
+    <section
+      class="relative bg-navy dark:bg-[#080E18] px-5 sm:px-10 lg:px-20 py-24 overflow-hidden"
+    >
+      <div class="absolute inset-0 diag-pattern pointer-events-none"></div>
+      <div
+        class="absolute inset-0 pointer-events-none"
+        style="
+          background: radial-gradient(
+            ellipse at 75% 50%,
+            rgba(196, 154, 44, 0.07) 0%,
+            transparent 60%
+          );
+        "
+      ></div>
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <div
+            class="inline-flex items-center justify-center gap-2.5 font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4"
+          >
+            <span class="w-6 h-px bg-gold"></span>Our Approach<span
+              class="w-6 h-px bg-gold"
+            ></span>
           </div>
+          <h2
+            class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-white leading-snug"
+          >
+            How We Teach
+          </h2>
+          <div class="w-16 h-[3px] bg-gold-maroon mx-auto mt-5"></div>
         </div>
 
-        <div
-          class="reveal faq-item bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden">
-          <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer">
-            <span class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light">What are the school
-              hours?</span>
-            <span class="faq-icon text-gold text-[22px] font-light flex-shrink-0 leading-none">+</span>
-          </button>
-          <div class="faq-answer px-6">
-            <p class="font-cormorant text-[16px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] pb-5">The school
-              gate opens at 7:00am. Formal lessons begin at 8:00am. Grade school closes at 2:00pm, while secondary
-              school closes at 3:30pm. An after-school care programme is available until 5:30pm for an additional fee.
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="reveal bg-white/5 border border-gold/15 rounded-sm p-8 transition-all duration-300 hover:bg-white/[0.08] hover:border-gold"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center text-[22px] mb-5"
+            ></div>
+            <div
+              class="font-cinzel text-[12.5px] font-semibold tracking-wide text-gold mb-3"
+            >
+              Inquiry-Based Learning
+            </div>
+            <p class="text-[14px] leading-[1.75] text-white/60">
+              Scholars are taught to ask questions, investigate problems, and
+              draw conclusions — building genuine understanding rather than rote
+              memorisation.
+            </p>
+          </div>
+          <div
+            class="reveal bg-white/5 border border-gold/15 rounded-sm p-8 transition-all duration-300 hover:bg-white/[0.08] hover:border-gold"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center text-[22px] mb-5"
+            ></div>
+            <div
+              class="font-cinzel text-[12.5px] font-semibold tracking-wide text-gold mb-3"
+            >
+              Collaborative Classrooms
+            </div>
+            <p class="text-[14px] leading-[1.75] text-white/60">
+              Small class sizes and group-based projects develop communication,
+              teamwork, and leadership skills alongside academic knowledge.
+            </p>
+          </div>
+          <div
+            class="reveal bg-white/5 border border-gold/15 rounded-sm p-8 transition-all duration-300 hover:bg-white/[0.08] hover:border-gold"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center text-[22px] mb-5"
+            ></div>
+            <div
+              class="font-cinzel text-[12.5px] font-semibold tracking-wide text-gold mb-3"
+            >
+              Technology Integration
+            </div>
+            <p class="text-[14px] leading-[1.75] text-white/60">
+              Our modern computer lab and in-class digital resources ensure
+              scholars are confident, responsible, and skilled digital citizens.
+            </p>
+          </div>
+          <div
+            class="reveal bg-white/5 border border-gold/15 rounded-sm p-8 transition-all duration-300 hover:bg-white/[0.08] hover:border-gold"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center text-[22px] mb-5"
+            ></div>
+            <div
+              class="font-cinzel text-[12.5px] font-semibold tracking-wide text-gold mb-3"
+            >
+              Continuous Assessment
+            </div>
+            <p class="text-[14px] leading-[1.75] text-white/60">
+              Regular formative assessments, termly reports, and parent
+              conferences ensure every scholar's progress is tracked,
+              celebrated, and supported.
+            </p>
+          </div>
+          <div
+            class="reveal bg-white/5 border border-gold/15 rounded-sm p-8 transition-all duration-300 hover:bg-white/[0.08] hover:border-gold"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center text-[22px] mb-5"
+            ></div>
+            <div
+              class="font-cinzel text-[12.5px] font-semibold tracking-wide text-gold mb-3"
+            >
+              Differentiated Instruction
+            </div>
+            <p class="text-[14px] leading-[1.75] text-white/60">
+              Teachers are trained to adapt their methods to diverse learning
+              styles and abilities, ensuring no scholar is left behind or
+              unchallenged.
+            </p>
+          </div>
+          <div
+            class="reveal bg-white/5 border border-gold/15 rounded-sm p-8 transition-all duration-300 hover:bg-white/[0.08] hover:border-gold"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-gold/15 flex items-center justify-center text-[22px] mb-5"
+            ></div>
+            <div
+              class="font-cinzel text-[12.5px] font-semibold tracking-wide text-gold mb-3"
+            >
+              Excellence & Recognition
+            </div>
+            <p class="text-[14px] leading-[1.75] text-white/60">
+              From termly honour rolls to annual awards, we celebrate academic
+              achievement and positive character as equally worthy of
+              recognition.
             </p>
           </div>
         </div>
-
-        <div
-          class="reveal faq-item bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden">
-          <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer">
-            <span class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light">Is there a school
-              uniform?</span>
-            <span class="faq-icon text-gold text-[22px] font-light flex-shrink-0 leading-none">+</span>
-          </button>
-          <div class="faq-answer px-6">
-            <p class="font-cormorant text-[16px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] pb-5">Yes. SSA
-              scholars wear a distinctive white and maroon uniform that reflects our school colours and values of purity
-              and purpose. Full uniform details, including sportswear, are available in our prospectus and from the
-              school office upon enrolment.</p>
-          </div>
-        </div>
-
-        <div
-          class="reveal faq-item bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden">
-          <button class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer">
-            <span class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light">How do I apply for a
-              place?</span>
-            <span class="faq-icon text-gold text-[22px] font-light flex-shrink-0 leading-none">+</span>
-          </button>
-          <div class="faq-answer px-6">
-            <p class="font-cormorant text-[16px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] pb-5">Applications
-              can be made online via our Admissions page or by visiting the school office in person. You will need to
-              complete the application form, submit the required documents, and attend an informal assessment session.
-              We recommend applying early as places fill quickly.</p>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ══════════════════════════════════════════════════
+    <!-- ══════════════════════════════════════════════════
+       ACADEMIC CALENDAR
+  ══════════════════════════════════════════════════ -->
+    <section class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-24">
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-16 items-start"
+        >
+          <!-- Left -->
+          <div class="reveal-left">
+            <div
+              class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4"
+            >
+              2025 / 2026 School Year
+            </div>
+            <h2
+              class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-navy dark:text-gold-light leading-snug mb-4"
+            >
+              Academic Calendar
+            </h2>
+            <div class="w-16 h-[3px] bg-gold-maroon mb-6"></div>
+            <p
+              class="font-cormorant text-[18px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] mb-8"
+            >
+              Our academic year is divided into three terms. Each term is a full
+              and enriching experience with a balance of rigorous study,
+              assessments, co-curricular activities, and community events.
+            </p>
+
+            <div class="space-y-4">
+              <!-- Term summary cards -->
+              <div
+                class="bg-white dark:bg-[#1A2840] border border-gold/20 rounded-sm p-5 flex items-center gap-4 hover:shadow-[0_4px_20px_rgba(196,154,44,0.12)] transition-all duration-300"
+              >
+                <div
+                  class="w-12 h-12 rounded-full bg-maroon flex items-center justify-center font-cinzel text-white font-bold text-[13px] flex-shrink-0"
+                >
+                  T1
+                </div>
+                <div>
+                  <div
+                    class="font-cinzel text-[11px] font-bold tracking-wide text-navy dark:text-gold-light"
+                  >
+                    First Term
+                  </div>
+                  <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">
+                    September – December 2025
+                  </div>
+                  <div class="text-[11px] text-gold mt-0.5">
+                    14 Weeks · Resumes September
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-white dark:bg-[#1A2840] border border-gold/20 rounded-sm p-5 flex items-center gap-4 hover:shadow-[0_4px_20px_rgba(196,154,44,0.12)] transition-all duration-300"
+              >
+                <div
+                  class="w-12 h-12 rounded-full bg-navy flex items-center justify-center font-cinzel text-white font-bold text-[13px] flex-shrink-0"
+                >
+                  T2
+                </div>
+                <div>
+                  <div
+                    class="font-cinzel text-[11px] font-bold tracking-wide text-navy dark:text-gold-light"
+                  >
+                    Second Term
+                  </div>
+                  <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">
+                    January – April 2026
+                  </div>
+                  <div class="text-[11px] text-gold mt-0.5">
+                    13 Weeks · Resumes January
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-white dark:bg-[#1A2840] border border-gold/20 rounded-sm p-5 flex items-center gap-4 hover:shadow-[0_4px_20px_rgba(196,154,44,0.12)] transition-all duration-300"
+              >
+                <div
+                  class="w-12 h-12 rounded-full bg-gold flex items-center justify-center font-cinzel text-navy font-bold text-[13px] flex-shrink-0"
+                >
+                  T3
+                </div>
+                <div>
+                  <div
+                    class="font-cinzel text-[11px] font-bold tracking-wide text-navy dark:text-gold-light"
+                  >
+                    Third Term
+                  </div>
+                  <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">
+                    May – July
+                  </div>
+                  <div class="text-[11px] text-gold mt-0.5">
+                    11 Weeks · Resumes May
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: detailed events table -->
+          <div class="reveal-right">
+            <div
+              class="bg-white dark:bg-[#1A2840] border border-gold/20 rounded-sm overflow-hidden"
+            >
+              <div
+                class="bg-navy dark:bg-[#0d1a30] px-6 py-4 flex items-center justify-between"
+              >
+                <div
+                  class="font-cinzel text-[13px] font-semibold tracking-wide text-white"
+                >
+                  Key Dates &amp; Events
+                </div>
+              </div>
+
+              <div class="divide-y divide-gold/10">
+                <!-- Row -->
+                <div
+                  class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center"
+                >
+                  <div
+                    class="font-cinzel text-[10px] tracking-wide text-gold font-semibold"
+                  >
+                    First Week of September
+                  </div>
+                  <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">
+                    First Term Resumes
+                  </div>
+                </div>
+                <div
+                  class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center"
+                >
+                  <div
+                    class="font-cinzel text-[10px] tracking-wide text-gold font-semibold"
+                  >
+                    Third week of October
+                  </div>
+                  <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">
+                    First Term Mid-Term Break
+                  </div>
+                </div>
+                <div
+                  class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center"
+                >
+                  <div
+                    class="font-cinzel text-[10px] tracking-wide text-gold font-semibold"
+                  >
+                    Last week of October
+                  </div>
+                  <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">
+                    Mid-Term Break Ends
+                  </div>
+                </div>
+                <div
+                  class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center"
+                >
+                  <div
+                    class="font-cinzel text-[10px] tracking-wide text-gold font-semibold"
+                  >
+                    Second Week of November
+                  </div>
+                  <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">
+                    First Term Examinations Begin
+                  </div>
+                </div>
+                <div
+                  class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center"
+                >
+                  <div
+                    class="font-cinzel text-[10px] tracking-wide text-gold font-semibold"
+                  >
+                    First Week of December
+                  </div>
+                  <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">
+                    Prize-Giving &amp; Carol Service
+                  </div>
+                </div>
+                <div
+                  class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center"
+                >
+                  <div
+                    class="font-cinzel text-[10px] tracking-wide text-gold font-semibold"
+                  >
+                    Second Week of December
+                  </div>
+                  <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">
+                    First Term Closes
+                  </div>
+                </div>
+                <div
+                  class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center"
+                >
+                  <div
+                    class="font-cinzel text-[10px] tracking-wide text-gold font-semibold"
+                  >
+                    Second Week of January
+                  </div>
+                  <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">
+                    Second Term Resumes
+                  </div>
+                </div>
+                <div
+                  class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center"
+                >
+                  <div
+                    class="font-cinzel text-[10px] tracking-wide text-gold font-semibold"
+                  >
+                    Third Week Feb 2026
+                  </div>
+                  <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">
+                    Second Term Mid-Term Break
+                  </div>
+                </div>
+                <div
+                  class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center"
+                >
+                  <div
+                    class="font-cinzel text-[10px] tracking-wide text-gold font-semibold"
+                  >
+                    Second Week of March
+                  </div>
+                  <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">
+                    Sports Day
+                  </div>
+                </div>
+                <div
+                  class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center"
+                >
+                  <div
+                    class="font-cinzel text-[10px] tracking-wide text-gold font-semibold"
+                  >
+                    First Week of April
+                  </div>
+                  <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">
+                    Second Term Closes
+                  </div>
+                </div>
+                <div
+                  class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center"
+                >
+                  <div
+                    class="font-cinzel text-[10px] tracking-wide text-gold font-semibold"
+                  >
+                    First Week of May
+                  </div>
+                  <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">
+                    Third Term Resumes
+                  </div>
+                </div>
+                <div
+                  class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center"
+                >
+                  <div
+                    class="font-cinzel text-[10px] tracking-wide text-gold font-semibold"
+                  >
+                    The Month Of June
+                  </div>
+                  <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">
+                    WAEC / NECO Examinations
+                  </div>
+                </div>
+                <div
+                  class="cal-row grid grid-cols-[120px_1fr] gap-4 px-6 py-3.5 items-center"
+                >
+                  <div
+                    class="font-cinzel text-[10px] tracking-wide text-gold font-semibold"
+                  >
+                    Second Week of July
+                  </div>
+                  <div class="text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">
+                    Graduation &amp; Closing Ceremony
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="px-6 py-4 bg-gold/8 dark:bg-gold/5 border-t border-gold/20"
+              >
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2 text-gold hover:text-gold-dark font-lato text-[12px] font-bold tracking-wide uppercase transition-colors no-underline"
+                >
+                  <svg
+                    width="13"
+                    height="13"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Download Full Calendar (PDF)
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+       DOWNLOADABLE PROSPECTUS
+  ══════════════════════════════════════════════════ -->
+    <section
+      id="prospectus"
+      class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-24"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="reveal bg-gradient-to-br from-navy to-[#243558] dark:from-[#080E18] dark:to-[#0d1a30] border border-gold/25 rounded-sm overflow-hidden"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-0">
+            <!-- Left content -->
+            <div class="p-10 lg:p-14">
+              <div class="flex items-center gap-3 mb-5">
+                <span class="w-8 h-px bg-gold flex-shrink-0"></span>
+                <span
+                  class="font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold"
+                  >School Prospectus</span
+                >
+              </div>
+              <h2
+                class="font-playfair text-[clamp(24px,3vw,38px)] font-bold text-white leading-snug mb-4"
+              >
+                Everything You Need<br />to Know About SSA
+              </h2>
+              <p
+                class="font-cormorant text-[18px] leading-relaxed text-white/70 max-w-lg mb-8"
+              >
+                Our comprehensive prospectus covers every aspect of school life
+                — academic programmes, fees structure, admission requirements,
+                pastoral care, extra-curricular activities, and more.
+              </p>
+
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10">
+                <div
+                  class="bg-white/5 border border-gold/15 rounded-sm p-3 text-center"
+                >
+                  <div class="text-[22px] mb-1"></div>
+                  <div
+                    class="font-lato text-[10px] tracking-widest uppercase text-white/60"
+                  >
+                    Programmes
+                  </div>
+                </div>
+                <div
+                  class="bg-white/5 border border-gold/15 rounded-sm p-3 text-center"
+                >
+                  <div class="text-[22px] mb-1"></div>
+                  <div
+                    class="font-lato text-[10px] tracking-widest uppercase text-white/60"
+                  >
+                    Fees Guide
+                  </div>
+                </div>
+                <div
+                  class="bg-white/5 border border-gold/15 rounded-sm p-3 text-center"
+                >
+                  <div class="text-[22px] mb-1"></div>
+                  <div
+                    class="font-lato text-[10px] tracking-widest uppercase text-white/60"
+                  >
+                    Facilities
+                  </div>
+                </div>
+                <div
+                  class="bg-white/5 border border-gold/15 rounded-sm p-3 text-center"
+                >
+                  <div class="text-[22px] mb-1"></div>
+                  <div
+                    class="font-lato text-[10px] tracking-widest uppercase text-white/60"
+                  >
+                    Calendar
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-3">
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy font-lato text-[13px] font-bold tracking-widest uppercase px-8 py-4 rounded-sm transition-all duration-200 hover:-translate-y-0.5 no-underline"
+                >
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Download Prospectus
+                </a>
+                <a
+                  href="contact.html#contact"
+                  class="inline-flex items-center gap-2 border border-white/30 hover:border-gold hover:text-gold text-white font-lato text-[13px] font-bold tracking-widest uppercase px-8 py-4 rounded-sm transition-all duration-200 no-underline"
+                >
+                  Request by Email
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+       FAQ
+  ══════════════════════════════════════════════════ -->
+    <section class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-24">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-14">
+          <div
+            class="inline-flex items-center justify-center gap-2.5 font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4"
+          >
+            <span class="w-6 h-px bg-gold"></span>FAQs<span
+              class="w-6 h-px bg-gold"
+            ></span>
+          </div>
+          <h2
+            class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-navy dark:text-gold-light leading-snug"
+          >
+            Frequently Asked Questions
+          </h2>
+          <div class="w-16 h-[3px] bg-gold-maroon mx-auto mt-5 mb-4"></div>
+          <p
+            class="font-cormorant text-[18px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+          >
+            Can't find your answer?
+            <a
+              href="#"
+              class="text-gold hover:text-gold-dark no-underline font-semibold"
+              >Contact us directly.</a
+            >
+          </p>
+        </div>
+
+        <div class="space-y-3" id="faqContainer">
+          <!-- FAQ Item -->
+          <div
+            class="reveal faq-item bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden"
+          >
+            <button
+              class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer"
+            >
+              <span
+                class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light"
+                >What curriculum does SSA follow?</span
+              >
+              <span
+                class="faq-icon text-gold text-[22px] font-light flex-shrink-0 leading-none"
+                >+</span
+              >
+            </button>
+            <div class="faq-answer px-6">
+              <p
+                class="font-cormorant text-[16px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] pb-5"
+              >
+                SSA follows the Nigerian National Curriculum as prescribed by
+                the Federal Ministry of Education, enriched with our own
+                pastoral programme, co-curricular activities, and character
+                development modules. At the senior secondary level, scholars are
+                prepared for WAEC and NECO external examinations.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="reveal faq-item bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden"
+          >
+            <button
+              class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer"
+            >
+              <span
+                class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light"
+                >How many pupils are in each class?</span
+              >
+              <span
+                class="faq-icon text-gold text-[22px] font-light flex-shrink-0 leading-none"
+                >+</span
+              >
+            </button>
+            <div class="faq-answer px-6">
+              <p
+                class="font-cormorant text-[16px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] pb-5"
+              >
+                We deliberately keep our class sizes small to maximise
+                individual attention. Pre-school classes hold a maximum of 15
+                pupils, Grade classes up to 25, and secondary classes between 25
+                and 30. This ensures every scholar receives the focus they
+                deserve.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="reveal faq-item bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden"
+          >
+            <button
+              class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer"
+            >
+              <span
+                class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light"
+                >When are school reports issued?</span
+              >
+              <span
+                class="faq-icon text-gold text-[22px] font-light flex-shrink-0 leading-none"
+                >+</span
+              >
+            </button>
+            <div class="faq-answer px-6">
+              <p
+                class="font-cormorant text-[16px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] pb-5"
+              >
+                Comprehensive academic reports are issued at the end of every
+                term alongside a parent-teacher conference opportunity.
+                Continuous assessment scores are shared throughout the term, and
+                parents can request progress meetings at any time through the
+                school office.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="reveal faq-item bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden"
+          >
+            <button
+              class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer"
+            >
+              <span
+                class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light"
+                >Does SSA offer extra-curricular activities?</span
+              >
+              <span
+                class="faq-icon text-gold text-[22px] font-light flex-shrink-0 leading-none"
+                >+</span
+              >
+            </button>
+            <div class="faq-answer px-6">
+              <p
+                class="font-cormorant text-[16px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] pb-5"
+              >
+                Absolutely. We offer a rich programme of clubs and activities
+                including debating, chess, drama, music, visual arts, football,
+                athletics, coding club, and more. Extra-curricular participation
+                is encouraged as part of our commitment to holistic development.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="reveal faq-item bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden"
+          >
+            <button
+              class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer"
+            >
+              <span
+                class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light"
+                >What are the school hours?</span
+              >
+              <span
+                class="faq-icon text-gold text-[22px] font-light flex-shrink-0 leading-none"
+                >+</span
+              >
+            </button>
+            <div class="faq-answer px-6">
+              <p
+                class="font-cormorant text-[16px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] pb-5"
+              >
+                The school gate opens at 7:00am. Formal lessons begin at 8:00am.
+                Grade school closes at 2:00pm, while secondary school closes at
+                3:30pm. An after-school care programme is available until 5:30pm
+                for an additional fee.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="reveal faq-item bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden"
+          >
+            <button
+              class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer"
+            >
+              <span
+                class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light"
+                >Is there a school uniform?</span
+              >
+              <span
+                class="faq-icon text-gold text-[22px] font-light flex-shrink-0 leading-none"
+                >+</span
+              >
+            </button>
+            <div class="faq-answer px-6">
+              <p
+                class="font-cormorant text-[16px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] pb-5"
+              >
+                Yes. SSA scholars wear a distinctive white and maroon uniform
+                that reflects our school colours and values of purity and
+                purpose. Full uniform details, including sportswear, are
+                available in our prospectus and from the school office upon
+                enrolment.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="reveal faq-item bg-white dark:bg-[#1A2840] border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden"
+          >
+            <button
+              class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left cursor-pointer"
+            >
+              <span
+                class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light"
+                >How do I apply for a place?</span
+              >
+              <span
+                class="faq-icon text-gold text-[22px] font-light flex-shrink-0 leading-none"
+                >+</span
+              >
+            </button>
+            <div class="faq-answer px-6">
+              <p
+                class="font-cormorant text-[16px] leading-relaxed text-[#4A4A4A] dark:text-[#C8D4E0] pb-5"
+              >
+                Applications can be made online via our Admissions page or by
+                visiting the school office in person. You will need to complete
+                the application form, submit the required documents, and attend
+                an informal assessment session. We recommend applying early as
+                places fill quickly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
        ADMISSIONS CTA
   ══════════════════════════════════════════════════ -->
-  <section class="relative bg-maroon-navy text-center px-5 sm:px-10 lg:px-20 py-24 overflow-hidden">
-    <div class="admissions-pattern absolute inset-0 pointer-events-none"></div>
-    <div class="relative z-10 max-w-2xl mx-auto">
+    <section
+      class="relative bg-maroon-navy text-center px-5 sm:px-10 lg:px-20 py-24 overflow-hidden"
+    >
       <div
-        class="inline-flex items-center justify-center gap-2.5 font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">
-        <span class="w-6 h-px bg-gold"></span>Ready to Join?<span class="w-6 h-px bg-gold"></span>
-      </div>
-      <h2 class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-white leading-snug mb-4">Begin Your Scholar's
-        Journey</h2>
-      <p class="font-cormorant text-[20px] text-white/75 leading-relaxed mb-10">Our admissions team is ready to guide
-        your family every step of the way. Apply today or visit us to see SSA in action.</p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="admissions.html#apply"
-          class="inline-block bg-gold hover:bg-gold-light text-navy font-lato text-[13px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all duration-200 hover:-translate-y-0.5 no-underline">Apply
-          Now</a>
-        <a href="contact.html#contact"
-          class="inline-block border border-white/50 hover:border-gold hover:text-gold text-white font-lato text-[13px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all duration-200 no-underline">Schedule
-          a Visit</a>
-      </div>
-    </div>
-  </section>
-
-  <!--FOOTER-->
-  <footer class="bg-navy dark:bg-[#04080F] text-white/65 px-5 sm:px-10 lg:px-20 pt-20 pb-10">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-14">
-
-      <!-- Brand col -->
-      <div>
-        <div class="flex items-center gap-3 mb-5">
-          <div
-            class="w-11 h-11 rounded-full bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center font-cinzel text-[16px] font-bold text-white flex-shrink-0">
-            <img src="imgs/logo2.jpg" alt="Logo">
-          </div>
-          <div class="font-cinzel text-[13px] font-semibold tracking-wide text-white leading-tight">
-            STELLAR SCHOLARS ACADEMY
-            <span class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5">LUX ET PAX · EST. 2026</span>
-          </div>
+        class="admissions-pattern absolute inset-0 pointer-events-none"
+      ></div>
+      <div class="relative z-10 max-w-2xl mx-auto">
+        <div
+          class="inline-flex items-center justify-center gap-2.5 font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4"
+        >
+          <span class="w-6 h-px bg-gold"></span>Ready to Join?<span
+            class="w-6 h-px bg-gold"
+          ></span>
         </div>
-        <p class="text-[13px] leading-[1.7] text-white/50 mb-6">Excellence in Education &amp; Character. We nurture
-          scholars who lead with knowledge, integrity, and compassion.</p>
-        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2">
-          <svg width="30" height="30"
-              viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
-              <path fill="white"
+        <h2
+          class="font-playfair text-[clamp(26px,3vw,40px)] font-bold text-white leading-snug mb-4"
+        >
+          Begin Your Scholar's Journey
+        </h2>
+        <p
+          class="font-cormorant text-[20px] text-white/75 leading-relaxed mb-10"
+        >
+          Our admissions team is ready to guide your family every step of the
+          way. Apply today or visit us to see SSA in action.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="admissions.html#apply"
+            class="inline-block bg-gold hover:bg-gold-light text-navy font-lato text-[13px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all duration-200 hover:-translate-y-0.5 no-underline"
+            >Apply Now</a
+          >
+          <a
+            href="contact.html#contact"
+            class="inline-block border border-white/50 hover:border-gold hover:text-gold text-white font-lato text-[13px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all duration-200 no-underline"
+            >Schedule a Visit</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer
+      class="bg-navy dark:bg-[#04080F] text-white/65 px-5 sm:px-10 lg:px-20 pt-20 pb-10"
+    >
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-14"
+      >
+        <!-- Brand col -->
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <div
+              class="w-11 h-11 rounded-full bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center font-cinzel text-[16px] font-bold text-white flex-shrink-0"
+            >
+              <img src="imgs/logo2.jpg" alt="Logo" />
+            </div>
+            <div
+              class="font-cinzel text-[13px] font-semibold tracking-wide text-white leading-tight"
+            >
+              STELLAR SCHOLARS ACADEMY
+              <span
+                class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5"
+                >LUX ET PAX · EST. 2026</span
+              >
+            </div>
+          </div>
+          <p class="text-[13px] leading-[1.7] text-white/50 mb-6">
+            Excellence in Education &amp; Character. We nurture scholars who
+            lead with knowledge, integrity, and compassion.
+          </p>
+          <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2">
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="white"
                 d="M12 2c-4.4 0-8 3.6-8 8 0 5.4 7 11.5 7.3 11.8.2.1.5.2.7.2.2 0 .5-.1.7-.2.3-.3 7.3-6.4 7.3-11.8 0-4.4-3.6-8-8-8zm0 17.7c-2.1-2-6-6.3-6-9.7 0-3.3 2.7-6 6-6s6 2.7 6 6-3.9 7.7-6 9.7zM12 6c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
-                 />
+              />
             </svg>
-            <div><b>Main Site:</b> Stellar Scholars Academy(Pre-school, Grade & Secondary Schools), Obafemi Owode L.G.A, Ogun State.<br><b>Annex:</b> Stellar Scholars Academy, Ikoyi (Daycare).</div>
-            
+            <div>
+              <b>Main Site:</b> Stellar Scholars Academy(Pre-school, Grade &
+              Secondary Schools), Obafemi Owode L.G.A, Ogun State.<br /><b
+                >Annex:</b
+              >
+              Stellar Scholars Academy, Ikoyi (Daycare).
+            </div>
+
             <div class="flex pt-0"></div>
-        </div>
-        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-              class="bi bi-telephone" viewBox="0 0 16 16">
-              <path fill="white"
-                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+          </div>
+          <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              class="bi bi-telephone"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill="white"
+                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+              />
             </svg>
-          <span> +234 706 737 4352</span>
-        </div>
-        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-6">
-         <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 640 640"> <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--> <path fill="white" d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"/></svg>
-          <span>stellarscholarsacademy@gmail.com</span>
-        </div>
-        <div class="flex gap-2.5">
-          <a href="#"
-            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[13px] font-bold transition-all duration-200 no-underline"><svg
-              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook"
-              viewBox="0 0 16 16">
+            <span> +234 706 737 4352</span>
+          </div>
+          <div class="flex items-start gap-2 text-[13px] text-white/55 mb-6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16px"
+              height="16px"
+              viewBox="0 0 640 640"
+            >
+              <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
               <path
-                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
-            </svg></a>
-          <a href="https://ng.linkedin.com/company/stellar-scholars-academy1"
-            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[11px] font-bold transition-all duration-200 no-underline"><svg
-              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin"
-              viewBox="0 0 16 16">
-              <path
-                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
-            </svg></a>
-          <a href="https://www.instagram.com/stellarscholarsacademyikoyi/"
-            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center hover:text-navy text-[14px] transition-all duration-200 no-underline"><svg
-              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
-              viewBox="0 0 16 16">
-              <path
-                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
-            </svg></a>
+                fill="white"
+                d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"
+              />
+            </svg>
+            <span>stellarscholarsacademy@gmail.com</span>
+          </div>
+          <div class="flex gap-2.5">
+            <a
+              href="#"
+              class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[13px] font-bold transition-all duration-200 no-underline"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-facebook"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                /></svg
+            ></a>
+            <a
+              href="https://ng.linkedin.com/company/stellar-scholars-academy1"
+              class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[11px] font-bold transition-all duration-200 no-underline"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-linkedin"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                /></svg
+            ></a>
+            <a
+              href="https://www.instagram.com/stellarscholarsacademyikoyi/"
+              class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center hover:text-navy text-[14px] transition-all duration-200 no-underline"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-instagram"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                /></svg
+            ></a>
+          </div>
+        </div>
+
+        <!-- Links cols -->
+        <div>
+          <div
+            class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5"
+          >
+            About Us
+          </div>
+          <ul class="list-none space-y-2.5">
+            <li>
+              <a
+                href="about.html#mission"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Our Mission</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html#leadership"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Leadership</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html#timeline"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >History</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Awards</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div
+            class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5"
+          >
+            Academics
+          </div>
+          <ul class="list-none space-y-2.5">
+            <li>
+              <a
+                href="academics.html"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Pre-School</a
+              >
+            </li>
+            <li>
+              <a
+                href="academics.html"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Grade School</a
+              >
+            </li>
+            <li>
+              <a
+                href="academics.html"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Secondary School</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Admissions</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="hidden sm:block md:hiddden">
+          <div
+            class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5"
+          >
+            School Life
+          </div>
+          <ul class="list-none space-y-2.5">
+            <li>
+              <a
+                href="#"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Sports &amp; Athletics</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Arts &amp; Culture</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Clubs &amp; Societies</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Events Calendar</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
 
-      <!-- Links cols -->
-      <div>
-        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">About Us</div>
-        <ul class="list-none space-y-2.5">
-          <li><a href="about.html#mission" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Our
-              Mission</a></li>
-          <li><a href="about.html#leadership"
-              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Leadership</a></li>
-          <li><a href="about.html#timeline"
-              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">History</a>
-          </li>
-          <li><a href="about.html"
-              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Awards</a>
-          </li>
-        </ul>
+      <!-- Footer bottom -->
+      <div
+        class="max-w-auto mx-auto border-t border-white/8 pt-7 flex flex-col sm:flex-row justify-between items-center text-[14px] text-white/35"
+      >
+        <span>© 2026 Stellar Scholars Academy. All rights reserved.</span>
+        <span class="inline-flex"
+          >Powered by
+          <a href="https://ticst.com.ng" target="_blank" class="no-underline"
+            ><img
+              src="imgs/ticst transparent - blue.png"
+              alt=""
+              class="h-11 w-15 pb-5 text-green-80"
+          /></a>
+          &nbsp;·&nbsp;
+          <a
+            href="#"
+            class="text-gold hover:text-gold-light transition-colors no-underline"
+            >Privacy Policy</a
+          >
+          &nbsp;·&nbsp;
+          <a
+            href="#"
+            class="text-gold hover:text-gold-light transition-colors no-underline"
+            >Terms</a
+          ></span
+        >
       </div>
-      <div>
-        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">Academics</div>
-        <ul class="list-none space-y-2.5">
-          <li><a href="academics.html"
-              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Pre-School</a></li>
-          <li><a href="academics.html"
-              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Grade
-              School</a></li>
-          <li><a href="academics.html"
-              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Secondary
-              School</a></li>
-          <li><a href="#"
-              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Admissions</a></li>
-        </ul>
-      </div>
-      <div class="hidden sm:block md:hiddden">
-        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">School Life</div>
-        <ul class="list-none space-y-2.5">
-          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Sports &amp;
-              Athletics</a></li>
-          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Arts &amp;
-              Culture</a></li>
-          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Clubs &amp;
-              Societies</a></li>
-          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Events
-              Calendar</a></li>
-        </ul>
-      </div>
-    </div>
+    </footer>
 
-    <!-- Footer bottom -->
-    <div
-      class="max-w-auto mx-auto border-t border-white/8 pt-7 flex flex-col sm:flex-row justify-between items-center text-[14px] text-white/35">
-      <span>© 2026 Stellar Scholars Academy. All rights reserved.</span>
-      <span class="inline-flex">Powered by <a href="https://ticst.com.ng" target="_blank"
-          class="no-underline"><img src="imgs/ticst transparent - blue.png" alt="" class="h-11 w-15 pb-5 text-green-80"></a> &nbsp;·&nbsp; <a href="#"
-          class="text-gold hover:text-gold-light transition-colors no-underline">Privacy Policy</a> &nbsp;·&nbsp; <a
-          href="#" class="text-gold hover:text-gold-light transition-colors no-underline">Terms</a></span>
-    </div>
-  </footer>
+    <!--JAVASCRIPT-->
+    <script>
+      // ── Dark / Light ─────────────────────────
+      const themeBtn = document.getElementById("themeBtn");
+      const html = document.documentElement;
+      const isDark = () => html.classList.contains("dark");
+      function applyTheme(dark) {
+        html.classList.toggle("dark", dark);
+        themeBtn.innerHTML = dark
+          ? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path  fill="rgb(255, 212, 59)" d="M303.3 112.7C196.2 121.2 112 210.8 112 320C112 434.9 205.1 528 320 528C353.3 528 384.7 520.2 412.6 506.3C309.2 482.9 232 390.5 232 280C232 214.2 259.4 154.9 303.3 112.7zM64 320C64 178.6 178.6 64 320 64C339.4 64 358.4 66.2 376.7 70.3C386.6 72.5 394 80.8 395.2 90.8C396.4 100.8 391.2 110.6 382.1 115.2C321.5 145.4 280 207.9 280 280C280 381.6 362.4 464 464 464C469 464 473.9 463.8 478.8 463.4C488.9 462.6 498.4 468.2 502.6 477.5C506.8 486.8 504.6 497.6 497.3 504.6C451.3 548.8 388.8 576 320 576C178.6 576 64 461.4 64 320z"/></svg>'
+          : '<svg xmlns="http://www.w3.org/2000/svg" height="23" width="23" viewBox="0 0 640 640"><path fill="rgb(255, 212, 59)" d="M320 32C328 32 335.4 36 339.9 42.6L398.7 130L502.1 109.8C509.9 108.3 518 110.7 523.7 116.4C529.4 122.1 531.8 130.2 530.3 138L510 241.3L597.4 300.1C604 304.5 608 312 608 320C608 328 604 335.4 597.4 339.9L510 398.7L530.2 502C531.7 509.8 529.3 517.9 523.6 523.6C517.9 529.3 509.8 531.7 502 530.2L398.7 510L339.9 597.4C335.4 604 328 608 320 608C312 608 304.6 604 300.1 597.4L241.3 510L137.9 530.2C130.1 531.7 122 529.3 116.3 523.6C110.6 517.9 108.2 509.8 109.7 502L130 398.7L42.6 339.9C36 335.4 32 328 32 320C32 312 36 304.6 42.6 300.1L130 241.3L109.8 137.9C108.3 130.1 110.7 122 116.4 116.3C122.1 110.6 130.2 108.2 138 109.7L241.3 129.9L300.1 42.5L301.9 40.2C306.4 35 313 32 320 32zM272.2 170C266.8 178 257.2 182 247.7 180.2L163.7 163.8L180.1 247.8C181.9 257.3 177.9 266.9 169.9 272.3L99 320L170 367.8C178 373.2 182 382.8 180.2 392.3L163.8 476.3L247.8 459.9L251.3 459.5C259.6 459.1 267.6 463.1 272.3 470.1L320.1 541.1L367.9 470.1L370.1 467.3C375.7 461.2 384.1 458.3 392.4 460L476.4 476.4L460 392.4C458.2 382.9 462.2 373.3 470.2 367.9L541.2 320.1L470.2 272.3C462.2 266.9 458.2 257.3 460 247.8L476.4 163.8L392.4 180.2C382.9 182 373.3 178 367.9 170L320.1 99L272.3 170zM320 440C253.7 440 200 386.3 200 320C200 253.7 253.7 200 320 200C386.3 200 440 253.7 440 320C440 386.3 386.3 440 320 440zM320 248C280.2 248 248 280.2 248 320C248 359.8 280.2 392 320 392C359.8 392 392 359.8 392 320C392 280.2 359.8 248 320 248z"/></svg>';
+        themeBtn.title = dark ? "Switch to Light Mode" : "Switch to Dark Mode";
+      }
+      applyTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
+      themeBtn.addEventListener("click", () => applyTheme(!isDark()));
+      // ── Mobile Menu ──────────────────────────
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
 
-  <!--JAVASCRIPT-->
-  <script>
-    // ── Dark / Light ─────────────────────────
-  const themeBtn = document.getElementById('themeBtn');
-    const html = document.documentElement;
-    const isDark = () => html.classList.contains('dark');
-    function applyTheme(dark) {
-      html.classList.toggle('dark', dark);
-      themeBtn.innerHTML = dark ? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path  fill="rgb(255, 212, 59)" d="M303.3 112.7C196.2 121.2 112 210.8 112 320C112 434.9 205.1 528 320 528C353.3 528 384.7 520.2 412.6 506.3C309.2 482.9 232 390.5 232 280C232 214.2 259.4 154.9 303.3 112.7zM64 320C64 178.6 178.6 64 320 64C339.4 64 358.4 66.2 376.7 70.3C386.6 72.5 394 80.8 395.2 90.8C396.4 100.8 391.2 110.6 382.1 115.2C321.5 145.4 280 207.9 280 280C280 381.6 362.4 464 464 464C469 464 473.9 463.8 478.8 463.4C488.9 462.6 498.4 468.2 502.6 477.5C506.8 486.8 504.6 497.6 497.3 504.6C451.3 548.8 388.8 576 320 576C178.6 576 64 461.4 64 320z"/></svg>' : '<svg xmlns="http://www.w3.org/2000/svg" height="23" width="23" viewBox="0 0 640 640"><path fill="rgb(255, 212, 59)" d="M320 32C328 32 335.4 36 339.9 42.6L398.7 130L502.1 109.8C509.9 108.3 518 110.7 523.7 116.4C529.4 122.1 531.8 130.2 530.3 138L510 241.3L597.4 300.1C604 304.5 608 312 608 320C608 328 604 335.4 597.4 339.9L510 398.7L530.2 502C531.7 509.8 529.3 517.9 523.6 523.6C517.9 529.3 509.8 531.7 502 530.2L398.7 510L339.9 597.4C335.4 604 328 608 320 608C312 608 304.6 604 300.1 597.4L241.3 510L137.9 530.2C130.1 531.7 122 529.3 116.3 523.6C110.6 517.9 108.2 509.8 109.7 502L130 398.7L42.6 339.9C36 335.4 32 328 32 320C32 312 36 304.6 42.6 300.1L130 241.3L109.8 137.9C108.3 130.1 110.7 122 116.4 116.3C122.1 110.6 130.2 108.2 138 109.7L241.3 129.9L300.1 42.5L301.9 40.2C306.4 35 313 32 320 32zM272.2 170C266.8 178 257.2 182 247.7 180.2L163.7 163.8L180.1 247.8C181.9 257.3 177.9 266.9 169.9 272.3L99 320L170 367.8C178 373.2 182 382.8 180.2 392.3L163.8 476.3L247.8 459.9L251.3 459.5C259.6 459.1 267.6 463.1 272.3 470.1L320.1 541.1L367.9 470.1L370.1 467.3C375.7 461.2 384.1 458.3 392.4 460L476.4 476.4L460 392.4C458.2 382.9 462.2 373.3 470.2 367.9L541.2 320.1L470.2 272.3C462.2 266.9 458.2 257.3 460 247.8L476.4 163.8L392.4 180.2C382.9 182 373.3 178 367.9 170L320.1 99L272.3 170zM320 440C253.7 440 200 386.3 200 320C200 253.7 253.7 200 320 200C386.3 200 440 253.7 440 320C440 386.3 386.3 440 320 440zM320 248C280.2 248 248 280.2 248 320C248 359.8 280.2 392 320 392C359.8 392 392 359.8 392 320C392 280.2 359.8 248 320 248z"/></svg>';
-      themeBtn.title = dark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
-    }
-    applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
-    themeBtn.addEventListener('click', () => applyTheme(!isDark()));
-    // ── Mobile Menu ──────────────────────────
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
 
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
+      // ── Programme Tabs ───────────────────────
+      const tabs = document.querySelectorAll(".prog-tab");
+      const panels = document.querySelectorAll(".prog-panel");
 
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const target = tab.dataset.tab;
+          tabs.forEach((t) => t.classList.remove("active"));
+          panels.forEach((p) => p.classList.remove("active"));
+          tab.classList.add("active");
+          const panel = document.getElementById("panel-" + target);
+          if (panel) {
+            panel.classList.add("active");
+            // Re-trigger scroll reveal for newly shown panel
+            panel
+              .querySelectorAll(".reveal-left, .reveal-right, .reveal")
+              .forEach((el) => {
+                if (!el.classList.contains("visible")) {
+                  setTimeout(() => el.classList.add("visible"), 80);
+                }
+              });
+          }
+        });
+      });
 
-    // ── Programme Tabs ───────────────────────
-    const tabs = document.querySelectorAll('.prog-tab');
-    const panels = document.querySelectorAll('.prog-panel');
+      // ── FAQ Accordion ────────────────────────
+      document.querySelectorAll(".faq-trigger").forEach((trigger) => {
+        trigger.addEventListener("click", () => {
+          const item = trigger.closest(".faq-item");
+          const answer = item.querySelector(".faq-answer");
+          const icon = trigger.querySelector(".faq-icon");
+          const isOpen = answer.classList.contains("open");
 
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const target = tab.dataset.tab;
-        tabs.forEach(t => t.classList.remove('active'));
-        panels.forEach(p => p.classList.remove('active'));
-        tab.classList.add('active');
-        const panel = document.getElementById('panel-' + target);
-        if (panel) {
-          panel.classList.add('active');
-          // Re-trigger scroll reveal for newly shown panel
-          panel.querySelectorAll('.reveal-left, .reveal-right, .reveal').forEach(el => {
-            if (!el.classList.contains('visible')) {
-              setTimeout(() => el.classList.add('visible'), 80);
+          // Close all
+          document
+            .querySelectorAll(".faq-answer")
+            .forEach((a) => a.classList.remove("open"));
+          document
+            .querySelectorAll(".faq-icon")
+            .forEach((i) => i.classList.remove("open"));
+
+          // Open clicked if it was closed
+          if (!isOpen) {
+            answer.classList.add("open");
+            icon.classList.add("open");
+          }
+        });
+      });
+
+      // ── Scroll Reveal ────────────────────────
+      const revealObs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              setTimeout(
+                () => e.target.classList.add("visible"),
+                Number(e.target.dataset.delay) || 0,
+              );
+              revealObs.unobserve(e.target);
             }
           });
-        }
+        },
+        { threshold: 0.08 },
+      );
+
+      document
+        .querySelectorAll(".reveal, .reveal-left, .reveal-right")
+        .forEach((el, i) => {
+          el.dataset.delay = (i % 4) * 75;
+          revealObs.observe(el);
+        });
+
+      // ── Navbar shrink on scroll ──────────────
+      window.addEventListener("scroll", () => {
+        navbar.classList.toggle("shadow-lg", window.scrollY > 40);
       });
-    });
-
-    // ── FAQ Accordion ────────────────────────
-    document.querySelectorAll('.faq-trigger').forEach(trigger => {
-      trigger.addEventListener('click', () => {
-        const item = trigger.closest('.faq-item');
-        const answer = item.querySelector('.faq-answer');
-        const icon = trigger.querySelector('.faq-icon');
-        const isOpen = answer.classList.contains('open');
-
-        // Close all
-        document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
-        document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('open'));
-
-        // Open clicked if it was closed
-        if (!isOpen) {
-          answer.classList.add('open');
-          icon.classList.add('open');
-        }
-      });
-    });
-
-    // ── Scroll Reveal ────────────────────────
-    const revealObs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          setTimeout(() => e.target.classList.add('visible'), Number(e.target.dataset.delay) || 0);
-          revealObs.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.08 });
-
-    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach((el, i) => {
-      el.dataset.delay = (i % 4) * 75;
-      revealObs.observe(el);
-    });
-
-    // ── Navbar shrink on scroll ──────────────
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('shadow-lg', window.scrollY > 40);
-    });
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>

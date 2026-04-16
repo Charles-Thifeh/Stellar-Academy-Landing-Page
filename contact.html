@@ -1,400 +1,915 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="light scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us | Stellar Scholars Academy</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500;600&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            gold:          '#C49A2C',
-            'gold-light':  '#E8C56A',
-            'gold-dark':   '#9A7A1E',
-            maroon:        '#7B1A2E',
-            'maroon-light':'#A02040',
-            navy:          '#1A2A4A',
-            'navy-light':  '#243558',
-            cream:         '#FAF6EE',
-            'warm-white':  '#FFFDF8',
-          },
-          fontFamily: {
-            playfair:  ['"Playfair Display"', 'serif'],
-            cormorant: ['"Cormorant Garamond"', 'serif'],
-            cinzel:    ['Cinzel', 'serif'],
-            lato:      ['Lato', 'sans-serif'],
-          },
-          backgroundImage: {
-            'gold-maroon':  'linear-gradient(to right, #C49A2C, #7B1A2E)',
-            'maroon-navy':  'linear-gradient(135deg, #7B1A2E 0%, #1A2A4A 100%)',
-            'hero-pattern': 'repeating-linear-gradient(45deg, rgba(196,154,44,0.04) 0, rgba(196,154,44,0.04) 1px, transparent 0, transparent 24px)',
-          },
-          keyframes: {
-            fadeUp: {
-              '0%':   { opacity: '0', transform: 'translateY(30px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' },
+    <title>
+      Stellar Scholars Academy | Excellence in Education & Character | Ogun
+      State, Nigeria
+    </title>
+
+    <meta
+      name="description"
+      content="Stellar Scholars Academy offers world-class Pre-School, Grade School, and Secondary School education in Obafemi Owode, Ogun State. Nurturing minds and building futures through academic excellence, pastoral care, and strong values. 2026/2027 Admissions now open."
+    />
+
+    <meta
+      name="keywords"
+      content="Stellar Scholars Academy, best school in Ogun State, private school Nigeria, secondary school Obafemi Owode, grade school Nigeria, pre-school Ogun State, top rated school Nigeria, admissions 2026, Ikoyi daycare, SSA Nigeria"
+    />
+
+    <meta name="author" content="Stellar Scholars Academy" />
+    <meta name="robots" content="contact, follow" />
+    <link
+      rel="canonical"
+      href="https://stellarscholarsacademy.com.ng/contact.html"
+    />
+
+    <!-- ✅ OPEN GRAPH (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://stellarscholarsacademy.com.ng/contact.html"
+    />
+    <meta
+      property="og:title"
+      content="Stellar Scholars Academy | Every Learner is a Light"
+    />
+    <meta
+      property="og:description"
+      content="A nurturing school community in Ogun State, Nigeria, where every scholar discovers their unique potential. Pre-School, Grade & Secondary School. Admissions open for 2026/2027."
+    />
+    <meta
+      property="og:image"
+      content="https://stellarscholarsacademy.com.ng/imgs/logo2.jpg"
+    />
+    <meta property="og:image:alt" content="Stellar Scholars Academy Logo" />
+    <meta property="og:site_name" content="Stellar Scholars Academy" />
+    <meta property="og:locale" content="en_NG" />
+
+    <!-- ✅ TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Stellar Scholars Academy | Excellence in Education & Character"
+    />
+    <meta
+      name="twitter:description"
+      content="Nurturing scholars in Ogun State, Nigeria with academic excellence, pastoral care, and strong values. Pre-School to Secondary School. 2026/2027 Admissions now open."
+    />
+    <meta
+      name="twitter:image"
+      content="https://stellarscholarsacademy.com.ng/imgs/logo2.jpg"
+    />
+
+    <!-- ✅ GEO / LOCAL SEO -->
+    <meta name="geo.region" content="NG-OG" />
+    <meta name="geo.placename" content="Obafemi Owode, Ogun State, Nigeria" />
+    <meta name="ICBM" content="6.9965, 3.5986" />
+
+    <!-- ✅ STRUCTURED DATA (JSON-LD) — paste inside a <script> tag -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "School",
+        "name": "Stellar Scholars Academy",
+        "url": "https://stellarscholarsacademy.com.ng",
+        "logo": "https://stellarscholarsacademy.com.ng/imgs/logo2.jpg",
+        "description": "Excellence in Education & Character. Stellar Scholars Academy nurtures scholars who lead with knowledge, integrity, and compassion.",
+        "telephone": "+2347067374352",
+        "email": "stellarscholarsacademy@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Obafemi Owode L.G.A",
+          "addressRegion": "Ogun State",
+          "addressCountry": "NG"
+        },
+        "foundingDate": "2026",
+        "slogan": "Every Learner is a Light",
+        "hasMap": "https://stellarscholarsacademy.com.ng",
+        "sameAs": []
+      }
+    </script>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500;600&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              gold: "#C49A2C",
+              "gold-light": "#E8C56A",
+              "gold-dark": "#9A7A1E",
+              maroon: "#7B1A2E",
+              "maroon-light": "#A02040",
+              navy: "#1A2A4A",
+              "navy-light": "#243558",
+              cream: "#FAF6EE",
+              "warm-white": "#FFFDF8",
+            },
+            fontFamily: {
+              playfair: ['"Playfair Display"', "serif"],
+              cormorant: ['"Cormorant Garamond"', "serif"],
+              cinzel: ["Cinzel", "serif"],
+              lato: ["Lato", "sans-serif"],
+            },
+            backgroundImage: {
+              "gold-maroon": "linear-gradient(to right, #C49A2C, #7B1A2E)",
+              "maroon-navy":
+                "linear-gradient(135deg, #7B1A2E 0%, #1A2A4A 100%)",
+              "hero-pattern":
+                "repeating-linear-gradient(45deg, rgba(196,154,44,0.04) 0, rgba(196,154,44,0.04) 1px, transparent 0, transparent 24px)",
+            },
+            keyframes: {
+              fadeUp: {
+                "0%": { opacity: "0", transform: "translateY(30px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+            },
+            animation: {
+              "fade-up": "fadeUp 0.7s ease both",
+              "fade-up-1": "fadeUp 0.7s ease 0.1s both",
+              "fade-up-2": "fadeUp 0.7s ease 0.2s both",
+              "fade-up-3": "fadeUp 0.7s ease 0.3s both",
+              "fade-up-4": "fadeUp 0.7s ease 0.4s both",
             },
           },
-          animation: {
-            'fade-up':   'fadeUp 0.7s ease both',
-            'fade-up-1': 'fadeUp 0.7s ease 0.1s both',
-            'fade-up-2': 'fadeUp 0.7s ease 0.2s both',
-            'fade-up-3': 'fadeUp 0.7s ease 0.3s both',
-            'fade-up-4': 'fadeUp 0.7s ease 0.4s both',
-          },
         },
-      },
-    }
-  </script>
+      };
+    </script>
 
-  <style>
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #f4f0e8; }
-    .dark ::-webkit-scrollbar-track { background: #0F1824; }
-    ::-webkit-scrollbar-thumb { background: #C49A2C; border-radius: 3px; }
+    <style>
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f4f0e8;
+      }
+      .dark ::-webkit-scrollbar-track {
+        background: #0f1824;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c49a2c;
+        border-radius: 3px;
+      }
 
-    .nav-link { position: relative; padding-bottom: 3px; }
-    .nav-link::after {
-      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
-      height: 2px; background: #C49A2C;
-      transform: scaleX(0); transition: transform 0.2s ease; border-radius: 1px;
-    }
-    .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
+      .nav-link {
+        position: relative;
+        padding-bottom: 3px;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #c49a2c;
+        transform: scaleX(0);
+        transition: transform 0.2s ease;
+        border-radius: 1px;
+      }
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        transform: scaleX(1);
+      }
 
-    .section-label-line { position: relative; padding-left: 36px; }
-    .section-label-line::before {
-      content: ''; position: absolute; left: 0; top: 50%;
-      width: 24px; height: 1px; background: #C49A2C; transform: translateY(-50%);
-    }
+      .section-label-line {
+        position: relative;
+        padding-left: 36px;
+      }
+      .section-label-line::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 24px;
+        height: 1px;
+        background: #c49a2c;
+        transform: translateY(-50%);
+      }
 
-    .hover-bar { position: relative; overflow: hidden; }
-    .hover-bar::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(to right, #C49A2C, #7B1A2E);
-      transform: scaleX(0); transition: transform 0.3s ease;
-    }
-    .hover-bar:hover::before { transform: scaleX(1); }
+      .hover-bar {
+        position: relative;
+        overflow: hidden;
+      }
+      .hover-bar::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(to right, #c49a2c, #7b1a2e);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+      .hover-bar:hover::before {
+        transform: scaleX(1);
+      }
 
-    .admissions-pattern {
-      background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 0, transparent 20px);
-    }
-    .diag-pattern {
-      background-image: repeating-linear-gradient(135deg, rgba(196,154,44,0.05) 0, rgba(196,154,44,0.05) 1px, transparent 0, transparent 28px);
-    }
+      .admissions-pattern {
+        background-image: repeating-linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 0.03) 0,
+          rgba(255, 255, 255, 0.03) 1px,
+          transparent 0,
+          transparent 20px
+        );
+      }
+      .diag-pattern {
+        background-image: repeating-linear-gradient(
+          135deg,
+          rgba(196, 154, 44, 0.05) 0,
+          rgba(196, 154, 44, 0.05) 1px,
+          transparent 0,
+          transparent 28px
+        );
+      }
 
-    .reveal {
-      opacity: 0; transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-    /* Form */
-    .form-input {
-      width: 100%;
-      background: white;
-      border: 1px solid rgba(196,154,44,0.25);
-      border-radius: 2px;
-      padding: 12px 16px;
-      font-family: 'Lato', sans-serif;
-      font-size: 14px;
-      color: #2A2A2A;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      outline: none;
-    }
-    .dark .form-input {
-      background: #1A2A4A;
-      border-color: rgba(196,154,44,0.2);
-      color: #C8D4E0;
-    }
-    .form-input:focus {
-      border-color: #C49A2C;
-      box-shadow: 0 0 0 3px rgba(196,154,44,0.08);
-    }
-    .form-input::placeholder { color: #aaa; }
-    .dark .form-input::placeholder { color: #6A7A8A; }
-    select.form-input { cursor: pointer; }
+      /* Form */
+      .form-input {
+        width: 100%;
+        background: white;
+        border: 1px solid rgba(196, 154, 44, 0.25);
+        border-radius: 2px;
+        padding: 12px 16px;
+        font-family: "Lato", sans-serif;
+        font-size: 14px;
+        color: #2a2a2a;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+        outline: none;
+      }
+      .dark .form-input {
+        background: #1a2a4a;
+        border-color: rgba(196, 154, 44, 0.2);
+        color: #c8d4e0;
+      }
+      .form-input:focus {
+        border-color: #c49a2c;
+        box-shadow: 0 0 0 3px rgba(196, 154, 44, 0.08);
+      }
+      .form-input::placeholder {
+        color: #aaa;
+      }
+      .dark .form-input::placeholder {
+        color: #6a7a8a;
+      }
+      select.form-input {
+        cursor: pointer;
+      }
 
-    /* Map container */
-    .map-container {
-      position: relative;
-      background: linear-gradient(135deg, #1A2A4A 0%, #243558 50%, #7B1A2E 100%);
-      overflow: hidden;
-    }
-    .map-container::before {
-      content: '';
-      position: absolute; inset: 0;
-      background-image:
-        repeating-linear-gradient(0deg, rgba(196,154,44,0.06) 0, rgba(196,154,44,0.06) 1px, transparent 0, transparent 40px),
-        repeating-linear-gradient(90deg, rgba(196,154,44,0.06) 0, rgba(196,154,44,0.06) 1px, transparent 0, transparent 40px);
-    }
+      /* Map container */
+      .map-container {
+        position: relative;
+        background: linear-gradient(
+          135deg,
+          #1a2a4a 0%,
+          #243558 50%,
+          #7b1a2e 100%
+        );
+        overflow: hidden;
+      }
+      .map-container::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          repeating-linear-gradient(
+            0deg,
+            rgba(196, 154, 44, 0.06) 0,
+            rgba(196, 154, 44, 0.06) 1px,
+            transparent 0,
+            transparent 40px
+          ),
+          repeating-linear-gradient(
+            90deg,
+            rgba(196, 154, 44, 0.06) 0,
+            rgba(196, 154, 44, 0.06) 1px,
+            transparent 0,
+            transparent 40px
+          );
+      }
 
-    /* Dept card active */
-    .dept-card { cursor: pointer; transition: all 0.2s; }
-    .dept-card.active { border-color: #C49A2C !important; background: rgba(196,154,44,0.06); }
-    .dept-card.active .dept-icon { background: #C49A2C; color: #1A2A4A; }
+      /* Dept card active */
+      .dept-card {
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .dept-card.active {
+        border-color: #c49a2c !important;
+        background: rgba(196, 154, 44, 0.06);
+      }
+      .dept-card.active .dept-icon {
+        background: #c49a2c;
+        color: #1a2a4a;
+      }
 
-    /* Office hours row */
-    .oh-row:hover { background: rgba(196,154,44,0.04); }
-    .dark .oh-row:hover { background: rgba(196,154,44,0.06); }
-  </style>
-</head>
+      /* Office hours row */
+      .oh-row:hover {
+        background: rgba(196, 154, 44, 0.04);
+      }
+      .dark .oh-row:hover {
+        background: rgba(196, 154, 44, 0.06);
+      }
+    </style>
+  </head>
 
-<body class="font-lato bg-warm-white dark:bg-[#0F1824] text-[#4A4A4A] dark:text-[#C8D4E0] overflow-x-hidden transition-colors duration-300">
+  <body
+    class="font-lato bg-warm-white dark:bg-[#0F1824] text-[#4A4A4A] dark:text-[#C8D4E0] overflow-x-hidden transition-colors duration-300"
+  >
+    <!-- ══════════════════ NAVBAR ══════════════════ -->
+    <nav
+      id="navbar"
+      class="fixed left-0 right-0 z-50 bg-warm-white/90 dark:bg-[#0F1824]/50 backdrop-blur-md border-b border-gold/20 dark:border-gold/10 transition-all duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto px-5 lg:px-10 h-[72px] flex items-center justify-between gap-5"
+      >
+        <a
+          href="index.html"
+          class="flex items-center gap-3 flex-shrink-0 no-underline"
+        >
+          <img src="imgs/logo2.jpg" alt="logo" class="h-11 w-11" />
+          <div
+            class="font-cinzel text-[13px] font-semibold hidden lg:block text-navy dark:text-gold-light leading-tight tracking-wide"
+          >
+            STELLAR SCHOLARS ACADEMY
+            <span
+              class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5"
+              >LUX ET PAX · EST. 2026</span
+            >
+          </div>
+        </a>
 
-  <!-- ══════════════════ NAVBAR ══════════════════ -->
-  <nav id="navbar" class="fixed left-0 right-0 z-50 bg-warm-white/90 dark:bg-[#0F1824]/50 backdrop-blur-md border-b border-gold/20 dark:border-gold/10 transition-all duration-300" >
-    <div class="max-w-7xl mx-auto px-5 lg:px-10 h-[72px] flex items-center justify-between gap-5">
-      <a href="index.html" class="flex items-center gap-3 flex-shrink-0 no-underline">
-        <img src="imgs/logo2.jpg" alt="logo" class="h-11 w-11">
-        <div class="font-cinzel text-[13px] font-semibold hidden lg:block text-navy dark:text-gold-light leading-tight tracking-wide">
-          STELLAR SCHOLARS ACADEMY
-          <span class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5">LUX ET PAX · EST. 2026</span>
+        <ul class="hidden lg:flex items-center gap-7 list-none">
+          <li>
+            <a
+              href="index.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] transition-colors duration-200 no-underline"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="about.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] transition-colors duration-200 no-underline"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="academics.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline"
+              >Academics</a
+            >
+          </li>
+          <li>
+            <a
+              href="admissions.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline"
+              >Admissions</a
+            >
+          </li>
+          <li>
+            <a
+              href="school-life.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline"
+              >School Life</a
+            >
+          </li>
+          <li>
+            <a
+              href="news.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline"
+              >News</a
+            >
+          </li>
+          <li>
+            <a
+              href="gallery.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline"
+              >Gallery</a
+            >
+          </li>
+        </ul>
+
+        <div class="flex items-center gap-2.5 flex-shrink-0">
+          <a
+            href="admissions.html#apply"
+            class="hidden sm:inline-block bg-maroon hover:bg-maroon-light text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all hover:-translate-y-px no-underline"
+            >Enroll Now</a
+          >
+          <a
+            href="#"
+            class="hidden sm:inline-block border border-gold text-gold hover:bg-gold hover:text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all no-underline"
+            >Book a Tour</a
+          >
+          <button
+            id="themeBtn"
+            class="w-9 h-9 rounded-full bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-[15px] transition-all hover:border-gold hover:rotate-12 cursor-pointer flex-shrink-0"
+          >
+            ☀️
+          </button>
+          <button
+            id="mobileMenuBtn"
+            class="lg:hidden w-9 h-9 rounded-sm bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-navy dark:text-gold transition-all hover:border-gold cursor-pointer flex-shrink-0"
+          >
+            <svg
+              width="18"
+              height="14"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <line x1="0" y1="1" x2="18" y2="1" />
+              <line x1="0" y1="7" x2="18" y2="7" />
+              <line x1="0" y1="13" x2="18" y2="13" />
+            </svg>
+          </button>
         </div>
-      </a>
-
-      <ul class="hidden lg:flex items-center gap-7 list-none">
-        <li><a href="index.html"
-            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] transition-colors duration-200 no-underline">Home</a></li>
-        <li><a href="about.html"
-            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] transition-colors duration-200 no-underline">About Us</a></li>
-        <li><a href="academics.html"
-            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">Academics</a>
-        </li>
-        <li><a href="admissions.html"
-            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">Admissions</a>
-        </li>
-        <li><a href="school-life.html"
-            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">School
-            Life</a></li>
-        <li><a href="news.html"
-            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">News</a>
-        </li>
-        <li><a href="gallery.html"
-            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">Gallery</a>
-        </li>
-      </ul>
-
-      <div class="flex items-center gap-2.5 flex-shrink-0">
-        <a href="admissions.html#apply" class="hidden sm:inline-block bg-maroon hover:bg-maroon-light text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all hover:-translate-y-px no-underline">Enroll Now</a>
-        <a href="#"                         class="hidden sm:inline-block border border-gold text-gold hover:bg-gold hover:text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all no-underline">Book a Tour</a>
-        <button id="themeBtn" class="w-9 h-9 rounded-full bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-[15px] transition-all hover:border-gold hover:rotate-12 cursor-pointer flex-shrink-0">☀️</button>
-        <button id="mobileMenuBtn" class="lg:hidden w-9 h-9 rounded-sm bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-navy dark:text-gold transition-all hover:border-gold cursor-pointer flex-shrink-0">
-          <svg width="18" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="0" y1="1" x2="18" y2="1"/><line x1="0" y1="7" x2="18" y2="7"/><line x1="0" y1="13" x2="18" y2="13"/></svg>
-        </button>
       </div>
-    </div>
-    <div id="mobileMenu" class="hidden lg:hidden bg-warm-white dark:bg-[#0F1824] border-t border-gold/20 px-5 py-4">
-      <ul class="flex flex-col gap-1 list-none mb-4">
-        <li><a href="about.html"      class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">About Us</a></li>
-        <li><a href="academics.html"  class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">Academics</a></li>
-        <li><a href="admissions.html" class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">Admissions</a></li>
-        <li><a href="school-life.html"  class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">School Life</a></li>
-        <li><a href="news.html"       class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">News</a></li>
-        <li><a href="gallery.html"    class="block font-lato text-[13px] font-bold py-2.5 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">Gallery</a></li>
-      </ul>
-      <div class="flex gap-2.5">
-        <a href="admissions.html#apply" class="flex-1 text-center bg-maroon text-white text-[11px] font-bold font-lato tracking-widest uppercase px-4 py-2.5 rounded-sm no-underline">Enroll Now</a>
-        <a href="#"                         class="flex-1 text-center border border-gold text-gold text-[11px] font-bold font-lato tracking-widest uppercase px-4 py-2.5 rounded-sm no-underline">Book a Tour</a>
+      <div
+        id="mobileMenu"
+        class="hidden lg:hidden bg-warm-white dark:bg-[#0F1824] border-t border-gold/20 px-5 py-4"
+      >
+        <ul class="flex flex-col gap-1 list-none mb-4">
+          <li>
+            <a
+              href="about.html"
+              class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="academics.html"
+              class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline"
+              >Academics</a
+            >
+          </li>
+          <li>
+            <a
+              href="admissions.html"
+              class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline"
+              >Admissions</a
+            >
+          </li>
+          <li>
+            <a
+              href="school-life.html"
+              class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline"
+              >School Life</a
+            >
+          </li>
+          <li>
+            <a
+              href="news.html"
+              class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline"
+              >News</a
+            >
+          </li>
+          <li>
+            <a
+              href="gallery.html"
+              class="block font-lato text-[13px] font-bold py-2.5 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline"
+              >Gallery</a
+            >
+          </li>
+        </ul>
+        <div class="flex gap-2.5">
+          <a
+            href="admissions.html#apply"
+            class="flex-1 text-center bg-maroon text-white text-[11px] font-bold font-lato tracking-widest uppercase px-4 py-2.5 rounded-sm no-underline"
+            >Enroll Now</a
+          >
+          <a
+            href="#"
+            class="flex-1 text-center border border-gold text-gold text-[11px] font-bold font-lato tracking-widest uppercase px-4 py-2.5 rounded-sm no-underline"
+            >Book a Tour</a
+          >
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- ══════════════════════════════════════════
+    <!-- ══════════════════════════════════════════
        PAGE HERO
   ══════════════════════════════════════════ -->
-  <section class="bg-navy dark:bg-[#080E18] diag-pattern relative overflow-hidden" style="padding-top: calc(36px + 72px)">
-    <div class="absolute inset-0 bg-hero-pattern pointer-events-none opacity-60"></div>
-    <div class="absolute top-0 right-0 w-[450px] h-[450px] rounded-full bg-gradient-to-bl from-gold/8 to-transparent pointer-events-none"></div>
-    <div class="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-gradient-to-tr from-maroon/20 to-transparent pointer-events-none"></div>
+    <section
+      class="bg-navy dark:bg-[#080E18] diag-pattern relative overflow-hidden"
+      style="padding-top: calc(36px + 72px)"
+    >
+      <div
+        class="absolute inset-0 bg-hero-pattern pointer-events-none opacity-60"
+      ></div>
+      <div
+        class="absolute top-0 right-0 w-[450px] h-[450px] rounded-full bg-gradient-to-bl from-gold/8 to-transparent pointer-events-none"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-gradient-to-tr from-maroon/20 to-transparent pointer-events-none"
+      ></div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 py-20 lg:py-28">
-      <div class="max-w-2xl">
-        <div class="animate-fade-up flex items-center gap-2 mb-8 text-[11px] font-lato tracking-widest uppercase text-white/40">
-          <a href="index.html" class="hover:text-gold transition-colors no-underline text-white/40">Home</a>
-          <span class="text-gold/50">›</span>
-          <span class="text-gold">Contact Us</span>
-        </div>
-        <div class="animate-fade-up-1 section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">We're Here for You</div>
-        <h1 class="animate-fade-up-2 font-playfair font-bold text-white leading-tight mb-6" style="font-size:clamp(36px,4.5vw,56px)">
-          Get in Touch With<br><em class="italic text-gold-light">Our Team</em>
-        </h1>
-        <p class="animate-fade-up-3 font-cormorant text-[19px] text-white/65 leading-relaxed mb-10">
-          Whether you have a question about admissions, fees, academics, or just want to say hello — our team is ready to help. Reach us by phone, email, or in person.
-        </p>
-        <div class="animate-fade-up-4 flex flex-wrap gap-6">
-          <a href="tel:+2347067374352" class="flex items-center gap-2 text-gold-light hover:text-gold transition-colors no-underline font-lato text-[13px] font-bold">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-              class="bi bi-telephone" viewBox="0 0 16 16">
-              <path fill="white"
-                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
-            </svg> (0) 0355 0088
-          </a>
-          <a href="mailto:info@stellarscholars.edu.ng" class="flex items-center gap-2 text-gold-light hover:text-gold transition-colors no-underline font-lato text-[13px] font-bold">
-            <span class="text-xl">✉️</span> info@stellarscholars.edu.ng
-          </a>
-          <span class="flex items-center gap-2 text-white/50 font-lato text-[13px]">
-            <span class="text-xl">🕐</span> Mon – Fri, 7:30 AM – 4:30 PM
-          </span>
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 py-20 lg:py-28"
+      >
+        <div class="max-w-2xl">
+          <div
+            class="animate-fade-up flex items-center gap-2 mb-8 text-[11px] font-lato tracking-widest uppercase text-white/40"
+          >
+            <a
+              href="index.html"
+              class="hover:text-gold transition-colors no-underline text-white/40"
+              >Home</a
+            >
+            <span class="text-gold/50">›</span>
+            <span class="text-gold">Contact Us</span>
+          </div>
+          <div
+            class="animate-fade-up-1 section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4"
+          >
+            We're Here for You
+          </div>
+          <h1
+            class="animate-fade-up-2 font-playfair font-bold text-white leading-tight mb-6"
+            style="font-size: clamp(36px, 4.5vw, 56px)"
+          >
+            Get in Touch With<br /><em class="italic text-gold-light"
+              >Our Team</em
+            >
+          </h1>
+          <p
+            class="animate-fade-up-3 font-cormorant text-[19px] text-white/65 leading-relaxed mb-10"
+          >
+            Whether you have a question about admissions, fees, academics, or
+            just want to say hello — our team is ready to help. Reach us by
+            phone, email, or in person.
+          </p>
+          <div class="animate-fade-up-4 flex flex-wrap gap-6">
+            <a
+              href="tel:+2347067374352"
+              class="flex items-center gap-2 text-gold-light hover:text-gold transition-colors no-underline font-lato text-[13px] font-bold"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                class="bi bi-telephone"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill="white"
+                  d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+                />
+              </svg>
+              (0) 0355 0088
+            </a>
+            <a
+              href="mailto:info@stellarscholars.edu.ng"
+              class="flex items-center gap-2 text-gold-light hover:text-gold transition-colors no-underline font-lato text-[13px] font-bold"
+            >
+              <span class="text-xl">✉️</span> info@stellarscholars.edu.ng
+            </a>
+            <span
+              class="flex items-center gap-2 text-white/50 font-lato text-[13px]"
+            >
+              <span class="text-xl">🕐</span> Mon – Fri, 7:30 AM – 4:30 PM
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ══════════════════════════════════════════
+    <!-- ══════════════════════════════════════════
        CONTACT FORM + INFO PANEL
   ══════════════════════════════════════════ -->
-  <section id="contact" class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-24">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
-
-      <!-- Left: info panel -->
-      <div class="lg:col-span-2 space-y-8 reveal">
-
-        <!-- Address card -->
-        <div class="hover-bar bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6">
-          <div class="flex items-start gap-4">
-            <div class="dept-icon w-11 h-11 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center text-xl flex-shrink-0 transition-all"><svg width="25" height="25" fill="currentColor"
-              viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M12 2c-4.4 0-8 3.6-8 8 0 5.4 7 11.5 7.3 11.8.2.1.5.2.7.2.2 0 .5-.1.7-.2.3-.3 7.3-6.4 7.3-11.8 0-4.4-3.6-8-8-8zm0 17.7c-2.1-2-6-6.3-6-9.7 0-3.3 2.7-6 6-6s6 2.7 6 6-3.9 7.7-6 9.7zM12 6c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
-                fill="#0D0D0D" />
-            </svg></div>
-            <div>
-              <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-1">Our Location</div>
-              <p class="font-cormorant text-[17px] text-[#4A4A4A] dark:text-[#C8D4E0] leading-relaxed">
-                Main Site: Stellar Scholars Academy(Pre-school, Grade & Secondary Schools), Obafemi Owode L.G.A, Ogun State.<br>
-Annex: Stellar Scholars Academy, Ikoyi (Daycare).
-              </p>
-              <a href="https://maps.app.goo.gl/5JoDD16st1V6FTS49" target="_blank" class="inline-block mt-3 font-lato text-[11px] font-bold tracking-widest uppercase text-gold hover:text-gold-dark transition-colors no-underline">Get Directions →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Phone card -->
-        <div class="hover-bar bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6">
-          <div class="flex items-start gap-4">
-            <div class="dept-icon w-11 h-11 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center text-xl flex-shrink-0 transition-all"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-              class="bi bi-telephone" viewBox="0 0 16 16">
-              <path
-                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
-            </svg></div>
-            <div>
-              <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-2">Phone</div>
-              <div class="space-y-1.5">
-                <a href="tel:+2347067374352" class="block font-lato text-[14px] text-[#5A5A5A] dark:text-[#A0B0C0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">0706 737 4352</a>
-                <a href="https://wa.me/2347067374352" target="_blank" class="inline-flex items-center gap-2 mt-2 bg-green-600/10 hover:bg-green-600/20 border border-green-600/25 text-green-700 dark:text-green-400 font-lato text-[11px] font-bold tracking-widest uppercase px-3 py-1.5 rounded-sm transition-all no-underline">
-                  WhatsApp Us
-                </a>
+    <section
+      id="contact"
+      class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-24"
+    >
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16"
+      >
+        <!-- Left: info panel -->
+        <div class="lg:col-span-2 space-y-8 reveal">
+          <!-- Address card -->
+          <div
+            class="hover-bar bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6"
+          >
+            <div class="flex items-start gap-4">
+              <div
+                class="dept-icon w-11 h-11 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center text-xl flex-shrink-0 transition-all"
+              >
+                <svg
+                  width="25"
+                  height="25"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2c-4.4 0-8 3.6-8 8 0 5.4 7 11.5 7.3 11.8.2.1.5.2.7.2.2 0 .5-.1.7-.2.3-.3 7.3-6.4 7.3-11.8 0-4.4-3.6-8-8-8zm0 17.7c-2.1-2-6-6.3-6-9.7 0-3.3 2.7-6 6-6s6 2.7 6 6-3.9 7.7-6 9.7zM12 6c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
+                    fill="#0D0D0D"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div
+                  class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-1"
+                >
+                  Our Location
+                </div>
+                <p
+                  class="font-cormorant text-[17px] text-[#4A4A4A] dark:text-[#C8D4E0] leading-relaxed"
+                >
+                  Main Site: Stellar Scholars Academy(Pre-school, Grade &
+                  Secondary Schools), Obafemi Owode L.G.A, Ogun State.<br />
+                  Annex: Stellar Scholars Academy, Ikoyi (Daycare).
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/5JoDD16st1V6FTS49"
+                  target="_blank"
+                  class="inline-block mt-3 font-lato text-[11px] font-bold tracking-widest uppercase text-gold hover:text-gold-dark transition-colors no-underline"
+                  >Get Directions →</a
+                >
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Email card -->
-        <div class="hover-bar bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6">
-          <div class="flex items-start gap-4">
-            <div class="dept-icon w-11 h-11 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center text-xl flex-shrink-0 transition-all">✉️</div>
-            <div>
-              <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-2">Email</div>
-              <div class="space-y-1.5">
-                <a href="mailto:stellarscholarsacademy@gmail.com"    class="block font-lato text-[13px] text-[#5A5A5A] dark:text-[#A0B0C0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">stellarscholarsacademy@gmail.com</a>
-                <a href="mailto:info@stellarscholars.com.ng"       class="block font-lato text-[13px] text-navy dark:text-gold-light hover:text-maroon dark:hover:text-gold transition-colors no-underline">info@stellarscholars.com.ng</a>
-                <a href="mailto:admissions@stellarscholars.com.ng" class="block font-lato text-[13px] text-[#5A5A5A] dark:text-[#A0B0C0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">admissions@stellarscholars.com.ng</a>
+          <!-- Phone card -->
+          <div
+            class="hover-bar bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6"
+          >
+            <div class="flex items-start gap-4">
+              <div
+                class="dept-icon w-11 h-11 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center text-xl flex-shrink-0 transition-all"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  class="bi bi-telephone"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+                  />
+                </svg>
               </div>
+              <div>
+                <div
+                  class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-2"
+                >
+                  Phone
+                </div>
+                <div class="space-y-1.5">
+                  <a
+                    href="tel:+2347067374352"
+                    class="block font-lato text-[14px] text-[#5A5A5A] dark:text-[#A0B0C0] hover:text-maroon dark:hover:text-gold transition-colors no-underline"
+                    >0706 737 4352</a
+                  >
+                  <a
+                    href="https://wa.me/2347067374352"
+                    target="_blank"
+                    class="inline-flex items-center gap-2 mt-2 bg-green-600/10 hover:bg-green-600/20 border border-green-600/25 text-green-700 dark:text-green-400 font-lato text-[11px] font-bold tracking-widest uppercase px-3 py-1.5 rounded-sm transition-all no-underline"
+                  >
+                    WhatsApp Us
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email card -->
+          <div
+            class="hover-bar bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6"
+          >
+            <div class="flex items-start gap-4">
+              <div
+                class="dept-icon w-11 h-11 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center text-xl flex-shrink-0 transition-all"
+              >
+                ✉️
+              </div>
+              <div>
+                <div
+                  class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-2"
+                >
+                  Email
+                </div>
+                <div class="space-y-1.5">
+                  <a
+                    href="mailto:stellarscholarsacademy@gmail.com"
+                    class="block font-lato text-[13px] text-[#5A5A5A] dark:text-[#A0B0C0] hover:text-maroon dark:hover:text-gold transition-colors no-underline"
+                    >stellarscholarsacademy@gmail.com</a
+                  >
+                  <a
+                    href="mailto:info@stellarscholars.com.ng"
+                    class="block font-lato text-[13px] text-navy dark:text-gold-light hover:text-maroon dark:hover:text-gold transition-colors no-underline"
+                    >info@stellarscholars.com.ng</a
+                  >
+                  <a
+                    href="mailto:admissions@stellarscholars.com.ng"
+                    class="block font-lato text-[13px] text-[#5A5A5A] dark:text-[#A0B0C0] hover:text-maroon dark:hover:text-gold transition-colors no-underline"
+                    >admissions@stellarscholars.com.ng</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social -->
+          <div
+            class="bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6"
+          >
+            <div
+              class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-4"
+            >
+              Follow Us
+            </div>
+            <div class="flex gap-3">
+              <a
+                href="#"
+                class="flex-1 flex items-center justify-center gap-1.5 bg-[#1877f2]/10 hover:bg-[#1877f2]/20 border border-[#1877f2]/20 text-[#1877f2] font-lato text-[11px] font-bold tracking-wide uppercase py-2.5 rounded-sm transition-all no-underline"
+                >f Facebook</a
+              >
+              <a
+                href="#"
+                class="flex-1 flex items-center justify-center gap-1.5 bg-pink-500/10 hover:bg-pink-500/20 border border-pink-400/20 text-pink-600 dark:text-pink-300 font-lato text-[11px] font-bold tracking-wide uppercase py-2.5 rounded-sm transition-all no-underline"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-instagram"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                  />
+                </svg>
+                Instagram</a
+              >
             </div>
           </div>
         </div>
 
-        <!-- Social -->
-        <div class="bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6">
-          <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-4">Follow Us</div>
-          <div class="flex gap-3">
-            <a href="#" class="flex-1 flex items-center justify-center gap-1.5 bg-[#1877f2]/10 hover:bg-[#1877f2]/20 border border-[#1877f2]/20 text-[#1877f2] font-lato text-[11px] font-bold tracking-wide uppercase py-2.5 rounded-sm transition-all no-underline">f Facebook</a>
-            <a href="#" class="flex-1 flex items-center justify-center gap-1.5 bg-pink-500/10 hover:bg-pink-500/20 border border-pink-400/20 text-pink-600 dark:text-pink-300 font-lato text-[11px] font-bold tracking-wide uppercase py-2.5 rounded-sm transition-all no-underline"><svg
-              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
-              viewBox="0 0 16 16">
-              <path
-                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
-            </svg> Instagram</a>
+        <!-- Right: contact form -->
+        <div class="lg:col-span-3 reveal" data-delay="150">
+          <div
+            class="bg-warm-white dark:bg-[#1A2A4A]/30 border border-gold/20 dark:border-gold/10 rounded-sm p-8 lg:p-10"
+          >
+            <div
+              class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-2"
+            >
+              Send Us a Message
+            </div>
+            <h2
+              class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(22px,2.5vw,30px)] mb-7"
+            >
+              How Can We Help?
+            </h2>
+
+            <div id="contactForm" class="space-y-5">
+              <!-- Name + phone -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label
+                    class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5"
+                    >Full Name <span class="text-maroon">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="cName"
+                    placeholder="Your full name"
+                    class="form-input"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5"
+                    >Phone Number</label
+                  >
+                  <input
+                    type="tel"
+                    id="cPhone"
+                    placeholder="e.g. 0801 234 5678"
+                    class="form-input"
+                  />
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label
+                  class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5"
+                  >Email Address <span class="text-maroon">*</span></label
+                >
+                <input
+                  type="email"
+                  id="cEmail"
+                  placeholder="your@email.com"
+                  class="form-input"
+                />
+              </div>
+
+              <!-- Department -->
+              <div>
+                <label
+                  class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5"
+                  >Department / Subject
+                  <span class="text-maroon">*</span></label
+                >
+                <select id="cDept" class="form-input">
+                  <option value="" disabled selected>
+                    Select a department
+                  </option>
+                  <option>General Enquiry</option>
+                  <option>Admissions</option>
+                  <option>Finance & Fees</option>
+                  <option>Academic Affairs</option>
+                  <option>Student Welfare & Pastoral</option>
+                  <option>Sports & Extra-Curricular</option>
+                  <option>IT / Technical Support</option>
+                  <option>Press & Media</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div>
+                <label
+                  class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5"
+                  >Your Message <span class="text-maroon">*</span></label
+                >
+                <textarea
+                  id="cMessage"
+                  rows="5"
+                  placeholder="Write your message here…"
+                  class="form-input resize-none"
+                ></textarea>
+              </div>
+
+              <!-- Submit -->
+              <div class="pt-1">
+                <button
+                  onclick="submitContact()"
+                  class="w-full bg-maroon hover:bg-maroon-light text-white font-lato text-[13px] font-bold tracking-widest uppercase py-4 rounded-sm transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(123,26,46,0.35)] cursor-pointer"
+                >
+                  Send Message →
+                </button>
+                <p
+                  class="text-center font-cormorant text-[14px] text-[#9A9A9A] mt-3"
+                >
+                  We respond to all enquiries within 1–2 working days.
+                </p>
+              </div>
+
+              <!-- Success -->
+              <div
+                id="contactSuccess"
+                class="hidden bg-gold/8 border border-gold/25 rounded-sm p-6 text-center"
+              >
+                <div class="text-3xl mb-2">✅</div>
+                <div
+                  class="font-cinzel text-[12px] tracking-widest uppercase text-gold mb-1"
+                >
+                  Message Received!
+                </div>
+                <p
+                  class="font-cormorant text-[17px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                >
+                  Thank you for reaching out. A member of our team will be in
+                  touch within 1–2 working days.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Right: contact form -->
-      <div class="lg:col-span-3 reveal" data-delay="150">
-        <div class="bg-warm-white dark:bg-[#1A2A4A]/30 border border-gold/20 dark:border-gold/10 rounded-sm p-8 lg:p-10">
-          <div class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-2">Send Us a Message</div>
-          <h2 class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(22px,2.5vw,30px)] mb-7">How Can We Help?</h2>
-
-          <div id="contactForm" class="space-y-5">
-
-            <!-- Name + phone -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5">Full Name <span class="text-maroon">*</span></label>
-                <input type="text" id="cName" placeholder="Your full name" class="form-input" />
-              </div>
-              <div>
-                <label class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5">Phone Number</label>
-                <input type="tel" id="cPhone" placeholder="e.g. 0801 234 5678" class="form-input" />
-              </div>
-            </div>
-
-            <!-- Email -->
-            <div>
-              <label class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5">Email Address <span class="text-maroon">*</span></label>
-              <input type="email" id="cEmail" placeholder="your@email.com" class="form-input" />
-            </div>
-
-            <!-- Department -->
-            <div>
-              <label class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5">Department / Subject <span class="text-maroon">*</span></label>
-              <select id="cDept" class="form-input">
-                <option value="" disabled selected>Select a department</option>
-                <option>General Enquiry</option>
-                <option>Admissions</option>
-                <option>Finance & Fees</option>
-                <option>Academic Affairs</option>
-                <option>Student Welfare & Pastoral</option>
-                <option>Sports & Extra-Curricular</option>
-                <option>IT / Technical Support</option>
-                <option>Press & Media</option>
-              </select>
-            </div>
-
-            <!-- Message -->
-            <div>
-              <label class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5">Your Message <span class="text-maroon">*</span></label>
-              <textarea id="cMessage" rows="5" placeholder="Write your message here…" class="form-input resize-none"></textarea>
-            </div>
-
-            <!-- Submit -->
-            <div class="pt-1">
-              <button onclick="submitContact()" class="w-full bg-maroon hover:bg-maroon-light text-white font-lato text-[13px] font-bold tracking-widest uppercase py-4 rounded-sm transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(123,26,46,0.35)] cursor-pointer">
-                Send Message →
-              </button>
-              <p class="text-center font-cormorant text-[14px] text-[#9A9A9A] mt-3">We respond to all enquiries within 1–2 working days.</p>
-            </div>
-
-            <!-- Success -->
-            <div id="contactSuccess" class="hidden bg-gold/8 border border-gold/25 rounded-sm p-6 text-center">
-              <div class="text-3xl mb-2">✅</div>
-              <div class="font-cinzel text-[12px] tracking-widest uppercase text-gold mb-1">Message Received!</div>
-              <p class="font-cormorant text-[17px] text-[#4A4A4A] dark:text-[#C8D4E0]">Thank you for reaching out. A member of our team will be in touch within 1–2 working days.</p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
+    <!-- ══════════════════════════════════════════
        DEPARTMENT CONTACTS
   ══════════════════════════════════════════ 
   <section id="departments" class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-24">
@@ -444,335 +959,682 @@ Annex: Stellar Scholars Academy, Ikoyi (Daycare).
     </div>
   </section>-->
 
-  <!-- ══════════════════════════════════════════
+    <!-- ══════════════════════════════════════════
        MAP + OFFICE HOURS
   ══════════════════════════════════════════ -->
-  <section class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-24">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
+    <section
+      class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-24"
+    >
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <!-- Map (styled placeholder — swap for real embed) -->
+        <div class="lg:col-span-2 reveal">
+          <div
+            class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-5"
+          >
+            Find Us
+          </div>
+          <h2
+            class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(22px,2.5vw,30px)] mb-6"
+          >
+            Our Location
+          </h2>
 
-      <!-- Map (styled placeholder — swap for real embed) -->
-      <div class="lg:col-span-2 reveal">
-        <div class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-5">Find Us</div>
-        <h2 class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(22px,2.5vw,30px)] mb-6">Our Location</h2>
-
-        <div class="map-container rounded-sm h-[380px] flex flex-col items-center justify-center relative">
-          <!-- Grid lines give a map feel -->
-          <!-- Pin -->
-          <div class="relative z-10 flex flex-col items-center">
-            <div class="w-16 h-16 rounded-full bg-maroon border-4 border-gold flex items-center justify-center text-3xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] mb-2"><svg width="25" height="25" fill="currentColor"
-              viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M12 2c-4.4 0-8 3.6-8 8 0 5.4 7 11.5 7.3 11.8.2.1.5.2.7.2.2 0 .5-.1.7-.2.3-.3 7.3-6.4 7.3-11.8 0-4.4-3.6-8-8-8zm0 17.7c-2.1-2-6-6.3-6-9.7 0-3.3 2.7-6 6-6s6 2.7 6 6-3.9 7.7-6 9.7zM12 6c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
-                fill="#0D0D0D" />
-            </svg></div>
-            <div class="bg-navy/90 backdrop-blur-sm border border-gold/30 rounded-sm px-5 py-3 text-center shadow-xl">
-              <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-0.5">Stellar Scholars Academy</div>
-              <div class="font-cormorant text-[15px] text-white/75">Off Lagos - Ibadan Expy, Ojora Street, Orimerunmu, Sagamu 110113, Ogun State</div>
+          <div
+            class="map-container rounded-sm h-[380px] flex flex-col items-center justify-center relative"
+          >
+            <!-- Grid lines give a map feel -->
+            <!-- Pin -->
+            <div class="relative z-10 flex flex-col items-center">
+              <div
+                class="w-16 h-16 rounded-full bg-maroon border-4 border-gold flex items-center justify-center text-3xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] mb-2"
+              >
+                <svg
+                  width="25"
+                  height="25"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2c-4.4 0-8 3.6-8 8 0 5.4 7 11.5 7.3 11.8.2.1.5.2.7.2.2 0 .5-.1.7-.2.3-.3 7.3-6.4 7.3-11.8 0-4.4-3.6-8-8-8zm0 17.7c-2.1-2-6-6.3-6-9.7 0-3.3 2.7-6 6-6s6 2.7 6 6-3.9 7.7-6 9.7zM12 6c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
+                    fill="#0D0D0D"
+                  />
+                </svg>
+              </div>
+              <div
+                class="bg-navy/90 backdrop-blur-sm border border-gold/30 rounded-sm px-5 py-3 text-center shadow-xl"
+              >
+                <div
+                  class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-0.5"
+                >
+                  Stellar Scholars Academy
+                </div>
+                <div class="font-cormorant text-[15px] text-white/75">
+                  Off Lagos - Ibadan Expy, Ojora Street, Orimerunmu, Sagamu
+                  110113, Ogun State
+                </div>
+              </div>
+              <div class="mt-4 flex gap-3">
+                <a
+                  href="https://maps.app.goo.gl/5JoDD16st1V6FTS49"
+                  target="_blank"
+                  class="bg-gold hover:bg-gold-light text-navy font-lato text-[11px] font-bold tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all no-underline"
+                >
+                  Open in Google Maps
+                </a>
+                <a
+                  href="https://waze.com/ul?ll=10.52,7.44&navigate=yes"
+                  target="_blank"
+                  class="border border-white/30 hover:border-gold text-white hover:text-gold font-lato text-[11px] font-bold tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all no-underline"
+                >
+                  Open in Waze
+                </a>
+              </div>
             </div>
-            <div class="mt-4 flex gap-3">
-              <a href="https://maps.app.goo.gl/5JoDD16st1V6FTS49" target="_blank"
-                 class="bg-gold hover:bg-gold-light text-navy font-lato text-[11px] font-bold tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all no-underline">
-                Open in Google Maps
-              </a>
-              <a href="https://waze.com/ul?ll=10.52,7.44&navigate=yes" target="_blank"
-                 class="border border-white/30 hover:border-gold text-white hover:text-gold font-lato text-[11px] font-bold tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all no-underline">
-                Open in Waze
-              </a>
+          </div>
+
+          <!-- Directions -->
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div
+              class="bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 rounded-sm p-4"
+            >
+              <div
+                class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-2"
+              >
+                🚗 By Car
+              </div>
+              <p
+                class="font-cormorant text-[15px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed"
+              >
+                From Kaduna city centre, take the Barnawa Road heading south.
+                Turn onto Quarantine Dam Road — the school gate is on your
+                right, marked by the blue SSA signboard.
+              </p>
+            </div>
+            <div
+              class="bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 rounded-sm p-4"
+            >
+              <div
+                class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-2"
+              >
+                🚌 By Bus / Keke
+              </div>
+              <p
+                class="font-cormorant text-[15px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed"
+              >
+                Board any bus or keke-napep heading to Anguwan Tasha from
+                Barnawa Junction. Alight at Quarantine Dam bus stop — the school
+                is a 3-minute walk.
+              </p>
+            </div>
+            <div
+              class="bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 rounded-sm p-4"
+            >
+              <div
+                class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-2"
+              >
+                🅿️ Parking
+              </div>
+              <p
+                class="font-cormorant text-[15px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed"
+              >
+                Free parking is available within the school compound. Visitor
+                parking is clearly signposted to the left of the main gate.
+                Security will direct you on arrival.
+              </p>
             </div>
           </div>
         </div>
 
-        <!-- Directions -->
-        <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div class="bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 rounded-sm p-4">
-            <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-2">🚗 By Car</div>
-            <p class="font-cormorant text-[15px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed">From Kaduna city centre, take the Barnawa Road heading south. Turn onto Quarantine Dam Road — the school gate is on your right, marked by the blue SSA signboard.</p>
+        <!-- Office Hours -->
+        <div class="reveal" data-delay="120">
+          <div
+            class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-5"
+          >
+            When to Visit
           </div>
-          <div class="bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 rounded-sm p-4">
-            <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-2">🚌 By Bus / Keke</div>
-            <p class="font-cormorant text-[15px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed">Board any bus or keke-napep heading to Anguwan Tasha from Barnawa Junction. Alight at Quarantine Dam bus stop — the school is a 3-minute walk.</p>
+          <h2
+            class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(20px,2vw,26px)] mb-6"
+          >
+            Office Hours
+          </h2>
+
+          <div
+            class="bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden mb-6"
+          >
+            <div class="bg-gold/10 border-b border-gold/15 px-5 py-3">
+              <div
+                class="font-cinzel text-[10px] font-bold tracking-widest uppercase text-gold"
+              >
+                Main Office
+              </div>
+            </div>
+            <div class="divide-y divide-gold/10">
+              <div
+                class="oh-row flex justify-between px-5 py-3 transition-colors"
+              >
+                <span
+                  class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >Monday – Friday</span
+                >
+                <span
+                  class="font-lato text-[13px] font-bold text-navy dark:text-gold-light"
+                  >7:30 AM – 4:30 PM</span
+                >
+              </div>
+              <div
+                class="oh-row flex justify-between px-5 py-3 transition-colors"
+              >
+                <span
+                  class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >Saturday</span
+                >
+                <span
+                  class="font-lato text-[13px] font-bold text-navy dark:text-gold-light"
+                  >9:00 AM – 12:00 PM</span
+                >
+              </div>
+              <div
+                class="oh-row flex justify-between px-5 py-3 transition-colors"
+              >
+                <span
+                  class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >Sunday</span
+                >
+                <span class="font-lato text-[13px] font-bold text-[#8A8A8A]"
+                  >Closed</span
+                >
+              </div>
+            </div>
           </div>
-          <div class="bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 rounded-sm p-4">
-            <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-2">🅿️ Parking</div>
-            <p class="font-cormorant text-[15px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed">Free parking is available within the school compound. Visitor parking is clearly signposted to the left of the main gate. Security will direct you on arrival.</p>
+
+          <div
+            class="bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden mb-6"
+          >
+            <div class="bg-gold/10 border-b border-gold/15 px-5 py-3">
+              <div
+                class="font-cinzel text-[10px] font-bold tracking-widest uppercase text-gold"
+              >
+                Admissions Office
+              </div>
+            </div>
+            <div class="divide-y divide-gold/10">
+              <div
+                class="oh-row flex justify-between px-5 py-3 transition-colors"
+              >
+                <span
+                  class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >Monday – Friday</span
+                >
+                <span
+                  class="font-lato text-[13px] font-bold text-navy dark:text-gold-light"
+                  >8:00 AM – 3:00 PM</span
+                >
+              </div>
+              <div
+                class="oh-row flex justify-between px-5 py-3 transition-colors"
+              >
+                <span
+                  class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >Saturday</span
+                >
+                <span
+                  class="font-lato text-[13px] font-bold text-navy dark:text-gold-light"
+                  >9:00 AM – 12:00 PM</span
+                >
+              </div>
+              <div
+                class="oh-row flex justify-between px-5 py-3 transition-colors"
+              >
+                <span
+                  class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >Sunday</span
+                >
+                <span class="font-lato text-[13px] font-bold text-[#8A8A8A]"
+                  >Closed</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Holiday notice -->
+          <div
+            class="bg-gold/8 border border-gold/25 rounded-sm p-4 flex gap-3 items-start"
+          >
+            <span class="text-xl flex-shrink-0">⚠️</span>
+            <div>
+              <div
+                class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-1"
+              >
+                During School Holidays
+              </div>
+              <p
+                class="font-cormorant text-[15px] text-[#4A4A4A] dark:text-[#C8D4E0] leading-relaxed"
+              >
+                The main office operates reduced hours (9 AM – 12 PM, Mon–Fri)
+                during term breaks. Email responses may be slower during this
+                period.
+              </p>
+            </div>
+          </div>
+
+          <!-- Quick contact -->
+          <div class="mt-6 space-y-3">
+            <a
+              href="admissions.html#apply"
+              class="block w-full text-center bg-maroon hover:bg-maroon-light text-white font-lato text-[12px] font-bold tracking-widest uppercase py-3.5 rounded-sm transition-all hover:-translate-y-0.5 no-underline"
+              >Apply for Admission →</a
+            >
+            <a
+              href="tel:+2347067374352"
+              class="block w-full text-center border border-gold/50 hover:border-gold text-gold hover:bg-gold/5 font-lato text-[12px] font-bold tracking-widest uppercase py-3.5 rounded-sm transition-all no-underline"
+              >📞 Call Us Now</a
+            >
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Office Hours -->
-      <div class="reveal" data-delay="120">
-        <div class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-5">When to Visit</div>
-        <h2 class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(20px,2vw,26px)] mb-6">Office Hours</h2>
-
-        <div class="bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden mb-6">
-          <div class="bg-gold/10 border-b border-gold/15 px-5 py-3">
-            <div class="font-cinzel text-[10px] font-bold tracking-widest uppercase text-gold">Main Office</div>
-          </div>
-          <div class="divide-y divide-gold/10">
-            <div class="oh-row flex justify-between px-5 py-3 transition-colors">
-              <span class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Monday – Friday</span>
-              <span class="font-lato text-[13px] font-bold text-navy dark:text-gold-light">7:30 AM – 4:30 PM</span>
-            </div>
-            <div class="oh-row flex justify-between px-5 py-3 transition-colors">
-              <span class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Saturday</span>
-              <span class="font-lato text-[13px] font-bold text-navy dark:text-gold-light">9:00 AM – 12:00 PM</span>
-            </div>
-            <div class="oh-row flex justify-between px-5 py-3 transition-colors">
-              <span class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Sunday</span>
-              <span class="font-lato text-[13px] font-bold text-[#8A8A8A]">Closed</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden mb-6">
-          <div class="bg-gold/10 border-b border-gold/15 px-5 py-3">
-            <div class="font-cinzel text-[10px] font-bold tracking-widest uppercase text-gold">Admissions Office</div>
-          </div>
-          <div class="divide-y divide-gold/10">
-            <div class="oh-row flex justify-between px-5 py-3 transition-colors">
-              <span class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Monday – Friday</span>
-              <span class="font-lato text-[13px] font-bold text-navy dark:text-gold-light">8:00 AM – 3:00 PM</span>
-            </div>
-            <div class="oh-row flex justify-between px-5 py-3 transition-colors">
-              <span class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Saturday</span>
-              <span class="font-lato text-[13px] font-bold text-navy dark:text-gold-light">9:00 AM – 12:00 PM</span>
-            </div>
-            <div class="oh-row flex justify-between px-5 py-3 transition-colors">
-              <span class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0]">Sunday</span>
-              <span class="font-lato text-[13px] font-bold text-[#8A8A8A]">Closed</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Holiday notice -->
-        <div class="bg-gold/8 border border-gold/25 rounded-sm p-4 flex gap-3 items-start">
-          <span class="text-xl flex-shrink-0">⚠️</span>
-          <div>
-            <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-1">During School Holidays</div>
-            <p class="font-cormorant text-[15px] text-[#4A4A4A] dark:text-[#C8D4E0] leading-relaxed">The main office operates reduced hours (9 AM – 12 PM, Mon–Fri) during term breaks. Email responses may be slower during this period.</p>
-          </div>
-        </div>
-
-        <!-- Quick contact -->
-        <div class="mt-6 space-y-3">
-          <a href="admissions.html#apply" class="block w-full text-center bg-maroon hover:bg-maroon-light text-white font-lato text-[12px] font-bold tracking-widest uppercase py-3.5 rounded-sm transition-all hover:-translate-y-0.5 no-underline">Apply for Admission →</a>
-          <a href="tel:+2347067374352" class="block w-full text-center border border-gold/50 hover:border-gold text-gold hover:bg-gold/5 font-lato text-[12px] font-bold tracking-widest uppercase py-3.5 rounded-sm transition-all no-underline">📞 Call Us Now</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
+    <!-- ══════════════════════════════════════════
        FINAL CTA
   ══════════════════════════════════════════ -->
-  <section class="bg-maroon-navy admissions-pattern relative overflow-hidden px-5 sm:px-10 lg:px-20 py-24">
-    <div class="absolute inset-0 bg-hero-pattern pointer-events-none opacity-40"></div>
-    <div class="relative z-10 max-w-3xl mx-auto text-center reveal">
-      <div class="text-5xl mb-5">🕊️</div>
-      <div class="font-cinzel text-[11px] tracking-[0.2em] uppercase text-gold mb-4">Always Here for You</div>
-      <h2 class="font-playfair font-bold text-white text-[clamp(26px,3.5vw,44px)] leading-snug mb-5">
-        Ready to Take the<br><em class="italic text-gold-light">Next Step?</em>
-      </h2>
-      <p class="font-cormorant text-[19px] text-white/65 leading-relaxed max-w-xl mx-auto mb-10">
-        Whether you're ready to apply, want to book a tour, or simply have a question — our team is always happy to help.
-      </p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="admissions.html#apply" class="inline-block bg-gold hover:bg-gold-light text-navy font-lato text-[12px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(196,154,44,0.4)] no-underline">Apply Now</a>
-        <a href="#contact"                  class="inline-block border border-white/35 hover:border-gold hover:text-gold text-white font-lato text-[12px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all no-underline">Send a Message</a>
-        <a href="tel:+2347067374352"        class="inline-block border border-white/35 hover:border-gold hover:text-gold text-white font-lato text-[12px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all no-underline">Call Us Directly</a>
-      </div>
-    </div>
-  </section>
-
-  <!--FOOTER-->
-  <footer class="bg-navy dark:bg-[#04080F] text-white/65 px-5 sm:px-10 lg:px-20 pt-20 pb-10">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-14">
-
-      <!-- Brand col -->
-      <div>
-        <div class="flex items-center gap-3 mb-5">
-          <div
-            class="w-11 h-11 rounded-full bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center font-cinzel text-[16px] font-bold text-white flex-shrink-0">
-            <img src="imgs/logo2.jpg" alt="Logo">
-          </div>
-          <div class="font-cinzel text-[13px] font-semibold tracking-wide text-white leading-tight">
-            STELLAR SCHOLARS ACADEMY
-            <span class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5">LUX ET PAX · EST. 2026</span>
-          </div>
+    <section
+      class="bg-maroon-navy admissions-pattern relative overflow-hidden px-5 sm:px-10 lg:px-20 py-24"
+    >
+      <div
+        class="absolute inset-0 bg-hero-pattern pointer-events-none opacity-40"
+      ></div>
+      <div class="relative z-10 max-w-3xl mx-auto text-center reveal">
+        <div class="text-5xl mb-5">🕊️</div>
+        <div
+          class="font-cinzel text-[11px] tracking-[0.2em] uppercase text-gold mb-4"
+        >
+          Always Here for You
         </div>
-        <p class="text-[13px] leading-[1.7] text-white/50 mb-6">Excellence in Education &amp; Character. We nurture
-          scholars who lead with knowledge, integrity, and compassion.</p>
-        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2">
-          <svg width="30" height="30"
-              viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
-              <path fill="white"
+        <h2
+          class="font-playfair font-bold text-white text-[clamp(26px,3.5vw,44px)] leading-snug mb-5"
+        >
+          Ready to Take the<br /><em class="italic text-gold-light"
+            >Next Step?</em
+          >
+        </h2>
+        <p
+          class="font-cormorant text-[19px] text-white/65 leading-relaxed max-w-xl mx-auto mb-10"
+        >
+          Whether you're ready to apply, want to book a tour, or simply have a
+          question — our team is always happy to help.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="admissions.html#apply"
+            class="inline-block bg-gold hover:bg-gold-light text-navy font-lato text-[12px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(196,154,44,0.4)] no-underline"
+            >Apply Now</a
+          >
+          <a
+            href="#contact"
+            class="inline-block border border-white/35 hover:border-gold hover:text-gold text-white font-lato text-[12px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all no-underline"
+            >Send a Message</a
+          >
+          <a
+            href="tel:+2347067374352"
+            class="inline-block border border-white/35 hover:border-gold hover:text-gold text-white font-lato text-[12px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all no-underline"
+            >Call Us Directly</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer
+      class="bg-navy dark:bg-[#04080F] text-white/65 px-5 sm:px-10 lg:px-20 pt-20 pb-10"
+    >
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-14"
+      >
+        <!-- Brand col -->
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <div
+              class="w-11 h-11 rounded-full bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center font-cinzel text-[16px] font-bold text-white flex-shrink-0"
+            >
+              <img src="imgs/logo2.jpg" alt="Logo" />
+            </div>
+            <div
+              class="font-cinzel text-[13px] font-semibold tracking-wide text-white leading-tight"
+            >
+              STELLAR SCHOLARS ACADEMY
+              <span
+                class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5"
+                >LUX ET PAX · EST. 2026</span
+              >
+            </div>
+          </div>
+          <p class="text-[13px] leading-[1.7] text-white/50 mb-6">
+            Excellence in Education &amp; Character. We nurture scholars who
+            lead with knowledge, integrity, and compassion.
+          </p>
+          <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2">
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="white"
                 d="M12 2c-4.4 0-8 3.6-8 8 0 5.4 7 11.5 7.3 11.8.2.1.5.2.7.2.2 0 .5-.1.7-.2.3-.3 7.3-6.4 7.3-11.8 0-4.4-3.6-8-8-8zm0 17.7c-2.1-2-6-6.3-6-9.7 0-3.3 2.7-6 6-6s6 2.7 6 6-3.9 7.7-6 9.7zM12 6c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
-                 />
+              />
             </svg>
-            <div><b>Main Site:</b> Stellar Scholars Academy(Pre-school, Grade & Secondary Schools), Obafemi Owode L.G.A, Ogun State.<br><b>Annex:</b> Stellar Scholars Academy, Ikoyi (Daycare).</div>
-            
+            <div>
+              <b>Main Site:</b> Stellar Scholars Academy(Pre-school, Grade &
+              Secondary Schools), Obafemi Owode L.G.A, Ogun State.<br /><b
+                >Annex:</b
+              >
+              Stellar Scholars Academy, Ikoyi (Daycare).
+            </div>
+
             <div class="flex pt-0"></div>
-        </div>
-        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-              class="bi bi-telephone" viewBox="0 0 16 16">
-              <path fill="white"
-                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+          </div>
+          <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              class="bi bi-telephone"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill="white"
+                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+              />
             </svg>
-          <span> +234 706 737 4352</span>
-        </div>
-        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-6">
-         <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 640 640"> <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--> <path fill="white" d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"/></svg>
-          <span>stellarscholarsacademy@gmail.com</span>
-        </div>
-        <div class="flex gap-2.5">
-          <a href="#"
-            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[13px] font-bold transition-all duration-200 no-underline"><svg
-              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook"
-              viewBox="0 0 16 16">
+            <span> +234 706 737 4352</span>
+          </div>
+          <div class="flex items-start gap-2 text-[13px] text-white/55 mb-6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16px"
+              height="16px"
+              viewBox="0 0 640 640"
+            >
+              <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
               <path
-                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
-            </svg></a>
-          <a href="https://ng.linkedin.com/company/stellar-scholars-academy1"
-            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[11px] font-bold transition-all duration-200 no-underline"><svg
-              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin"
-              viewBox="0 0 16 16">
-              <path
-                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
-            </svg></a>
-          <a href="https://www.instagram.com/stellarscholarsacademyikoyi/"
-            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center hover:text-navy text-[14px] transition-all duration-200 no-underline"><svg
-              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
-              viewBox="0 0 16 16">
-              <path
-                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
-            </svg></a>
+                fill="white"
+                d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"
+              />
+            </svg>
+            <span>stellarscholarsacademy@gmail.com</span>
+          </div>
+          <div class="flex gap-2.5">
+            <a
+              href="#"
+              class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[13px] font-bold transition-all duration-200 no-underline"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-facebook"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                /></svg
+            ></a>
+            <a
+              href="https://ng.linkedin.com/company/stellar-scholars-academy1"
+              class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[11px] font-bold transition-all duration-200 no-underline"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-linkedin"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                /></svg
+            ></a>
+            <a
+              href="https://www.instagram.com/stellarscholarsacademyikoyi/"
+              class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center hover:text-navy text-[14px] transition-all duration-200 no-underline"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-instagram"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                /></svg
+            ></a>
+          </div>
+        </div>
+
+        <!-- Links cols -->
+        <div>
+          <div
+            class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5"
+          >
+            About Us
+          </div>
+          <ul class="list-none space-y-2.5">
+            <li>
+              <a
+                href="about.html#mission"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Our Mission</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html#leadership"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Leadership</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html#timeline"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >History</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Awards</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div
+            class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5"
+          >
+            Academics
+          </div>
+          <ul class="list-none space-y-2.5">
+            <li>
+              <a
+                href="academics.html"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Pre-School</a
+              >
+            </li>
+            <li>
+              <a
+                href="academics.html"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Grade School</a
+              >
+            </li>
+            <li>
+              <a
+                href="academics.html"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Secondary School</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Admissions</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="hidden sm:block md:hiddden">
+          <div
+            class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5"
+          >
+            School Life
+          </div>
+          <ul class="list-none space-y-2.5">
+            <li>
+              <a
+                href="#"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Sports &amp; Athletics</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Arts &amp; Culture</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Clubs &amp; Societies</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Events Calendar</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
 
-      <!-- Links cols -->
-      <div>
-        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">About Us</div>
-        <ul class="list-none space-y-2.5">
-          <li><a href="about.html#mission" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Our
-              Mission</a></li>
-          <li><a href="about.html#leadership"
-              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Leadership</a></li>
-          <li><a href="about.html#timeline"
-              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">History</a>
-          </li>
-          <li><a href="about.html"
-              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Awards</a>
-          </li>
-        </ul>
+      <!-- Footer bottom -->
+      <div
+        class="max-w-auto mx-auto border-t border-white/8 pt-7 flex flex-col sm:flex-row justify-between items-center text-[14px] text-white/35"
+      >
+        <span>© 2026 Stellar Scholars Academy. All rights reserved.</span>
+        <span class="inline-flex"
+          >Powered by
+          <a href="https://ticst.com.ng" target="_blank" class="no-underline"
+            ><img
+              src="imgs/ticst transparent - blue.png"
+              alt=""
+              class="h-11 w-15 pb-5 text-green-80"
+          /></a>
+          &nbsp;·&nbsp;
+          <a
+            href="#"
+            class="text-gold hover:text-gold-light transition-colors no-underline"
+            >Privacy Policy</a
+          >
+          &nbsp;·&nbsp;
+          <a
+            href="#"
+            class="text-gold hover:text-gold-light transition-colors no-underline"
+            >Terms</a
+          ></span
+        >
       </div>
-      <div>
-        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">Academics</div>
-        <ul class="list-none space-y-2.5">
-          <li><a href="academics.html"
-              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Pre-School</a></li>
-          <li><a href="academics.html"
-              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Grade
-              School</a></li>
-          <li><a href="academics.html"
-              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Secondary
-              School</a></li>
-          <li><a href="#"
-              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Admissions</a></li>
-        </ul>
-      </div>
-      <div class="hidden sm:block md:hiddden">
-        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">School Life</div>
-        <ul class="list-none space-y-2.5">
-          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Sports &amp;
-              Athletics</a></li>
-          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Arts &amp;
-              Culture</a></li>
-          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Clubs &amp;
-              Societies</a></li>
-          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Events
-              Calendar</a></li>
-        </ul>
-      </div>
-    </div>
+    </footer>
 
-    <!-- Footer bottom -->
-    <div
-      class="max-w-auto mx-auto border-t border-white/8 pt-7 flex flex-col sm:flex-row justify-between items-center text-[14px] text-white/35">
-      <span>© 2026 Stellar Scholars Academy. All rights reserved.</span>
-      <span class="inline-flex">Powered by <a href="https://ticst.com.ng" target="_blank"
-          class="no-underline"><img src="imgs/ticst transparent - blue.png" alt="" class="h-11 w-15 pb-5 text-green-80"></a> &nbsp;·&nbsp; <a href="#"
-          class="text-gold hover:text-gold-light transition-colors no-underline">Privacy Policy</a> &nbsp;·&nbsp; <a
-          href="#" class="text-gold hover:text-gold-light transition-colors no-underline">Terms</a></span>
-    </div>
-  </footer>
-
-
-
-  <!-- ══════════════════════════════════════════
+    <!-- ══════════════════════════════════════════
        JAVASCRIPT
   ══════════════════════════════════════════ -->
-  <script>
-    // Theme
-  const themeBtn = document.getElementById('themeBtn');
-    const html = document.documentElement;
-    const isDark = () => html.classList.contains('dark');
-    function applyTheme(dark) {
-      html.classList.toggle('dark', dark);
-      themeBtn.innerHTML = dark ? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path  fill="rgb(255, 212, 59)" d="M303.3 112.7C196.2 121.2 112 210.8 112 320C112 434.9 205.1 528 320 528C353.3 528 384.7 520.2 412.6 506.3C309.2 482.9 232 390.5 232 280C232 214.2 259.4 154.9 303.3 112.7zM64 320C64 178.6 178.6 64 320 64C339.4 64 358.4 66.2 376.7 70.3C386.6 72.5 394 80.8 395.2 90.8C396.4 100.8 391.2 110.6 382.1 115.2C321.5 145.4 280 207.9 280 280C280 381.6 362.4 464 464 464C469 464 473.9 463.8 478.8 463.4C488.9 462.6 498.4 468.2 502.6 477.5C506.8 486.8 504.6 497.6 497.3 504.6C451.3 548.8 388.8 576 320 576C178.6 576 64 461.4 64 320z"/></svg>' : '<svg xmlns="http://www.w3.org/2000/svg" height="23" width="23" viewBox="0 0 640 640"><path fill="rgb(255, 212, 59)" d="M320 32C328 32 335.4 36 339.9 42.6L398.7 130L502.1 109.8C509.9 108.3 518 110.7 523.7 116.4C529.4 122.1 531.8 130.2 530.3 138L510 241.3L597.4 300.1C604 304.5 608 312 608 320C608 328 604 335.4 597.4 339.9L510 398.7L530.2 502C531.7 509.8 529.3 517.9 523.6 523.6C517.9 529.3 509.8 531.7 502 530.2L398.7 510L339.9 597.4C335.4 604 328 608 320 608C312 608 304.6 604 300.1 597.4L241.3 510L137.9 530.2C130.1 531.7 122 529.3 116.3 523.6C110.6 517.9 108.2 509.8 109.7 502L130 398.7L42.6 339.9C36 335.4 32 328 32 320C32 312 36 304.6 42.6 300.1L130 241.3L109.8 137.9C108.3 130.1 110.7 122 116.4 116.3C122.1 110.6 130.2 108.2 138 109.7L241.3 129.9L300.1 42.5L301.9 40.2C306.4 35 313 32 320 32zM272.2 170C266.8 178 257.2 182 247.7 180.2L163.7 163.8L180.1 247.8C181.9 257.3 177.9 266.9 169.9 272.3L99 320L170 367.8C178 373.2 182 382.8 180.2 392.3L163.8 476.3L247.8 459.9L251.3 459.5C259.6 459.1 267.6 463.1 272.3 470.1L320.1 541.1L367.9 470.1L370.1 467.3C375.7 461.2 384.1 458.3 392.4 460L476.4 476.4L460 392.4C458.2 382.9 462.2 373.3 470.2 367.9L541.2 320.1L470.2 272.3C462.2 266.9 458.2 257.3 460 247.8L476.4 163.8L392.4 180.2C382.9 182 373.3 178 367.9 170L320.1 99L272.3 170zM320 440C253.7 440 200 386.3 200 320C200 253.7 253.7 200 320 200C386.3 200 440 253.7 440 320C440 386.3 386.3 440 320 440zM320 248C280.2 248 248 280.2 248 320C248 359.8 280.2 392 320 392C359.8 392 392 359.8 392 320C392 280.2 359.8 248 320 248z"/></svg>';
-      themeBtn.title = dark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
-    }
-    applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
-    themeBtn.addEventListener('click', () => applyTheme(!isDark()));
-    // ── Mobile Menu ──────────────────────────
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
+    <script>
+      // Theme
+      const themeBtn = document.getElementById("themeBtn");
+      const html = document.documentElement;
+      const isDark = () => html.classList.contains("dark");
+      function applyTheme(dark) {
+        html.classList.toggle("dark", dark);
+        themeBtn.innerHTML = dark
+          ? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path  fill="rgb(255, 212, 59)" d="M303.3 112.7C196.2 121.2 112 210.8 112 320C112 434.9 205.1 528 320 528C353.3 528 384.7 520.2 412.6 506.3C309.2 482.9 232 390.5 232 280C232 214.2 259.4 154.9 303.3 112.7zM64 320C64 178.6 178.6 64 320 64C339.4 64 358.4 66.2 376.7 70.3C386.6 72.5 394 80.8 395.2 90.8C396.4 100.8 391.2 110.6 382.1 115.2C321.5 145.4 280 207.9 280 280C280 381.6 362.4 464 464 464C469 464 473.9 463.8 478.8 463.4C488.9 462.6 498.4 468.2 502.6 477.5C506.8 486.8 504.6 497.6 497.3 504.6C451.3 548.8 388.8 576 320 576C178.6 576 64 461.4 64 320z"/></svg>'
+          : '<svg xmlns="http://www.w3.org/2000/svg" height="23" width="23" viewBox="0 0 640 640"><path fill="rgb(255, 212, 59)" d="M320 32C328 32 335.4 36 339.9 42.6L398.7 130L502.1 109.8C509.9 108.3 518 110.7 523.7 116.4C529.4 122.1 531.8 130.2 530.3 138L510 241.3L597.4 300.1C604 304.5 608 312 608 320C608 328 604 335.4 597.4 339.9L510 398.7L530.2 502C531.7 509.8 529.3 517.9 523.6 523.6C517.9 529.3 509.8 531.7 502 530.2L398.7 510L339.9 597.4C335.4 604 328 608 320 608C312 608 304.6 604 300.1 597.4L241.3 510L137.9 530.2C130.1 531.7 122 529.3 116.3 523.6C110.6 517.9 108.2 509.8 109.7 502L130 398.7L42.6 339.9C36 335.4 32 328 32 320C32 312 36 304.6 42.6 300.1L130 241.3L109.8 137.9C108.3 130.1 110.7 122 116.4 116.3C122.1 110.6 130.2 108.2 138 109.7L241.3 129.9L300.1 42.5L301.9 40.2C306.4 35 313 32 320 32zM272.2 170C266.8 178 257.2 182 247.7 180.2L163.7 163.8L180.1 247.8C181.9 257.3 177.9 266.9 169.9 272.3L99 320L170 367.8C178 373.2 182 382.8 180.2 392.3L163.8 476.3L247.8 459.9L251.3 459.5C259.6 459.1 267.6 463.1 272.3 470.1L320.1 541.1L367.9 470.1L370.1 467.3C375.7 461.2 384.1 458.3 392.4 460L476.4 476.4L460 392.4C458.2 382.9 462.2 373.3 470.2 367.9L541.2 320.1L470.2 272.3C462.2 266.9 458.2 257.3 460 247.8L476.4 163.8L392.4 180.2C382.9 182 373.3 178 367.9 170L320.1 99L272.3 170zM320 440C253.7 440 200 386.3 200 320C200 253.7 253.7 200 320 200C386.3 200 440 253.7 440 320C440 386.3 386.3 440 320 440zM320 248C280.2 248 248 280.2 248 320C248 359.8 280.2 392 320 392C359.8 392 392 359.8 392 320C392 280.2 359.8 248 320 248z"/></svg>';
+        themeBtn.title = dark ? "Switch to Light Mode" : "Switch to Dark Mode";
+      }
+      applyTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
+      themeBtn.addEventListener("click", () => applyTheme(!isDark()));
+      // ── Mobile Menu ──────────────────────────
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
 
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
 
-    // Scroll reveal
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          setTimeout(() => e.target.classList.add('visible'), parseInt(e.target.dataset.delay || 0));
-          obs.unobserve(e.target);
+      // Scroll reveal
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              setTimeout(
+                () => e.target.classList.add("visible"),
+                parseInt(e.target.dataset.delay || 0),
+              );
+              obs.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.08 },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => obs.observe(el));
+
+      // Navbar shadow
+      window.addEventListener("scroll", () =>
+        navbar.classList.toggle("shadow-lg", window.scrollY > 40),
+      );
+
+      // Contact form submit
+      function submitContact() {
+        const fields = [
+          { id: "cName", label: "name" },
+          { id: "cEmail", label: "email" },
+          { id: "cDept", label: "department" },
+          { id: "cMessage", label: "message" },
+        ];
+        let valid = true;
+        fields.forEach((f) => {
+          const el = document.getElementById(f.id);
+          if (!el.value.trim()) {
+            el.style.borderColor = "#7B1A2E";
+            valid = false;
+          } else el.style.borderColor = "";
+        });
+        if (!valid) {
+          alert("Please fill in all required fields.");
+          return;
         }
-      });
-    }, { threshold: 0.08 });
-    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-    // Navbar shadow
-    window.addEventListener('scroll', () => navbar.classList.toggle('shadow-lg', window.scrollY > 40));
-
-    // Contact form submit
-    function submitContact() {
-      const fields = [
-        { id: 'cName', label: 'name' },
-        { id: 'cEmail', label: 'email' },
-        { id: 'cDept', label: 'department' },
-        { id: 'cMessage', label: 'message' },
-      ];
-      let valid = true;
-      fields.forEach(f => {
-        const el = document.getElementById(f.id);
-        if (!el.value.trim()) { el.style.borderColor = '#7B1A2E'; valid = false; }
-        else el.style.borderColor = '';
-      });
-      if (!valid) { alert('Please fill in all required fields.'); return; }
-
-      const form = document.getElementById('contactForm');
-      form.style.transition = 'all 0.3s ease';
-      form.style.opacity = '0';
-      form.style.transform = 'translateY(-10px)';
-      setTimeout(() => {
-        form.style.display = 'none';
-        document.getElementById('contactSuccess').classList.remove('hidden');
-      }, 300);
-    }
-  </script>
-
-</body>
+        const form = document.getElementById("contactForm");
+        form.style.transition = "all 0.3s ease";
+        form.style.opacity = "0";
+        form.style.transform = "translateY(-10px)";
+        setTimeout(() => {
+          form.style.display = "none";
+          document.getElementById("contactSuccess").classList.remove("hidden");
+        }, 300);
+      }
+    </script>
+  </body>
 </html>

@@ -1,759 +1,1781 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="light scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>News & Events | Stellar Scholars Academy</title>
-  <link rel="shortcut icon" href="imgs/logo2.jpg" type="image/x-icon">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500;600&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            gold:          '#C49A2C',
-            'gold-light':  '#E8C56A',
-            'gold-dark':   '#9A7A1E',
-            maroon:        '#7B1A2E',
-            'maroon-light':'#A02040',
-            navy:          '#1A2A4A',
-            'navy-light':  '#243558',
-            cream:         '#FAF6EE',
-            'warm-white':  '#FFFDF8',
-          },
-          fontFamily: {
-            playfair:  ['"Playfair Display"', 'serif'],
-            cormorant: ['"Cormorant Garamond"', 'serif'],
-            cinzel:    ['Cinzel', 'serif'],
-            lato:      ['Lato', 'sans-serif'],
-          },
-          backgroundImage: {
-            'gold-maroon':    'linear-gradient(to right, #C49A2C, #7B1A2E)',
-            'maroon-navy':    'linear-gradient(135deg, #7B1A2E 0%, #1A2A4A 100%)',
-            'hero-pattern':   'repeating-linear-gradient(45deg, rgba(196,154,44,0.04) 0, rgba(196,154,44,0.04) 1px, transparent 0, transparent 24px)',
-            'img-placeholder':'linear-gradient(135deg, rgba(26,42,74,0.15) 0%, rgba(123,26,46,0.1) 100%)',
-          },
-          keyframes: {
-            fadeUp: {
-              '0%':   { opacity: '0', transform: 'translateY(30px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' },
+    <title>
+      Stellar Scholars Academy | Excellence in Education & Character | Ogun
+      State, Nigeria
+    </title>
+
+    <meta
+      name="description"
+      content="Stellar Scholars Academy offers world-class Pre-School, Grade School, and Secondary School education in Obafemi Owode, Ogun State. Nurturing minds and building futures through academic excellence, pastoral care, and strong values. 2026/2027 Admissions now open."
+    />
+
+    <meta
+      name="keywords"
+      content="Stellar Scholars Academy, best school in Ogun State, private school Nigeria, secondary school Obafemi Owode, grade school Nigeria, pre-school Ogun State, top rated school Nigeria, admissions 2026, Ikoyi daycare, SSA Nigeria"
+    />
+
+    <meta name="author" content="Stellar Scholars Academy" />
+    <meta name="robots" content="news, follow" />
+    <link
+      rel="canonical"
+      href="https://stellarscholarsacademy.com.ng/news.html"
+    />
+
+    <!-- ✅ OPEN GRAPH (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://stellarscholarsacademy.com.ng/news.html"
+    />
+    <meta
+      property="og:title"
+      content="Stellar Scholars Academy | Every Learner is a Light"
+    />
+    <meta
+      property="og:description"
+      content="A nurturing school community in Ogun State, Nigeria, where every scholar discovers their unique potential. Pre-School, Grade & Secondary School. Admissions open for 2026/2027."
+    />
+    <meta
+      property="og:image"
+      content="https://stellarscholarsacademy.com.ng/imgs/logo2.jpg"
+    />
+    <meta property="og:image:alt" content="Stellar Scholars Academy Logo" />
+    <meta property="og:site_name" content="Stellar Scholars Academy" />
+    <meta property="og:locale" content="en_NG" />
+
+    <!-- ✅ TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Stellar Scholars Academy | Excellence in Education & Character"
+    />
+    <meta
+      name="twitter:description"
+      content="Nurturing scholars in Ogun State, Nigeria with academic excellence, pastoral care, and strong values. Pre-School to Secondary School. 2026/2027 Admissions now open."
+    />
+    <meta
+      name="twitter:image"
+      content="https://stellarscholarsacademy.com.ng/imgs/logo2.jpg"
+    />
+
+    <!-- ✅ GEO / LOCAL SEO -->
+    <meta name="geo.region" content="NG-OG" />
+    <meta name="geo.placename" content="Obafemi Owode, Ogun State, Nigeria" />
+    <meta name="ICBM" content="6.9965, 3.5986" />
+
+    <!-- ✅ STRUCTURED DATA (JSON-LD) — paste inside a <script> tag -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "School",
+        "name": "Stellar Scholars Academy",
+        "url": "https://stellarscholarsacademy.com.ng",
+        "logo": "https://stellarscholarsacademy.com.ng/imgs/logo2.jpg",
+        "description": "Excellence in Education & Character. Stellar Scholars Academy nurtures scholars who lead with knowledge, integrity, and compassion.",
+        "telephone": "+2347067374352",
+        "email": "stellarscholarsacademy@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Obafemi Owode L.G.A",
+          "addressRegion": "Ogun State",
+          "addressCountry": "NG"
+        },
+        "foundingDate": "2026",
+        "slogan": "Every Learner is a Light",
+        "hasMap": "https://stellarscholarsacademy.com.ng",
+        "sameAs": []
+      }
+    </script>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500;600&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              gold: "#C49A2C",
+              "gold-light": "#E8C56A",
+              "gold-dark": "#9A7A1E",
+              maroon: "#7B1A2E",
+              "maroon-light": "#A02040",
+              navy: "#1A2A4A",
+              "navy-light": "#243558",
+              cream: "#FAF6EE",
+              "warm-white": "#FFFDF8",
+            },
+            fontFamily: {
+              playfair: ['"Playfair Display"', "serif"],
+              cormorant: ['"Cormorant Garamond"', "serif"],
+              cinzel: ["Cinzel", "serif"],
+              lato: ["Lato", "sans-serif"],
+            },
+            backgroundImage: {
+              "gold-maroon": "linear-gradient(to right, #C49A2C, #7B1A2E)",
+              "maroon-navy":
+                "linear-gradient(135deg, #7B1A2E 0%, #1A2A4A 100%)",
+              "hero-pattern":
+                "repeating-linear-gradient(45deg, rgba(196,154,44,0.04) 0, rgba(196,154,44,0.04) 1px, transparent 0, transparent 24px)",
+              "img-placeholder":
+                "linear-gradient(135deg, rgba(26,42,74,0.15) 0%, rgba(123,26,46,0.1) 100%)",
+            },
+            keyframes: {
+              fadeUp: {
+                "0%": { opacity: "0", transform: "translateY(30px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+            },
+            animation: {
+              "fade-up": "fadeUp 0.7s ease both",
+              "fade-up-1": "fadeUp 0.7s ease 0.1s both",
+              "fade-up-2": "fadeUp 0.7s ease 0.2s both",
+              "fade-up-3": "fadeUp 0.7s ease 0.3s both",
+              "fade-up-4": "fadeUp 0.7s ease 0.4s both",
             },
           },
-          animation: {
-            'fade-up':   'fadeUp 0.7s ease both',
-            'fade-up-1': 'fadeUp 0.7s ease 0.1s both',
-            'fade-up-2': 'fadeUp 0.7s ease 0.2s both',
-            'fade-up-3': 'fadeUp 0.7s ease 0.3s both',
-            'fade-up-4': 'fadeUp 0.7s ease 0.4s both',
-          },
         },
-      },
-    }
-  </script>
+      };
+    </script>
 
-  <style>
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #f4f0e8; }
-    .dark ::-webkit-scrollbar-track { background: #0F1824; }
-    ::-webkit-scrollbar-thumb { background: #C49A2C; border-radius: 3px; }
+    <style>
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f4f0e8;
+      }
+      .dark ::-webkit-scrollbar-track {
+        background: #0f1824;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c49a2c;
+        border-radius: 3px;
+      }
 
-    .nav-link { position: relative; padding-bottom: 3px; }
-    .nav-link::after {
-      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
-      height: 2px; background: #C49A2C;
-      transform: scaleX(0); transition: transform 0.2s ease; border-radius: 1px;
-    }
-    .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
+      .nav-link {
+        position: relative;
+        padding-bottom: 3px;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #c49a2c;
+        transform: scaleX(0);
+        transition: transform 0.2s ease;
+        border-radius: 1px;
+      }
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        transform: scaleX(1);
+      }
 
-    .section-label-line { position: relative; padding-left: 36px; }
-    .section-label-line::before {
-      content: ''; position: absolute; left: 0; top: 50%;
-      width: 24px; height: 1px; background: #C49A2C; transform: translateY(-50%);
-    }
+      .section-label-line {
+        position: relative;
+        padding-left: 36px;
+      }
+      .section-label-line::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 24px;
+        height: 1px;
+        background: #c49a2c;
+        transform: translateY(-50%);
+      }
 
-    .hover-bar { position: relative; overflow: hidden; }
-    .hover-bar::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(to right, #C49A2C, #7B1A2E);
-      transform: scaleX(0); transition: transform 0.3s ease;
-    }
-    .hover-bar:hover::before { transform: scaleX(1); }
+      .hover-bar {
+        position: relative;
+        overflow: hidden;
+      }
+      .hover-bar::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(to right, #c49a2c, #7b1a2e);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+      .hover-bar:hover::before {
+        transform: scaleX(1);
+      }
 
-    .admissions-pattern {
-      background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 0, transparent 20px);
-    }
-    .diag-pattern {
-      background-image: repeating-linear-gradient(135deg, rgba(196,154,44,0.05) 0, rgba(196,154,44,0.05) 1px, transparent 0, transparent 28px);
-    }
+      .admissions-pattern {
+        background-image: repeating-linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 0.03) 0,
+          rgba(255, 255, 255, 0.03) 1px,
+          transparent 0,
+          transparent 20px
+        );
+      }
+      .diag-pattern {
+        background-image: repeating-linear-gradient(
+          135deg,
+          rgba(196, 154, 44, 0.05) 0,
+          rgba(196, 154, 44, 0.05) 1px,
+          transparent 0,
+          transparent 28px
+        );
+      }
 
-    /* Reveal */
-    .reveal {
-      opacity: 0; transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+      /* Reveal */
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-    /* News card image placeholder */
-    .news-thumb {
-      background: linear-gradient(135deg, #1A2A4A 0%, #7B1A2E 100%);
-      position: relative; overflow: hidden;
-    }
-    .news-thumb::after {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.35) 0%, transparent 60%);
-    }
+      /* News card image placeholder */
+      .news-thumb {
+        background: linear-gradient(135deg, #1a2a4a 0%, #7b1a2e 100%);
+        position: relative;
+        overflow: hidden;
+      }
+      .news-thumb::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.35) 0%,
+          transparent 60%
+        );
+      }
 
-    /* Category badge colours */
-    .badge-announcement { background: rgba(123,26,46,0.12); color: #A02040; border-color: rgba(123,26,46,0.2); }
-    .dark .badge-announcement { background: rgba(123,26,46,0.25); color: #E8607A; }
-    .badge-academic { background: rgba(26,42,74,0.1); color: #1A2A4A; border-color: rgba(26,42,74,0.2); }
-    .dark .badge-academic { background: rgba(196,154,44,0.15); color: #E8C56A; }
-    .badge-event { background: rgba(196,154,44,0.12); color: #9A7A1E; border-color: rgba(196,154,44,0.25); }
-    .dark .badge-event { background: rgba(196,154,44,0.2); color: #E8C56A; }
-    .badge-sport { background: rgba(26,90,46,0.1); color: #1A5A2E; border-color: rgba(26,90,46,0.2); }
-    .dark .badge-sport { background: rgba(26,90,46,0.2); color: #5AC87A; }
-    .badge-community { background: rgba(60,20,80,0.1); color: #60208A; border-color: rgba(60,20,80,0.2); }
-    .dark .badge-community { background: rgba(120,60,160,0.2); color: #C080FF; }
+      /* Category badge colours */
+      .badge-announcement {
+        background: rgba(123, 26, 46, 0.12);
+        color: #a02040;
+        border-color: rgba(123, 26, 46, 0.2);
+      }
+      .dark .badge-announcement {
+        background: rgba(123, 26, 46, 0.25);
+        color: #e8607a;
+      }
+      .badge-academic {
+        background: rgba(26, 42, 74, 0.1);
+        color: #1a2a4a;
+        border-color: rgba(26, 42, 74, 0.2);
+      }
+      .dark .badge-academic {
+        background: rgba(196, 154, 44, 0.15);
+        color: #e8c56a;
+      }
+      .badge-event {
+        background: rgba(196, 154, 44, 0.12);
+        color: #9a7a1e;
+        border-color: rgba(196, 154, 44, 0.25);
+      }
+      .dark .badge-event {
+        background: rgba(196, 154, 44, 0.2);
+        color: #e8c56a;
+      }
+      .badge-sport {
+        background: rgba(26, 90, 46, 0.1);
+        color: #1a5a2e;
+        border-color: rgba(26, 90, 46, 0.2);
+      }
+      .dark .badge-sport {
+        background: rgba(26, 90, 46, 0.2);
+        color: #5ac87a;
+      }
+      .badge-community {
+        background: rgba(60, 20, 80, 0.1);
+        color: #60208a;
+        border-color: rgba(60, 20, 80, 0.2);
+      }
+      .dark .badge-community {
+        background: rgba(120, 60, 160, 0.2);
+        color: #c080ff;
+      }
 
-    /* Filter button active state */
-    .filter-btn.active {
-      background: #C49A2C; color: #1A2A4A; border-color: #C49A2C;
-    }
+      /* Filter button active state */
+      .filter-btn.active {
+        background: #c49a2c;
+        color: #1a2a4a;
+        border-color: #c49a2c;
+      }
 
-    /* Calendar grid */
-    .cal-day { min-height: 80px; }
-    .cal-day.today { background: rgba(196,154,44,0.08); }
-    .cal-day.other-month { opacity: 0.35; }
-    .cal-event-dot {
-      display: inline-block; width: 6px; height: 6px; border-radius: 50%;
-      flex-shrink: 0; margin-top: 4px;
-    }
+      /* Calendar grid */
+      .cal-day {
+        min-height: 80px;
+      }
+      .cal-day.today {
+        background: rgba(196, 154, 44, 0.08);
+      }
+      .cal-day.other-month {
+        opacity: 0.35;
+      }
+      .cal-event-dot {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-top: 4px;
+      }
 
-    /* Newsletter input */
-    .nl-input {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(196,154,44,0.3);
-      border-radius: 2px; padding: 12px 16px;
-      font-family: 'Lato', sans-serif; font-size: 14px; color: white; outline: none;
-      transition: border-color 0.2s;
-    }
-    .nl-input:focus { border-color: #C49A2C; }
-    .nl-input::placeholder { color: rgba(255,255,255,0.35); }
+      /* Newsletter input */
+      .nl-input {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(196, 154, 44, 0.3);
+        border-radius: 2px;
+        padding: 12px 16px;
+        font-family: "Lato", sans-serif;
+        font-size: 14px;
+        color: white;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+      .nl-input:focus {
+        border-color: #c49a2c;
+      }
+      .nl-input::placeholder {
+        color: rgba(255, 255, 255, 0.35);
+      }
 
-    /* Article modal */
-    #articleModal {
-      display: none; position: fixed; inset: 0; z-index: 200;
-      background: rgba(10,18,30,0.85); backdrop-filter: blur(6px);
-      align-items: center; justify-content: center; padding: 20px;
-    }
-    #articleModal.open { display: flex; }
-    #articleModalInner {
-      background: #FFFDF8; border-radius: 2px; max-width: 720px; width: 100%;
-      max-height: 90vh; overflow-y: auto;
-      box-shadow: 0 32px 80px rgba(0,0,0,0.4);
-      animation: fadeUp 0.35s ease both;
-    }
-    .dark #articleModalInner { background: #162030; }
+      /* Article modal */
+      #articleModal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 200;
+        background: rgba(10, 18, 30, 0.85);
+        backdrop-filter: blur(6px);
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      #articleModal.open {
+        display: flex;
+      }
+      #articleModalInner {
+        background: #fffdf8;
+        border-radius: 2px;
+        max-width: 720px;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        box-shadow: 0 32px 80px rgba(0, 0, 0, 0.4);
+        animation: fadeUp 0.35s ease both;
+      }
+      .dark #articleModalInner {
+        background: #162030;
+      }
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-  </style>
-</head>
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
 
-<body class="font-lato bg-warm-white dark:bg-[#0F1824] text-[#4A4A4A] dark:text-[#C8D4E0] overflow-x-hidden transition-colors duration-300">
+  <body
+    class="font-lato bg-warm-white dark:bg-[#0F1824] text-[#4A4A4A] dark:text-[#C8D4E0] overflow-x-hidden transition-colors duration-300"
+  >
+    <!-- NAVBAR -->
+    <nav
+      class="fixed left-0 right-0 z-50 bg-warm-white/90 dark:bg-[#0F1824]/50 backdrop-blur-md border-b border-gold/20 dark:border-gold/10 shadow-[0_2px_16px_rgba(26,42,74,0.07)] dark:shadow-[0_2px_16px_rgba(0,0,0,0.3)] transition-all duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto px-5 lg:px-10 h-[72px] flex items-center justify-between gap-5"
+      >
+        <!-- Logo-->
+        <a
+          href="index.html"
+          class="flex items-center gap-3 flex-shrink-0 no-underline"
+        >
+          <img src="imgs/logo2.jpg" alt="School's logo" class="h-10 w-10" />
+          <div
+            class="font-cinzel text-[13px] font-semibold hidden lg:block text-navy dark:text-gold-light leading-tight tracking-wide"
+          >
+            STELLAR SCHOLARS ACADEMY
+            <span
+              class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5"
+              >LUX ET PAX · EST. 2026</span
+            >
+          </div>
+        </a>
 
-  <!-- NAVBAR -->
-  <nav
-    class="fixed left-0 right-0 z-50 bg-warm-white/90 dark:bg-[#0F1824]/50 backdrop-blur-md border-b border-gold/20 dark:border-gold/10 shadow-[0_2px_16px_rgba(26,42,74,0.07)] dark:shadow-[0_2px_16px_rgba(0,0,0,0.3)] transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-5 lg:px-10 h-[72px] flex items-center justify-between gap-5">
+        <!-- Nav Links desktop -->
+        <ul class="hidden lg:flex items-center gap-7 list-none">
+          <li>
+            <a
+              href="/"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="about.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] transition-colors duration-200 no-underline"
+              >About Us
+            </a>
+          </li>
+          <li>
+            <a
+              href="academics.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline"
+              >Academics</a
+            >
+          </li>
+          <li>
+            <a
+              href="admissions.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline"
+              >Admissions</a
+            >
+          </li>
+          <li>
+            <a
+              href="school-life.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline"
+              >School Life</a
+            >
+          </li>
+          <li>
+            <a
+              href="gallery.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline"
+              >Gallery</a
+            >
+          </li>
+        </ul>
 
-      <!-- Logo-->
-      <a href="index.html" class="flex items-center gap-3 flex-shrink-0 no-underline">
-        <img src="imgs/logo2.jpg" alt="School's logo" class="h-10 w-10">
-        <div class="font-cinzel text-[13px] font-semibold hidden lg:block text-navy dark:text-gold-light leading-tight tracking-wide">
-          STELLAR SCHOLARS ACADEMY
-          <span class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5">LUX ET PAX · EST. 2026</span>
+        <!-- Actions -->
+        <div class="flex items-center gap-2.5 flex-shrink-0">
+          <a
+            href="#"
+            class="hidden sm:inline-block bg-maroon hover:bg-maroon-light text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all duration-200 hover:-translate-y-px no-underline"
+            >Enroll Now</a
+          >
+          <a
+            href="#"
+            class="hidden sm:inline-block border border-gold text-gold hover:bg-gold hover:text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all duration-200 no-underline"
+            >Book a Tour</a
+          >
+          <button
+            id="themeBtn"
+            aria-label="Toggle theme"
+            class="w-9 h-9 rounded-full bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-[15px] transition-all duration-300 hover:border-gold hover:rotate-12 cursor-pointer flex-shrink-0"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="30"
+              width="30"
+              viewBox="0 0 640 640"
+            >
+              <path
+                fill="rgb(255, 212, 59)"
+                d="M320 32C328 32 335.4 36 339.9 42.6L398.7 130L502.1 109.8C509.9 108.3 518 110.7 523.7 116.4C529.4 122.1 531.8 130.2 530.3 138L510 241.3L597.4 300.1C604 304.5 608 312 608 320C608 328 604 335.4 597.4 339.9L510 398.7L530.2 502C531.7 509.8 529.3 517.9 523.6 523.6C517.9 529.3 509.8 531.7 502 530.2L398.7 510L339.9 597.4C335.4 604 328 608 320 608C312 608 304.6 604 300.1 597.4L241.3 510L137.9 530.2C130.1 531.7 122 529.3 116.3 523.6C110.6 517.9 108.2 509.8 109.7 502L130 398.7L42.6 339.9C36 335.4 32 328 32 320C32 312 36 304.6 42.6 300.1L130 241.3L109.8 137.9C108.3 130.1 110.7 122 116.4 116.3C122.1 110.6 130.2 108.2 138 109.7L241.3 129.9L300.1 42.5L301.9 40.2C306.4 35 313 32 320 32zM272.2 170C266.8 178 257.2 182 247.7 180.2L163.7 163.8L180.1 247.8C181.9 257.3 177.9 266.9 169.9 272.3L99 320L170 367.8C178 373.2 182 382.8 180.2 392.3L163.8 476.3L247.8 459.9L251.3 459.5C259.6 459.1 267.6 463.1 272.3 470.1L320.1 541.1L367.9 470.1L370.1 467.3C375.7 461.2 384.1 458.3 392.4 460L476.4 476.4L460 392.4C458.2 382.9 462.2 373.3 470.2 367.9L541.2 320.1L470.2 272.3C462.2 266.9 458.2 257.3 460 247.8L476.4 163.8L392.4 180.2C382.9 182 373.3 178 367.9 170L320.1 99L272.3 170zM320 440C253.7 440 200 386.3 200 320C200 253.7 253.7 200 320 200C386.3 200 440 253.7 440 320C440 386.3 386.3 440 320 440zM320 248C280.2 248 248 280.2 248 320C248 359.8 280.2 392 320 392C359.8 392 392 359.8 392 320C392 280.2 359.8 248 320 248z"
+              />
+            </svg>
+          </button>
+          <button
+            id="mobileMenuBtn"
+            aria-label="Open menu"
+            class="lg:hidden w-9 h-9 rounded-sm bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-navy dark:text-gold hover:border-gold cursor-pointer flex-shrink-0"
+          >
+            <svg
+              width="14"
+              height="10"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <line x1="0" y1="1" x2="18" y2="1" />
+              <line x1="0" y1="7" x2="18" y2="7" />
+              <line x1="0" y1="13" x2="18" y2="13" />
+            </svg>
+          </button>
         </div>
-      </a>
-
-      <!-- Nav Links desktop -->
-      <ul class="hidden lg:flex items-center gap-7 list-none">
-        <li><a href="/"
-            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">Home</a>
-        </li>
-        <li><a href="about.html"
-            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] transition-colors duration-200 no-underline">About
-            Us
-          </a></li>
-        <li><a href="academics.html"
-            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">Academics</a>
-        </li>
-        <li><a href="admissions.html"
-            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">Admissions</a>
-        </li>
-        <li><a href="school-life.html"
-            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">School
-            Life</a></li>
-        <li><a href="gallery.html"
-            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">Gallery</a>
-        </li>
-      </ul>
-
-      <!-- Actions -->
-      <div class="flex items-center gap-2.5 flex-shrink-0">
-        <a href="#"
-          class="hidden sm:inline-block bg-maroon hover:bg-maroon-light text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all duration-200 hover:-translate-y-px no-underline">Enroll
-          Now</a>
-        <a href="#"
-          class="hidden sm:inline-block border border-gold text-gold hover:bg-gold hover:text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all duration-200 no-underline">Book
-          a Tour</a>
-        <button id="themeBtn" aria-label="Toggle theme"
-          class="w-9 h-9 rounded-full bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-[15px] transition-all duration-300 hover:border-gold hover:rotate-12 cursor-pointer flex-shrink-0">
-         <svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 640 640"><path fill="rgb(255, 212, 59)" d="M320 32C328 32 335.4 36 339.9 42.6L398.7 130L502.1 109.8C509.9 108.3 518 110.7 523.7 116.4C529.4 122.1 531.8 130.2 530.3 138L510 241.3L597.4 300.1C604 304.5 608 312 608 320C608 328 604 335.4 597.4 339.9L510 398.7L530.2 502C531.7 509.8 529.3 517.9 523.6 523.6C517.9 529.3 509.8 531.7 502 530.2L398.7 510L339.9 597.4C335.4 604 328 608 320 608C312 608 304.6 604 300.1 597.4L241.3 510L137.9 530.2C130.1 531.7 122 529.3 116.3 523.6C110.6 517.9 108.2 509.8 109.7 502L130 398.7L42.6 339.9C36 335.4 32 328 32 320C32 312 36 304.6 42.6 300.1L130 241.3L109.8 137.9C108.3 130.1 110.7 122 116.4 116.3C122.1 110.6 130.2 108.2 138 109.7L241.3 129.9L300.1 42.5L301.9 40.2C306.4 35 313 32 320 32zM272.2 170C266.8 178 257.2 182 247.7 180.2L163.7 163.8L180.1 247.8C181.9 257.3 177.9 266.9 169.9 272.3L99 320L170 367.8C178 373.2 182 382.8 180.2 392.3L163.8 476.3L247.8 459.9L251.3 459.5C259.6 459.1 267.6 463.1 272.3 470.1L320.1 541.1L367.9 470.1L370.1 467.3C375.7 461.2 384.1 458.3 392.4 460L476.4 476.4L460 392.4C458.2 382.9 462.2 373.3 470.2 367.9L541.2 320.1L470.2 272.3C462.2 266.9 458.2 257.3 460 247.8L476.4 163.8L392.4 180.2C382.9 182 373.3 178 367.9 170L320.1 99L272.3 170zM320 440C253.7 440 200 386.3 200 320C200 253.7 253.7 200 320 200C386.3 200 440 253.7 440 320C440 386.3 386.3 440 320 440zM320 248C280.2 248 248 280.2 248 320C248 359.8 280.2 392 320 392C359.8 392 392 359.8 392 320C392 280.2 359.8 248 320 248z"/></svg>
-             </button>
-        <button id="mobileMenuBtn" aria-label="Open menu"
-          class="lg:hidden w-9 h-9 rounded-sm bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-navy dark:text-gold hover:border-gold cursor-pointer flex-shrink-0">
-          <svg width="14" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-            <line x1="0" y1="1" x2="18" y2="1" />
-            <line x1="0" y1="7" x2="18" y2="7" />
-            <line x1="0" y1="13" x2="18" y2="13" />
-          </svg>
-        </button>
       </div>
-    </div>
 
-    <!-- Mobile drawer -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-warm-white dark:bg-[#0F1824] border-t border-gold/20 px-5 py-4">
-      <ul class="flex flex-col gap-1 list-none mb-4">
-        <li><a href="/"
-            class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">Home</a>
-        </li>
-        <li><a href="about.html"
-            class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">About
-            Us</a></li>
-        <li><a href="academics.html"
-            class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">Academics</a>
-        </li>
-        <li><a href="admissions.html"
-            class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">Admissions</a>
-        </li>
-        <li><a href="school-life.html"
-            class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors">School
-            Life</a></li>
-        <li><a href="gallery.html"
-            class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 no-underline transition-colors">Gallery</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+      <!-- Mobile drawer -->
+      <div
+        id="mobileMenu"
+        class="hidden lg:hidden bg-warm-white dark:bg-[#0F1824] border-t border-gold/20 px-5 py-4"
+      >
+        <ul class="flex flex-col gap-1 list-none mb-4">
+          <li>
+            <a
+              href="/"
+              class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="about.html"
+              class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="academics.html"
+              class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors"
+              >Academics</a
+            >
+          </li>
+          <li>
+            <a
+              href="admissions.html"
+              class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors"
+              >Admissions</a
+            >
+          </li>
+          <li>
+            <a
+              href="school-life.html"
+              class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline transition-colors"
+              >School Life</a
+            >
+          </li>
+          <li>
+            <a
+              href="gallery.html"
+              class="block font-lato text-[13px] font-bold text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 no-underline transition-colors"
+              >Gallery</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-  <!-- ══════════════════════════════════════════
+    <!-- ══════════════════════════════════════════
        PAGE HERO
   ══════════════════════════════════════════ -->
-  <section class="bg-navy dark:bg-[#080E18] diag-pattern relative overflow-hidden" style="padding-top: calc(36px + 72px)">
-    <div class="absolute inset-0 bg-hero-pattern pointer-events-none opacity-60"></div>
-    <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-gradient-to-bl from-gold/8 to-transparent pointer-events-none"></div>
-    <div class="absolute bottom-0 left-10 w-[280px] h-[280px] rounded-full bg-gradient-to-tr from-maroon/20 to-transparent pointer-events-none"></div>
+    <section
+      class="bg-navy dark:bg-[#080E18] diag-pattern relative overflow-hidden"
+      style="padding-top: calc(36px + 72px)"
+    >
+      <div
+        class="absolute inset-0 bg-hero-pattern pointer-events-none opacity-60"
+      ></div>
+      <div
+        class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-gradient-to-bl from-gold/8 to-transparent pointer-events-none"
+      ></div>
+      <div
+        class="absolute bottom-0 left-10 w-[280px] h-[280px] rounded-full bg-gradient-to-tr from-maroon/20 to-transparent pointer-events-none"
+      ></div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 py-20 lg:py-28">
-      <div class="max-w-3xl">
-        <div class="animate-fade-up flex items-center gap-2 mb-8 text-[11px] font-lato tracking-widest uppercase text-white/40">
-          <a href="index.html" class="hover:text-gold transition-colors no-underline text-white/40">Home</a>
-          <span class="text-gold/50">›</span>
-          <span class="text-gold">News &amp; Events</span>
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 py-20 lg:py-28"
+      >
+        <div class="max-w-3xl">
+          <div
+            class="animate-fade-up flex items-center gap-2 mb-8 text-[11px] font-lato tracking-widest uppercase text-white/40"
+          >
+            <a
+              href="index.html"
+              class="hover:text-gold transition-colors no-underline text-white/40"
+              >Home</a
+            >
+            <span class="text-gold/50">›</span>
+            <span class="text-gold">News &amp; Events</span>
+          </div>
+          <div
+            class="animate-fade-up-1 section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4"
+          >
+            Stay Informed
+          </div>
+          <h1
+            class="animate-fade-up-2 font-playfair font-bold text-white leading-tight mb-6"
+            style="font-size: clamp(36px, 4.5vw, 58px)"
+          >
+            News, Events &amp;<br /><em class="italic text-gold-light"
+              >School Announcements</em
+            >
+          </h1>
+          <p
+            class="animate-fade-up-3 font-cormorant text-[19px] text-white/65 leading-relaxed max-w-xl mb-10"
+          >
+            Stay up to date with the latest happenings at Stellar Scholars
+            Academy — from academic achievements and community events to
+            important notices for families.
+          </p>
+          <div class="animate-fade-up-4 flex flex-wrap gap-3">
+            <a
+              href="#posts"
+              class="inline-block bg-gold hover:bg-gold-light text-navy font-lato text-[12px] font-bold tracking-widest uppercase px-8 py-3.5 rounded-sm transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(196,154,44,0.35)] no-underline"
+              >Browse All Posts</a
+            >
+            <a
+              href="#calendar"
+              class="inline-block border border-white/30 hover:border-gold hover:text-gold text-white font-lato text-[12px] font-bold tracking-widest uppercase px-8 py-3.5 rounded-sm transition-all no-underline"
+              >View Calendar</a
+            >
+          </div>
         </div>
-        <div class="animate-fade-up-1 section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">Stay Informed</div>
-        <h1 class="animate-fade-up-2 font-playfair font-bold text-white leading-tight mb-6" style="font-size:clamp(36px,4.5vw,58px)">
-          News, Events &amp;<br><em class="italic text-gold-light">School Announcements</em>
-        </h1>
-        <p class="animate-fade-up-3 font-cormorant text-[19px] text-white/65 leading-relaxed max-w-xl mb-10">
-          Stay up to date with the latest happenings at Stellar Scholars Academy — from academic achievements and community events to important notices for families.
-        </p>
-        <div class="animate-fade-up-4 flex flex-wrap gap-3">
-          <a href="#posts" class="inline-block bg-gold hover:bg-gold-light text-navy font-lato text-[12px] font-bold tracking-widest uppercase px-8 py-3.5 rounded-sm transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(196,154,44,0.35)] no-underline">Browse All Posts</a>
-          <a href="#calendar" class="inline-block border border-white/30 hover:border-gold hover:text-gold text-white font-lato text-[12px] font-bold tracking-widest uppercase px-8 py-3.5 rounded-sm transition-all no-underline">View Calendar</a>
+
+        <!-- Stats strip -->
+        <div
+          class="mt-16 pt-10 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-6"
+        >
+          <div class="animate-fade-up">
+            <div class="font-cinzel text-[26px] font-bold text-gold">24</div>
+            <div
+              class="font-lato text-[10px] tracking-widest uppercase text-white/40 mt-1"
+            >
+              Posts This Year
+            </div>
+          </div>
+          <div class="animate-fade-up-1">
+            <div class="font-cinzel text-[26px] font-bold text-gold">12</div>
+            <div
+              class="font-lato text-[10px] tracking-widest uppercase text-white/40 mt-1"
+            >
+              Upcoming Events
+            </div>
+          </div>
+          <div class="animate-fade-up-2">
+            <div class="font-cinzel text-[26px] font-bold text-gold">5</div>
+            <div
+              class="font-lato text-[10px] tracking-widest uppercase text-white/40 mt-1"
+            >
+              Categories
+            </div>
+          </div>
+          <div class="animate-fade-up-3">
+            <div class="font-cinzel text-[26px] font-bold text-gold">
+              Weekly
+            </div>
+            <div
+              class="font-lato text-[10px] tracking-widest uppercase text-white/40 mt-1"
+            >
+              Newsletter
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Stats strip -->
-      <div class="mt-16 pt-10 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-6">
-        <div class="animate-fade-up"><div class="font-cinzel text-[26px] font-bold text-gold">24</div><div class="font-lato text-[10px] tracking-widest uppercase text-white/40 mt-1">Posts This Year</div></div>
-        <div class="animate-fade-up-1"><div class="font-cinzel text-[26px] font-bold text-gold">12</div><div class="font-lato text-[10px] tracking-widest uppercase text-white/40 mt-1">Upcoming Events</div></div>
-        <div class="animate-fade-up-2"><div class="font-cinzel text-[26px] font-bold text-gold">5</div><div class="font-lato text-[10px] tracking-widest uppercase text-white/40 mt-1">Categories</div></div>
-        <div class="animate-fade-up-3"><div class="font-cinzel text-[26px] font-bold text-gold">Weekly</div><div class="font-lato text-[10px] tracking-widest uppercase text-white/40 mt-1">Newsletter</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
+    <!-- ══════════════════════════════════════════
        FEATURED POST (HERO ARTICLE)
   ══════════════════════════════════════════ -->
-  <section class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-20">
-    <div class="max-w-7xl mx-auto">
-      <div class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-8 reveal">Featured Story</div>
-
-      <div class="reveal grid grid-cols-1 lg:grid-cols-2 gap-0 border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden hover:shadow-[0_12px_48px_rgba(196,154,44,0.12)] transition-all duration-300 cursor-pointer group" onclick="openArticle('featured')">
-        <!-- Image half -->
-        <div class="news-thumb min-h-[280px] lg:min-h-[420px] flex items-end p-8 relative">
-          <div class="absolute inset-0 flex items-center justify-center text-[100px] opacity-15 select-none">🏆</div>
-          <div class="relative z-10">
-            <span class="inline-block bg-gold text-navy font-lato text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-sm mb-3">Academic</span>
-            <div class="font-lato text-[11px] tracking-widest uppercase text-white/55">March 15, 2026</div>
-          </div>
+    <section class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-20">
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-8 reveal"
+        >
+          Featured Story
         </div>
-        <!-- Text half -->
-        <div class="bg-warm-white dark:bg-[#1A2A4A]/50 p-8 lg:p-12 flex flex-col justify-center">
-          <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-3">Top Story</div>
-          <h2 class="font-playfair font-bold text-navy dark:text-gold-light leading-snug mb-4 group-hover:text-maroon dark:group-hover:text-gold transition-colors" style="font-size:clamp(22px,2.5vw,32px)">
-            SSA Scholars Sweep Regional Mathematics Olympiad — First Place in All Three Categories
-          </h2>
-          <div class="w-12 h-[2px] bg-gold-maroon mb-5"></div>
-          <p class="font-cormorant text-[17px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed mb-6">
-            In a landmark achievement for the Academy, our JSS and SSS mathematics teams claimed first-place honours across all three competition categories at the 2026 Regional Schools Mathematics Olympiad held in Kaduna. The victory marks the school's most successful competitive outing to date.
-          </p>
-          <div class="flex items-center justify-between flex-wrap gap-4">
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center font-cinzel text-gold font-bold text-sm">P</div>
-              <div>
-                <div class="font-lato text-[12px] font-bold text-navy dark:text-gold-light">The Principal's Office</div>
-                <div class="font-lato text-[11px] text-[#8A8A8A]">5 min read</div>
+
+        <div
+          class="reveal grid grid-cols-1 lg:grid-cols-2 gap-0 border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden hover:shadow-[0_12px_48px_rgba(196,154,44,0.12)] transition-all duration-300 cursor-pointer group"
+          onclick="openArticle('featured')"
+        >
+          <!-- Image half -->
+          <div
+            class="news-thumb min-h-[280px] lg:min-h-[420px] flex items-end p-8 relative"
+          >
+            <div
+              class="absolute inset-0 flex items-center justify-center text-[100px] opacity-15 select-none"
+            >
+              🏆
+            </div>
+            <div class="relative z-10">
+              <span
+                class="inline-block bg-gold text-navy font-lato text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-sm mb-3"
+                >Academic</span
+              >
+              <div
+                class="font-lato text-[11px] tracking-widest uppercase text-white/55"
+              >
+                March 15, 2026
               </div>
             </div>
-            <span class="font-lato text-[11px] font-bold tracking-widest uppercase text-maroon dark:text-gold group-hover:gap-2 transition-all">Read Full Story →</span>
+          </div>
+          <!-- Text half -->
+          <div
+            class="bg-warm-white dark:bg-[#1A2A4A]/50 p-8 lg:p-12 flex flex-col justify-center"
+          >
+            <div
+              class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-3"
+            >
+              Top Story
+            </div>
+            <h2
+              class="font-playfair font-bold text-navy dark:text-gold-light leading-snug mb-4 group-hover:text-maroon dark:group-hover:text-gold transition-colors"
+              style="font-size: clamp(22px, 2.5vw, 32px)"
+            >
+              SSA Scholars Sweep Regional Mathematics Olympiad — First Place in
+              All Three Categories
+            </h2>
+            <div class="w-12 h-[2px] bg-gold-maroon mb-5"></div>
+            <p
+              class="font-cormorant text-[17px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed mb-6"
+            >
+              In a landmark achievement for the Academy, our JSS and SSS
+              mathematics teams claimed first-place honours across all three
+              competition categories at the 2026 Regional Schools Mathematics
+              Olympiad held in Kaduna. The victory marks the school's most
+              successful competitive outing to date.
+            </p>
+            <div class="flex items-center justify-between flex-wrap gap-4">
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center font-cinzel text-gold font-bold text-sm"
+                >
+                  P
+                </div>
+                <div>
+                  <div
+                    class="font-lato text-[12px] font-bold text-navy dark:text-gold-light"
+                  >
+                    The Principal's Office
+                  </div>
+                  <div class="font-lato text-[11px] text-[#8A8A8A]">
+                    5 min read
+                  </div>
+                </div>
+              </div>
+              <span
+                class="font-lato text-[11px] font-bold tracking-widest uppercase text-maroon dark:text-gold group-hover:gap-2 transition-all"
+                >Read Full Story →</span
+              >
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ══════════════════════════════════════════
+    <!-- ══════════════════════════════════════════
        POSTS GRID WITH FILTER
   ══════════════════════════════════════════ -->
-  <section id="posts" class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-20">
-    <div class="max-w-7xl mx-auto">
-
-      <!-- Header + Filters -->
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-5 mb-10 reveal">
-        <div>
-          <div class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-2">Latest Posts</div>
-          <h2 class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(22px,2.5vw,32px)]">All News &amp; Announcements</h2>
+    <section
+      id="posts"
+      class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-20"
+    >
+      <div class="max-w-7xl mx-auto">
+        <!-- Header + Filters -->
+        <div
+          class="flex flex-col sm:flex-row sm:items-center justify-between gap-5 mb-10 reveal"
+        >
+          <div>
+            <div
+              class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-2"
+            >
+              Latest Posts
+            </div>
+            <h2
+              class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(22px,2.5vw,32px)]"
+            >
+              All News &amp; Announcements
+            </h2>
+          </div>
+          <!-- Search -->
+          <div class="relative flex-shrink-0">
+            <input
+              id="searchInput"
+              type="text"
+              placeholder="Search posts…"
+              oninput="filterPosts()"
+              class="bg-cream dark:bg-[#162030] border border-gold/25 dark:border-gold/15 rounded-sm px-4 py-2.5 pr-10 font-lato text-[13px] text-[#2A2A2A] dark:text-[#C8D4E0] outline-none focus:border-gold w-full sm:w-56 placeholder-[#aaa]"
+            />
+            <span
+              class="absolute right-3 top-1/2 -translate-y-1/2 text-gold/60 text-[14px]"
+              >🔍</span
+            >
+          </div>
         </div>
-        <!-- Search -->
-        <div class="relative flex-shrink-0">
-          <input id="searchInput" type="text" placeholder="Search posts…" oninput="filterPosts()" class="bg-cream dark:bg-[#162030] border border-gold/25 dark:border-gold/15 rounded-sm px-4 py-2.5 pr-10 font-lato text-[13px] text-[#2A2A2A] dark:text-[#C8D4E0] outline-none focus:border-gold w-full sm:w-56 placeholder-[#aaa]" />
-          <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gold/60 text-[14px]">🔍</span>
+
+        <!-- Category filter chips -->
+        <div class="flex flex-wrap gap-2 mb-10 reveal" id="filterBtns">
+          <button
+            onclick="setFilter('all', this)"
+            class="filter-btn active font-lato text-[11px] font-bold tracking-widest uppercase px-4 py-1.5 rounded-sm border border-gold/40 text-gold transition-all"
+          >
+            All
+          </button>
+          <button
+            onclick="setFilter('announcement', this)"
+            class="filter-btn font-lato text-[11px] font-bold tracking-widest uppercase px-4 py-1.5 rounded-sm border border-[#A02040]/30 text-[#A02040] dark:text-[#E8607A] hover:bg-[#A02040]/10 transition-all"
+          >
+            Announcements
+          </button>
+          <button
+            onclick="setFilter('academic', this)"
+            class="filter-btn font-lato text-[11px] font-bold tracking-widest uppercase px-4 py-1.5 rounded-sm border border-navy/20 dark:border-gold/20 text-navy dark:text-gold-light hover:bg-navy/5 transition-all"
+          >
+            Academic
+          </button>
+          <button
+            onclick="setFilter('event', this)"
+            class="filter-btn font-lato text-[11px] font-bold tracking-widest uppercase px-4 py-1.5 rounded-sm border border-gold/30 text-gold-dark dark:text-gold hover:bg-gold/10 transition-all"
+          >
+            Events
+          </button>
+          <button
+            onclick="setFilter('sport', this)"
+            class="filter-btn font-lato text-[11px] font-bold tracking-widest uppercase px-4 py-1.5 rounded-sm border border-green-700/20 text-green-800 dark:text-green-400 hover:bg-green-700/5 transition-all"
+          >
+            Sports
+          </button>
+          <button
+            onclick="setFilter('community', this)"
+            class="filter-btn font-lato text-[11px] font-bold tracking-widest uppercase px-4 py-1.5 rounded-sm border border-purple-700/20 text-purple-800 dark:text-purple-300 hover:bg-purple-700/5 transition-all"
+          >
+            Community
+          </button>
+        </div>
+
+        <!-- Posts Grid -->
+        <div
+          id="postsGrid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        ></div>
+
+        <!-- No results -->
+        <div id="noResults" class="hidden text-center py-16">
+          <div class="text-5xl mb-4">🔍</div>
+          <div
+            class="font-playfair text-[20px] text-navy dark:text-gold-light mb-2"
+          >
+            No posts found
+          </div>
+          <p class="font-cormorant text-[17px] text-[#8A8A8A]">
+            Try a different search term or category.
+          </p>
+        </div>
+
+        <!-- Load more -->
+        <div class="text-center mt-12 reveal">
+          <button
+            id="loadMoreBtn"
+            onclick="loadMore()"
+            class="inline-block border border-gold/50 hover:border-gold text-gold hover:bg-gold/5 font-lato text-[12px] font-bold tracking-widest uppercase px-8 py-3 rounded-sm transition-all"
+          >
+            Load More Posts
+          </button>
         </div>
       </div>
+    </section>
 
-      <!-- Category filter chips -->
-      <div class="flex flex-wrap gap-2 mb-10 reveal" id="filterBtns">
-        <button onclick="setFilter('all', this)"      class="filter-btn active font-lato text-[11px] font-bold tracking-widest uppercase px-4 py-1.5 rounded-sm border border-gold/40 text-gold transition-all">All</button>
-        <button onclick="setFilter('announcement', this)" class="filter-btn font-lato text-[11px] font-bold tracking-widest uppercase px-4 py-1.5 rounded-sm border border-[#A02040]/30 text-[#A02040] dark:text-[#E8607A] hover:bg-[#A02040]/10 transition-all">Announcements</button>
-        <button onclick="setFilter('academic', this)" class="filter-btn font-lato text-[11px] font-bold tracking-widest uppercase px-4 py-1.5 rounded-sm border border-navy/20 dark:border-gold/20 text-navy dark:text-gold-light hover:bg-navy/5 transition-all">Academic</button>
-        <button onclick="setFilter('event', this)"    class="filter-btn font-lato text-[11px] font-bold tracking-widest uppercase px-4 py-1.5 rounded-sm border border-gold/30 text-gold-dark dark:text-gold hover:bg-gold/10 transition-all">Events</button>
-        <button onclick="setFilter('sport', this)"    class="filter-btn font-lato text-[11px] font-bold tracking-widest uppercase px-4 py-1.5 rounded-sm border border-green-700/20 text-green-800 dark:text-green-400 hover:bg-green-700/5 transition-all">Sports</button>
-        <button onclick="setFilter('community', this)" class="filter-btn font-lato text-[11px] font-bold tracking-widest uppercase px-4 py-1.5 rounded-sm border border-purple-700/20 text-purple-800 dark:text-purple-300 hover:bg-purple-700/5 transition-all">Community</button>
-      </div>
-
-      <!-- Posts Grid -->
-      <div id="postsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-
-      <!-- No results -->
-      <div id="noResults" class="hidden text-center py-16">
-        <div class="text-5xl mb-4">🔍</div>
-        <div class="font-playfair text-[20px] text-navy dark:text-gold-light mb-2">No posts found</div>
-        <p class="font-cormorant text-[17px] text-[#8A8A8A]">Try a different search term or category.</p>
-      </div>
-
-      <!-- Load more -->
-      <div class="text-center mt-12 reveal">
-        <button id="loadMoreBtn" onclick="loadMore()" class="inline-block border border-gold/50 hover:border-gold text-gold hover:bg-gold/5 font-lato text-[12px] font-bold tracking-widest uppercase px-8 py-3 rounded-sm transition-all">Load More Posts</button>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
+    <!-- ══════════════════════════════════════════
        UPCOMING EVENTS — STRIPE LIST
   ══════════════════════════════════════════ -->
-  <section id="upcoming" class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-20">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
+    <section
+      id="upcoming"
+      class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-20"
+    >
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16"
+      >
+        <!-- Event list -->
+        <div class="lg:col-span-2">
+          <div class="reveal mb-8">
+            <div
+              class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-2"
+            >
+              What's Coming Up
+            </div>
+            <h2
+              class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(22px,2.5vw,32px)]"
+            >
+              Upcoming Events
+            </h2>
+          </div>
 
-      <!-- Event list -->
-      <div class="lg:col-span-2">
-        <div class="reveal mb-8">
-          <div class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-2">What's Coming Up</div>
-          <h2 class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(22px,2.5vw,32px)]">Upcoming Events</h2>
+          <div class="space-y-3" id="eventsList">
+            <!-- Event items injected by JS -->
+          </div>
         </div>
 
-        <div class="space-y-3" id="eventsList">
+        <!-- Sidebar: Quick Links + Newsletter -->
+        <div class="space-y-8">
+          <!-- Quick category links -->
+          <div
+            class="reveal bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6"
+          >
+            <div
+              class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-5"
+            >
+              Browse by Topic
+            </div>
+            <ul class="space-y-2 list-none">
+              <li>
+                <button
+                  onclick="
+                    setFilter(
+                      'announcement',
+                      document.querySelector('[onclick*=announcement]'),
+                    )
+                  "
+                  class="flex items-center justify-between w-full text-left group no-underline"
+                >
+                  <span
+                    class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors"
+                    >📢 Announcements</span
+                  >
+                  <span
+                    class="font-lato text-[11px] text-gold bg-gold/10 px-2 py-0.5 rounded-sm"
+                    >4</span
+                  >
+                </button>
+              </li>
+              <li class="border-t border-gold/10 pt-2">
+                <button
+                  onclick="
+                    setFilter(
+                      'academic',
+                      document.querySelector('[onclick*=academic]'),
+                    )
+                  "
+                  class="flex items-center justify-between w-full text-left group"
+                >
+                  <span
+                    class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors"
+                    >📚 Academic News</span
+                  >
+                  <span
+                    class="font-lato text-[11px] text-gold bg-gold/10 px-2 py-0.5 rounded-sm"
+                    >5</span
+                  >
+                </button>
+              </li>
+              <li class="border-t border-gold/10 pt-2">
+                <button
+                  onclick="
+                    setFilter(
+                      'event',
+                      document.querySelector('[onclick*=event]'),
+                    )
+                  "
+                  class="flex items-center justify-between w-full text-left group"
+                >
+                  <span
+                    class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors"
+                    >🎉 Events</span
+                  >
+                  <span
+                    class="font-lato text-[11px] text-gold bg-gold/10 px-2 py-0.5 rounded-sm"
+                    >6</span
+                  >
+                </button>
+              </li>
+              <li class="border-t border-gold/10 pt-2">
+                <button
+                  onclick="
+                    setFilter(
+                      'sport',
+                      document.querySelector('[onclick*=sport]'),
+                    )
+                  "
+                  class="flex items-center justify-between w-full text-left group"
+                >
+                  <span
+                    class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors"
+                    >⚽ Sports</span
+                  >
+                  <span
+                    class="font-lato text-[11px] text-gold bg-gold/10 px-2 py-0.5 rounded-sm"
+                    >5</span
+                  >
+                </button>
+              </li>
+              <li class="border-t border-gold/10 pt-2">
+                <button
+                  onclick="
+                    setFilter(
+                      'community',
+                      document.querySelector('[onclick*=community]'),
+                    )
+                  "
+                  class="flex items-center justify-between w-full text-left group"
+                >
+                  <span
+                    class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors"
+                    >🤝 Community</span
+                  >
+                  <span
+                    class="font-lato text-[11px] text-gold bg-gold/10 px-2 py-0.5 rounded-sm"
+                    >4</span
+                  >
+                </button>
+              </li>
+            </ul>
+          </div>
 
-          <!-- Event items injected by JS -->
+          <!-- Newsletter signup -->
+          <div
+            class="reveal bg-navy dark:bg-[#1A2A4A]/80 border border-gold/25 rounded-sm p-6 admissions-pattern"
+          >
+            <div
+              class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-2"
+            >
+              Stay in the Loop
+            </div>
+            <h3 class="font-playfair text-[20px] font-bold text-white mb-3">
+              Weekly School Newsletter
+            </h3>
+            <p
+              class="font-cormorant text-[16px] text-white/60 leading-relaxed mb-5"
+            >
+              Get the week's highlights, upcoming events, and important notices
+              delivered straight to your inbox every Friday.
+            </p>
+            <div class="space-y-3" id="nlForm">
+              <input
+                id="nlEmail"
+                type="email"
+                placeholder="Your email address"
+                class="nl-input w-full"
+              />
+              <button
+                onclick="subscribeNl()"
+                class="w-full bg-gold hover:bg-gold-light text-navy font-lato text-[12px] font-bold tracking-widest uppercase py-3 rounded-sm transition-all hover:-translate-y-px cursor-pointer"
+              >
+                Subscribe Free
+              </button>
+            </div>
+            <div id="nlSuccess" class="hidden text-center py-3">
+              <div class="text-2xl mb-1">✉️</div>
+              <p class="font-cormorant text-[16px] text-gold">
+                You're subscribed! Check your inbox for a confirmation.
+              </p>
+            </div>
+            <p class="font-lato text-[10px] text-white/30 mt-3 text-center">
+              No spam. Unsubscribe anytime.
+            </p>
+          </div>
 
+          <!-- Social follow -->
+          <div
+            class="reveal bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6"
+          >
+            <div
+              class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-4"
+            >
+              Follow Us
+            </div>
+            <div class="flex gap-3">
+              <a
+                href="#"
+                class="flex-1 flex items-center justify-center gap-2 bg-[#1877f2]/10 hover:bg-[#1877f2]/20 border border-[#1877f2]/20 text-[#1877f2] font-lato text-[11px] font-bold tracking-wide uppercase py-2.5 rounded-sm transition-all no-underline"
+                >f Facebook</a
+              >
+              <a
+                href="#"
+                class="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500/10 to-pink-500/10 hover:from-purple-500/20 hover:to-pink-500/20 border border-purple-400/20 text-purple-600 dark:text-purple-300 font-lato text-[11px] font-bold tracking-wide uppercase py-2.5 rounded-sm transition-all no-underline"
+                >📷 Insta</a
+              >
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Sidebar: Quick Links + Newsletter -->
-      <div class="space-y-8">
-
-        <!-- Quick category links -->
-        <div class="reveal bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6">
-          <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-5">Browse by Topic</div>
-          <ul class="space-y-2 list-none">
-            <li><button onclick="setFilter('announcement', document.querySelector('[onclick*=announcement]'))" class="flex items-center justify-between w-full text-left group no-underline">
-              <span class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors">📢 Announcements</span>
-              <span class="font-lato text-[11px] text-gold bg-gold/10 px-2 py-0.5 rounded-sm">4</span>
-            </button></li>
-            <li class="border-t border-gold/10 pt-2"><button onclick="setFilter('academic', document.querySelector('[onclick*=academic]'))" class="flex items-center justify-between w-full text-left group">
-              <span class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors">📚 Academic News</span>
-              <span class="font-lato text-[11px] text-gold bg-gold/10 px-2 py-0.5 rounded-sm">5</span>
-            </button></li>
-            <li class="border-t border-gold/10 pt-2"><button onclick="setFilter('event', document.querySelector('[onclick*=event]'))" class="flex items-center justify-between w-full text-left group">
-              <span class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors">🎉 Events</span>
-              <span class="font-lato text-[11px] text-gold bg-gold/10 px-2 py-0.5 rounded-sm">6</span>
-            </button></li>
-            <li class="border-t border-gold/10 pt-2"><button onclick="setFilter('sport', document.querySelector('[onclick*=sport]'))" class="flex items-center justify-between w-full text-left group">
-              <span class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors">⚽ Sports</span>
-              <span class="font-lato text-[11px] text-gold bg-gold/10 px-2 py-0.5 rounded-sm">5</span>
-            </button></li>
-            <li class="border-t border-gold/10 pt-2"><button onclick="setFilter('community', document.querySelector('[onclick*=community]'))" class="flex items-center justify-between w-full text-left group">
-              <span class="font-lato text-[13px] text-[#4A4A4A] dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors">🤝 Community</span>
-              <span class="font-lato text-[11px] text-gold bg-gold/10 px-2 py-0.5 rounded-sm">4</span>
-            </button></li>
-          </ul>
-        </div>
-
-        <!-- Newsletter signup -->
-        <div class="reveal bg-navy dark:bg-[#1A2A4A]/80 border border-gold/25 rounded-sm p-6 admissions-pattern">
-          <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-2">Stay in the Loop</div>
-          <h3 class="font-playfair text-[20px] font-bold text-white mb-3">Weekly School Newsletter</h3>
-          <p class="font-cormorant text-[16px] text-white/60 leading-relaxed mb-5">Get the week's highlights, upcoming events, and important notices delivered straight to your inbox every Friday.</p>
-          <div class="space-y-3" id="nlForm">
-            <input id="nlEmail" type="email" placeholder="Your email address" class="nl-input w-full" />
-            <button onclick="subscribeNl()" class="w-full bg-gold hover:bg-gold-light text-navy font-lato text-[12px] font-bold tracking-widest uppercase py-3 rounded-sm transition-all hover:-translate-y-px cursor-pointer">Subscribe Free</button>
-          </div>
-          <div id="nlSuccess" class="hidden text-center py-3">
-            <div class="text-2xl mb-1">✉️</div>
-            <p class="font-cormorant text-[16px] text-gold">You're subscribed! Check your inbox for a confirmation.</p>
-          </div>
-          <p class="font-lato text-[10px] text-white/30 mt-3 text-center">No spam. Unsubscribe anytime.</p>
-        </div>
-
-        <!-- Social follow -->
-        <div class="reveal bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6">
-          <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-4">Follow Us</div>
-          <div class="flex gap-3">
-            <a href="#" class="flex-1 flex items-center justify-center gap-2 bg-[#1877f2]/10 hover:bg-[#1877f2]/20 border border-[#1877f2]/20 text-[#1877f2] font-lato text-[11px] font-bold tracking-wide uppercase py-2.5 rounded-sm transition-all no-underline">f Facebook</a>
-            <a href="#" class="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500/10 to-pink-500/10 hover:from-purple-500/20 hover:to-pink-500/20 border border-purple-400/20 text-purple-600 dark:text-purple-300 font-lato text-[11px] font-bold tracking-wide uppercase py-2.5 rounded-sm transition-all no-underline">📷 Insta</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
+    <!-- ══════════════════════════════════════════
        EVENTS CALENDAR
   ══════════════════════════════════════════ -->
-  <section id="calendar" class="bg-navy dark:bg-[#080E18] admissions-pattern px-5 sm:px-10 lg:px-20 py-20">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-12 reveal">
-        <div class="section-label-line inline-block font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">School Calendar</div>
-        <h2 class="font-playfair font-bold text-white text-[clamp(24px,3vw,38px)] mb-4">Events Calendar — 2026</h2>
-        <div class="w-16 h-[3px] bg-gold-maroon mx-auto"></div>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 reveal">
-
-        <!-- Mini Calendar -->
-        <div class="lg:col-span-1 bg-navy-light/60 border border-gold/20 rounded-sm p-5">
-          <div class="flex items-center justify-between mb-5">
-            <button onclick="prevMonth()" class="text-gold/60 hover:text-gold transition-colors text-xl font-bold cursor-pointer px-2">‹</button>
-            <div id="calTitle" class="font-cinzel text-[13px] font-bold tracking-widest uppercase text-gold"></div>
-            <button onclick="nextMonth()" class="text-gold/60 hover:text-gold transition-colors text-xl font-bold cursor-pointer px-2">›</button>
+    <section
+      id="calendar"
+      class="bg-navy dark:bg-[#080E18] admissions-pattern px-5 sm:px-10 lg:px-20 py-20"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12 reveal">
+          <div
+            class="section-label-line inline-block font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4"
+          >
+            School Calendar
           </div>
-          <!-- Day labels -->
-          <div class="grid grid-cols-7 mb-2">
-            <div class="text-center font-lato text-[10px] font-bold tracking-wide text-white/35 uppercase py-1">Su</div>
-            <div class="text-center font-lato text-[10px] font-bold tracking-wide text-white/35 uppercase py-1">Mo</div>
-            <div class="text-center font-lato text-[10px] font-bold tracking-wide text-white/35 uppercase py-1">Tu</div>
-            <div class="text-center font-lato text-[10px] font-bold tracking-wide text-white/35 uppercase py-1">We</div>
-            <div class="text-center font-lato text-[10px] font-bold tracking-wide text-white/35 uppercase py-1">Th</div>
-            <div class="text-center font-lato text-[10px] font-bold tracking-wide text-white/35 uppercase py-1">Fr</div>
-            <div class="text-center font-lato text-[10px] font-bold tracking-wide text-white/35 uppercase py-1">Sa</div>
-          </div>
-          <!-- Calendar days -->
-          <div id="calGrid" class="grid grid-cols-7 gap-0.5"></div>
-
-          <!-- Legend -->
-          <div class="mt-5 pt-4 border-t border-white/10 space-y-1.5">
-            <div class="flex items-center gap-2"><span class="cal-event-dot bg-gold"></span><span class="font-lato text-[11px] text-white/55">Academic / Exam</span></div>
-            <div class="flex items-center gap-2"><span class="cal-event-dot bg-maroon-light"></span><span class="font-lato text-[11px] text-white/55">School Event</span></div>
-            <div class="flex items-center gap-2"><span class="cal-event-dot bg-green-500"></span><span class="font-lato text-[11px] text-white/55">Holiday / Break</span></div>
-            <div class="flex items-center gap-2"><span class="cal-event-dot bg-blue-400"></span><span class="font-lato text-[11px] text-white/55">Sports / Club</span></div>
-          </div>
+          <h2
+            class="font-playfair font-bold text-white text-[clamp(24px,3vw,38px)] mb-4"
+          >
+            Events Calendar — 2026
+          </h2>
+          <div class="w-16 h-[3px] bg-gold-maroon mx-auto"></div>
         </div>
 
-        <!-- Event list for selected month -->
-        <div class="lg:col-span-2 space-y-3" id="calEventsList"></div>
-      </div>
-    </div>
-  </section>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 reveal">
+          <!-- Mini Calendar -->
+          <div
+            class="lg:col-span-1 bg-navy-light/60 border border-gold/20 rounded-sm p-5"
+          >
+            <div class="flex items-center justify-between mb-5">
+              <button
+                onclick="prevMonth()"
+                class="text-gold/60 hover:text-gold transition-colors text-xl font-bold cursor-pointer px-2"
+              >
+                ‹
+              </button>
+              <div
+                id="calTitle"
+                class="font-cinzel text-[13px] font-bold tracking-widest uppercase text-gold"
+              ></div>
+              <button
+                onclick="nextMonth()"
+                class="text-gold/60 hover:text-gold transition-colors text-xl font-bold cursor-pointer px-2"
+              >
+                ›
+              </button>
+            </div>
+            <!-- Day labels -->
+            <div class="grid grid-cols-7 mb-2">
+              <div
+                class="text-center font-lato text-[10px] font-bold tracking-wide text-white/35 uppercase py-1"
+              >
+                Su
+              </div>
+              <div
+                class="text-center font-lato text-[10px] font-bold tracking-wide text-white/35 uppercase py-1"
+              >
+                Mo
+              </div>
+              <div
+                class="text-center font-lato text-[10px] font-bold tracking-wide text-white/35 uppercase py-1"
+              >
+                Tu
+              </div>
+              <div
+                class="text-center font-lato text-[10px] font-bold tracking-wide text-white/35 uppercase py-1"
+              >
+                We
+              </div>
+              <div
+                class="text-center font-lato text-[10px] font-bold tracking-wide text-white/35 uppercase py-1"
+              >
+                Th
+              </div>
+              <div
+                class="text-center font-lato text-[10px] font-bold tracking-wide text-white/35 uppercase py-1"
+              >
+                Fr
+              </div>
+              <div
+                class="text-center font-lato text-[10px] font-bold tracking-wide text-white/35 uppercase py-1"
+              >
+                Sa
+              </div>
+            </div>
+            <!-- Calendar days -->
+            <div id="calGrid" class="grid grid-cols-7 gap-0.5"></div>
 
-  <!-- ══════════════════════════════════════════
+            <!-- Legend -->
+            <div class="mt-5 pt-4 border-t border-white/10 space-y-1.5">
+              <div class="flex items-center gap-2">
+                <span class="cal-event-dot bg-gold"></span
+                ><span class="font-lato text-[11px] text-white/55"
+                  >Academic / Exam</span
+                >
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="cal-event-dot bg-maroon-light"></span
+                ><span class="font-lato text-[11px] text-white/55"
+                  >School Event</span
+                >
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="cal-event-dot bg-green-500"></span
+                ><span class="font-lato text-[11px] text-white/55"
+                  >Holiday / Break</span
+                >
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="cal-event-dot bg-blue-400"></span
+                ><span class="font-lato text-[11px] text-white/55"
+                  >Sports / Club</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Event list for selected month -->
+          <div class="lg:col-span-2 space-y-3" id="calEventsList"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
        FINAL CTA
   ══════════════════════════════════════════ -->
-  <section class="bg-maroon-navy admissions-pattern relative overflow-hidden px-5 sm:px-10 lg:px-20 py-24">
-    <div class="absolute inset-0 bg-hero-pattern pointer-events-none opacity-40"></div>
-    <div class="relative z-10 max-w-3xl mx-auto text-center reveal">
-      <div class="text-5xl mb-5">🕊️</div>
-      <div class="font-cinzel text-[11px] tracking-[0.2em] uppercase text-gold mb-4">Never Miss a Moment</div>
-      <h2 class="font-playfair font-bold text-white text-[clamp(26px,3.5vw,44px)] leading-snug mb-5">
-        Be Part of the<br><em class="italic text-gold-light">Stellar Scholars Community</em>
-      </h2>
-      <p class="font-cormorant text-[19px] text-white/65 leading-relaxed max-w-xl mx-auto mb-10">
-        Subscribe to our newsletter, follow us on social media, and never miss an important update from the school.
-      </p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="#upcoming" class="inline-block bg-gold hover:bg-gold-light text-navy font-lato text-[12px] font-bold tracking-widest uppercase px-8 py-4 rounded-sm transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(196,154,44,0.4)] no-underline">View All Events</a>
-        <a href="admissions.html" class="inline-block border border-white/35 hover:border-gold hover:text-gold text-white font-lato text-[12px] font-bold tracking-widest uppercase px-8 py-4 rounded-sm transition-all no-underline">Apply for Admission</a>
-      </div>
-    </div>
-  </section>
-
-  <!--FOOTER-->
-  <footer class="bg-navy dark:bg-[#04080F] text-white/65 px-5 sm:px-10 lg:px-20 pt-20 pb-10">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-14">
-
-      <!-- Brand col -->
-      <div>
-        <div class="flex items-center gap-3 mb-5">
-          <div
-            class="w-11 h-11 rounded-full bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center font-cinzel text-[16px] font-bold text-white flex-shrink-0">
-            <img src="imgs/logo2.jpg" alt="Logo">
-          </div>
-          <div class="font-cinzel text-[13px] font-semibold tracking-wide text-white leading-tight">
-            STELLAR SCHOLARS ACADEMY
-            <span class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5">LUX ET PAX · EST. 2026</span>
-          </div>
+    <section
+      class="bg-maroon-navy admissions-pattern relative overflow-hidden px-5 sm:px-10 lg:px-20 py-24"
+    >
+      <div
+        class="absolute inset-0 bg-hero-pattern pointer-events-none opacity-40"
+      ></div>
+      <div class="relative z-10 max-w-3xl mx-auto text-center reveal">
+        <div class="text-5xl mb-5">🕊️</div>
+        <div
+          class="font-cinzel text-[11px] tracking-[0.2em] uppercase text-gold mb-4"
+        >
+          Never Miss a Moment
         </div>
-        <p class="text-[13px] leading-[1.7] text-white/50 mb-6">Excellence in Education &amp; Character. We nurture
-          scholars who lead with knowledge, integrity, and compassion.</p>
-        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2">
-          <svg width="30" height="30"
-              viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
-              <path fill="white"
+        <h2
+          class="font-playfair font-bold text-white text-[clamp(26px,3.5vw,44px)] leading-snug mb-5"
+        >
+          Be Part of the<br /><em class="italic text-gold-light"
+            >Stellar Scholars Community</em
+          >
+        </h2>
+        <p
+          class="font-cormorant text-[19px] text-white/65 leading-relaxed max-w-xl mx-auto mb-10"
+        >
+          Subscribe to our newsletter, follow us on social media, and never miss
+          an important update from the school.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="#upcoming"
+            class="inline-block bg-gold hover:bg-gold-light text-navy font-lato text-[12px] font-bold tracking-widest uppercase px-8 py-4 rounded-sm transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(196,154,44,0.4)] no-underline"
+            >View All Events</a
+          >
+          <a
+            href="admissions.html"
+            class="inline-block border border-white/35 hover:border-gold hover:text-gold text-white font-lato text-[12px] font-bold tracking-widest uppercase px-8 py-4 rounded-sm transition-all no-underline"
+            >Apply for Admission</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer
+      class="bg-navy dark:bg-[#04080F] text-white/65 px-5 sm:px-10 lg:px-20 pt-20 pb-10"
+    >
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-14"
+      >
+        <!-- Brand col -->
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <div
+              class="w-11 h-11 rounded-full bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center font-cinzel text-[16px] font-bold text-white flex-shrink-0"
+            >
+              <img src="imgs/logo2.jpg" alt="Logo" />
+            </div>
+            <div
+              class="font-cinzel text-[13px] font-semibold tracking-wide text-white leading-tight"
+            >
+              STELLAR SCHOLARS ACADEMY
+              <span
+                class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5"
+                >LUX ET PAX · EST. 2026</span
+              >
+            </div>
+          </div>
+          <p class="text-[13px] leading-[1.7] text-white/50 mb-6">
+            Excellence in Education &amp; Character. We nurture scholars who
+            lead with knowledge, integrity, and compassion.
+          </p>
+          <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2">
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="white"
                 d="M12 2c-4.4 0-8 3.6-8 8 0 5.4 7 11.5 7.3 11.8.2.1.5.2.7.2.2 0 .5-.1.7-.2.3-.3 7.3-6.4 7.3-11.8 0-4.4-3.6-8-8-8zm0 17.7c-2.1-2-6-6.3-6-9.7 0-3.3 2.7-6 6-6s6 2.7 6 6-3.9 7.7-6 9.7zM12 6c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
-                 />
+              />
             </svg>
-            <div><b>Main Site:</b> Stellar Scholars Academy(Pre-school, Grade & Secondary Schools), Obafemi Owode L.G.A, Ogun State.<br><b>Annex:</b> Stellar Scholars Academy, Ikoyi (Daycare).</div>
-            
+            <div>
+              <b>Main Site:</b> Stellar Scholars Academy(Pre-school, Grade &
+              Secondary Schools), Obafemi Owode L.G.A, Ogun State.<br /><b
+                >Annex:</b
+              >
+              Stellar Scholars Academy, Ikoyi (Daycare).
+            </div>
+
             <div class="flex pt-0"></div>
-        </div>
-        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-              class="bi bi-telephone" viewBox="0 0 16 16">
-              <path fill="white"
-                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+          </div>
+          <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              class="bi bi-telephone"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill="white"
+                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+              />
             </svg>
-          <span> +234 706 737 4352</span>
+            <span> +234 706 737 4352</span>
+          </div>
+          <div class="flex items-start gap-2 text-[13px] text-white/55 mb-6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16px"
+              height="16px"
+              viewBox="0 0 640 640"
+            >
+              <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+              <path
+                fill="white"
+                d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"
+              />
+            </svg>
+            <span>stellarscholarsacademy@gmail.com</span>
+          </div>
+          <div class="flex gap-2.5">
+            <a
+              href="#"
+              class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[13px] font-bold transition-all duration-200 no-underline"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-facebook"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                /></svg
+            ></a>
+            <a
+              href="https://ng.linkedin.com/company/stellar-scholars-academy1"
+              class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[11px] font-bold transition-all duration-200 no-underline"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-linkedin"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                /></svg
+            ></a>
+            <a
+              href="https://www.instagram.com/stellarscholarsacademyikoyi/"
+              class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center hover:text-navy text-[14px] transition-all duration-200 no-underline"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-instagram"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                /></svg
+            ></a>
+          </div>
         </div>
-        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-6">
-         <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 640 640"> <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--> <path fill="white" d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"/></svg>
-          <span>stellarscholarsacademy@gmail.com</span>
+
+        <!-- Links cols -->
+        <div>
+          <div
+            class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5"
+          >
+            About Us
+          </div>
+          <ul class="list-none space-y-2.5">
+            <li>
+              <a
+                href="about.html#mission"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Our Mission</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html#leadership"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Leadership</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html#timeline"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >History</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Awards</a
+              >
+            </li>
+          </ul>
         </div>
-        <div class="flex gap-2.5">
-          <a href="#"
-            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[13px] font-bold transition-all duration-200 no-underline"><svg
-              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook"
-              viewBox="0 0 16 16">
-              <path
-                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
-            </svg></a>
-          <a href="https://ng.linkedin.com/company/stellar-scholars-academy1"
-            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[11px] font-bold transition-all duration-200 no-underline"><svg
-              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin"
-              viewBox="0 0 16 16">
-              <path
-                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
-            </svg></a>
-          <a href="https://www.instagram.com/stellarscholarsacademyikoyi/"
-            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center hover:text-navy text-[14px] transition-all duration-200 no-underline"><svg
-              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
-              viewBox="0 0 16 16">
-              <path
-                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
-            </svg></a>
+        <div>
+          <div
+            class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5"
+          >
+            Academics
+          </div>
+          <ul class="list-none space-y-2.5">
+            <li>
+              <a
+                href="academics.html"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Pre-School</a
+              >
+            </li>
+            <li>
+              <a
+                href="academics.html"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Grade School</a
+              >
+            </li>
+            <li>
+              <a
+                href="academics.html"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Secondary School</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Admissions</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="hidden sm:block md:hiddden">
+          <div
+            class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5"
+          >
+            School Life
+          </div>
+          <ul class="list-none space-y-2.5">
+            <li>
+              <a
+                href="#"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Sports &amp; Athletics</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Arts &amp; Culture</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Clubs &amp; Societies</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Events Calendar</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
 
-      <!-- Links cols -->
-      <div>
-        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">About Us</div>
-        <ul class="list-none space-y-2.5">
-          <li><a href="about.html#mission" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Our
-              Mission</a></li>
-          <li><a href="about.html#leadership"
-              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Leadership</a></li>
-          <li><a href="about.html#timeline"
-              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">History</a>
-          </li>
-          <li><a href="about.html"
-              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Awards</a>
-          </li>
-        </ul>
+      <!-- Footer bottom -->
+      <div
+        class="max-w-auto mx-auto border-t border-white/8 pt-7 flex flex-col sm:flex-row justify-between items-center text-[14px] text-white/35"
+      >
+        <span>© 2026 Stellar Scholars Academy. All rights reserved.</span>
+        <span class="inline-flex"
+          >Powered by
+          <a href="https://ticst.com.ng" target="_blank" class="no-underline"
+            ><img
+              src="imgs/ticst transparent - blue.png"
+              alt=""
+              class="h-11 w-15 pb-5 text-green-80"
+          /></a>
+          &nbsp;·&nbsp;
+          <a
+            href="#"
+            class="text-gold hover:text-gold-light transition-colors no-underline"
+            >Privacy Policy</a
+          >
+          &nbsp;·&nbsp;
+          <a
+            href="#"
+            class="text-gold hover:text-gold-light transition-colors no-underline"
+            >Terms</a
+          ></span
+        >
       </div>
-      <div>
-        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">Academics</div>
-        <ul class="list-none space-y-2.5">
-          <li><a href="academics.html"
-              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Pre-School</a></li>
-          <li><a href="academics.html"
-              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Grade
-              School</a></li>
-          <li><a href="academics.html"
-              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Secondary
-              School</a></li>
-          <li><a href="#"
-              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Admissions</a></li>
-        </ul>
-      </div>
-      <div class="hidden sm:block md:hiddden">
-        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">School Life</div>
-        <ul class="list-none space-y-2.5">
-          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Sports &amp;
-              Athletics</a></li>
-          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Arts &amp;
-              Culture</a></li>
-          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Clubs &amp;
-              Societies</a></li>
-          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Events
-              Calendar</a></li>
-        </ul>
-      </div>
-    </div>
+    </footer>
 
-    <!-- Footer bottom -->
-    <div
-      class="max-w-auto mx-auto border-t border-white/8 pt-7 flex flex-col sm:flex-row justify-between items-center text-[14px] text-white/35">
-      <span>© 2026 Stellar Scholars Academy. All rights reserved.</span>
-      <span class="inline-flex">Powered by <a href="https://ticst.com.ng" target="_blank"
-          class="no-underline"><img src="imgs/ticst transparent - blue.png" alt="" class="h-11 w-15 pb-5 text-green-80"></a> &nbsp;·&nbsp; <a href="#"
-          class="text-gold hover:text-gold-light transition-colors no-underline">Privacy Policy</a> &nbsp;·&nbsp; <a
-          href="#" class="text-gold hover:text-gold-light transition-colors no-underline">Terms</a></span>
-    </div>
-  </footer>
-
-  <!-- ══════════════════════════════════════════
+    <!-- ══════════════════════════════════════════
        ARTICLE MODAL
   ══════════════════════════════════════════ -->
-  <div id="articleModal" onclick="closeModalOutside(event)">
-    <div id="articleModalInner" class="relative">
-      <button onclick="closeModal()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-gold/15 hover:bg-gold text-gold hover:text-navy flex items-center justify-center text-lg font-bold transition-all cursor-pointer">✕</button>
-      <div id="articleModalContent" class="p-8 lg:p-10"></div>
+    <div id="articleModal" onclick="closeModalOutside(event)">
+      <div id="articleModalInner" class="relative">
+        <button
+          onclick="closeModal()"
+          class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-gold/15 hover:bg-gold text-gold hover:text-navy flex items-center justify-center text-lg font-bold transition-all cursor-pointer"
+        >
+          ✕
+        </button>
+        <div id="articleModalContent" class="p-8 lg:p-10"></div>
+      </div>
     </div>
-  </div>
 
-  <!-- ══════════════════════════════════════════
+    <!-- ══════════════════════════════════════════
        JAVASCRIPT
   ══════════════════════════════════════════ -->
-  <script>
-    // ── CTA Bar ──
-    const ctaBar = document.getElementById('ctaBar');
-    
+    <script>
+      // ── CTA Bar ──
+      const ctaBar = document.getElementById("ctaBar");
 
-    // ── Theme ──
-    const themeBtn = document.getElementById('themeBtn');
-    const html = document.documentElement;
-    function applyTheme(dark) {
-      html.classList.toggle('dark', dark);
-      themeBtn.textContent = dark ? '🌙' : '☀️';
-    }
-    applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
-    themeBtn.addEventListener('click', () => applyTheme(!html.classList.contains('dark')));
-
-    // ── Mobile Menu ──────────────────────────
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // ── Scroll reveal ──
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          const d = parseInt(e.target.dataset.delay || 0);
-          setTimeout(() => e.target.classList.add('visible'), d);
-          obs.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.08 });
-    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-    // ── Navbar shadow ──
-    window.addEventListener('scroll', () => navbar.classList.toggle('shadow-lg', window.scrollY > 40));
-
-    // ════════════════════════════════
-    // POST DATA
-    // ════════════════════════════════
-    const allPosts = [
-      { id: 1, cat: 'academic', date: 'Mar 15, 2026', title: 'SSA Scholars Sweep Regional Mathematics Olympiad', excerpt: 'Our JSS and SSS maths teams claimed first-place honours in all three categories at the 2026 Regional Schools Mathematics Olympiad in Kaduna.', emoji: '🏆', author: "Principal's Office", read: '5 min', body: 'Our JSS and SSS mathematics teams performed brilliantly at the 2026 Regional Schools Mathematics Olympiad held in Kaduna last weekend. Competing against 48 schools from across the state, Stellar Scholars claimed gold in Junior Individual, Senior Individual, and Team categories — a first in the Academy\'s history.\n\nThe Principal, Mrs. Adaobi Nwosu, commended the students and their mathematics teachers: "This achievement reflects the tireless dedication of our scholars and the exceptional quality of our teaching staff. We are immensely proud."\n\nThe winning scholars will represent the school at the National Olympiad in June.' },
-      { id: 2, cat: 'announcement', date: 'Mar 10, 2026', title: 'Second Term Examination Timetable Released', excerpt: 'The Second Term examination timetable has been published. Parents and scholars should review dates carefully.', emoji: '📋', author: 'Academic Office', read: '2 min', body: 'The Second Term examination timetable for all divisions is now available on the school notice board and has been sent via SMS to all parents on record.\n\nKey dates:\n• Pre-School & Grade: April 7–11, 2026\n• JSS 1–3: April 14–18, 2026\n• SSS 1–2: April 14–18, 2026\n• SSS 3 Mock Exams: March 30 – April 3, 2026\n\nScholars are reminded to arrive 30 minutes before each paper. Electronic devices are not permitted in examination halls. Contact the Academic Office for any queries.' },
-      { id: 3, cat: 'event', date: 'Mar 5, 2026', title: 'Annual Cultural Day & Inter-House Fiesta — April 26', excerpt: 'Mark your calendars! Our flagship cultural celebration returns with performances, food stalls, and the inter-house competition finale.', emoji: '🎉', author: 'Student Affairs', read: '3 min', body: 'Stellar Scholars Academy\'s Annual Cultural Day & Inter-House Fiesta will be held on Saturday, April 26, 2026 from 9am to 4pm on the school grounds.\n\nThe event celebrates Nigeria\'s rich cultural diversity and the competitive spirit of our four houses — Eagle, Phoenix, Lion, and Dove. Parents, guardians, and alumni are warmly invited.\n\nHighlights include:\n• Cultural dance and drama performances\n• Inter-house athletics finals\n• Traditional food stalls\n• Art & craft exhibition\n• Prize-giving ceremony\n\nEntry is free for families of current scholars. RSVP by April 20 at the school office.' },
-      { id: 4, cat: 'sport', date: 'Feb 28, 2026', title: 'Eagles FC Qualify for State Schools Football Finals', excerpt: 'The SSA football team secured their place in the State Finals with a stunning 3–1 victory over Government Secondary School Kaduna.', emoji: '⚽', author: 'Sports Department', read: '3 min', body: 'The Eagles FC — SSA\'s senior football team — produced a dominant performance to beat Government Secondary School Kaduna 3–1 in the State semi-finals, booking their place in the 2026 State Schools Football Finals.\n\nGoals from Daniel Obi (2) and Chukwuemeka Eze sealed the victory. Coach Abdullahi praised the team\'s discipline and tactical awareness throughout the match.\n\nThe finals will be held on April 19 at Ahmadu Bello Stadium. The whole school community is encouraged to come out and support the team!' },
-      { id: 5, cat: 'community', date: 'Feb 20, 2026', title: 'SSA Charity Drive Raises ₦480,000 for Local Orphanage', excerpt: 'Thanks to the incredible generosity of our school community, this year\'s charity drive exceeded its target by 60%.', emoji: '🤝', author: 'Welfare Committee', read: '4 min', body: 'We are overwhelmed with gratitude after our 2026 Charity Drive surpassed all expectations, raising ₦480,000 — 60% above the ₦300,000 target — for Hope Reborn Orphanage in Kaduna.\n\nThe funds will be used to refurbish the orphanage\'s learning centre and purchase educational materials for over 80 children.\n\nWe extend our heartfelt thanks to every scholar, parent, staff member, and sponsor who contributed. Special recognition goes to JSS 3B who single-handedly raised ₦95,000 through their bake sale and talent show.' },
-      { id: 6, cat: 'academic', date: 'Feb 14, 2026', title: 'SSA Launches New STEM Innovation Lab', excerpt: 'The newly equipped STEM Innovation Lab, equipped with 3D printers, robotics kits, and coding workstations, is now open to all scholars.', emoji: '🔬', author: 'Academic Office', read: '4 min', body: 'Stellar Scholars Academy is delighted to announce the official opening of its state-of-the-art STEM Innovation Lab. The facility, funded through a generous parent and alumni donation drive, features:\n\n• 20 high-spec coding workstations\n• 2 professional-grade 3D printers\n• Arduino and Raspberry Pi robotics kits\n• A dedicated electronics prototyping bench\n\nThe lab will be integrated into the Science and Technology curriculum from the Third Term onwards and will also be available for after-school STEM Club sessions.' },
-      { id: 7, cat: 'announcement', date: 'Feb 7, 2026', title: 'Parent-Teacher Conference — March 1, 2026', excerpt: 'The Second Term Parent-Teacher Conference is scheduled for Saturday, March 1. Booking is now open via the school office.', emoji: '👨‍🏫', author: 'Admin Office', read: '2 min', body: 'The Second Term Parent-Teacher Conference will take place on Saturday, March 1, 2026 from 9am to 1pm.\n\nEach appointment is 15 minutes. To book your slot, contact the school office by phone or in person before February 26. Walk-in appointments cannot be guaranteed.\n\nParents of scholars with ongoing pastoral concerns are especially encouraged to attend. The Vice Principal will also be available for general enquiries throughout the morning.' },
-      { id: 8, cat: 'event', date: 'Jan 30, 2026', title: 'Open Day — Saturday, March 22, 2026', excerpt: 'Prospective families are invited to tour the campus, meet staff, and see our facilities up close at our Spring Open Day.', emoji: '🏫', author: 'Admissions Office', read: '2 min', body: 'We warmly invite prospective families to our Spring Open Day on Saturday, March 22, 2026 from 10am to 2pm.\n\nVisitors will enjoy guided tours of all facilities, including our new STEM Lab, library, sports complex, and performing arts studio. Current students will act as ambassadors, and members of the senior leadership team will be on hand to answer your questions.\n\nNo booking required — simply arrive at the main gate. Light refreshments will be served.' },
-      { id: 9, cat: 'sport', date: 'Jan 22, 2026', title: 'Inter-School Athletics Day — SSA Claims 2nd Overall', excerpt: 'Our track-and-field athletes delivered outstanding performances at the Zonal Inter-School Athletics Meet.', emoji: '🏃', author: 'Sports Department', read: '3 min', body: 'SSA\'s athletics squad put in a remarkable performance at the 2026 Zonal Inter-School Athletics Meet, finishing 2nd overall out of 22 competing schools.\n\nHighlights included gold medals in the 400m hurdles (Senior Girls), 100m sprint (Junior Boys), and the Mixed 4×100m relay. The team accumulated a total of 14 medals — 5 gold, 6 silver, and 3 bronze.\n\nCoach Miriam Sani stated: "This result is a testament to the dedication of our athletes and the quality of our coaching programme."' },
-    ];
-
-    let visibleCount = 6;
-    let activeFilter = 'all';
-    let searchTerm = '';
-
-    function getFilteredPosts() {
-      return allPosts.filter(p => {
-        const matchCat = activeFilter === 'all' || p.cat === activeFilter;
-        const matchSearch = !searchTerm || p.title.toLowerCase().includes(searchTerm) || p.excerpt.toLowerCase().includes(searchTerm);
-        return matchCat && matchSearch;
-      });
-    }
-
-    function badgeClass(cat) {
-      const map = { announcement: 'badge-announcement', academic: 'badge-academic', event: 'badge-event', sport: 'badge-sport', community: 'badge-community' };
-      return map[cat] || 'badge-event';
-    }
-    function catLabel(cat) {
-      return { announcement: 'Announcement', academic: 'Academic', event: 'Event', sport: 'Sport', community: 'Community' }[cat] || cat;
-    }
-
-    function renderPosts() {
-      const grid = document.getElementById('postsGrid');
-      const filtered = getFilteredPosts();
-      const visible = filtered.slice(0, visibleCount);
-      grid.innerHTML = '';
-      if (filtered.length === 0) {
-        document.getElementById('noResults').classList.remove('hidden');
-        document.getElementById('loadMoreBtn').parentElement.classList.add('hidden');
-      } else {
-        document.getElementById('noResults').classList.add('hidden');
-        document.getElementById('loadMoreBtn').parentElement.classList.remove('hidden');
-        document.getElementById('loadMoreBtn').style.display = filtered.length <= visibleCount ? 'none' : 'inline-block';
+      // ── Theme ──
+      const themeBtn = document.getElementById("themeBtn");
+      const html = document.documentElement;
+      function applyTheme(dark) {
+        html.classList.toggle("dark", dark);
+        themeBtn.textContent = dark ? "🌙" : "☀️";
       }
-      visible.forEach((p, i) => {
-        const card = document.createElement('div');
-        card.className = 'hover-bar bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden cursor-pointer group transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(196,154,44,0.1)]';
-        card.style.cssText = `opacity:0;transform:translateY(20px);transition:opacity 0.5s ease ${i*0.07}s,transform 0.5s ease ${i*0.07}s`;
-        card.onclick = () => openArticle(p.id);
-        card.innerHTML = `
+      applyTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
+      themeBtn.addEventListener("click", () =>
+        applyTheme(!html.classList.contains("dark")),
+      );
+
+      // ── Mobile Menu ──────────────────────────
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // ── Scroll reveal ──
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              const d = parseInt(e.target.dataset.delay || 0);
+              setTimeout(() => e.target.classList.add("visible"), d);
+              obs.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.08 },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => obs.observe(el));
+
+      // ── Navbar shadow ──
+      window.addEventListener("scroll", () =>
+        navbar.classList.toggle("shadow-lg", window.scrollY > 40),
+      );
+
+      // ════════════════════════════════
+      // POST DATA
+      // ════════════════════════════════
+      const allPosts = [
+        {
+          id: 1,
+          cat: "academic",
+          date: "Mar 15, 2026",
+          title: "SSA Scholars Sweep Regional Mathematics Olympiad",
+          excerpt:
+            "Our JSS and SSS maths teams claimed first-place honours in all three categories at the 2026 Regional Schools Mathematics Olympiad in Kaduna.",
+          emoji: "🏆",
+          author: "Principal's Office",
+          read: "5 min",
+          body: 'Our JSS and SSS mathematics teams performed brilliantly at the 2026 Regional Schools Mathematics Olympiad held in Kaduna last weekend. Competing against 48 schools from across the state, Stellar Scholars claimed gold in Junior Individual, Senior Individual, and Team categories — a first in the Academy\'s history.\n\nThe Principal, Mrs. Adaobi Nwosu, commended the students and their mathematics teachers: "This achievement reflects the tireless dedication of our scholars and the exceptional quality of our teaching staff. We are immensely proud."\n\nThe winning scholars will represent the school at the National Olympiad in June.',
+        },
+        {
+          id: 2,
+          cat: "announcement",
+          date: "Mar 10, 2026",
+          title: "Second Term Examination Timetable Released",
+          excerpt:
+            "The Second Term examination timetable has been published. Parents and scholars should review dates carefully.",
+          emoji: "📋",
+          author: "Academic Office",
+          read: "2 min",
+          body: "The Second Term examination timetable for all divisions is now available on the school notice board and has been sent via SMS to all parents on record.\n\nKey dates:\n• Pre-School & Grade: April 7–11, 2026\n• JSS 1–3: April 14–18, 2026\n• SSS 1–2: April 14–18, 2026\n• SSS 3 Mock Exams: March 30 – April 3, 2026\n\nScholars are reminded to arrive 30 minutes before each paper. Electronic devices are not permitted in examination halls. Contact the Academic Office for any queries.",
+        },
+        {
+          id: 3,
+          cat: "event",
+          date: "Mar 5, 2026",
+          title: "Annual Cultural Day & Inter-House Fiesta — April 26",
+          excerpt:
+            "Mark your calendars! Our flagship cultural celebration returns with performances, food stalls, and the inter-house competition finale.",
+          emoji: "🎉",
+          author: "Student Affairs",
+          read: "3 min",
+          body: "Stellar Scholars Academy's Annual Cultural Day & Inter-House Fiesta will be held on Saturday, April 26, 2026 from 9am to 4pm on the school grounds.\n\nThe event celebrates Nigeria's rich cultural diversity and the competitive spirit of our four houses — Eagle, Phoenix, Lion, and Dove. Parents, guardians, and alumni are warmly invited.\n\nHighlights include:\n• Cultural dance and drama performances\n• Inter-house athletics finals\n• Traditional food stalls\n• Art & craft exhibition\n• Prize-giving ceremony\n\nEntry is free for families of current scholars. RSVP by April 20 at the school office.",
+        },
+        {
+          id: 4,
+          cat: "sport",
+          date: "Feb 28, 2026",
+          title: "Eagles FC Qualify for State Schools Football Finals",
+          excerpt:
+            "The SSA football team secured their place in the State Finals with a stunning 3–1 victory over Government Secondary School Kaduna.",
+          emoji: "⚽",
+          author: "Sports Department",
+          read: "3 min",
+          body: "The Eagles FC — SSA's senior football team — produced a dominant performance to beat Government Secondary School Kaduna 3–1 in the State semi-finals, booking their place in the 2026 State Schools Football Finals.\n\nGoals from Daniel Obi (2) and Chukwuemeka Eze sealed the victory. Coach Abdullahi praised the team's discipline and tactical awareness throughout the match.\n\nThe finals will be held on April 19 at Ahmadu Bello Stadium. The whole school community is encouraged to come out and support the team!",
+        },
+        {
+          id: 5,
+          cat: "community",
+          date: "Feb 20, 2026",
+          title: "SSA Charity Drive Raises ₦480,000 for Local Orphanage",
+          excerpt:
+            "Thanks to the incredible generosity of our school community, this year's charity drive exceeded its target by 60%.",
+          emoji: "🤝",
+          author: "Welfare Committee",
+          read: "4 min",
+          body: "We are overwhelmed with gratitude after our 2026 Charity Drive surpassed all expectations, raising ₦480,000 — 60% above the ₦300,000 target — for Hope Reborn Orphanage in Kaduna.\n\nThe funds will be used to refurbish the orphanage's learning centre and purchase educational materials for over 80 children.\n\nWe extend our heartfelt thanks to every scholar, parent, staff member, and sponsor who contributed. Special recognition goes to JSS 3B who single-handedly raised ₦95,000 through their bake sale and talent show.",
+        },
+        {
+          id: 6,
+          cat: "academic",
+          date: "Feb 14, 2026",
+          title: "SSA Launches New STEM Innovation Lab",
+          excerpt:
+            "The newly equipped STEM Innovation Lab, equipped with 3D printers, robotics kits, and coding workstations, is now open to all scholars.",
+          emoji: "🔬",
+          author: "Academic Office",
+          read: "4 min",
+          body: "Stellar Scholars Academy is delighted to announce the official opening of its state-of-the-art STEM Innovation Lab. The facility, funded through a generous parent and alumni donation drive, features:\n\n• 20 high-spec coding workstations\n• 2 professional-grade 3D printers\n• Arduino and Raspberry Pi robotics kits\n• A dedicated electronics prototyping bench\n\nThe lab will be integrated into the Science and Technology curriculum from the Third Term onwards and will also be available for after-school STEM Club sessions.",
+        },
+        {
+          id: 7,
+          cat: "announcement",
+          date: "Feb 7, 2026",
+          title: "Parent-Teacher Conference — March 1, 2026",
+          excerpt:
+            "The Second Term Parent-Teacher Conference is scheduled for Saturday, March 1. Booking is now open via the school office.",
+          emoji: "👨‍🏫",
+          author: "Admin Office",
+          read: "2 min",
+          body: "The Second Term Parent-Teacher Conference will take place on Saturday, March 1, 2026 from 9am to 1pm.\n\nEach appointment is 15 minutes. To book your slot, contact the school office by phone or in person before February 26. Walk-in appointments cannot be guaranteed.\n\nParents of scholars with ongoing pastoral concerns are especially encouraged to attend. The Vice Principal will also be available for general enquiries throughout the morning.",
+        },
+        {
+          id: 8,
+          cat: "event",
+          date: "Jan 30, 2026",
+          title: "Open Day — Saturday, March 22, 2026",
+          excerpt:
+            "Prospective families are invited to tour the campus, meet staff, and see our facilities up close at our Spring Open Day.",
+          emoji: "🏫",
+          author: "Admissions Office",
+          read: "2 min",
+          body: "We warmly invite prospective families to our Spring Open Day on Saturday, March 22, 2026 from 10am to 2pm.\n\nVisitors will enjoy guided tours of all facilities, including our new STEM Lab, library, sports complex, and performing arts studio. Current students will act as ambassadors, and members of the senior leadership team will be on hand to answer your questions.\n\nNo booking required — simply arrive at the main gate. Light refreshments will be served.",
+        },
+        {
+          id: 9,
+          cat: "sport",
+          date: "Jan 22, 2026",
+          title: "Inter-School Athletics Day — SSA Claims 2nd Overall",
+          excerpt:
+            "Our track-and-field athletes delivered outstanding performances at the Zonal Inter-School Athletics Meet.",
+          emoji: "🏃",
+          author: "Sports Department",
+          read: "3 min",
+          body: 'SSA\'s athletics squad put in a remarkable performance at the 2026 Zonal Inter-School Athletics Meet, finishing 2nd overall out of 22 competing schools.\n\nHighlights included gold medals in the 400m hurdles (Senior Girls), 100m sprint (Junior Boys), and the Mixed 4×100m relay. The team accumulated a total of 14 medals — 5 gold, 6 silver, and 3 bronze.\n\nCoach Miriam Sani stated: "This result is a testament to the dedication of our athletes and the quality of our coaching programme."',
+        },
+      ];
+
+      let visibleCount = 6;
+      let activeFilter = "all";
+      let searchTerm = "";
+
+      function getFilteredPosts() {
+        return allPosts.filter((p) => {
+          const matchCat = activeFilter === "all" || p.cat === activeFilter;
+          const matchSearch =
+            !searchTerm ||
+            p.title.toLowerCase().includes(searchTerm) ||
+            p.excerpt.toLowerCase().includes(searchTerm);
+          return matchCat && matchSearch;
+        });
+      }
+
+      function badgeClass(cat) {
+        const map = {
+          announcement: "badge-announcement",
+          academic: "badge-academic",
+          event: "badge-event",
+          sport: "badge-sport",
+          community: "badge-community",
+        };
+        return map[cat] || "badge-event";
+      }
+      function catLabel(cat) {
+        return (
+          {
+            announcement: "Announcement",
+            academic: "Academic",
+            event: "Event",
+            sport: "Sport",
+            community: "Community",
+          }[cat] || cat
+        );
+      }
+
+      function renderPosts() {
+        const grid = document.getElementById("postsGrid");
+        const filtered = getFilteredPosts();
+        const visible = filtered.slice(0, visibleCount);
+        grid.innerHTML = "";
+        if (filtered.length === 0) {
+          document.getElementById("noResults").classList.remove("hidden");
+          document
+            .getElementById("loadMoreBtn")
+            .parentElement.classList.add("hidden");
+        } else {
+          document.getElementById("noResults").classList.add("hidden");
+          document
+            .getElementById("loadMoreBtn")
+            .parentElement.classList.remove("hidden");
+          document.getElementById("loadMoreBtn").style.display =
+            filtered.length <= visibleCount ? "none" : "inline-block";
+        }
+        visible.forEach((p, i) => {
+          const card = document.createElement("div");
+          card.className =
+            "hover-bar bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden cursor-pointer group transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(196,154,44,0.1)]";
+          card.style.cssText = `opacity:0;transform:translateY(20px);transition:opacity 0.5s ease ${i * 0.07}s,transform 0.5s ease ${i * 0.07}s`;
+          card.onclick = () => openArticle(p.id);
+          card.innerHTML = `
           <div class="news-thumb h-44 flex items-end p-5">
             <div class="absolute inset-0 flex items-center justify-center text-[60px] opacity-15 select-none">${p.emoji}</div>
             <span class="relative z-10 inline-block font-lato text-[9px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-sm border ${badgeClass(p.cat)}">${catLabel(p.cat)}</span>
@@ -764,48 +1786,74 @@
             <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed line-clamp-3">${p.excerpt}</p>
             <div class="mt-4 font-lato text-[11px] font-bold tracking-widest uppercase text-gold flex items-center gap-1">Read More →</div>
           </div>`;
-        grid.appendChild(card);
-        requestAnimationFrame(() => { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; });
-      });
-    }
+          grid.appendChild(card);
+          requestAnimationFrame(() => {
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+          });
+        });
+      }
 
-    function setFilter(cat, btn) {
-      activeFilter = cat;
-      visibleCount = 6;
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      if (btn) btn.classList.add('active');
+      function setFilter(cat, btn) {
+        activeFilter = cat;
+        visibleCount = 6;
+        document
+          .querySelectorAll(".filter-btn")
+          .forEach((b) => b.classList.remove("active"));
+        if (btn) btn.classList.add("active");
+        renderPosts();
+      }
+
+      function filterPosts() {
+        searchTerm = document.getElementById("searchInput").value.toLowerCase();
+        visibleCount = 6;
+        renderPosts();
+      }
+
+      function loadMore() {
+        visibleCount += 3;
+        renderPosts();
+      }
+
+      // Initial render
       renderPosts();
-    }
 
-    function filterPosts() {
-      searchTerm = document.getElementById('searchInput').value.toLowerCase();
-      visibleCount = 6;
-      renderPosts();
-    }
+      // ════════════════════════════════
+      // ARTICLE MODAL
+      // ════════════════════════════════
+      const featuredArticle = {
+        emoji: "🏆",
+        cat: "academic",
+        date: "March 15, 2026",
+        author: "Principal's Office",
+        read: "5 min",
+        title:
+          "SSA Scholars Sweep Regional Mathematics Olympiad — First Place in All Three Categories",
+        body: 'Our JSS and SSS mathematics teams performed brilliantly at the 2026 Regional Schools Mathematics Olympiad held in Kaduna last weekend. Competing against 48 schools from across the state, Stellar Scholars claimed gold in Junior Individual, Senior Individual, and Team categories — a first in the Academy\'s history.\n\nThe Principal, Mrs. Adaobi Nwosu, commended the students and their mathematics teachers: "This achievement reflects the tireless dedication of our scholars and the exceptional quality of our teaching staff. We are immensely proud."\n\nThe winning scholars will represent the school at the National Olympiad in June.',
+      };
 
-    function loadMore() { visibleCount += 3; renderPosts(); }
-
-    // Initial render
-    renderPosts();
-
-    // ════════════════════════════════
-    // ARTICLE MODAL
-    // ════════════════════════════════
-    const featuredArticle = {
-      emoji: '🏆', cat: 'academic', date: 'March 15, 2026', author: "Principal's Office", read: '5 min',
-      title: 'SSA Scholars Sweep Regional Mathematics Olympiad — First Place in All Three Categories',
-      body: 'Our JSS and SSS mathematics teams performed brilliantly at the 2026 Regional Schools Mathematics Olympiad held in Kaduna last weekend. Competing against 48 schools from across the state, Stellar Scholars claimed gold in Junior Individual, Senior Individual, and Team categories — a first in the Academy\'s history.\n\nThe Principal, Mrs. Adaobi Nwosu, commended the students and their mathematics teachers: "This achievement reflects the tireless dedication of our scholars and the exceptional quality of our teaching staff. We are immensely proud."\n\nThe winning scholars will represent the school at the National Olympiad in June.'
-    };
-
-    function openArticle(id) {
-      const p = id === 'featured' ? featuredArticle : allPosts.find(x => x.id === id);
-      if (!p) return;
-      const paragraphs = p.body.split('\n\n').map(para =>
-        para.startsWith('•') || para.includes('\n•')
-          ? `<ul class="list-none space-y-1 my-3">${para.split('\n').filter(l=>l.trim()).map(l=>`<li class="flex gap-2 font-cormorant text-[17px] text-[#4A4A4A] dark:text-[#C0CDD8]"><span class="text-gold flex-shrink-0">✓</span>${l.replace('• ','')}</li>`).join('')}</ul>`
-          : `<p class="font-cormorant text-[18px] leading-relaxed text-[#4A4A4A] dark:text-[#C0CDD8] mb-4">${para}</p>`
-      ).join('');
-      document.getElementById('articleModalContent').innerHTML = `
+      function openArticle(id) {
+        const p =
+          id === "featured"
+            ? featuredArticle
+            : allPosts.find((x) => x.id === id);
+        if (!p) return;
+        const paragraphs = p.body
+          .split("\n\n")
+          .map((para) =>
+            para.startsWith("•") || para.includes("\n•")
+              ? `<ul class="list-none space-y-1 my-3">${para
+                  .split("\n")
+                  .filter((l) => l.trim())
+                  .map(
+                    (l) =>
+                      `<li class="flex gap-2 font-cormorant text-[17px] text-[#4A4A4A] dark:text-[#C0CDD8]"><span class="text-gold flex-shrink-0">✓</span>${l.replace("• ", "")}</li>`,
+                  )
+                  .join("")}</ul>`
+              : `<p class="font-cormorant text-[18px] leading-relaxed text-[#4A4A4A] dark:text-[#C0CDD8] mb-4">${para}</p>`,
+          )
+          .join("");
+        document.getElementById("articleModalContent").innerHTML = `
         <div class="news-thumb rounded-sm min-h-[180px] flex items-center justify-center text-[80px] mb-6">${p.emoji}</div>
         <span class="inline-block font-lato text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-sm border mb-4 ${badgeClass(p.cat)}">${catLabel(p.cat)}</span>
         <h2 class="font-playfair text-[clamp(20px,2.5vw,28px)] font-bold text-navy dark:text-gold-light leading-snug mb-3">${p.title}</h2>
@@ -817,42 +1865,108 @@
         <div class="mt-8 pt-5 border-t border-gold/15">
           <a href="admissions.html#apply" class="inline-block bg-maroon hover:bg-maroon-light text-white font-lato text-[11px] font-bold tracking-widest uppercase px-6 py-2.5 rounded-sm transition-all no-underline">Apply for Admission →</a>
         </div>`;
-      document.getElementById('articleModal').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
+        document.getElementById("articleModal").classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
 
-    function closeModal() {
-      document.getElementById('articleModal').classList.remove('open');
-      document.body.style.overflow = '';
-    }
-    function closeModalOutside(e) { if (e.target === document.getElementById('articleModal')) closeModal(); }
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+      function closeModal() {
+        document.getElementById("articleModal").classList.remove("open");
+        document.body.style.overflow = "";
+      }
+      function closeModalOutside(e) {
+        if (e.target === document.getElementById("articleModal")) closeModal();
+      }
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+      });
 
-    // ════════════════════════════════
-    // UPCOMING EVENTS
-    // ════════════════════════════════
-    const upcomingEvents = [
-      { date: 'Mar 22', day: 'Sat', title: 'Spring Open Day', desc: 'Campus tours and meet-the-staff for prospective families.', type: 'event', time: '10:00 AM – 2:00 PM' },
-      { date: 'Mar 30', day: 'Mon', title: 'SSS 3 Mock Examinations Begin', desc: 'Three-week mock exam period for all SSS 3 scholars across all subjects.', type: 'academic', time: 'All Day' },
-      { date: 'Apr 7', day: 'Mon', title: 'Second Term Examinations — Pre-School & Grade', desc: 'End-of-term examinations for Nursery through Grade 6.', type: 'academic', time: 'All Day' },
-      { date: 'Apr 14', day: 'Mon', title: 'Second Term Examinations — Secondary', desc: 'End-of-term examinations for JSS 1–3 and SSS 1–2.', type: 'academic', time: 'All Day' },
-      { date: 'Apr 19', day: 'Sun', title: 'State Schools Football Finals', desc: 'Eagles FC represent SSA at Ahmadu Bello Stadium, Kaduna.', type: 'sport', time: '3:00 PM Kick-off' },
-      { date: 'Apr 25', day: 'Fri', title: 'Second Term Ends', desc: 'Last day of the second term. Early dismissal at 12:00 PM.', type: 'holiday', time: '12:00 PM' },
-      { date: 'Apr 26', day: 'Sat', title: 'Annual Cultural Day & Inter-House Fiesta', desc: 'A full-day celebration of culture, talent, and inter-house competition.', type: 'event', time: '9:00 AM – 4:00 PM' },
-      { date: 'May 19', day: 'Mon', title: 'Third Term Resumes', desc: 'All scholars return for the Third Term.', type: 'holiday', time: '8:00 AM' },
-    ];
+      // ════════════════════════════════
+      // UPCOMING EVENTS
+      // ════════════════════════════════
+      const upcomingEvents = [
+        {
+          date: "Mar 22",
+          day: "Sat",
+          title: "Spring Open Day",
+          desc: "Campus tours and meet-the-staff for prospective families.",
+          type: "event",
+          time: "10:00 AM – 2:00 PM",
+        },
+        {
+          date: "Mar 30",
+          day: "Mon",
+          title: "SSS 3 Mock Examinations Begin",
+          desc: "Three-week mock exam period for all SSS 3 scholars across all subjects.",
+          type: "academic",
+          time: "All Day",
+        },
+        {
+          date: "Apr 7",
+          day: "Mon",
+          title: "Second Term Examinations — Pre-School & Grade",
+          desc: "End-of-term examinations for Nursery through Grade 6.",
+          type: "academic",
+          time: "All Day",
+        },
+        {
+          date: "Apr 14",
+          day: "Mon",
+          title: "Second Term Examinations — Secondary",
+          desc: "End-of-term examinations for JSS 1–3 and SSS 1–2.",
+          type: "academic",
+          time: "All Day",
+        },
+        {
+          date: "Apr 19",
+          day: "Sun",
+          title: "State Schools Football Finals",
+          desc: "Eagles FC represent SSA at Ahmadu Bello Stadium, Kaduna.",
+          type: "sport",
+          time: "3:00 PM Kick-off",
+        },
+        {
+          date: "Apr 25",
+          day: "Fri",
+          title: "Second Term Ends",
+          desc: "Last day of the second term. Early dismissal at 12:00 PM.",
+          type: "holiday",
+          time: "12:00 PM",
+        },
+        {
+          date: "Apr 26",
+          day: "Sat",
+          title: "Annual Cultural Day & Inter-House Fiesta",
+          desc: "A full-day celebration of culture, talent, and inter-house competition.",
+          type: "event",
+          time: "9:00 AM – 4:00 PM",
+        },
+        {
+          date: "May 19",
+          day: "Mon",
+          title: "Third Term Resumes",
+          desc: "All scholars return for the Third Term.",
+          type: "holiday",
+          time: "8:00 AM",
+        },
+      ];
 
-    const typeColors = { academic: 'bg-gold text-navy', event: 'bg-maroon text-white', sport: 'bg-blue-600 text-white', holiday: 'bg-green-700 text-white' };
+      const typeColors = {
+        academic: "bg-gold text-navy",
+        event: "bg-maroon text-white",
+        sport: "bg-blue-600 text-white",
+        holiday: "bg-green-700 text-white",
+      };
 
-    const eventsList = document.getElementById('eventsList');
-    upcomingEvents.forEach((ev, i) => {
-      const el = document.createElement('div');
-      el.className = 'reveal flex gap-4 bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-4 hover:shadow-[0_4px_20px_rgba(196,154,44,0.08)] transition-all';
-      el.dataset.delay = (i % 4) * 80;
-      el.innerHTML = `
-        <div class="flex-shrink-0 w-14 h-14 rounded-sm ${typeColors[ev.type] || 'bg-gold text-navy'} flex flex-col items-center justify-center text-center">
-          <div class="font-cinzel text-[18px] font-bold leading-none">${ev.date.split(' ')[1]}</div>
-          <div class="font-lato text-[9px] font-bold tracking-widest uppercase leading-none mt-0.5">${ev.date.split(' ')[0]}</div>
+      const eventsList = document.getElementById("eventsList");
+      upcomingEvents.forEach((ev, i) => {
+        const el = document.createElement("div");
+        el.className =
+          "reveal flex gap-4 bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-4 hover:shadow-[0_4px_20px_rgba(196,154,44,0.08)] transition-all";
+        el.dataset.delay = (i % 4) * 80;
+        el.innerHTML = `
+        <div class="flex-shrink-0 w-14 h-14 rounded-sm ${typeColors[ev.type] || "bg-gold text-navy"} flex flex-col items-center justify-center text-center">
+          <div class="font-cinzel text-[18px] font-bold leading-none">${ev.date.split(" ")[1]}</div>
+          <div class="font-lato text-[9px] font-bold tracking-widest uppercase leading-none mt-0.5">${ev.date.split(" ")[0]}</div>
         </div>
         <div class="flex-1 min-w-0">
           <div class="flex items-start justify-between gap-3 flex-wrap">
@@ -861,72 +1975,96 @@
           </div>
           <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-snug mt-0.5">${ev.desc}</p>
         </div>`;
-      eventsList.appendChild(el);
-    });
-
-    // Observe newly added reveal elements
-    eventsList.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-    // ════════════════════════════════
-    // MINI CALENDAR
-    // ════════════════════════════════
-    const calEvents = {
-      '2026-3-22': { label: 'Open Day', color: 'bg-maroon-light' },
-      '2026-3-30': { label: 'SSS 3 Mocks Begin', color: 'bg-gold' },
-      '2026-4-7':  { label: 'Exams: Pre-School & Grade', color: 'bg-gold' },
-      '2026-4-14': { label: 'Exams: Secondary', color: 'bg-gold' },
-      '2026-4-19': { label: 'Football Finals', color: 'bg-blue-500' },
-      '2026-4-25': { label: 'Second Term Ends', color: 'bg-green-600' },
-      '2026-4-26': { label: 'Cultural Day & Fiesta', color: 'bg-maroon-light' },
-      '2026-5-19': { label: 'Third Term Resumes', color: 'bg-green-600' },
-    };
-
-    let calYear = 2026, calMonth = 2; // 0-indexed; 2 = March
-
-    function renderCalendar() {
-      const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-      document.getElementById('calTitle').textContent = `${months[calMonth]} ${calYear}`;
-      const grid = document.getElementById('calGrid');
-      grid.innerHTML = '';
-      const firstDay = new Date(calYear, calMonth, 1).getDay();
-      const daysInMonth = new Date(calYear, calMonth + 1, 0).getDate();
-      const today = new Date();
-
-      // Empty cells before month start
-      for (let i = 0; i < firstDay; i++) {
-        const cell = document.createElement('div');
-        cell.className = 'cal-day other-month p-1 rounded-sm';
-        grid.appendChild(cell);
-      }
-      for (let d = 1; d <= daysInMonth; d++) {
-        const key = `${calYear}-${calMonth}-${d}`;
-        const cell = document.createElement('div');
-        const isToday = today.getFullYear() === calYear && today.getMonth() === calMonth && today.getDate() === d;
-        const hasEvent = calEvents[key];
-        cell.className = `cal-day p-1 rounded-sm cursor-default flex flex-col items-center ${isToday ? 'today' : ''} ${hasEvent ? 'cursor-pointer' : ''}`;
-        cell.innerHTML = `
-          <span class="font-lato text-[11px] ${isToday ? 'text-gold font-bold' : 'text-white/70'}">${d}</span>
-          ${hasEvent ? `<span class="cal-event-dot ${hasEvent.color} mt-0.5"></span>` : ''}`;
-        grid.appendChild(cell);
-      }
-
-      // Render events for this month
-      const evList = document.getElementById('calEventsList');
-      evList.innerHTML = '';
-      const monthEvents = Object.entries(calEvents).filter(([k]) => {
-        const [y,m] = k.split('-').map(Number);
-        return y === calYear && m === calMonth;
+        eventsList.appendChild(el);
       });
-      if (monthEvents.length === 0) {
-        evList.innerHTML = `<div class="text-center py-12 text-white/35 font-cormorant text-[18px]">No events this month.</div>`;
-      } else {
-        monthEvents.forEach(([key, ev]) => {
-          const [y, m, d] = key.split('-');
-          const dateObj = new Date(y, m, d);
-          const dayName = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][dateObj.getDay()];
-          const el = document.createElement('div');
-          el.className = 'flex gap-4 bg-navy-light/50 border border-gold/15 rounded-sm p-4';
-          el.innerHTML = `
+
+      // Observe newly added reveal elements
+      eventsList.querySelectorAll(".reveal").forEach((el) => obs.observe(el));
+
+      // ════════════════════════════════
+      // MINI CALENDAR
+      // ════════════════════════════════
+      const calEvents = {
+        "2026-3-22": { label: "Open Day", color: "bg-maroon-light" },
+        "2026-3-30": { label: "SSS 3 Mocks Begin", color: "bg-gold" },
+        "2026-4-7": { label: "Exams: Pre-School & Grade", color: "bg-gold" },
+        "2026-4-14": { label: "Exams: Secondary", color: "bg-gold" },
+        "2026-4-19": { label: "Football Finals", color: "bg-blue-500" },
+        "2026-4-25": { label: "Second Term Ends", color: "bg-green-600" },
+        "2026-4-26": {
+          label: "Cultural Day & Fiesta",
+          color: "bg-maroon-light",
+        },
+        "2026-5-19": { label: "Third Term Resumes", color: "bg-green-600" },
+      };
+
+      let calYear = 2026,
+        calMonth = 2; // 0-indexed; 2 = March
+
+      function renderCalendar() {
+        const months = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+        document.getElementById("calTitle").textContent =
+          `${months[calMonth]} ${calYear}`;
+        const grid = document.getElementById("calGrid");
+        grid.innerHTML = "";
+        const firstDay = new Date(calYear, calMonth, 1).getDay();
+        const daysInMonth = new Date(calYear, calMonth + 1, 0).getDate();
+        const today = new Date();
+
+        // Empty cells before month start
+        for (let i = 0; i < firstDay; i++) {
+          const cell = document.createElement("div");
+          cell.className = "cal-day other-month p-1 rounded-sm";
+          grid.appendChild(cell);
+        }
+        for (let d = 1; d <= daysInMonth; d++) {
+          const key = `${calYear}-${calMonth}-${d}`;
+          const cell = document.createElement("div");
+          const isToday =
+            today.getFullYear() === calYear &&
+            today.getMonth() === calMonth &&
+            today.getDate() === d;
+          const hasEvent = calEvents[key];
+          cell.className = `cal-day p-1 rounded-sm cursor-default flex flex-col items-center ${isToday ? "today" : ""} ${hasEvent ? "cursor-pointer" : ""}`;
+          cell.innerHTML = `
+          <span class="font-lato text-[11px] ${isToday ? "text-gold font-bold" : "text-white/70"}">${d}</span>
+          ${hasEvent ? `<span class="cal-event-dot ${hasEvent.color} mt-0.5"></span>` : ""}`;
+          grid.appendChild(cell);
+        }
+
+        // Render events for this month
+        const evList = document.getElementById("calEventsList");
+        evList.innerHTML = "";
+        const monthEvents = Object.entries(calEvents).filter(([k]) => {
+          const [y, m] = k.split("-").map(Number);
+          return y === calYear && m === calMonth;
+        });
+        if (monthEvents.length === 0) {
+          evList.innerHTML = `<div class="text-center py-12 text-white/35 font-cormorant text-[18px]">No events this month.</div>`;
+        } else {
+          monthEvents.forEach(([key, ev]) => {
+            const [y, m, d] = key.split("-");
+            const dateObj = new Date(y, m, d);
+            const dayName = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][
+              dateObj.getDay()
+            ];
+            const el = document.createElement("div");
+            el.className =
+              "flex gap-4 bg-navy-light/50 border border-gold/15 rounded-sm p-4";
+            el.innerHTML = `
             <div class="flex-shrink-0 w-14 h-14 rounded-sm ${ev.color} flex flex-col items-center justify-center text-center text-white">
               <div class="font-cinzel text-[20px] font-bold leading-none">${d}</div>
               <div class="font-lato text-[9px] font-bold tracking-widest uppercase">${dayName}</div>
@@ -935,33 +2073,41 @@
               <div class="font-lato text-[13px] font-bold text-white">${ev.label}</div>
               <div class="font-cormorant text-[14px] text-white/50 mt-0.5">${months[parseInt(m)]} ${d}, ${y}</div>
             </div>`;
-          evList.appendChild(el);
-        });
+            evList.appendChild(el);
+          });
+        }
       }
-    }
 
-    function prevMonth() {
-      calMonth--;
-      if (calMonth < 0) { calMonth = 11; calYear--; }
+      function prevMonth() {
+        calMonth--;
+        if (calMonth < 0) {
+          calMonth = 11;
+          calYear--;
+        }
+        renderCalendar();
+      }
+      function nextMonth() {
+        calMonth++;
+        if (calMonth > 11) {
+          calMonth = 0;
+          calYear++;
+        }
+        renderCalendar();
+      }
       renderCalendar();
-    }
-    function nextMonth() {
-      calMonth++;
-      if (calMonth > 11) { calMonth = 0; calYear++; }
-      renderCalendar();
-    }
-    renderCalendar();
 
-    // ════════════════════════════════
-    // NEWSLETTER
-    // ════════════════════════════════
-    function subscribeNl() {
-      const email = document.getElementById('nlEmail').value.trim();
-      if (!email || !email.includes('@')) { document.getElementById('nlEmail').style.borderColor = '#7B1A2E'; return; }
-      document.getElementById('nlForm').style.display = 'none';
-      document.getElementById('nlSuccess').classList.remove('hidden');
-    }
-  </script>
-
-</body>
+      // ════════════════════════════════
+      // NEWSLETTER
+      // ════════════════════════════════
+      function subscribeNl() {
+        const email = document.getElementById("nlEmail").value.trim();
+        if (!email || !email.includes("@")) {
+          document.getElementById("nlEmail").style.borderColor = "#7B1A2E";
+          return;
+        }
+        document.getElementById("nlForm").style.display = "none";
+        document.getElementById("nlSuccess").classList.remove("hidden");
+      }
+    </script>
+  </body>
 </html>
