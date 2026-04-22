@@ -1,1132 +1,2599 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="light scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admissions | Stellar Scholars Academy</title>
-  <link rel="shortcut icon" href="imgs/logo2.jpg" type="image/x-icon">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500;600&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            gold:          '#C49A2C',
-            'gold-light':  '#E8C56A',
-            'gold-dark':   '#9A7A1E',
-            maroon:        '#7B1A2E',
-            'maroon-light':'#A02040',
-            navy:          '#1A2A4A',
-            'navy-light':  '#243558',
-            cream:         '#FAF6EE',
-            'warm-white':  '#FFFDF8',
-          },
-          fontFamily: {
-            playfair:  ['"Playfair Display"', 'serif'],
-            cormorant: ['"Cormorant Garamond"', 'serif'],
-            cinzel:    ['Cinzel', 'serif'],
-            lato:      ['Lato', 'sans-serif'],
-          },
-          backgroundImage: {
-            'gold-maroon':   'linear-gradient(to right, #C49A2C, #7B1A2E)',
-            'maroon-navy':   'linear-gradient(135deg, #7B1A2E 0%, #1A2A4A 100%)',
-            'hero-pattern':  'repeating-linear-gradient(45deg, rgba(196,154,44,0.04) 0, rgba(196,154,44,0.04) 1px, transparent 0, transparent 24px)',
-            'img-placeholder':'linear-gradient(135deg, rgba(26,42,74,0.15) 0%, rgba(123,26,46,0.1) 100%)',
-          },
-          keyframes: {
-            fadeUp: {
-              '0%':   { opacity: '0', transform: 'translateY(30px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' },
+    <title>
+      Stellar Scholars Academy | Excellence in Education & Character | Ogun
+      State, Nigeria
+    </title>
+
+    <meta
+      name="description"
+      content="Stellar Scholars Academy offers world-class Pre-School, Grade School, and Secondary School education in Obafemi Owode, Ogun State. Nurturing minds and building futures through academic excellence, pastoral care, and strong values. 2026/2027 Admissions now open."
+    />
+
+    <meta
+      name="keywords"
+      content="Stellar Scholars Academy, best school in Ogun State, private school Nigeria, secondary school Obafemi Owode, grade school Nigeria, pre-school Ogun State, top rated school Nigeria, admissions 2026, Ikoyi daycare, SSA Nigeria"
+    />
+
+    <meta name="author" content="Stellar Scholars Academy" />
+    <meta name="robots" content="admissions, follow" />
+    <link
+      rel="canonical"
+      href="https://stellarscholarsacademy.com.ng/admissions.html"
+    />
+
+    <!-- ✅ OPEN GRAPH (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://stellarscholarsacademy.com.ng/admissions.html"
+    />
+    <meta
+      property="og:title"
+      content="Stellar Scholars Academy | Every Learner is a Light"
+    />
+    <meta
+      property="og:description"
+      content="A nurturing school community in Ogun State, Nigeria, where every scholar discovers their unique potential. Pre-School, Grade & Secondary School. Admissions open for 2026/2027."
+    />
+    <meta
+      property="og:image"
+      content="https://stellarscholarsacademy.com.ng/imgs/logo2.jpg"
+    />
+    <meta property="og:image:alt" content="Stellar Scholars Academy Logo" />
+    <meta property="og:site_name" content="Stellar Scholars Academy" />
+    <meta property="og:locale" content="en_NG" />
+
+    <!-- ✅ TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Stellar Scholars Academy | Excellence in Education & Character"
+    />
+    <meta
+      name="twitter:description"
+      content="Nurturing scholars in Ogun State, Nigeria with academic excellence, pastoral care, and strong values. Pre-School to Secondary School. 2026/2027 Admissions now open."
+    />
+    <meta
+      name="twitter:image"
+      content="https://stellarscholarsacademy.com.ng/imgs/logo2.jpg"
+    />
+
+    <!-- ✅ GEO / LOCAL SEO -->
+    <meta name="geo.region" content="NG-OG" />
+    <meta name="geo.placename" content="Obafemi Owode, Ogun State, Nigeria" />
+    <meta name="ICBM" content="6.9965, 3.5986" />
+
+    <!-- ✅ STRUCTURED DATA (JSON-LD) — paste inside a <script> tag -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "School",
+        "name": "Stellar Scholars Academy",
+        "url": "https://stellarscholarsacademy.com.ng",
+        "logo": "https://stellarscholarsacademy.com.ng/imgs/logo2.jpg",
+        "description": "Excellence in Education & Character. Stellar Scholars Academy nurtures scholars who lead with knowledge, integrity, and compassion.",
+        "telephone": "+2347067374352",
+        "email": "stellarscholarsacademy@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Obafemi Owode L.G.A",
+          "addressRegion": "Ogun State",
+          "addressCountry": "NG"
+        },
+        "foundingDate": "2026",
+        "slogan": "Every Learner is a Light",
+        "hasMap": "https://stellarscholarsacademy.com.ng",
+        "sameAs": []
+      }
+    </script>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500;600&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              gold: "#C49A2C",
+              "gold-light": "#E8C56A",
+              "gold-dark": "#9A7A1E",
+              maroon: "#7B1A2E",
+              "maroon-light": "#A02040",
+              navy: "#1A2A4A",
+              "navy-light": "#243558",
+              cream: "#FAF6EE",
+              "warm-white": "#FFFDF8",
+            },
+            fontFamily: {
+              playfair: ['"Playfair Display"', "serif"],
+              cormorant: ['"Cormorant Garamond"', "serif"],
+              cinzel: ["Cinzel", "serif"],
+              lato: ["Lato", "sans-serif"],
+            },
+            backgroundImage: {
+              "gold-maroon": "linear-gradient(to right, #C49A2C, #7B1A2E)",
+              "maroon-navy":
+                "linear-gradient(135deg, #7B1A2E 0%, #1A2A4A 100%)",
+              "hero-pattern":
+                "repeating-linear-gradient(45deg, rgba(196,154,44,0.04) 0, rgba(196,154,44,0.04) 1px, transparent 0, transparent 24px)",
+              "img-placeholder":
+                "linear-gradient(135deg, rgba(26,42,74,0.15) 0%, rgba(123,26,46,0.1) 100%)",
+            },
+            keyframes: {
+              fadeUp: {
+                "0%": { opacity: "0", transform: "translateY(30px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+            },
+            animation: {
+              "fade-up": "fadeUp 0.7s ease both",
+              "fade-up-1": "fadeUp 0.7s ease 0.1s both",
+              "fade-up-2": "fadeUp 0.7s ease 0.2s both",
+              "fade-up-3": "fadeUp 0.7s ease 0.3s both",
+              "fade-up-4": "fadeUp 0.7s ease 0.4s both",
             },
           },
-          animation: {
-            'fade-up':   'fadeUp 0.7s ease both',
-            'fade-up-1': 'fadeUp 0.7s ease 0.1s both',
-            'fade-up-2': 'fadeUp 0.7s ease 0.2s both',
-            'fade-up-3': 'fadeUp 0.7s ease 0.3s both',
-            'fade-up-4': 'fadeUp 0.7s ease 0.4s both',
-          },
         },
-      },
-    }
-  </script>
+      };
+    </script>
 
-  <style>
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #f4f0e8; }
-    .dark ::-webkit-scrollbar-track { background: #0F1824; }
-    ::-webkit-scrollbar-thumb { background: #C49A2C; border-radius: 3px; }
+    <style>
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f4f0e8;
+      }
+      .dark ::-webkit-scrollbar-track {
+        background: #0f1824;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c49a2c;
+        border-radius: 3px;
+      }
 
-    .nav-link { position: relative; padding-bottom: 3px; }
-    .nav-link::after {
-      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
-      height: 2px; background: #C49A2C;
-      transform: scaleX(0); transition: transform 0.2s ease; border-radius: 1px;
-    }
-    .nav-link:hover::after,
-    .nav-link.active::after { transform: scaleX(1); }
+      .nav-link {
+        position: relative;
+        padding-bottom: 3px;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #c49a2c;
+        transform: scaleX(0);
+        transition: transform 0.2s ease;
+        border-radius: 1px;
+      }
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        transform: scaleX(1);
+      }
 
-    .section-label-line { position: relative; padding-left: 36px; }
-    .section-label-line::before {
-      content: ''; position: absolute; left: 0; top: 50%;
-      width: 24px; height: 1px; background: #C49A2C;
-      transform: translateY(-50%);
-    }
+      .section-label-line {
+        position: relative;
+        padding-left: 36px;
+      }
+      .section-label-line::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 24px;
+        height: 1px;
+        background: #c49a2c;
+        transform: translateY(-50%);
+      }
 
-    .pillar-card { position: relative; overflow: hidden; }
-    .pillar-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(to right, #C49A2C, #7B1A2E);
-      transform: scaleX(0); transition: transform 0.3s ease;
-    }
-    .pillar-card:hover::before { transform: scaleX(1); }
+      .pillar-card {
+        position: relative;
+        overflow: hidden;
+      }
+      .pillar-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(to right, #c49a2c, #7b1a2e);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+      .pillar-card:hover::before {
+        transform: scaleX(1);
+      }
 
-    .hover-bar { position: relative; overflow: hidden; }
-    .hover-bar::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(to right, #C49A2C, #7B1A2E);
-      transform: scaleX(0); transition: transform 0.3s ease;
-    }
-    .hover-bar:hover::before { transform: scaleX(1); }
+      .hover-bar {
+        position: relative;
+        overflow: hidden;
+      }
+      .hover-bar::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(to right, #c49a2c, #7b1a2e);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+      .hover-bar:hover::before {
+        transform: scaleX(1);
+      }
 
-    .admissions-pattern {
-      background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 0, transparent 20px);
-    }
+      .admissions-pattern {
+        background-image: repeating-linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 0.03) 0,
+          rgba(255, 255, 255, 0.03) 1px,
+          transparent 0,
+          transparent 20px
+        );
+      }
 
-    .diag-pattern {
-      background-image: repeating-linear-gradient(135deg, rgba(196,154,44,0.05) 0, rgba(196,154,44,0.05) 1px, transparent 0, transparent 28px);
-    }
+      .diag-pattern {
+        background-image: repeating-linear-gradient(
+          135deg,
+          rgba(196, 154, 44, 0.05) 0,
+          rgba(196, 154, 44, 0.05) 1px,
+          transparent 0,
+          transparent 28px
+        );
+      }
 
-    /* Step connector line */
-    .step-connector::after {
-      content: '';
-      position: absolute;
-      top: 28px;
-      left: calc(50% + 28px);
-      right: calc(-50% + 28px);
-      height: 2px;
-      background: linear-gradient(to right, #C49A2C, rgba(196,154,44,0.2));
-    }
+      /* Step connector line */
+      .step-connector::after {
+        content: "";
+        position: absolute;
+        top: 28px;
+        left: calc(50% + 28px);
+        right: calc(-50% + 28px);
+        height: 2px;
+        background: linear-gradient(to right, #c49a2c, rgba(196, 154, 44, 0.2));
+      }
 
-    /* Form inputs */
-    .form-input {
-      width: 100%;
-      background: white;
-      border: 1px solid rgba(196,154,44,0.25);
-      border-radius: 2px;
-      padding: 12px 16px;
-      font-family: 'Lato', sans-serif;
-      font-size: 14px;
-      color: #2A2A2A;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      outline: none;
-    }
-    .dark .form-input {
-      background: #1A2A4A;
-      border-color: rgba(196,154,44,0.2);
-      color: #C8D4E0;
-    }
-    .form-input:focus {
-      border-color: #C49A2C;
-      box-shadow: 0 0 0 3px rgba(196,154,44,0.08);
-    }
-    .form-input::placeholder { color: #aaa; }
-    .dark .form-input::placeholder { color: #6A7A8A; }
+      /* Form inputs */
+      .form-input {
+        width: 100%;
+        background: white;
+        border: 1px solid rgba(196, 154, 44, 0.25);
+        border-radius: 2px;
+        padding: 12px 16px;
+        font-family: "Lato", sans-serif;
+        font-size: 14px;
+        color: #2a2a2a;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+        outline: none;
+      }
+      .dark .form-input {
+        background: #1a2a4a;
+        border-color: rgba(196, 154, 44, 0.2);
+        color: #c8d4e0;
+      }
+      .form-input:focus {
+        border-color: #c49a2c;
+        box-shadow: 0 0 0 3px rgba(196, 154, 44, 0.08);
+      }
+      .form-input::placeholder {
+        color: #aaa;
+      }
+      .dark .form-input::placeholder {
+        color: #6a7a8a;
+      }
 
-    select.form-input { cursor: pointer; }
+      select.form-input {
+        cursor: pointer;
+      }
 
-    /* Accordion */
-    .faq-body {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.35s ease;
-    }
-    .faq-body.open { max-height: 400px; }
-    .faq-icon { transition: transform 0.3s ease; }
-    .faq-item.open .faq-icon { transform: rotate(45deg); }
+      /* Accordion */
+      .faq-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+      }
+      .faq-body.open {
+        max-height: 400px;
+      }
+      .faq-icon {
+        transition: transform 0.3s ease;
+      }
+      .faq-item.open .faq-icon {
+        transform: rotate(45deg);
+      }
 
-    /* Fee table */
-    .fee-row:hover { background: rgba(196,154,44,0.04); }
-    .dark .fee-row:hover { background: rgba(196,154,44,0.06); }
+      /* Fee table */
+      .fee-row:hover {
+        background: rgba(196, 154, 44, 0.04);
+      }
+      .dark .fee-row:hover {
+        background: rgba(196, 154, 44, 0.06);
+      }
 
-    /* Reveal animations */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-  </style>
-</head>
+      /* Reveal animations */
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
 
-<body class="font-lato bg-warm-white dark:bg-[#0F1824] text-[#4A4A4A] dark:text-[#C8D4E0] overflow-x-hidden transition-colors duration-300">
-  <!-- ══════════════════════════════════════════
+  <body
+    class="font-lato bg-warm-white dark:bg-[#0F1824] text-[#4A4A4A] dark:text-[#C8D4E0] overflow-x-hidden transition-colors duration-300"
+  >
+    <!-- ══════════════════════════════════════════
        NAVBAR
   ══════════════════════════════════════════ -->
-  <nav id="navbar" class="fixed left-0 right-0 z-50 bg-warm-white/90 dark:bg-[#0F1824]/50 backdrop-blur-md border-b border-gold/20 dark:border-gold/10 shadow-[0_2px_16px_rgba(26,42,74,0.07)] dark:shadow-[0_2px_16px_rgba(0,0,0,0.3)] transition-all duration-300" >
-    <div class="max-w-7xl mx-auto px-5 lg:px-10 h-[72px] flex items-center justify-between gap-5">
-      <!-- Brand -->
-      <a href="index.html" class="flex items-center gap-3 flex-shrink-0 no-underline group">
-        <img src="imgs/logo2.jpg" alt="school-logo" class="h-11 w-11">
-        <div class="font-cinzel text-[13px] font-semibold text-navy dark:text-gold-light leading-tight tracking-wide">
-          STELLAR SCHOLARS ACADEMY
-          <span class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5">LUX ET PAX · EST. 2026</span>
+    <nav
+      id="navbar"
+      class="fixed left-0 right-0 z-50 bg-warm-white/90 dark:bg-[#0F1824]/50 backdrop-blur-md border-b border-gold/20 dark:border-gold/10 shadow-[0_2px_16px_rgba(26,42,74,0.07)] dark:shadow-[0_2px_16px_rgba(0,0,0,0.3)] transition-all duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto px-5 lg:px-10 h-[72px] flex items-center justify-between gap-5"
+      >
+        <!-- Brand -->
+        <a
+          href="index.html"
+          class="flex items-center gap-3 flex-shrink-0 no-underline group"
+        >
+          <img src="imgs/logo2.jpg" alt="school-logo" class="h-11 w-11" />
+          <div
+            class="font-cinzel text-[13px] font-semibold hidden lg:block text-navy dark:text-gold-light leading-tight tracking-wide"
+          >
+            STELLAR SCHOLARS ACADEMY
+            <span
+              class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5"
+              >LUX ET PAX · EST. 2026</span
+            >
+          </div>
+        </a>
+
+        <!-- Nav Links -->
+        <ul class="hidden lg:flex items-center gap-7 list-none">
+          <li>
+            <a
+              href="index.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="about.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="academics.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] transition-colors duration-200 no-underline"
+              >Academics</a
+            >
+          </li>
+          <li>
+            <a
+              href="school-life.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline"
+              >School Life</a
+            >
+          </li>
+          <li>
+            <a
+              href="news.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline"
+              >News</a
+            >
+          </li>
+          <li>
+            <a
+              href="gallery.html"
+              class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline"
+              >Gallery</a
+            >
+          </li>
+        </ul>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-2.5 flex-shrink-0">
+          <a
+            href="#apply"
+            class="hidden sm:inline-block bg-maroon hover:bg-maroon-light text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all duration-200 hover:-translate-y-px no-underline"
+            >Enroll Now</a
+          >
+          <a
+            href="#"
+            class="hidden sm:inline-block border border-gold text-gold hover:bg-gold hover:text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all duration-200 no-underline"
+            >Book a Tour</a
+          >
+          <button
+            id="themeBtn"
+            aria-label="Toggle dark/light mode"
+            class="w-9 h-9 rounded-full bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-[15px] transition-all duration-300 hover:border-gold hover:rotate-12 cursor-pointer flex-shrink-0"
+          >
+            ☀️
+          </button>
+          <button
+            id="mobileMenuBtn"
+            aria-label="Open menu"
+            class="lg:hidden w-9 h-9 rounded-sm bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-navy dark:text-gold transition-all duration-200 hover:border-gold cursor-pointer flex-shrink-0"
+          >
+            <svg
+              width="18"
+              height="14"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <line x1="0" y1="1" x2="18" y2="1" />
+              <line x1="0" y1="7" x2="18" y2="7" />
+              <line x1="0" y1="13" x2="18" y2="13" />
+            </svg>
+          </button>
         </div>
-      </a>
-
-      <!-- Nav Links -->
-      <ul class="hidden lg:flex items-center gap-7 list-none">
-        <li><a href="index.html" class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">Home</a></li>
-        <li><a href="about.html" class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">About Us</a></li>
-        <li><a href="academics.html" class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] transition-colors duration-200 no-underline">Academics</a></li>
-        <li><a href="school-life.html" class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">School Life</a></li>
-        <li><a href="news.html" class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">News</a></li>
-        <li><a href="gallery.html" class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors duration-200 no-underline">Gallery</a></li>
-      </ul>
-
-      <!-- Actions -->
-      <div class="flex items-center gap-2.5 flex-shrink-0">
-        <a href="#apply" class="hidden sm:inline-block bg-maroon hover:bg-maroon-light text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all duration-200 hover:-translate-y-px no-underline">Enroll Now</a>
-        <a href="#" class="hidden sm:inline-block border border-gold text-gold hover:bg-gold hover:text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all duration-200 no-underline">Book a Tour</a>
-        <button id="themeBtn" aria-label="Toggle dark/light mode"
-          class="w-9 h-9 rounded-full bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-[15px] transition-all duration-300 hover:border-gold hover:rotate-12 cursor-pointer flex-shrink-0">☀️</button>
-        <button id="mobileMenuBtn" aria-label="Open menu"
-          class="lg:hidden w-9 h-9 rounded-sm bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-navy dark:text-gold transition-all duration-200 hover:border-gold cursor-pointer flex-shrink-0">
-          <svg width="18" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-            <line x1="0" y1="1" x2="18" y2="1"/><line x1="0" y1="7" x2="18" y2="7"/><line x1="0" y1="13" x2="18" y2="13"/>
-          </svg>
-        </button>
       </div>
-    </div>
 
-    <!-- Mobile Drawer -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-warm-white dark:bg-[#0F1824] border-t border-gold/20 px-5 py-4">
-      <ul class="flex flex-col gap-1 list-none mb-4">
-        <li><a href="ssa-about.html" class="block font-lato text-[13px] font-bold tracking-wide text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline">About Us</a></li>
-        <li><a href="ssa-academics.html" class="block font-lato text-[13px] font-bold tracking-wide text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline">Academics</a></li>
-        <li><a href="ssa-admissions.html" class="block font-lato text-[13px] font-bold tracking-wide text-maroon dark:text-gold py-2.5 border-b border-gold/10 no-underline">Admissions</a></li>
-        <li><a href="#" class="block font-lato text-[13px] font-bold tracking-wide text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline">School Life</a></li>
-        <li><a href="#" class="block font-lato text-[13px] font-bold tracking-wide text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline">News</a></li>
-        <li><a href="ssa-gallery.html" class="block font-lato text-[13px] font-bold tracking-wide text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 no-underline">Gallery</a></li>
-      </ul>
-      <div class="flex gap-2.5">
-        <a href="#apply" class="flex-1 text-center bg-maroon hover:bg-maroon-light text-white text-[11px] font-bold font-lato tracking-widest uppercase px-4 py-2.5 rounded-sm transition-all no-underline">Enroll Now</a>
-        <a href="#" class="flex-1 text-center border border-gold text-gold hover:bg-gold hover:text-white text-[11px] font-bold font-lato tracking-widest uppercase px-4 py-2.5 rounded-sm transition-all no-underline">Book a Tour</a>
+      <!-- Mobile Drawer -->
+      <div
+        id="mobileMenu"
+        class="hidden lg:hidden bg-warm-white dark:bg-[#0F1824] border-t border-gold/20 px-5 py-4"
+      >
+        <ul class="flex flex-col gap-1 list-none mb-4">
+          <li>
+            <a
+              href="about.html"
+              class="block font-lato text-[13px] font-bold tracking-wide text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="academics.html"
+              class="block font-lato text-[13px] font-bold tracking-wide text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline"
+              >Academics</a
+            >
+          </li>
+          <li>
+            <a
+              href="admissions.html"
+              class="block font-lato text-[13px] font-bold tracking-wide text-maroon dark:text-gold py-2.5 border-b border-gold/10 no-underline"
+              >Admissions</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block font-lato text-[13px] font-bold tracking-wide text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline"
+              >School Life</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block font-lato text-[13px] font-bold tracking-wide text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 border-b border-gold/10 no-underline"
+              >News</a
+            >
+          </li>
+          <li>
+            <a
+              href="gallery.html"
+              class="block font-lato text-[13px] font-bold tracking-wide text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold py-2.5 no-underline"
+              >Gallery</a
+            >
+          </li>
+        </ul>
+        <div class="flex gap-2.5">
+          <a
+            href="#apply"
+            class="flex-1 text-center bg-maroon hover:bg-maroon-light text-white text-[11px] font-bold font-lato tracking-widest uppercase px-4 py-2.5 rounded-sm transition-all no-underline"
+            >Enroll Now</a
+          >
+          <a
+            href="#"
+            class="flex-1 text-center border border-gold text-gold hover:bg-gold hover:text-white text-[11px] font-bold font-lato tracking-widest uppercase px-4 py-2.5 rounded-sm transition-all no-underline"
+            >Book a Tour</a
+          >
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- ══════════════════════════════════════════
+    <!-- ══════════════════════════════════════════
        PAGE HERO
   ══════════════════════════════════════════ -->
-  <section class="bg-navy dark:bg-[#080E18] diag-pattern relative overflow-hidden" style="padding-top: calc(36px + 72px)">
-    <div class="absolute inset-0 bg-hero-pattern pointer-events-none opacity-60"></div>
-    <!-- Gold orbs -->
-    <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-gradient-to-bl from-gold/10 to-transparent pointer-events-none"></div>
-    <div class="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-gradient-to-tr from-maroon/20 to-transparent pointer-events-none"></div>
+    <section
+      class="bg-navy dark:bg-[#080E18] diag-pattern relative overflow-hidden"
+      style="padding-top: calc(36px + 72px)"
+    >
+      <div
+        class="absolute inset-0 bg-hero-pattern pointer-events-none opacity-60"
+      ></div>
+      <!-- Gold orbs -->
+      <div
+        class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-gradient-to-bl from-gold/10 to-transparent pointer-events-none"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-gradient-to-tr from-maroon/20 to-transparent pointer-events-none"
+      ></div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 py-20 lg:py-28">
-      <div class="max-w-3xl">
-        <!-- Breadcrumb -->
-        <div class="animate-fade-up flex items-center gap-2 mb-8 text-[11px] font-lato tracking-widest uppercase text-white/40">
-          <a href="index.html" class="hover:text-gold transition-colors no-underline text-white/40">Home</a>
-          <span class="text-gold/50">›</span>
-          <span class="text-gold">Admissions</span>
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 py-20 lg:py-28"
+      >
+        <div class="max-w-3xl">
+          <!-- Breadcrumb -->
+          <div
+            class="animate-fade-up flex items-center gap-2 mb-8 text-[11px] font-lato tracking-widest uppercase text-white/40"
+          >
+            <a
+              href="index.html"
+              class="hover:text-gold transition-colors no-underline text-white/40"
+              >Home</a
+            >
+            <span class="text-gold/50">›</span>
+            <span class="text-gold">Admissions</span>
+          </div>
+
+          <div
+            class="animate-fade-up-1 section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4"
+          >
+            Join Our Community
+          </div>
+          <h1
+            class="animate-fade-up-2 font-playfair font-bold text-white leading-tight mb-6"
+            style="font-size: clamp(36px, 4.5vw, 58px)"
+          >
+            Begin Your Child's<br /><em class="italic text-gold-light"
+              >Journey of Excellence</em
+            >
+          </h1>
+          <p
+            class="animate-fade-up-3 font-cormorant text-[19px] text-white/65 leading-relaxed max-w-xl mb-10"
+          >
+            We welcome families who share our commitment to academic excellence,
+            character development, and a purposeful education. Discover how to
+            join the Stellar Scholars family.
+          </p>
+          <div class="animate-fade-up-4 flex flex-wrap gap-3">
+            <a
+              href="#apply"
+              class="inline-block bg-gold hover:bg-gold-light text-navy font-lato text-[12px] font-bold tracking-widest uppercase px-8 py-3.5 rounded-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(196,154,44,0.35)] no-underline"
+              >Start Application</a
+            >
+            <a
+              href="#process"
+              class="inline-block border border-white/30 hover:border-gold hover:text-gold text-white font-lato text-[12px] font-bold tracking-widest uppercase px-8 py-3.5 rounded-sm transition-all duration-200 no-underline"
+              >View Process</a
+            >
+          </div>
         </div>
 
-        <div class="animate-fade-up-1 section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">Join Our Community</div>
-        <h1 class="animate-fade-up-2 font-playfair font-bold text-white leading-tight mb-6" style="font-size:clamp(36px,4.5vw,58px)">
-          Begin Your Child's<br><em class="italic text-gold-light">Journey of Excellence</em>
-        </h1>
-        <p class="animate-fade-up-3 font-cormorant text-[19px] text-white/65 leading-relaxed max-w-xl mb-10">
-          We welcome families who share our commitment to academic excellence, character development, and a purposeful education. Discover how to join the Stellar Scholars family.
-        </p>
-        <div class="animate-fade-up-4 flex flex-wrap gap-3">
-          <a href="#apply" class="inline-block bg-gold hover:bg-gold-light text-navy font-lato text-[12px] font-bold tracking-widest uppercase px-8 py-3.5 rounded-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(196,154,44,0.35)] no-underline">Start Application</a>
-          <a href="#process" class="inline-block border border-white/30 hover:border-gold hover:text-gold text-white font-lato text-[12px] font-bold tracking-widest uppercase px-8 py-3.5 rounded-sm transition-all duration-200 no-underline">View Process</a>
+        <!-- Quick Stats -->
+        <div
+          class="mt-16 pt-10 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-10"
+        >
+          <div class="animate-fade-up">
+            <div class="font-cinzel text-[28px] font-bold text-gold">4</div>
+            <div
+              class="font-lato text-[10px] tracking-widest uppercase text-white/45 mt-1"
+            >
+              School Divisions
+            </div>
+          </div>
+          <div class="animate-fade-up-1">
+            <div class="font-cinzel text-[28px] font-bold text-gold">
+              ₦20,000
+            </div>
+            <div
+              class="font-lato text-[10px] tracking-widest uppercase text-white/45 mt-1"
+            >
+              Application Fee
+            </div>
+          </div>
+          <div class="animate-fade-up-2">
+            <div class="font-cinzel text-[28px] font-bold text-gold">
+              June 30
+            </div>
+            <div
+              class="font-lato text-[10px] tracking-widest uppercase text-white/45 mt-1"
+            >
+              Application Deadline
+            </div>
+          </div>
+          <div class="animate-fade-up-3">
+            <div class="font-cinzel text-[28px] font-bold text-gold">2 Wks</div>
+            <div
+              class="font-lato text-[10px] tracking-widest uppercase text-white/45 mt-1"
+            >
+              Response Time
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Quick Stats -->
-      <div class="mt-16 pt-10 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-10">
-        <div class="animate-fade-up">
-          <div class="font-cinzel text-[28px] font-bold text-gold">4</div>
-          <div class="font-lato text-[10px] tracking-widest uppercase text-white/45 mt-1">School Divisions</div>
-        </div>
-        <div class="animate-fade-up-1">
-          <div class="font-cinzel text-[28px] font-bold text-gold">₦5,000</div>
-          <div class="font-lato text-[10px] tracking-widest uppercase text-white/45 mt-1">Application Fee</div>
-        </div>
-        <div class="animate-fade-up-2">
-          <div class="font-cinzel text-[28px] font-bold text-gold">June 30</div>
-          <div class="font-lato text-[10px] tracking-widest uppercase text-white/45 mt-1">Application Deadline</div>
-        </div>
-        <div class="animate-fade-up-3">
-          <div class="font-cinzel text-[28px] font-bold text-gold">2 Wks</div>
-          <div class="font-lato text-[10px] tracking-widest uppercase text-white/45 mt-1">Response Time</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
+    <!-- ══════════════════════════════════════════
        ADMISSIONS PROCESS — 5 STEPS
   ══════════════════════════════════════════ -->
-  <section id="process" class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-24">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16 reveal">
-        <div class="section-label-line inline-block font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">How It Works</div>
-        <h2 class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(26px,3vw,40px)] leading-snug mb-4">The Admissions Process</h2>
-        <div class="w-16 h-[3px] bg-gold-maroon mx-auto mb-6"></div>
-        <p class="font-cormorant text-[18px] text-[#5A5A5A] dark:text-[#A0B0C0] max-w-xl mx-auto leading-relaxed">A clear, straightforward journey from enquiry to enrolment — we're with you every step of the way.</p>
+    <section
+      id="process"
+      class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-24"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16 reveal">
+          <div
+            class="section-label-line inline-block font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4"
+          >
+            How It Works
+          </div>
+          <h2
+            class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(26px,3vw,40px)] leading-snug mb-4"
+          >
+            The Admissions Process
+          </h2>
+          <div class="w-16 h-[3px] bg-gold-maroon mx-auto mb-6"></div>
+          <p
+            class="font-cormorant text-[18px] text-[#5A5A5A] dark:text-[#A0B0C0] max-w-xl mx-auto leading-relaxed"
+          >
+            A clear, straightforward journey from enquiry to enrolment — we're
+            with you every step of the way.
+          </p>
+        </div>
+
+        <!-- Steps Grid -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4"
+        >
+          <!-- Step 1 -->
+          <div
+            class="reveal pillar-card bg-warm-white dark:bg-[#1A2A4A]/50 border border-gold/15 dark:border-gold/10 rounded-sm p-6 text-center hover:-translate-y-1 transition-all duration-300 hover:shadow-[0_8px_32px_rgba(196,154,44,0.12)]"
+          >
+            <div
+              class="w-14 h-14 rounded-full bg-gold/10 border-2 border-gold/30 flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="font-cinzel text-[20px] font-bold text-gold">1</span>
+            </div>
+            <div class="text-2xl mb-3">📋</div>
+            <h3
+              class="font-cinzel text-[11px] font-bold tracking-[0.1em] text-navy dark:text-gold-light uppercase mb-2"
+            >
+              Enquiry
+            </h3>
+            <p
+              class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed"
+            >
+              Complete our online enquiry form or visit the school to express
+              interest and receive our prospectus.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div
+            class="reveal pillar-card bg-warm-white dark:bg-[#1A2A4A]/50 border border-gold/15 dark:border-gold/10 rounded-sm p-6 text-center hover:-translate-y-1 transition-all duration-300 hover:shadow-[0_8px_32px_rgba(196,154,44,0.12)]"
+            data-delay="100"
+          >
+            <div
+              class="w-14 h-14 rounded-full bg-gold/10 border-2 border-gold/30 flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="font-cinzel text-[20px] font-bold text-gold">2</span>
+            </div>
+            <div class="text-2xl mb-3">📝</div>
+            <h3
+              class="font-cinzel text-[11px] font-bold tracking-[0.1em] text-navy dark:text-gold-light uppercase mb-2"
+            >
+              Application
+            </h3>
+            <p
+              class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed"
+            >
+              Submit the completed application form along with required
+              documents and the ₦5,000 application fee.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div
+            class="reveal pillar-card bg-warm-white dark:bg-[#1A2A4A]/50 border border-gold/15 dark:border-gold/10 rounded-sm p-6 text-center hover:-translate-y-1 transition-all duration-300 hover:shadow-[0_8px_32px_rgba(196,154,44,0.12)]"
+            data-delay="200"
+          >
+            <div
+              class="w-14 h-14 rounded-full bg-gold/10 border-2 border-gold/30 flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="font-cinzel text-[20px] font-bold text-gold">3</span>
+            </div>
+            <div class="text-2xl mb-3">✏️</div>
+            <h3
+              class="font-cinzel text-[11px] font-bold tracking-[0.1em] text-navy dark:text-gold-light uppercase mb-2"
+            >
+              Assessment
+            </h3>
+            <p
+              class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed"
+            >
+              Your child attends a friendly entrance assessment — a relaxed
+              session to gauge readiness and learning style.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div
+            class="reveal pillar-card bg-warm-white dark:bg-[#1A2A4A]/50 border border-gold/15 dark:border-gold/10 rounded-sm p-6 text-center hover:-translate-y-1 transition-all duration-300 hover:shadow-[0_8px_32px_rgba(196,154,44,0.12)]"
+            data-delay="300"
+          >
+            <div
+              class="w-14 h-14 rounded-full bg-gold/10 border-2 border-gold/30 flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="font-cinzel text-[20px] font-bold text-gold">4</span>
+            </div>
+            <div class="text-2xl mb-3">🤝</div>
+            <h3
+              class="font-cinzel text-[11px] font-bold tracking-[0.1em] text-navy dark:text-gold-light uppercase mb-2"
+            >
+              Interview
+            </h3>
+            <p
+              class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed"
+            >
+              A brief parent-and-child meeting with the Principal — an
+              opportunity to ask questions and tour the campus.
+            </p>
+          </div>
+
+          <!-- Step 5 -->
+          <div
+            class="reveal pillar-card bg-navy dark:bg-[#C49A2C]/10 border border-gold/30 rounded-sm p-6 text-center hover:-translate-y-1 transition-all duration-300 hover:shadow-[0_8px_32px_rgba(196,154,44,0.2)]"
+            data-delay="400"
+          >
+            <div
+              class="w-14 h-14 rounded-full bg-gold flex items-center justify-center mx-auto mb-4"
+            >
+              <span class="font-cinzel text-[20px] font-bold text-navy">5</span>
+            </div>
+            <div class="text-2xl mb-3">🎉</div>
+            <h3
+              class="font-cinzel text-[11px] font-bold tracking-[0.1em] text-gold uppercase mb-2"
+            >
+              Enrolment
+            </h3>
+            <p class="font-cormorant text-[15px] text-white/65 leading-relaxed">
+              Receive your offer letter, pay the acceptance deposit, and welcome
+              to the Stellar Scholars family!
+            </p>
+          </div>
+        </div>
+
+        <!-- Download Guide CTA -->
+        <div class="mt-12 text-center reveal">
+          <a
+            href="#"
+            class="inline-flex items-center gap-3 border border-gold/50 hover:border-gold text-gold hover:bg-gold/5 font-lato text-[12px] font-bold tracking-widest uppercase px-7 py-3 rounded-sm transition-all duration-200 no-underline"
+          >
+            <span>📄</span> Download Admissions Guide (PDF)
+          </a>
+        </div>
       </div>
+    </section>
 
-      <!-- Steps Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4">
-
-        <!-- Step 1 -->
-        <div class="reveal pillar-card bg-warm-white dark:bg-[#1A2A4A]/50 border border-gold/15 dark:border-gold/10 rounded-sm p-6 text-center hover:-translate-y-1 transition-all duration-300 hover:shadow-[0_8px_32px_rgba(196,154,44,0.12)]">
-          <div class="w-14 h-14 rounded-full bg-gold/10 border-2 border-gold/30 flex items-center justify-center mx-auto mb-4">
-            <span class="font-cinzel text-[20px] font-bold text-gold">1</span>
-          </div>
-          <div class="text-2xl mb-3">📋</div>
-          <h3 class="font-cinzel text-[11px] font-bold tracking-[0.1em] text-navy dark:text-gold-light uppercase mb-2">Enquiry</h3>
-          <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed">Complete our online enquiry form or visit the school to express interest and receive our prospectus.</p>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="reveal pillar-card bg-warm-white dark:bg-[#1A2A4A]/50 border border-gold/15 dark:border-gold/10 rounded-sm p-6 text-center hover:-translate-y-1 transition-all duration-300 hover:shadow-[0_8px_32px_rgba(196,154,44,0.12)]" data-delay="100">
-          <div class="w-14 h-14 rounded-full bg-gold/10 border-2 border-gold/30 flex items-center justify-center mx-auto mb-4">
-            <span class="font-cinzel text-[20px] font-bold text-gold">2</span>
-          </div>
-          <div class="text-2xl mb-3">📝</div>
-          <h3 class="font-cinzel text-[11px] font-bold tracking-[0.1em] text-navy dark:text-gold-light uppercase mb-2">Application</h3>
-          <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed">Submit the completed application form along with required documents and the ₦5,000 application fee.</p>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="reveal pillar-card bg-warm-white dark:bg-[#1A2A4A]/50 border border-gold/15 dark:border-gold/10 rounded-sm p-6 text-center hover:-translate-y-1 transition-all duration-300 hover:shadow-[0_8px_32px_rgba(196,154,44,0.12)]" data-delay="200">
-          <div class="w-14 h-14 rounded-full bg-gold/10 border-2 border-gold/30 flex items-center justify-center mx-auto mb-4">
-            <span class="font-cinzel text-[20px] font-bold text-gold">3</span>
-          </div>
-          <div class="text-2xl mb-3">✏️</div>
-          <h3 class="font-cinzel text-[11px] font-bold tracking-[0.1em] text-navy dark:text-gold-light uppercase mb-2">Assessment</h3>
-          <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed">Your child attends a friendly entrance assessment — a relaxed session to gauge readiness and learning style.</p>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="reveal pillar-card bg-warm-white dark:bg-[#1A2A4A]/50 border border-gold/15 dark:border-gold/10 rounded-sm p-6 text-center hover:-translate-y-1 transition-all duration-300 hover:shadow-[0_8px_32px_rgba(196,154,44,0.12)]" data-delay="300">
-          <div class="w-14 h-14 rounded-full bg-gold/10 border-2 border-gold/30 flex items-center justify-center mx-auto mb-4">
-            <span class="font-cinzel text-[20px] font-bold text-gold">4</span>
-          </div>
-          <div class="text-2xl mb-3">🤝</div>
-          <h3 class="font-cinzel text-[11px] font-bold tracking-[0.1em] text-navy dark:text-gold-light uppercase mb-2">Interview</h3>
-          <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed">A brief parent-and-child meeting with the Principal — an opportunity to ask questions and tour the campus.</p>
-        </div>
-
-        <!-- Step 5 -->
-        <div class="reveal pillar-card bg-navy dark:bg-[#C49A2C]/10 border border-gold/30 rounded-sm p-6 text-center hover:-translate-y-1 transition-all duration-300 hover:shadow-[0_8px_32px_rgba(196,154,44,0.2)]" data-delay="400">
-          <div class="w-14 h-14 rounded-full bg-gold flex items-center justify-center mx-auto mb-4">
-            <span class="font-cinzel text-[20px] font-bold text-navy">5</span>
-          </div>
-          <div class="text-2xl mb-3">🎉</div>
-          <h3 class="font-cinzel text-[11px] font-bold tracking-[0.1em] text-gold uppercase mb-2">Enrolment</h3>
-          <p class="font-cormorant text-[15px] text-white/65 leading-relaxed">Receive your offer letter, pay the acceptance deposit, and welcome to the Stellar Scholars family!</p>
-        </div>
-
-      </div>
-
-      <!-- Download Guide CTA -->
-      <div class="mt-12 text-center reveal">
-        <a href="#" class="inline-flex items-center gap-3 border border-gold/50 hover:border-gold text-gold hover:bg-gold/5 font-lato text-[12px] font-bold tracking-widest uppercase px-7 py-3 rounded-sm transition-all duration-200 no-underline">
-          <span>📄</span> Download Admissions Guide (PDF)
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
+    <!-- ══════════════════════════════════════════
        REQUIREMENTS BY DIVISION
   ══════════════════════════════════════════ -->
-  <section id="requirements" class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-24">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+    <section
+      id="requirements"
+      class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-24"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <!-- Left: Text intro -->
+          <div class="reveal">
+            <div
+              class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4"
+            >
+              Entry Requirements
+            </div>
+            <h2
+              class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(24px,2.8vw,38px)] leading-snug mb-4"
+            >
+              What You'll Need to Apply
+            </h2>
+            <div class="w-16 h-[3px] bg-gold-maroon mb-7"></div>
+            <p
+              class="font-cormorant text-[18px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed mb-6"
+            >
+              Each division has tailored entry criteria to ensure every scholar
+              is placed in the right environment to thrive. Below are the
+              standard requirements across all divisions.
+            </p>
+            <p
+              class="font-cormorant text-[18px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed mb-8"
+            >
+              Applications are considered on a rolling basis. We encourage
+              families to apply early as spaces are limited. Siblings of current
+              scholars receive priority consideration.
+            </p>
 
-        <!-- Left: Text intro -->
-        <div class="reveal">
-          <div class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">Entry Requirements</div>
-          <h2 class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(24px,2.8vw,38px)] leading-snug mb-4">What You'll Need to Apply</h2>
-          <div class="w-16 h-[3px] bg-gold-maroon mb-7"></div>
-          <p class="font-cormorant text-[18px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed mb-6">
-            Each division has tailored entry criteria to ensure every scholar is placed in the right environment to thrive. Below are the standard requirements across all divisions.
-          </p>
-          <p class="font-cormorant text-[18px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed mb-8">
-            Applications are considered on a rolling basis. We encourage families to apply early as spaces are limited. Siblings of current scholars receive priority consideration.
-          </p>
+            <!-- Sibling policy card -->
+            <div
+              class="bg-gold/8 dark:bg-gold/5 border border-gold/25 rounded-sm p-5 flex gap-4 items-start"
+            >
+              <span class="text-2xl flex-shrink-0">👨‍👩‍👧‍👦</span>
+              <div>
+                <div
+                  class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-1"
+                >
+                  Sibling Priority Policy
+                </div>
+                <p
+                  class="font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0] leading-relaxed"
+                >
+                  Siblings of currently enrolled scholars receive priority
+                  placement and a
+                  <strong class="text-gold">10% sibling discount</strong> on
+                  tuition fees. Please indicate sibling status on your
+                  application form.
+                </p>
+              </div>
+            </div>
+          </div>
 
-          <!-- Sibling policy card -->
-          <div class="bg-gold/8 dark:bg-gold/5 border border-gold/25 rounded-sm p-5 flex gap-4 items-start">
-            <span class="text-2xl flex-shrink-0">👨‍👩‍👧‍👦</span>
-            <div>
-              <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-1">Sibling Priority Policy</div>
-              <p class="font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0] leading-relaxed">
-                Siblings of currently enrolled scholars receive priority placement and a <strong class="text-gold">10% sibling discount</strong> on tuition fees. Please indicate sibling status on your application form.
-              </p>
+          <!-- Right: Division cards -->
+          <div class="space-y-4 reveal">
+            <!-- Pre-School -->
+            <div
+              class="hover-bar border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden"
+            >
+              <div class="bg-warm-white dark:bg-[#1A2A4A]/40 p-5">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="text-xl">🌱</span>
+                  <div>
+                    <div
+                      class="font-cinzel text-[11px] tracking-widest uppercase text-gold"
+                    >
+                      Pre-School
+                    </div>
+                    <div
+                      class="font-lato text-[12px] text-[#7A7A7A] dark:text-[#8A9AAA]"
+                    >
+                      Ages 3 – 5 · Nursery & Reception
+                    </div>
+                  </div>
+                </div>
+                <ul class="space-y-1.5">
+                  <li
+                    class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >
+                    <span class="text-gold mt-1 flex-shrink-0">✓</span> Birth
+                    certificate (original + copy)
+                  </li>
+                  <li
+                    class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >
+                    <span class="text-gold mt-1 flex-shrink-0">✓</span>
+                    Immunisation records / health card
+                  </li>
+                  <li
+                    class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >
+                    <span class="text-gold mt-1 flex-shrink-0">✓</span> 4
+                    passport photographs of child
+                  </li>
+                  <li
+                    class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >
+                    <span class="text-gold mt-1 flex-shrink-0">✓</span>
+                    Completed application form + ₦5,000 fee
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Grade -->
+            <div
+              class="hover-bar border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden"
+            >
+              <div class="bg-warm-white dark:bg-[#1A2A4A]/40 p-5">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="text-xl">📚</span>
+                  <div>
+                    <div
+                      class="font-cinzel text-[11px] tracking-widest uppercase text-gold"
+                    >
+                      Grade School
+                    </div>
+                    <div
+                      class="font-lato text-[12px] text-[#7A7A7A] dark:text-[#8A9AAA]"
+                    >
+                      Ages 6 – 11 · Grade 1 – 6
+                    </div>
+                  </div>
+                </div>
+                <ul class="space-y-1.5">
+                  <li
+                    class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >
+                    <span class="text-gold mt-1 flex-shrink-0">✓</span> Birth
+                    certificate + immunisation records
+                  </li>
+                  <li
+                    class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >
+                    <span class="text-gold mt-1 flex-shrink-0">✓</span> Previous
+                    school report cards (last 2 terms)
+                  </li>
+                  <li
+                    class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >
+                    <span class="text-gold mt-1 flex-shrink-0">✓</span> Entrance
+                    assessment (Literacy & Numeracy)
+                  </li>
+                  <li
+                    class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >
+                    <span class="text-gold mt-1 flex-shrink-0">✓</span> School
+                    transfer letter (if applicable)
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- JSS -->
+            <div
+              class="hover-bar border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden"
+            >
+              <div class="bg-warm-white dark:bg-[#1A2A4A]/40 p-5">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="text-xl">🔭</span>
+                  <div>
+                    <div
+                      class="font-cinzel text-[11px] tracking-widest uppercase text-gold"
+                    >
+                      Junior Secondary (JSS)
+                    </div>
+                    <div
+                      class="font-lato text-[12px] text-[#7A7A7A] dark:text-[#8A9AAA]"
+                    >
+                      Ages 11 – 14 · JSS 1 – 3
+                    </div>
+                  </div>
+                </div>
+                <ul class="space-y-1.5">
+                  <li
+                    class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >
+                    <span class="text-gold mt-1 flex-shrink-0">✓</span> Grade 6
+                    leaving certificate / FSLC
+                  </li>
+                  <li
+                    class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >
+                    <span class="text-gold mt-1 flex-shrink-0">✓</span> Recent
+                    academic report cards
+                  </li>
+                  <li
+                    class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >
+                    <span class="text-gold mt-1 flex-shrink-0">✓</span> Written
+                    entrance exam (core subjects)
+                  </li>
+                  <li
+                    class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >
+                    <span class="text-gold mt-1 flex-shrink-0">✓</span>
+                    Parent-Principal interview
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- SSS -->
+            <div
+              class="hover-bar border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden"
+            >
+              <div class="bg-warm-white dark:bg-[#1A2A4A]/40 p-5">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="text-xl">🎓</span>
+                  <div>
+                    <div
+                      class="font-cinzel text-[11px] tracking-widest uppercase text-gold"
+                    >
+                      Senior Secondary (SSS)
+                    </div>
+                    <div
+                      class="font-lato text-[12px] text-[#7A7A7A] dark:text-[#8A9AAA]"
+                    >
+                      Ages 15 – 17 · SSS 1 – 3
+                    </div>
+                  </div>
+                </div>
+                <ul class="space-y-1.5">
+                  <li
+                    class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >
+                    <span class="text-gold mt-1 flex-shrink-0">✓</span> JSS 3
+                    certificate / BECE result
+                  </li>
+                  <li
+                    class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >
+                    <span class="text-gold mt-1 flex-shrink-0">✓</span>
+                    Comprehensive entrance exam + oral interview
+                  </li>
+                  <li
+                    class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >
+                    <span class="text-gold mt-1 flex-shrink-0">✓</span>
+                    Statement of academic goals (student-written)
+                  </li>
+                  <li
+                    class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >
+                    <span class="text-gold mt-1 flex-shrink-0">✓</span> Previous
+                    school reference letter
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Right: Division cards -->
-        <div class="space-y-4 reveal">
+    <!-- ══════════════════════════════════════════
+       FEE STRUCTURE
+  ══════════════════════════════════════════ -->
+    <section
+      id="fees"
+      class="bg-navy dark:bg-[#080E18] admissions-pattern px-5 sm:px-10 lg:px-20 py-24"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-14 reveal">
+          <div
+            class="section-label-line inline-block font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4"
+          >
+            Transparent Pricing
+          </div>
+          <h2
+            class="font-playfair font-bold text-white text-[clamp(26px,3vw,40px)] leading-snug mb-4"
+          >
+            School Fees & Payment Plans
+          </h2>
+          <div class="w-16 h-[3px] bg-gold-maroon mx-auto mb-5"></div>
+          <p class="font-cormorant text-[18px] text-white/60 max-w-xl mx-auto">
+            All fees are quoted per term (3 terms per academic year). Additional
+            levies may apply for examinations, excursions, and special
+            programmes.
+          </p>
+        </div>
 
-          <!-- Pre-School -->
-          <div class="hover-bar border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden">
-            <div class="bg-warm-white dark:bg-[#1A2A4A]/40 p-5">
-              <div class="flex items-center gap-3 mb-3">
-                <span class="text-xl">🌱</span>
-                <div>
-                  <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold">Pre-School</div>
-                  <div class="font-lato text-[12px] text-[#7A7A7A] dark:text-[#8A9AAA]">Ages 3 – 5 · Nursery & Reception</div>
-                </div>
-              </div>
-              <ul class="space-y-1.5">
-                <li class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"><span class="text-gold mt-1 flex-shrink-0">✓</span> Birth certificate (original + copy)</li>
-                <li class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"><span class="text-gold mt-1 flex-shrink-0">✓</span> Immunisation records / health card</li>
-                <li class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"><span class="text-gold mt-1 flex-shrink-0">✓</span> 4 passport photographs of child</li>
-                <li class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"><span class="text-gold mt-1 flex-shrink-0">✓</span> Completed application form + ₦5,000 fee</li>
-              </ul>
+        <!-- Fee Table -->
+        <div
+          class="bg-navy-light/60 border border-gold/20 rounded-sm overflow-hidden reveal mb-10"
+        >
+          <!-- Table header -->
+          <div
+            class="grid grid-cols-12 bg-gold/15 px-6 py-3 border-b border-gold/20"
+          >
+            <div
+              class="col-span-4 font-cinzel text-[10px] tracking-widest uppercase text-gold"
+            >
+              Division / Class
+            </div>
+            <div
+              class="col-span-2 font-cinzel text-[10px] tracking-widest uppercase text-gold text-right"
+            >
+              Tuition / Term
+            </div>
+            <div
+              class="col-span-2 font-cinzel text-[10px] tracking-widest uppercase text-gold text-right hidden sm:block"
+            >
+              Dev. Levy
+            </div>
+            <div
+              class="col-span-2 font-cinzel text-[10px] tracking-widest uppercase text-gold text-right hidden md:block"
+            >
+              Books / Term
+            </div>
+            <div
+              class="col-span-2 font-cinzel text-[10px] tracking-widest uppercase text-gold text-right"
+            >
+              Total / Term
             </div>
           </div>
 
-          <!-- Primary -->
-          <div class="hover-bar border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden">
-            <div class="bg-warm-white dark:bg-[#1A2A4A]/40 p-5">
-              <div class="flex items-center gap-3 mb-3">
-                <span class="text-xl">📚</span>
-                <div>
-                  <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold">Primary School</div>
-                  <div class="font-lato text-[12px] text-[#7A7A7A] dark:text-[#8A9AAA]">Ages 6 – 11 · Primary 1 – 6</div>
-                </div>
+          <!-- Pre-School -->
+          <div
+            class="fee-row grid grid-cols-12 px-6 py-4 border-b border-white/5 transition-colors"
+          >
+            <div class="col-span-4">
+              <div class="font-lato text-[13px] font-bold text-white">
+                Pre-School
               </div>
-              <ul class="space-y-1.5">
-                <li class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"><span class="text-gold mt-1 flex-shrink-0">✓</span> Birth certificate + immunisation records</li>
-                <li class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"><span class="text-gold mt-1 flex-shrink-0">✓</span> Previous school report cards (last 2 terms)</li>
-                <li class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"><span class="text-gold mt-1 flex-shrink-0">✓</span> Entrance assessment (Literacy & Numeracy)</li>
-                <li class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"><span class="text-gold mt-1 flex-shrink-0">✓</span> School transfer letter (if applicable)</li>
-              </ul>
+              <div class="font-lato text-[11px] text-white/40">
+                Nursery 1 – Reception
+              </div>
+            </div>
+            <div
+              class="col-span-2 text-right font-lato text-[13px] text-gold font-bold"
+            >
+              ₦85,000
+            </div>
+            <div
+              class="col-span-2 text-right font-lato text-[13px] text-white/60 hidden sm:block"
+            >
+              ₦8,000
+            </div>
+            <div
+              class="col-span-2 text-right font-lato text-[13px] text-white/60 hidden md:block"
+            >
+              ₦12,000
+            </div>
+            <div
+              class="col-span-2 text-right font-lato text-[13px] text-gold-light font-bold"
+            >
+              ₦105,000
+            </div>
+          </div>
+
+          <!-- Grade Lower -->
+          <div
+            class="fee-row grid grid-cols-12 px-6 py-4 border-b border-white/5 transition-colors"
+          >
+            <div class="col-span-4">
+              <div class="font-lato text-[13px] font-bold text-white">
+                Grade (Lower)
+              </div>
+              <div class="font-lato text-[11px] text-white/40">Grade 1 – 3</div>
+            </div>
+            <div
+              class="col-span-2 text-right font-lato text-[13px] text-gold font-bold"
+            >
+              ₦95,000
+            </div>
+            <div
+              class="col-span-2 text-right font-lato text-[13px] text-white/60 hidden sm:block"
+            >
+              ₦10,000
+            </div>
+            <div
+              class="col-span-2 text-right font-lato text-[13px] text-white/60 hidden md:block"
+            >
+              ₦15,000
+            </div>
+            <div
+              class="col-span-2 text-right font-lato text-[13px] text-gold-light font-bold"
+            >
+              ₦120,000
+            </div>
+          </div>
+
+          <!-- Grade Upper -->
+          <div
+            class="fee-row grid grid-cols-12 px-6 py-4 border-b border-white/5 transition-colors"
+          >
+            <div class="col-span-4">
+              <div class="font-lato text-[13px] font-bold text-white">
+                Grade (Upper)
+              </div>
+              <div class="font-lato text-[11px] text-white/40">Grade 4 – 6</div>
+            </div>
+            <div
+              class="col-span-2 text-right font-lato text-[13px] text-gold font-bold"
+            >
+              ₦105,000
+            </div>
+            <div
+              class="col-span-2 text-right font-lato text-[13px] text-white/60 hidden sm:block"
+            >
+              ₦10,000
+            </div>
+            <div
+              class="col-span-2 text-right font-lato text-[13px] text-white/60 hidden md:block"
+            >
+              ₦18,000
+            </div>
+            <div
+              class="col-span-2 text-right font-lato text-[13px] text-gold-light font-bold"
+            >
+              ₦133,000
             </div>
           </div>
 
           <!-- JSS -->
-          <div class="hover-bar border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden">
-            <div class="bg-warm-white dark:bg-[#1A2A4A]/40 p-5">
-              <div class="flex items-center gap-3 mb-3">
-                <span class="text-xl">🔭</span>
-                <div>
-                  <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold">Junior Secondary (JSS)</div>
-                  <div class="font-lato text-[12px] text-[#7A7A7A] dark:text-[#8A9AAA]">Ages 11 – 14 · JSS 1 – 3</div>
-                </div>
+          <div
+            class="fee-row grid grid-cols-12 px-6 py-4 border-b border-white/5 transition-colors"
+          >
+            <div class="col-span-4">
+              <div class="font-lato text-[13px] font-bold text-white">
+                Junior Secondary
               </div>
-              <ul class="space-y-1.5">
-                <li class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"><span class="text-gold mt-1 flex-shrink-0">✓</span> Primary 6 leaving certificate / FSLC</li>
-                <li class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"><span class="text-gold mt-1 flex-shrink-0">✓</span> Recent academic report cards</li>
-                <li class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"><span class="text-gold mt-1 flex-shrink-0">✓</span> Written entrance exam (core subjects)</li>
-                <li class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"><span class="text-gold mt-1 flex-shrink-0">✓</span> Parent-Principal interview</li>
-              </ul>
+              <div class="font-lato text-[11px] text-white/40">JSS 1 – 3</div>
+            </div>
+            <div
+              class="col-span-2 text-right font-lato text-[13px] text-gold font-bold"
+            >
+              ₦135,000
+            </div>
+            <div
+              class="col-span-2 text-right font-lato text-[13px] text-white/60 hidden sm:block"
+            >
+              ₦12,000
+            </div>
+            <div
+              class="col-span-2 text-right font-lato text-[13px] text-white/60 hidden md:block"
+            >
+              ₦22,000
+            </div>
+            <div
+              class="col-span-2 text-right font-lato text-[13px] text-gold-light font-bold"
+            >
+              ₦169,000
             </div>
           </div>
 
           <!-- SSS -->
-          <div class="hover-bar border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden">
-            <div class="bg-warm-white dark:bg-[#1A2A4A]/40 p-5">
-              <div class="flex items-center gap-3 mb-3">
-                <span class="text-xl">🎓</span>
-                <div>
-                  <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold">Senior Secondary (SSS)</div>
-                  <div class="font-lato text-[12px] text-[#7A7A7A] dark:text-[#8A9AAA]">Ages 15 – 17 · SSS 1 – 3</div>
-                </div>
+          <div class="fee-row grid grid-cols-12 px-6 py-4 transition-colors">
+            <div class="col-span-4">
+              <div class="font-lato text-[13px] font-bold text-white">
+                Senior Secondary
               </div>
-              <ul class="space-y-1.5">
-                <li class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"><span class="text-gold mt-1 flex-shrink-0">✓</span> JSS 3 certificate / BECE result</li>
-                <li class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"><span class="text-gold mt-1 flex-shrink-0">✓</span> Comprehensive entrance exam + oral interview</li>
-                <li class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"><span class="text-gold mt-1 flex-shrink-0">✓</span> Statement of academic goals (student-written)</li>
-                <li class="flex items-start gap-2 font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"><span class="text-gold mt-1 flex-shrink-0">✓</span> Previous school reference letter</li>
-              </ul>
+              <div class="font-lato text-[11px] text-white/40">SSS 1 – 3</div>
+            </div>
+            <div
+              class="col-span-2 text-right font-lato text-[13px] text-gold font-bold"
+            >
+              ₦160,000
+            </div>
+            <div
+              class="col-span-2 text-right font-lato text-[13px] text-white/60 hidden sm:block"
+            >
+              ₦15,000
+            </div>
+            <div
+              class="col-span-2 text-right font-lato text-[13px] text-white/60 hidden md:block"
+            >
+              ₦28,000
+            </div>
+            <div
+              class="col-span-2 text-right font-lato text-[13px] text-gold-light font-bold"
+            >
+              ₦203,000
             </div>
           </div>
+        </div>
 
+        <!-- One-time fees note -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 reveal mb-10">
+          <div
+            class="bg-white/5 border border-gold/15 rounded-sm p-4 text-center"
+          >
+            <div class="font-cinzel text-[22px] font-bold text-gold mb-1">
+              ₦20,000
+            </div>
+            <div
+              class="font-lato text-[11px] tracking-widest uppercase text-white/50"
+            >
+              Application Fee
+            </div>
+            <div class="font-cormorant text-[14px] text-white/35 mt-1">
+              Non-refundable
+            </div>
+          </div>
+          <div
+            class="bg-white/5 border border-gold/15 rounded-sm p-4 text-center"
+          >
+            <div class="font-cinzel text-[22px] font-bold text-gold mb-1">
+              ₦50,000
+            </div>
+            <div
+              class="font-lato text-[11px] tracking-widest uppercase text-white/50"
+            >
+              Acceptance Deposit
+            </div>
+            <div class="font-cormorant text-[14px] text-white/35 mt-1">
+              Applied to first term fees
+            </div>
+          </div>
+          <div
+            class="bg-white/5 border border-gold/15 rounded-sm p-4 text-center"
+          >
+            <div class="font-cinzel text-[22px] font-bold text-gold mb-1">
+              ₦25,000
+            </div>
+            <div
+              class="font-lato text-[11px] tracking-widest uppercase text-white/50"
+            >
+              Caution Deposit
+            </div>
+            <div class="font-cormorant text-[14px] text-white/35 mt-1">
+              Fully refundable on exit
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment plans -->
+        <div class="reveal">
+          <h3
+            class="font-cinzel text-[13px] font-bold tracking-widest uppercase text-gold mb-5 text-center"
+          >
+            Flexible Payment Plans
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div
+              class="bg-white/5 border border-gold/20 rounded-sm p-5 hover:border-gold/40 transition-colors"
+            >
+              <div
+                class="font-cinzel text-[11px] uppercase tracking-widest text-gold-light mb-2"
+              >
+                Full Term Payment
+              </div>
+              <div class="font-playfair text-[22px] font-bold text-white mb-1">
+                Full Amount<span class="text-[13px] font-normal text-white/50">
+                  / term</span
+                >
+              </div>
+              <p class="font-cormorant text-[15px] text-white/50 mb-3">
+                Pay the full term fees before resumption and receive a 2%
+                loyalty discount.
+              </p>
+              <div class="text-[11px] font-lato tracking-wide text-gold">
+                ✓ 2% discount · ✓ Priority processing
+              </div>
+            </div>
+            <div
+              class="bg-gold/10 border border-gold/30 rounded-sm p-5 relative"
+            >
+              <div
+                class="absolute top-3 right-3 bg-gold text-navy text-[9px] font-bold font-lato tracking-widest uppercase px-2 py-0.5 rounded-sm"
+              >
+                Popular
+              </div>
+              <div
+                class="font-cinzel text-[11px] uppercase tracking-widest text-gold-light mb-2"
+              >
+                Half-Half Plan
+              </div>
+              <div class="font-playfair text-[22px] font-bold text-white mb-1">
+                2 Instalments<span
+                  class="text-[13px] font-normal text-white/50"
+                >
+                  / term</span
+                >
+              </div>
+              <p class="font-cormorant text-[15px] text-white/50 mb-3">
+                50% at resumption, 50% at mid-term. No additional charge.
+              </p>
+              <div class="text-[11px] font-lato tracking-wide text-gold">
+                ✓ Standard rate · ✓ Flexible timing
+              </div>
+            </div>
+            <div
+              class="bg-white/5 border border-gold/20 rounded-sm p-5 hover:border-gold/40 transition-colors"
+            >
+              <div
+                class="font-cinzel text-[11px] uppercase tracking-widest text-gold-light mb-2"
+              >
+                Monthly Plan
+              </div>
+              <div class="font-playfair text-[22px] font-bold text-white mb-1">
+                3 Instalments<span
+                  class="text-[13px] font-normal text-white/50"
+                >
+                  / term</span
+                >
+              </div>
+              <p class="font-cormorant text-[15px] text-white/50 mb-3">
+                Split into 3 monthly payments. A 5% administrative surcharge
+                applies.
+              </p>
+              <div class="text-[11px] font-lato tracking-wide text-gold/70">
+                + 5% admin fee · Pre-authorization required
+              </div>
+            </div>
+          </div>
+          <p class="text-center font-cormorant text-[15px] text-white/35 mt-5">
+            Payment plans are subject to approval by the Finance Office. Contact
+            us at
+            <span class="text-gold">finance@stellarscholars.edu.ng</span> to
+            arrange.
+          </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ══════════════════════════════════════════
-       FEE STRUCTURE
-  ══════════════════════════════════════════ -->
-  <section id="fees" class="bg-navy dark:bg-[#080E18] admissions-pattern px-5 sm:px-10 lg:px-20 py-24">
-    <div class="max-w-7xl mx-auto">
-
-      <div class="text-center mb-14 reveal">
-        <div class="section-label-line inline-block font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">Transparent Pricing</div>
-        <h2 class="font-playfair font-bold text-white text-[clamp(26px,3vw,40px)] leading-snug mb-4">School Fees & Payment Plans</h2>
-        <div class="w-16 h-[3px] bg-gold-maroon mx-auto mb-5"></div>
-        <p class="font-cormorant text-[18px] text-white/60 max-w-xl mx-auto">All fees are quoted per term (3 terms per academic year). Additional levies may apply for examinations, excursions, and special programmes.</p>
-      </div>
-
-      <!-- Fee Table -->
-      <div class="bg-navy-light/60 border border-gold/20 rounded-sm overflow-hidden reveal mb-10">
-        <!-- Table header -->
-        <div class="grid grid-cols-12 bg-gold/15 px-6 py-3 border-b border-gold/20">
-          <div class="col-span-4 font-cinzel text-[10px] tracking-widest uppercase text-gold">Division / Class</div>
-          <div class="col-span-2 font-cinzel text-[10px] tracking-widest uppercase text-gold text-right">Tuition / Term</div>
-          <div class="col-span-2 font-cinzel text-[10px] tracking-widest uppercase text-gold text-right hidden sm:block">Dev. Levy</div>
-          <div class="col-span-2 font-cinzel text-[10px] tracking-widest uppercase text-gold text-right hidden md:block">Books / Term</div>
-          <div class="col-span-2 font-cinzel text-[10px] tracking-widest uppercase text-gold text-right">Total / Term</div>
-        </div>
-
-        <!-- Pre-School -->
-        <div class="fee-row grid grid-cols-12 px-6 py-4 border-b border-white/5 transition-colors">
-          <div class="col-span-4">
-            <div class="font-lato text-[13px] font-bold text-white">Pre-School</div>
-            <div class="font-lato text-[11px] text-white/40">Nursery 1 – Reception</div>
-          </div>
-          <div class="col-span-2 text-right font-lato text-[13px] text-gold font-bold">₦85,000</div>
-          <div class="col-span-2 text-right font-lato text-[13px] text-white/60 hidden sm:block">₦8,000</div>
-          <div class="col-span-2 text-right font-lato text-[13px] text-white/60 hidden md:block">₦12,000</div>
-          <div class="col-span-2 text-right font-lato text-[13px] text-gold-light font-bold">₦105,000</div>
-        </div>
-
-        <!-- Primary Lower -->
-        <div class="fee-row grid grid-cols-12 px-6 py-4 border-b border-white/5 transition-colors">
-          <div class="col-span-4">
-            <div class="font-lato text-[13px] font-bold text-white">Primary (Lower)</div>
-            <div class="font-lato text-[11px] text-white/40">Primary 1 – 3</div>
-          </div>
-          <div class="col-span-2 text-right font-lato text-[13px] text-gold font-bold">₦95,000</div>
-          <div class="col-span-2 text-right font-lato text-[13px] text-white/60 hidden sm:block">₦10,000</div>
-          <div class="col-span-2 text-right font-lato text-[13px] text-white/60 hidden md:block">₦15,000</div>
-          <div class="col-span-2 text-right font-lato text-[13px] text-gold-light font-bold">₦120,000</div>
-        </div>
-
-        <!-- Primary Upper -->
-        <div class="fee-row grid grid-cols-12 px-6 py-4 border-b border-white/5 transition-colors">
-          <div class="col-span-4">
-            <div class="font-lato text-[13px] font-bold text-white">Primary (Upper)</div>
-            <div class="font-lato text-[11px] text-white/40">Primary 4 – 6</div>
-          </div>
-          <div class="col-span-2 text-right font-lato text-[13px] text-gold font-bold">₦105,000</div>
-          <div class="col-span-2 text-right font-lato text-[13px] text-white/60 hidden sm:block">₦10,000</div>
-          <div class="col-span-2 text-right font-lato text-[13px] text-white/60 hidden md:block">₦18,000</div>
-          <div class="col-span-2 text-right font-lato text-[13px] text-gold-light font-bold">₦133,000</div>
-        </div>
-
-        <!-- JSS -->
-        <div class="fee-row grid grid-cols-12 px-6 py-4 border-b border-white/5 transition-colors">
-          <div class="col-span-4">
-            <div class="font-lato text-[13px] font-bold text-white">Junior Secondary</div>
-            <div class="font-lato text-[11px] text-white/40">JSS 1 – 3</div>
-          </div>
-          <div class="col-span-2 text-right font-lato text-[13px] text-gold font-bold">₦135,000</div>
-          <div class="col-span-2 text-right font-lato text-[13px] text-white/60 hidden sm:block">₦12,000</div>
-          <div class="col-span-2 text-right font-lato text-[13px] text-white/60 hidden md:block">₦22,000</div>
-          <div class="col-span-2 text-right font-lato text-[13px] text-gold-light font-bold">₦169,000</div>
-        </div>
-
-        <!-- SSS -->
-        <div class="fee-row grid grid-cols-12 px-6 py-4 transition-colors">
-          <div class="col-span-4">
-            <div class="font-lato text-[13px] font-bold text-white">Senior Secondary</div>
-            <div class="font-lato text-[11px] text-white/40">SSS 1 – 3</div>
-          </div>
-          <div class="col-span-2 text-right font-lato text-[13px] text-gold font-bold">₦160,000</div>
-          <div class="col-span-2 text-right font-lato text-[13px] text-white/60 hidden sm:block">₦15,000</div>
-          <div class="col-span-2 text-right font-lato text-[13px] text-white/60 hidden md:block">₦28,000</div>
-          <div class="col-span-2 text-right font-lato text-[13px] text-gold-light font-bold">₦203,000</div>
-        </div>
-      </div>
-
-      <!-- One-time fees note -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 reveal mb-10">
-        <div class="bg-white/5 border border-gold/15 rounded-sm p-4 text-center">
-          <div class="font-cinzel text-[22px] font-bold text-gold mb-1">₦5,000</div>
-          <div class="font-lato text-[11px] tracking-widest uppercase text-white/50">Application Fee</div>
-          <div class="font-cormorant text-[14px] text-white/35 mt-1">Non-refundable</div>
-        </div>
-        <div class="bg-white/5 border border-gold/15 rounded-sm p-4 text-center">
-          <div class="font-cinzel text-[22px] font-bold text-gold mb-1">₦50,000</div>
-          <div class="font-lato text-[11px] tracking-widest uppercase text-white/50">Acceptance Deposit</div>
-          <div class="font-cormorant text-[14px] text-white/35 mt-1">Applied to first term fees</div>
-        </div>
-        <div class="bg-white/5 border border-gold/15 rounded-sm p-4 text-center">
-          <div class="font-cinzel text-[22px] font-bold text-gold mb-1">₦25,000</div>
-          <div class="font-lato text-[11px] tracking-widest uppercase text-white/50">Caution Deposit</div>
-          <div class="font-cormorant text-[14px] text-white/35 mt-1">Fully refundable on exit</div>
-        </div>
-      </div>
-
-      <!-- Payment plans -->
-      <div class="reveal">
-        <h3 class="font-cinzel text-[13px] font-bold tracking-widest uppercase text-gold mb-5 text-center">Flexible Payment Plans</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div class="bg-white/5 border border-gold/20 rounded-sm p-5 hover:border-gold/40 transition-colors">
-            <div class="font-cinzel text-[11px] uppercase tracking-widest text-gold-light mb-2">Full Term Payment</div>
-            <div class="font-playfair text-[22px] font-bold text-white mb-1">Full Amount<span class="text-[13px] font-normal text-white/50"> / term</span></div>
-            <p class="font-cormorant text-[15px] text-white/50 mb-3">Pay the full term fees before resumption and receive a 2% loyalty discount.</p>
-            <div class="text-[11px] font-lato tracking-wide text-gold">✓ 2% discount · ✓ Priority processing</div>
-          </div>
-          <div class="bg-gold/10 border border-gold/30 rounded-sm p-5 relative">
-            <div class="absolute top-3 right-3 bg-gold text-navy text-[9px] font-bold font-lato tracking-widest uppercase px-2 py-0.5 rounded-sm">Popular</div>
-            <div class="font-cinzel text-[11px] uppercase tracking-widest text-gold-light mb-2">Half-Half Plan</div>
-            <div class="font-playfair text-[22px] font-bold text-white mb-1">2 Instalments<span class="text-[13px] font-normal text-white/50"> / term</span></div>
-            <p class="font-cormorant text-[15px] text-white/50 mb-3">50% at resumption, 50% at mid-term. No additional charge.</p>
-            <div class="text-[11px] font-lato tracking-wide text-gold">✓ Standard rate · ✓ Flexible timing</div>
-          </div>
-          <div class="bg-white/5 border border-gold/20 rounded-sm p-5 hover:border-gold/40 transition-colors">
-            <div class="font-cinzel text-[11px] uppercase tracking-widest text-gold-light mb-2">Monthly Plan</div>
-            <div class="font-playfair text-[22px] font-bold text-white mb-1">3 Instalments<span class="text-[13px] font-normal text-white/50"> / term</span></div>
-            <p class="font-cormorant text-[15px] text-white/50 mb-3">Split into 3 monthly payments. A 5% administrative surcharge applies.</p>
-            <div class="text-[11px] font-lato tracking-wide text-gold/70">+ 5% admin fee · Pre-authorization required</div>
-          </div>
-        </div>
-        <p class="text-center font-cormorant text-[15px] text-white/35 mt-5">Payment plans are subject to approval by the Finance Office. Contact us at <span class="text-gold">finance@stellarscholars.edu.ng</span> to arrange.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
+    <!-- ══════════════════════════════════════════
        PARENT TESTIMONIALS
   ══════════════════════════════════════════ -->
-  <section class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-24">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-14 reveal">
-        <div class="section-label-line inline-block font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">Parent Voices</div>
-        <h2 class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(24px,3vw,38px)] leading-snug mb-4">What Our Families Say</h2>
-        <div class="w-16 h-[3px] bg-gold-maroon mx-auto"></div>
+    <section class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-24">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-14 reveal">
+          <div
+            class="section-label-line inline-block font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4"
+          >
+            Parent Voices
+          </div>
+          <h2
+            class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(24px,3vw,38px)] leading-snug mb-4"
+          >
+            What Our Families Say
+          </h2>
+          <div class="w-16 h-[3px] bg-gold-maroon mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            class="testi-card reveal bg-warm-white dark:bg-[#1A2A4A]/50 border border-gold/15 dark:border-gold/10 rounded-sm p-7 hover:shadow-[0_8px_32px_rgba(196,154,44,0.1)] transition-all duration-300"
+          >
+            <div class="flex gap-1 mb-4">
+              <span class="text-gold text-[14px]">★★★★★</span>
+            </div>
+            <blockquote
+              class="font-playfair text-[17px] italic text-[#3A3A3A] dark:text-[#D0D8E8] leading-relaxed mb-5"
+            >
+              "The admissions process was transparent and professional. We felt
+              guided and informed at every stage. Our daughter started in
+              January and is already thriving."
+            </blockquote>
+            <div class="flex items-center gap-3 pt-4 border-t border-gold/15">
+              <div
+                class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center font-cinzel text-gold font-bold"
+              >
+                A
+              </div>
+              <div>
+                <div
+                  class="font-lato text-[13px] font-bold text-navy dark:text-gold-light"
+                >
+                  Mrs. Adaeze Okafor
+                </div>
+                <div
+                  class="font-lato text-[11px] text-[#8A8A8A] dark:text-[#7A8A9A]"
+                >
+                  Parent · Grade 3
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="testi-card reveal bg-navy dark:bg-[#1A2A4A]/80 border border-gold/30 rounded-sm p-7 hover:shadow-[0_8px_32px_rgba(196,154,44,0.15)] transition-all duration-300"
+            data-delay="100"
+          >
+            <div class="flex gap-1 mb-4">
+              <span class="text-gold text-[14px]">★★★★★</span>
+            </div>
+            <blockquote
+              class="font-playfair text-[17px] italic text-white/80 leading-relaxed mb-5"
+            >
+              "We enrolled both our children and the sibling discount was a
+              welcome relief. The fee structure is fair, and the quality of
+              education is unmatched in this area."
+            </blockquote>
+            <div class="flex items-center gap-3 pt-4 border-t border-gold/15">
+              <div
+                class="w-10 h-10 rounded-full bg-gold flex items-center justify-center font-cinzel text-navy font-bold"
+              >
+                E
+              </div>
+              <div>
+                <div class="font-lato text-[13px] font-bold text-gold-light">
+                  Mr. Emmanuel Dada
+                </div>
+                <div class="font-lato text-[11px] text-white/45">
+                  Parent · JSS 2 & Grade 5
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="testi-card reveal bg-warm-white dark:bg-[#1A2A4A]/50 border border-gold/15 dark:border-gold/10 rounded-sm p-7 hover:shadow-[0_8px_32px_rgba(196,154,44,0.1)] transition-all duration-300"
+            data-delay="200"
+          >
+            <div class="flex gap-1 mb-4">
+              <span class="text-gold text-[14px]">★★★★★</span>
+            </div>
+            <blockquote
+              class="font-playfair text-[17px] italic text-[#3A3A3A] dark:text-[#D0D8E8] leading-relaxed mb-5"
+            >
+              "What struck us most was the Principal's personal involvement in
+              the interview. It showed how much the school cares about each
+              child as an individual."
+            </blockquote>
+            <div class="flex items-center gap-3 pt-4 border-t border-gold/15">
+              <div
+                class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center font-cinzel text-gold font-bold"
+              >
+                F
+              </div>
+              <div>
+                <div
+                  class="font-lato text-[13px] font-bold text-navy dark:text-gold-light"
+                >
+                  Dr. Fatima Aliyu
+                </div>
+                <div
+                  class="font-lato text-[11px] text-[#8A8A8A] dark:text-[#7A8A9A]"
+                >
+                  Parent · SSS 1
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        <div class="testi-card reveal bg-warm-white dark:bg-[#1A2A4A]/50 border border-gold/15 dark:border-gold/10 rounded-sm p-7 hover:shadow-[0_8px_32px_rgba(196,154,44,0.1)] transition-all duration-300">
-          <div class="flex gap-1 mb-4">
-            <span class="text-gold text-[14px]">★★★★★</span>
-          </div>
-          <blockquote class="font-playfair text-[17px] italic text-[#3A3A3A] dark:text-[#D0D8E8] leading-relaxed mb-5">
-            "The admissions process was transparent and professional. We felt guided and informed at every stage. Our daughter started in January and is already thriving."
-          </blockquote>
-          <div class="flex items-center gap-3 pt-4 border-t border-gold/15">
-            <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center font-cinzel text-gold font-bold">A</div>
-            <div>
-              <div class="font-lato text-[13px] font-bold text-navy dark:text-gold-light">Mrs. Adaeze Okafor</div>
-              <div class="font-lato text-[11px] text-[#8A8A8A] dark:text-[#7A8A9A]">Parent · Primary 3</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testi-card reveal bg-navy dark:bg-[#1A2A4A]/80 border border-gold/30 rounded-sm p-7 hover:shadow-[0_8px_32px_rgba(196,154,44,0.15)] transition-all duration-300" data-delay="100">
-          <div class="flex gap-1 mb-4">
-            <span class="text-gold text-[14px]">★★★★★</span>
-          </div>
-          <blockquote class="font-playfair text-[17px] italic text-white/80 leading-relaxed mb-5">
-            "We enrolled both our children and the sibling discount was a welcome relief. The fee structure is fair, and the quality of education is unmatched in this area."
-          </blockquote>
-          <div class="flex items-center gap-3 pt-4 border-t border-gold/15">
-            <div class="w-10 h-10 rounded-full bg-gold flex items-center justify-center font-cinzel text-navy font-bold">E</div>
-            <div>
-              <div class="font-lato text-[13px] font-bold text-gold-light">Mr. Emmanuel Dada</div>
-              <div class="font-lato text-[11px] text-white/45">Parent · JSS 2 & Primary 5</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testi-card reveal bg-warm-white dark:bg-[#1A2A4A]/50 border border-gold/15 dark:border-gold/10 rounded-sm p-7 hover:shadow-[0_8px_32px_rgba(196,154,44,0.1)] transition-all duration-300" data-delay="200">
-          <div class="flex gap-1 mb-4">
-            <span class="text-gold text-[14px]">★★★★★</span>
-          </div>
-          <blockquote class="font-playfair text-[17px] italic text-[#3A3A3A] dark:text-[#D0D8E8] leading-relaxed mb-5">
-            "What struck us most was the Principal's personal involvement in the interview. It showed how much the school cares about each child as an individual."
-          </blockquote>
-          <div class="flex items-center gap-3 pt-4 border-t border-gold/15">
-            <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center font-cinzel text-gold font-bold">F</div>
-            <div>
-              <div class="font-lato text-[13px] font-bold text-navy dark:text-gold-light">Dr. Fatima Aliyu</div>
-              <div class="font-lato text-[11px] text-[#8A8A8A] dark:text-[#7A8A9A]">Parent · SSS 1</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
+    <!-- ══════════════════════════════════════════
        ONLINE APPLICATION FORM
   ══════════════════════════════════════════ -->
-  <section id="apply" class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-24">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+    <section
+      id="apply"
+      class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-24"
+    >
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-start"
+      >
+        <!-- Left Info Panel -->
+        <div class="lg:col-span-2 reveal">
+          <div
+            class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4"
+          >
+            Apply Now
+          </div>
+          <h2
+            class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(26px,2.8vw,38px)] leading-snug mb-5"
+          >
+            Start Your Application
+          </h2>
+          <div class="w-16 h-[3px] bg-gold-maroon mb-7"></div>
+          <p
+            class="font-cormorant text-[18px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed mb-7"
+          >
+            Complete this form to begin your child's journey at Stellar Scholars
+            Academy. Our admissions team will contact you within 5 working days
+            to confirm receipt and next steps.
+          </p>
 
-      <!-- Left Info Panel -->
-      <div class="lg:col-span-2 reveal">
-        <div class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">Apply Now</div>
-        <h2 class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(26px,2.8vw,38px)] leading-snug mb-5">Start Your Application</h2>
-        <div class="w-16 h-[3px] bg-gold-maroon mb-7"></div>
-        <p class="font-cormorant text-[18px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed mb-7">
-          Complete this form to begin your child's journey at Stellar Scholars Academy. Our admissions team will contact you within 5 working days to confirm receipt and next steps.
-        </p>
+          <!-- Important Dates -->
+          <div
+            class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-5 mb-6"
+          >
+            <div
+              class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-4"
+            >
+              Key Dates — 2026/2027
+            </div>
+            <div class="space-y-3">
+              <div
+                class="flex justify-between items-center border-b border-gold/10 pb-2"
+              >
+                <span
+                  class="font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >Applications Open</span
+                >
+                <span class="font-lato text-[12px] font-bold text-gold"
+                  >Jan 15, 2026</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center border-b border-gold/10 pb-2"
+              >
+                <span
+                  class="font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >Application Deadline</span
+                >
+                <span class="font-lato text-[12px] font-bold text-maroon"
+                  >Jun 30, 2026</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center border-b border-gold/10 pb-2"
+              >
+                <span
+                  class="font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >Assessment Days</span
+                >
+                <span class="font-lato text-[12px] font-bold text-gold"
+                  >Jul 12 – 16, 2026</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center border-b border-gold/10 pb-2"
+              >
+                <span
+                  class="font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >Offer Letters Sent</span
+                >
+                <span class="font-lato text-[12px] font-bold text-gold"
+                  >Jul 25, 2026</span
+                >
+              </div>
+              <div class="flex justify-between items-center">
+                <span
+                  class="font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                  >Resumption Day</span
+                >
+                <span class="font-lato text-[12px] font-bold text-gold"
+                  >Sep 8, 2026</span
+                >
+              </div>
+            </div>
+          </div>
 
-        <!-- Important Dates -->
-        <div class="bg-cream dark:bg-[#162030] border border-gold/20 rounded-sm p-5 mb-6">
-          <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-4">Key Dates — 2026/2027</div>
+          <!-- Contact block -->
           <div class="space-y-3">
-            <div class="flex justify-between items-center border-b border-gold/10 pb-2">
-              <span class="font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]">Applications Open</span>
-              <span class="font-lato text-[12px] font-bold text-gold">Jan 15, 2026</span>
-            </div>
-            <div class="flex justify-between items-center border-b border-gold/10 pb-2">
-              <span class="font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]">Application Deadline</span>
-              <span class="font-lato text-[12px] font-bold text-maroon">Jun 30, 2026</span>
-            </div>
-            <div class="flex justify-between items-center border-b border-gold/10 pb-2">
-              <span class="font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]">Assessment Days</span>
-              <span class="font-lato text-[12px] font-bold text-gold">Jul 12 – 16, 2026</span>
-            </div>
-            <div class="flex justify-between items-center border-b border-gold/10 pb-2">
-              <span class="font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]">Offer Letters Sent</span>
-              <span class="font-lato text-[12px] font-bold text-gold">Jul 25, 2026</span>
-            </div>
-            <div class="flex justify-between items-center">
-              <span class="font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0]">Resumption Day</span>
-              <span class="font-lato text-[12px] font-bold text-gold">Sep 8, 2026</span>
+            <a
+              href="tel:+2347067374352"
+              class="flex items-center gap-3 group no-underline"
+            >
+              <div
+                class="w-8 h-8 rounded-full bg-gold/10 border border-gold/25 flex items-center justify-center text-gold text-[14px] group-hover:bg-gold group-hover:text-navy transition-all"
+              >
+                📞
+              </div>
+              <span
+                class="font-lato text-[13px] text-[#5A5A5A] dark:text-[#8A9AAA] group-hover:text-maroon dark:group-hover:text-gold transition-colors"
+                >+234 706 737 4352</span
+              >
+            </a>
+            <a
+              href="mailto:admissions@stellarscholars.edu.ng"
+              class="flex items-center gap-3 group no-underline"
+            >
+              <div
+                class="w-8 h-8 rounded-full bg-gold/10 border border-gold/25 flex items-center justify-center text-gold text-[14px] group-hover:bg-gold group-hover:text-navy transition-all"
+              >
+                ✉️
+              </div>
+              <span
+                class="font-lato text-[13px] text-[#5A5A5A] dark:text-[#8A9AAA] group-hover:text-maroon dark:group-hover:text-gold transition-colors"
+                >stellarscholarsacademy@gmail.com</span
+              >
+            </a>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-8 h-8 rounded-full bg-gold/10 border border-gold/25 flex items-center justify-center text-gold text-[14px]"
+              >
+                📍
+              </div>
+              <span
+                class="font-lato text-[13px] text-[#5A5A5A] dark:text-[#8A9AAA]"
+                >Main Site: Stellar Scholars Academy(Pre-school, Grade &
+                Secondary Schools), Obafemi Owode L.G.A, Ogun State. Annex:
+                Stellar Scholars Academy, Ikoyi (Daycare).</span
+              >
             </div>
           </div>
         </div>
 
-        <!-- Contact block -->
-        <div class="space-y-3">
-          <a href="tel:+2340355008800" class="flex items-center gap-3 group no-underline">
-            <div class="w-8 h-8 rounded-full bg-gold/10 border border-gold/25 flex items-center justify-center text-gold text-[14px] group-hover:bg-gold group-hover:text-navy transition-all">📞</div>
-            <span class="font-lato text-[13px] text-[#5A5A5A] dark:text-[#8A9AAA] group-hover:text-maroon dark:group-hover:text-gold transition-colors">(0) 0355 0088 · 0801 234 5678</span>
-          </a>
-          <a href="mailto:admissions@stellarscholars.edu.ng" class="flex items-center gap-3 group no-underline">
-            <div class="w-8 h-8 rounded-full bg-gold/10 border border-gold/25 flex items-center justify-center text-gold text-[14px] group-hover:bg-gold group-hover:text-navy transition-all">✉️</div>
-            <span class="font-lato text-[13px] text-[#5A5A5A] dark:text-[#8A9AAA] group-hover:text-maroon dark:group-hover:text-gold transition-colors">admissions@stellarscholars.edu.ng</span>
-          </a>
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full bg-gold/10 border border-gold/25 flex items-center justify-center text-gold text-[14px]">📍</div>
-            <span class="font-lato text-[13px] text-[#5A5A5A] dark:text-[#8A9AAA]">003 Quarantine Dam Road, Anguwan Tasha</span>
+        <!-- Right: Form -->
+        <div class="lg:col-span-3 reveal" data-delay="150">
+          <div
+            class="bg-cream dark:bg-[#162030] border border-gold/20 dark:border-gold/10 rounded-sm p-8 lg:p-10"
+          >
+            <div
+              class="font-cinzel text-[12px] tracking-widest uppercase text-gold mb-1"
+            >
+              Application Form
+            </div>
+            <h3
+              class="font-playfair text-[22px] font-bold text-navy dark:text-gold-light mb-6"
+            >
+              2026/2027 Academic Year
+            </h3>
+
+            <div id="applicationForm" class="space-y-5">
+              <!-- Row: Parent name + phone -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label
+                    class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5"
+                    >Parent / Guardian Name
+                    <span class="text-maroon">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="parentName"
+                    placeholder="Full name"
+                    class="form-input"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5"
+                    >Phone Number <span class="text-maroon">*</span></label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    placeholder="e.g. 0801 234 5678"
+                    class="form-input"
+                  />
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label
+                  class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5"
+                  >Email Address <span class="text-maroon">*</span></label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="your@email.com"
+                  class="form-input"
+                />
+              </div>
+
+              <!-- Row: Child name + DOB -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label
+                    class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5"
+                    >Child's Full Name <span class="text-maroon">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="childName"
+                    placeholder="Child's full name"
+                    class="form-input"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5"
+                    >Date of Birth <span class="text-maroon">*</span></label
+                  >
+                  <input type="date" id="dob" class="form-input" />
+                </div>
+              </div>
+
+              <!-- Row: Division + class applying -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label
+                    class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5"
+                    >Division Applying For
+                    <span class="text-maroon">*</span></label
+                  >
+                  <select id="division" class="form-input">
+                    <option value="" disabled selected>Select division</option>
+                    <option>Pre-School (Nursery / Reception)</option>
+                    <option>Grade School (P1 – P6)</option>
+                    <option>Junior Secondary (JSS 1 – 3)</option>
+                    <option>Senior Secondary (SSS 1 – 3)</option>
+                  </select>
+                </div>
+                <div>
+                  <label
+                    class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5"
+                    >Class Applying For
+                    <span class="text-maroon">*</span></label
+                  >
+                  <select id="classApply" class="form-input">
+                    <option value="" disabled selected>Select class</option>
+                    <option>Nursery 1</option>
+                    <option>Nursery 2</option>
+                    <option>Reception</option>
+                    <option>Grade 1</option>
+                    <option>Grade 2</option>
+                    <option>Grade 3</option>
+                    <option>Grade 4</option>
+                    <option>Grade 5</option>
+                    <option>Grade 6</option>
+                    <option>JSS 1</option>
+                    <option>JSS 2</option>
+                    <option>JSS 3</option>
+                    <option>SSS 1</option>
+                    <option>SSS 2</option>
+                    <option>SSS 3</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Previous school -->
+              <div>
+                <label
+                  class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5"
+                  >Previous School
+                  <span
+                    class="text-[#aaa] font-normal normal-case tracking-normal"
+                    >(if applicable)</span
+                  ></label
+                >
+                <input
+                  type="text"
+                  id="prevSchool"
+                  placeholder="Name of previous school"
+                  class="form-input"
+                />
+              </div>
+
+              <!-- Sibling checkbox -->
+              <div
+                class="flex items-start gap-3 bg-gold/5 border border-gold/20 rounded-sm p-4"
+              >
+                <input
+                  type="checkbox"
+                  id="hasSibling"
+                  class="mt-0.5 w-4 h-4 accent-gold cursor-pointer flex-shrink-0"
+                />
+                <label
+                  for="hasSibling"
+                  class="font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0] cursor-pointer leading-snug"
+                >
+                  My child has a
+                  <strong class="text-gold">sibling currently enrolled</strong>
+                  at Stellar Scholars Academy (10% sibling discount applies)
+                </label>
+              </div>
+
+              <!-- How did you hear -->
+              <div>
+                <label
+                  class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5"
+                  >How Did You Hear About Us?</label
+                >
+                <select id="referral" class="form-input">
+                  <option value="" disabled selected>Select source</option>
+                  <option>Word of mouth / Friend or family</option>
+                  <option>Social media (Facebook / Instagram)</option>
+                  <option>Google Search</option>
+                  <option>School notice board / flyer</option>
+                  <option>Open Day / School event</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div>
+                <label
+                  class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5"
+                  >Additional Information
+                  <span
+                    class="text-[#aaa] font-normal normal-case tracking-normal"
+                    >(optional)</span
+                  ></label
+                >
+                <textarea
+                  id="message"
+                  rows="3"
+                  placeholder="Any special needs, questions, or notes for the admissions team..."
+                  class="form-input resize-none"
+                ></textarea>
+              </div>
+
+              <!-- Submit -->
+              <div class="pt-2">
+                <button
+                  onclick="submitApplication()"
+                  class="w-full bg-maroon hover:bg-maroon-light text-white font-lato text-[13px] font-bold tracking-widest uppercase py-4 rounded-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(123,26,46,0.35)] cursor-pointer"
+                >
+                  Submit Application →
+                </button>
+                <p
+                  class="text-center font-cormorant text-[14px] text-[#8A8A8A] dark:text-[#6A7A8A] mt-3"
+                >
+                  By submitting, you agree to our
+                  <a href="#" class="text-gold hover:underline"
+                    >Privacy Policy</a
+                  >. The ₦5,000 application fee is payable upon confirmation.
+                </p>
+              </div>
+
+              <!-- Success message (hidden) -->
+              <div
+                id="formSuccess"
+                class="hidden bg-gold/10 border border-gold/30 rounded-sm p-5 text-center"
+              >
+                <div class="text-3xl mb-2">🎉</div>
+                <div
+                  class="font-cinzel text-[13px] tracking-widest uppercase text-gold mb-1"
+                >
+                  Application Received!
+                </div>
+                <p
+                  class="font-cormorant text-[17px] text-[#4A4A4A] dark:text-[#C8D4E0]"
+                >
+                  Thank you! Our admissions team will contact you within 5
+                  working days to confirm receipt and outline your next steps.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Right: Form -->
-      <div class="lg:col-span-3 reveal" data-delay="150">
-        <div class="bg-cream dark:bg-[#162030] border border-gold/20 dark:border-gold/10 rounded-sm p-8 lg:p-10">
-          <div class="font-cinzel text-[12px] tracking-widest uppercase text-gold mb-1">Application Form</div>
-          <h3 class="font-playfair text-[22px] font-bold text-navy dark:text-gold-light mb-6">2026/2027 Academic Year</h3>
-
-          <div id="applicationForm" class="space-y-5">
-
-            <!-- Row: Parent name + phone -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5">Parent / Guardian Name <span class="text-maroon">*</span></label>
-                <input type="text" id="parentName" placeholder="Full name" class="form-input" />
-              </div>
-              <div>
-                <label class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5">Phone Number <span class="text-maroon">*</span></label>
-                <input type="tel" id="phone" placeholder="e.g. 0801 234 5678" class="form-input" />
-              </div>
-            </div>
-
-            <!-- Email -->
-            <div>
-              <label class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5">Email Address <span class="text-maroon">*</span></label>
-              <input type="email" id="email" placeholder="your@email.com" class="form-input" />
-            </div>
-
-            <!-- Row: Child name + DOB -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5">Child's Full Name <span class="text-maroon">*</span></label>
-                <input type="text" id="childName" placeholder="Child's full name" class="form-input" />
-              </div>
-              <div>
-                <label class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5">Date of Birth <span class="text-maroon">*</span></label>
-                <input type="date" id="dob" class="form-input" />
-              </div>
-            </div>
-
-            <!-- Row: Division + class applying -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5">Division Applying For <span class="text-maroon">*</span></label>
-                <select id="division" class="form-input">
-                  <option value="" disabled selected>Select division</option>
-                  <option>Pre-School (Nursery / Reception)</option>
-                  <option>Primary School (P1 – P6)</option>
-                  <option>Junior Secondary (JSS 1 – 3)</option>
-                  <option>Senior Secondary (SSS 1 – 3)</option>
-                </select>
-              </div>
-              <div>
-                <label class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5">Class Applying For <span class="text-maroon">*</span></label>
-                <select id="classApply" class="form-input">
-                  <option value="" disabled selected>Select class</option>
-                  <option>Nursery 1</option>
-                  <option>Nursery 2</option>
-                  <option>Reception</option>
-                  <option>Primary 1</option>
-                  <option>Primary 2</option>
-                  <option>Primary 3</option>
-                  <option>Primary 4</option>
-                  <option>Primary 5</option>
-                  <option>Primary 6</option>
-                  <option>JSS 1</option>
-                  <option>JSS 2</option>
-                  <option>JSS 3</option>
-                  <option>SSS 1</option>
-                  <option>SSS 2</option>
-                  <option>SSS 3</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Previous school -->
-            <div>
-              <label class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5">Previous School <span class="text-[#aaa] font-normal normal-case tracking-normal">(if applicable)</span></label>
-              <input type="text" id="prevSchool" placeholder="Name of previous school" class="form-input" />
-            </div>
-
-            <!-- Sibling checkbox -->
-            <div class="flex items-start gap-3 bg-gold/5 border border-gold/20 rounded-sm p-4">
-              <input type="checkbox" id="hasSibling" class="mt-0.5 w-4 h-4 accent-gold cursor-pointer flex-shrink-0" />
-              <label for="hasSibling" class="font-cormorant text-[16px] text-[#4A4A4A] dark:text-[#C8D4E0] cursor-pointer leading-snug">
-                My child has a <strong class="text-gold">sibling currently enrolled</strong> at Stellar Scholars Academy (10% sibling discount applies)
-              </label>
-            </div>
-
-            <!-- How did you hear -->
-            <div>
-              <label class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5">How Did You Hear About Us?</label>
-              <select id="referral" class="form-input">
-                <option value="" disabled selected>Select source</option>
-                <option>Word of mouth / Friend or family</option>
-                <option>Social media (Facebook / Instagram)</option>
-                <option>Google Search</option>
-                <option>School notice board / flyer</option>
-                <option>Open Day / School event</option>
-                <option>Other</option>
-              </select>
-            </div>
-
-            <!-- Message -->
-            <div>
-              <label class="block font-lato text-[11px] font-bold tracking-widest uppercase text-[#6A6A6A] dark:text-[#8A9AAA] mb-1.5">Additional Information <span class="text-[#aaa] font-normal normal-case tracking-normal">(optional)</span></label>
-              <textarea id="message" rows="3" placeholder="Any special needs, questions, or notes for the admissions team..." class="form-input resize-none"></textarea>
-            </div>
-
-            <!-- Submit -->
-            <div class="pt-2">
-              <button onclick="submitApplication()" class="w-full bg-maroon hover:bg-maroon-light text-white font-lato text-[13px] font-bold tracking-widest uppercase py-4 rounded-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(123,26,46,0.35)] cursor-pointer">
-                Submit Application →
-              </button>
-              <p class="text-center font-cormorant text-[14px] text-[#8A8A8A] dark:text-[#6A7A8A] mt-3">By submitting, you agree to our <a href="#" class="text-gold hover:underline">Privacy Policy</a>. The ₦5,000 application fee is payable upon confirmation.</p>
-            </div>
-
-            <!-- Success message (hidden) -->
-            <div id="formSuccess" class="hidden bg-gold/10 border border-gold/30 rounded-sm p-5 text-center">
-              <div class="text-3xl mb-2">🎉</div>
-              <div class="font-cinzel text-[13px] tracking-widest uppercase text-gold mb-1">Application Received!</div>
-              <p class="font-cormorant text-[17px] text-[#4A4A4A] dark:text-[#C8D4E0]">Thank you! Our admissions team will contact you within 5 working days to confirm receipt and outline your next steps.</p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
+    <!-- ══════════════════════════════════════════
        FAQ ACCORDION
   ══════════════════════════════════════════ -->
-  <section class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-24">
-    <div class="max-w-3xl mx-auto">
-      <div class="text-center mb-12 reveal">
-        <div class="section-label-line inline-block font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">Got Questions?</div>
-        <h2 class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(24px,3vw,36px)] leading-snug mb-4">Frequently Asked Questions</h2>
-        <div class="w-16 h-[3px] bg-gold-maroon mx-auto"></div>
+    <section class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-24">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-12 reveal">
+          <div
+            class="section-label-line inline-block font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4"
+          >
+            Got Questions?
+          </div>
+          <h2
+            class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(24px,3vw,36px)] leading-snug mb-4"
+          >
+            Frequently Asked Questions
+          </h2>
+          <div class="w-16 h-[3px] bg-gold-maroon mx-auto"></div>
+        </div>
+
+        <div class="space-y-3 reveal" id="faqList">
+          <div
+            class="faq-item border border-gold/20 dark:border-gold/10 rounded-sm bg-warm-white dark:bg-[#1A2A4A]/40 overflow-hidden"
+          >
+            <button
+              onclick="toggleFaq(this)"
+              class="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer group"
+            >
+              <span
+                class="font-lato text-[14px] font-bold text-navy dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors pr-4"
+                >Is there a waiting list if spaces are full?</span
+              >
+              <span class="faq-icon text-gold text-xl font-bold flex-shrink-0"
+                >+</span
+              >
+            </button>
+            <div class="faq-body px-6">
+              <p
+                class="font-cormorant text-[17px] text-[#5A5A5A] dark:text-[#9AAABA] leading-relaxed pb-5"
+              >
+                Yes. If the class you applied for is full, we will offer your
+                child a place on our priority waiting list. You will be notified
+                as soon as a space becomes available. Being on the waiting list
+                does not require any payment.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="faq-item border border-gold/20 dark:border-gold/10 rounded-sm bg-warm-white dark:bg-[#1A2A4A]/40 overflow-hidden"
+          >
+            <button
+              onclick="toggleFaq(this)"
+              class="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer group"
+            >
+              <span
+                class="font-lato text-[14px] font-bold text-navy dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors pr-4"
+                >Can my child join mid-term or mid-session?</span
+              >
+              <span class="faq-icon text-gold text-xl font-bold flex-shrink-0"
+                >+</span
+              >
+            </button>
+            <div class="faq-body px-6">
+              <p
+                class="font-cormorant text-[17px] text-[#5A5A5A] dark:text-[#9AAABA] leading-relaxed pb-5"
+              >
+                We generally encourage enrolment at the start of a term for
+                seamless integration. However, mid-term admissions are
+                considered on a case-by-case basis for compelling circumstances.
+                Please contact our admissions office to discuss your situation.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="faq-item border border-gold/20 dark:border-gold/10 rounded-sm bg-warm-white dark:bg-[#1A2A4A]/40 overflow-hidden"
+          >
+            <button
+              onclick="toggleFaq(this)"
+              class="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer group"
+            >
+              <span
+                class="font-lato text-[14px] font-bold text-navy dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors pr-4"
+                >What is the class size at Stellar Scholars?</span
+              >
+              <span class="faq-icon text-gold text-xl font-bold flex-shrink-0"
+                >+</span
+              >
+            </button>
+            <div class="faq-body px-6">
+              <p
+                class="font-cormorant text-[17px] text-[#5A5A5A] dark:text-[#9AAABA] leading-relaxed pb-5"
+              >
+                We maintain a maximum of 25 pupils per class to ensure each
+                child receives adequate attention. Pre-school classes are capped
+                at 18 pupils with dedicated classroom assistants for every
+                class.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="faq-item border border-gold/20 dark:border-gold/10 rounded-sm bg-warm-white dark:bg-[#1A2A4A]/40 overflow-hidden"
+          >
+            <button
+              onclick="toggleFaq(this)"
+              class="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer group"
+            >
+              <span
+                class="font-lato text-[14px] font-bold text-navy dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors pr-4"
+                >Is the entrance assessment a pass/fail test?</span
+              >
+              <span class="faq-icon text-gold text-xl font-bold flex-shrink-0"
+                >+</span
+              >
+            </button>
+            <div class="faq-body px-6">
+              <p
+                class="font-cormorant text-[17px] text-[#5A5A5A] dark:text-[#9AAABA] leading-relaxed pb-5"
+              >
+                No. The entrance assessment is designed to help us understand
+                your child's current abilities and learning style so we can
+                place them appropriately. It is not a competitive exam and there
+                is no pass or fail. We want every child to feel relaxed and
+                comfortable.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="faq-item border border-gold/20 dark:border-gold/10 rounded-sm bg-warm-white dark:bg-[#1A2A4A]/40 overflow-hidden"
+          >
+            <button
+              onclick="toggleFaq(this)"
+              class="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer group"
+            >
+              <span
+                class="font-lato text-[14px] font-bold text-navy dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors pr-4"
+                >Are there scholarships or bursaries available?</span
+              >
+              <span class="faq-icon text-gold text-xl font-bold flex-shrink-0"
+                >+</span
+              >
+            </button>
+            <div class="faq-body px-6">
+              <p
+                class="font-cormorant text-[17px] text-[#5A5A5A] dark:text-[#9AAABA] leading-relaxed pb-5"
+              >
+                We offer a limited number of merit scholarships annually to
+                academically exceptional applicants at the JSS and SSS levels.
+                Scholarships are awarded based on assessment results and are
+                subject to annual review. Enquire at the admissions office for
+                current availability.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="faq-item border border-gold/20 dark:border-gold/10 rounded-sm bg-warm-white dark:bg-[#1A2A4A]/40 overflow-hidden"
+          >
+            <button
+              onclick="toggleFaq(this)"
+              class="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer group"
+            >
+              <span
+                class="font-lato text-[14px] font-bold text-navy dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors pr-4"
+                >What uniform and supplies does my child need?</span
+              >
+              <span class="faq-icon text-gold text-xl font-bold flex-shrink-0"
+                >+</span
+              >
+            </button>
+            <div class="faq-body px-6">
+              <p
+                class="font-cormorant text-[17px] text-[#5A5A5A] dark:text-[#9AAABA] leading-relaxed pb-5"
+              >
+                A complete uniform and supplies list is provided in the offer
+                letter pack. Uniforms are available for purchase at our school
+                store during orientation week. We also have a nearly-new uniform
+                exchange programme to support affordability.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="faq-item border border-gold/20 dark:border-gold/10 rounded-sm bg-warm-white dark:bg-[#1A2A4A]/40 overflow-hidden"
+          >
+            <button
+              onclick="toggleFaq(this)"
+              class="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer group"
+            >
+              <span
+                class="font-lato text-[14px] font-bold text-navy dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors pr-4"
+                >Can we visit the school before applying?</span
+              >
+              <span class="faq-icon text-gold text-xl font-bold flex-shrink-0"
+                >+</span
+              >
+            </button>
+            <div class="faq-body px-6">
+              <p
+                class="font-cormorant text-[17px] text-[#5A5A5A] dark:text-[#9AAABA] leading-relaxed pb-5"
+              >
+                Absolutely — we encourage it! You can book a guided campus tour
+                Monday through Friday between 9am and 2pm. Our Open Days in
+                March and October are also ideal for families to experience the
+                school atmosphere. Contact us to schedule a visit.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="space-y-3 reveal" id="faqList">
-
-        <div class="faq-item border border-gold/20 dark:border-gold/10 rounded-sm bg-warm-white dark:bg-[#1A2A4A]/40 overflow-hidden">
-          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer group">
-            <span class="font-lato text-[14px] font-bold text-navy dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors pr-4">Is there a waiting list if spaces are full?</span>
-            <span class="faq-icon text-gold text-xl font-bold flex-shrink-0">+</span>
-          </button>
-          <div class="faq-body px-6">
-            <p class="font-cormorant text-[17px] text-[#5A5A5A] dark:text-[#9AAABA] leading-relaxed pb-5">Yes. If the class you applied for is full, we will offer your child a place on our priority waiting list. You will be notified as soon as a space becomes available. Being on the waiting list does not require any payment.</p>
-          </div>
-        </div>
-
-        <div class="faq-item border border-gold/20 dark:border-gold/10 rounded-sm bg-warm-white dark:bg-[#1A2A4A]/40 overflow-hidden">
-          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer group">
-            <span class="font-lato text-[14px] font-bold text-navy dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors pr-4">Can my child join mid-term or mid-session?</span>
-            <span class="faq-icon text-gold text-xl font-bold flex-shrink-0">+</span>
-          </button>
-          <div class="faq-body px-6">
-            <p class="font-cormorant text-[17px] text-[#5A5A5A] dark:text-[#9AAABA] leading-relaxed pb-5">We generally encourage enrolment at the start of a term for seamless integration. However, mid-term admissions are considered on a case-by-case basis for compelling circumstances. Please contact our admissions office to discuss your situation.</p>
-          </div>
-        </div>
-
-        <div class="faq-item border border-gold/20 dark:border-gold/10 rounded-sm bg-warm-white dark:bg-[#1A2A4A]/40 overflow-hidden">
-          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer group">
-            <span class="font-lato text-[14px] font-bold text-navy dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors pr-4">What is the class size at Stellar Scholars?</span>
-            <span class="faq-icon text-gold text-xl font-bold flex-shrink-0">+</span>
-          </button>
-          <div class="faq-body px-6">
-            <p class="font-cormorant text-[17px] text-[#5A5A5A] dark:text-[#9AAABA] leading-relaxed pb-5">We maintain a maximum of 25 pupils per class to ensure each child receives adequate attention. Pre-school classes are capped at 18 pupils with dedicated classroom assistants for every class.</p>
-          </div>
-        </div>
-
-        <div class="faq-item border border-gold/20 dark:border-gold/10 rounded-sm bg-warm-white dark:bg-[#1A2A4A]/40 overflow-hidden">
-          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer group">
-            <span class="font-lato text-[14px] font-bold text-navy dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors pr-4">Is the entrance assessment a pass/fail test?</span>
-            <span class="faq-icon text-gold text-xl font-bold flex-shrink-0">+</span>
-          </button>
-          <div class="faq-body px-6">
-            <p class="font-cormorant text-[17px] text-[#5A5A5A] dark:text-[#9AAABA] leading-relaxed pb-5">No. The entrance assessment is designed to help us understand your child's current abilities and learning style so we can place them appropriately. It is not a competitive exam and there is no pass or fail. We want every child to feel relaxed and comfortable.</p>
-          </div>
-        </div>
-
-        <div class="faq-item border border-gold/20 dark:border-gold/10 rounded-sm bg-warm-white dark:bg-[#1A2A4A]/40 overflow-hidden">
-          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer group">
-            <span class="font-lato text-[14px] font-bold text-navy dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors pr-4">Are there scholarships or bursaries available?</span>
-            <span class="faq-icon text-gold text-xl font-bold flex-shrink-0">+</span>
-          </button>
-          <div class="faq-body px-6">
-            <p class="font-cormorant text-[17px] text-[#5A5A5A] dark:text-[#9AAABA] leading-relaxed pb-5">We offer a limited number of merit scholarships annually to academically exceptional applicants at the JSS and SSS levels. Scholarships are awarded based on assessment results and are subject to annual review. Enquire at the admissions office for current availability.</p>
-          </div>
-        </div>
-
-        <div class="faq-item border border-gold/20 dark:border-gold/10 rounded-sm bg-warm-white dark:bg-[#1A2A4A]/40 overflow-hidden">
-          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer group">
-            <span class="font-lato text-[14px] font-bold text-navy dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors pr-4">What uniform and supplies does my child need?</span>
-            <span class="faq-icon text-gold text-xl font-bold flex-shrink-0">+</span>
-          </button>
-          <div class="faq-body px-6">
-            <p class="font-cormorant text-[17px] text-[#5A5A5A] dark:text-[#9AAABA] leading-relaxed pb-5">A complete uniform and supplies list is provided in the offer letter pack. Uniforms are available for purchase at our school store during orientation week. We also have a nearly-new uniform exchange programme to support affordability.</p>
-          </div>
-        </div>
-
-        <div class="faq-item border border-gold/20 dark:border-gold/10 rounded-sm bg-warm-white dark:bg-[#1A2A4A]/40 overflow-hidden">
-          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer group">
-            <span class="font-lato text-[14px] font-bold text-navy dark:text-[#C8D4E0] group-hover:text-maroon dark:group-hover:text-gold transition-colors pr-4">Can we visit the school before applying?</span>
-            <span class="faq-icon text-gold text-xl font-bold flex-shrink-0">+</span>
-          </button>
-          <div class="faq-body px-6">
-            <p class="font-cormorant text-[17px] text-[#5A5A5A] dark:text-[#9AAABA] leading-relaxed pb-5">Absolutely — we encourage it! You can book a guided campus tour Monday through Friday between 9am and 2pm. Our Open Days in March and October are also ideal for families to experience the school atmosphere. Contact us to schedule a visit.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
+    <!-- ══════════════════════════════════════════
        FINAL CTA
   ══════════════════════════════════════════ -->
-  <section class="bg-maroon-navy admissions-pattern relative overflow-hidden px-5 sm:px-10 lg:px-20 py-24">
-    <div class="absolute inset-0 bg-hero-pattern pointer-events-none opacity-40"></div>
-    <div class="relative z-10 max-w-3xl mx-auto text-center reveal">
-      <div class="text-5xl mb-5">🕊️</div>
-      <div class="font-cinzel text-[11px] tracking-[0.2em] uppercase text-gold mb-4">Take the First Step</div>
-      <h2 class="font-playfair font-bold text-white text-[clamp(28px,3.5vw,46px)] leading-snug mb-5">
-        Ready to Join the<br><em class="italic text-gold-light">Stellar Scholars Family?</em>
-      </h2>
-      <p class="font-cormorant text-[19px] text-white/65 leading-relaxed max-w-xl mx-auto mb-10">
-        Spaces are limited and fill quickly. Submit your application today and begin the journey toward an exceptional education for your child.
-      </p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="#apply" class="inline-block bg-gold hover:bg-gold-light text-navy font-lato text-[12px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(196,154,44,0.4)] no-underline">Apply Now</a>
-        <a href="#" class="inline-block border border-white/35 hover:border-gold hover:text-gold text-white font-lato text-[12px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all duration-200 no-underline">Book a Tour</a>
-        <a href="tel:+2340355008800" class="inline-block border border-white/35 hover:border-gold hover:text-gold text-white font-lato text-[12px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all duration-200 no-underline">Call Us Directly</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════════ -->
-  <footer class="bg-navy dark:bg-[#080E18] px-5 sm:px-10 lg:px-20 pt-16 pb-8">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
-      <div>
-        <div class="flex items-center gap-3 mb-5">
-          <svg width="38" height="44" viewBox="0 0 100 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M50 4 L94 22 L94 62 Q94 90 50 111 Q6 90 6 62 L6 22 Z" fill="#1A2A4A" stroke="#C49A2C" stroke-width="4"/>
-            <text x="50" y="35" text-anchor="middle" font-size="13" fill="#C49A2C" font-family="serif">★ ★ ★</text>
-            <text x="50" y="62" text-anchor="middle" font-family="serif" font-size="7.5" fill="#C49A2C" font-weight="bold">STELLAR SCHOLARS</text>
-            <text x="50" y="107" text-anchor="middle" font-family="serif" font-size="7" fill="#C49A2C" font-weight="bold">2026</text>
-          </svg>
-          <div class="font-cinzel text-[12px] font-semibold text-white leading-tight">STELLAR SCHOLARS<span class="block text-[9px] text-gold tracking-[0.1em] mt-0.5">ACADEMY · LUX ET PAX</span></div>
+    <section
+      class="bg-maroon-navy admissions-pattern relative overflow-hidden px-5 sm:px-10 lg:px-20 py-24"
+    >
+      <div
+        class="absolute inset-0 bg-hero-pattern pointer-events-none opacity-40"
+      ></div>
+      <div class="relative z-10 max-w-3xl mx-auto text-center reveal">
+        <div class="text-5xl mb-5">🕊️</div>
+        <div
+          class="font-cinzel text-[11px] tracking-[0.2em] uppercase text-gold mb-4"
+        >
+          Take the First Step
         </div>
-        <p class="font-cormorant text-[15px] leading-[1.7] text-white/50 mb-6">Excellence in Education &amp; Character. We nurture scholars who lead with knowledge, integrity, and compassion.</p>
-        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2"><span class="text-gold flex-shrink-0">📍</span><span>003 Quarantine Dam Road, Anguwan Tasha</span></div>
-        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2"><span class="text-gold flex-shrink-0">📞</span><span>(0) 0355 0088</span></div>
-        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-6"><span class="text-gold flex-shrink-0">✉️</span><span>info@stellarscholars.edu.ng</span></div>
-        <div class="flex gap-2.5">
-          <a href="#" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[13px] font-bold transition-all duration-200 no-underline">f</a>
-          <a href="#" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[13px] font-bold transition-all duration-200 no-underline">t</a>
-          <a href="#" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[11px] font-bold transition-all duration-200 no-underline">in</a>
-          <a href="#" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center hover:text-navy text-[14px] transition-all duration-200 no-underline">▶</a>
+        <h2
+          class="font-playfair font-bold text-white text-[clamp(28px,3.5vw,46px)] leading-snug mb-5"
+        >
+          Ready to Join the<br /><em class="italic text-gold-light"
+            >Stellar Scholars Family?</em
+          >
+        </h2>
+        <p
+          class="font-cormorant text-[19px] text-white/65 leading-relaxed max-w-xl mx-auto mb-10"
+        >
+          Spaces are limited and fill quickly. Submit your application today and
+          begin the journey toward an exceptional education for your child.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="#apply"
+            class="inline-block bg-gold hover:bg-gold-light text-navy font-lato text-[12px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(196,154,44,0.4)] no-underline"
+            >Apply Now</a
+          >
+          <a
+            href="#"
+            class="inline-block border border-white/35 hover:border-gold hover:text-gold text-white font-lato text-[12px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all duration-200 no-underline"
+            >Book a Tour</a
+          >
+          <a
+            href="tel:+2347067374352"
+            class="inline-block border border-white/35 hover:border-gold hover:text-gold text-white font-lato text-[12px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all duration-200 no-underline"
+            >Call Us Directly</a
+          >
         </div>
       </div>
-      <div>
-        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">About Us</div>
-        <ul class="list-none space-y-2.5">
-          <li><a href="ssa-about.html" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Our Mission</a></li>
-          <li><a href="ssa-about.html#leadership" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Leadership</a></li>
-          <li><a href="ssa-about.html#history" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">History</a></li>
-          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Awards</a></li>
-          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">Academics</div>
-        <ul class="list-none space-y-2.5">
-          <li><a href="ssa-academics.html" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Pre-School</a></li>
-          <li><a href="ssa-academics.html" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Primary School</a></li>
-          <li><a href="ssa-academics.html" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Secondary School</a></li>
-          <li><a href="ssa-admissions.html" class="text-[13px] text-gold hover:text-gold-light transition-colors no-underline">Admissions</a></li>
-          <li><a href="ssa-gallery.html" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Gallery</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">Quick Links</div>
-        <ul class="list-none space-y-2.5">
-          <li><a href="#apply" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Apply Now</a></li>
-          <li><a href="#fees" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Fee Structure</a></li>
-          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Book a Tour</a></li>
-          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Parent Portal</a></li>
-          <li><a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">News & Events</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="max-w-7xl mx-auto border-t border-white/8 pt-7 flex flex-col sm:flex-row justify-between items-center gap-3 text-[12px] text-white/35">
-      <span>© 2026 Stellar Scholars Academy. All rights reserved.</span>
-      <span>Powered by <a href="https://ticst.com.ng" target="_blank" class="text-gold hover:text-gold-light transition-colors no-underline">TICST</a> &nbsp;·&nbsp; <a href="#" class="text-gold hover:text-gold-light transition-colors no-underline">Privacy Policy</a> &nbsp;·&nbsp; <a href="#" class="text-gold hover:text-gold-light transition-colors no-underline">Terms</a></span>
-    </div>
-  </footer>
+    </section>
 
-  <!-- ══════════════════════════════════════════
+    <!--FOOTER-->
+    <footer
+      class="bg-navy dark:bg-[#04080F] text-white/65 px-5 sm:px-10 lg:px-20 pt-20 pb-10"
+    >
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-14"
+      >
+        <!-- Brand col -->
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <div
+              class="w-11 h-11 rounded-full bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center font-cinzel text-[16px] font-bold text-white flex-shrink-0"
+            >
+              <img src="imgs/logo2.jpg" alt="Logo" />
+            </div>
+            <div
+              class="font-cinzel text-[13px] font-semibold tracking-wide text-white leading-tight"
+            >
+              STELLAR SCHOLARS ACADEMY
+              <span
+                class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5"
+                >LUX ET PAX · EST. 2026</span
+              >
+            </div>
+          </div>
+          <p class="text-[13px] leading-[1.7] text-white/50 mb-6">
+            Excellence in Education &amp; Character. We nurture scholars who
+            lead with knowledge, integrity, and compassion.
+          </p>
+          <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2">
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill="white"
+                d="M12 2c-4.4 0-8 3.6-8 8 0 5.4 7 11.5 7.3 11.8.2.1.5.2.7.2.2 0 .5-.1.7-.2.3-.3 7.3-6.4 7.3-11.8 0-4.4-3.6-8-8-8zm0 17.7c-2.1-2-6-6.3-6-9.7 0-3.3 2.7-6 6-6s6 2.7 6 6-3.9 7.7-6 9.7zM12 6c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
+              />
+            </svg>
+            <div>
+              <b>Main Site:</b> Stellar Scholars Academy(Pre-school, Grade &
+              Secondary Schools), Obafemi Owode L.G.A, Ogun State.<br /><b
+                >Annex:</b
+              >
+              Stellar Scholars Academy, Ikoyi (Daycare).
+            </div>
+
+            <div class="flex pt-0"></div>
+          </div>
+          <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              class="bi bi-telephone"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill="white"
+                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+              />
+            </svg>
+            <span> +234 706 737 4352</span>
+          </div>
+          <div class="flex items-start gap-2 text-[13px] text-white/55 mb-6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16px"
+              height="16px"
+              viewBox="0 0 640 640"
+            >
+              <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+              <path
+                fill="white"
+                d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"
+              />
+            </svg>
+            <span>stellarscholarsacademy@gmail.com</span>
+          </div>
+          <div class="flex gap-2.5">
+            <a
+              href="#"
+              class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[13px] font-bold transition-all duration-200 no-underline"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-facebook"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                /></svg
+            ></a>
+            <a
+              href="https://ng.linkedin.com/company/stellar-scholars-academy1"
+              class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[11px] font-bold transition-all duration-200 no-underline"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-linkedin"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                /></svg
+            ></a>
+            <a
+              href="https://www.instagram.com/stellarscholarsacademyikoyi/"
+              class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center hover:text-navy text-[14px] transition-all duration-200 no-underline"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-instagram"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                /></svg
+            ></a>
+          </div>
+        </div>
+
+        <!-- Links cols -->
+        <div>
+          <div
+            class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5"
+          >
+            About Us
+          </div>
+          <ul class="list-none space-y-2.5">
+            <li>
+              <a
+                href="about.html#mission"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Our Mission</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html#leadership"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Leadership</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html#timeline"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >History</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Awards</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div
+            class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5"
+          >
+            Academics
+          </div>
+          <ul class="list-none space-y-2.5">
+            <li>
+              <a
+                href="academics.html"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Pre-School</a
+              >
+            </li>
+            <li>
+              <a
+                href="academics.html"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Grade School</a
+              >
+            </li>
+            <li>
+              <a
+                href="academics.html"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Secondary School</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Admissions</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="hidden sm:block md:hiddden">
+          <div
+            class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5"
+          >
+            School Life
+          </div>
+          <ul class="list-none space-y-2.5">
+            <li>
+              <a
+                href="#"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Sports &amp; Athletics</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Arts &amp; Culture</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Clubs &amp; Societies</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline"
+                >Events Calendar</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer bottom -->
+      <div
+        class="max-w-auto mx-auto border-t border-white/8 pt-7 flex flex-col sm:flex-row justify-between items-center text-[14px] text-white/35"
+      >
+        <span>© 2026 Stellar Scholars Academy. All rights reserved.</span>
+        <span class="inline-flex"
+          >Powered by
+          <a href="https://ticst.com.ng" target="_blank" class="no-underline"
+            ><img
+              src="imgs/ticst transparent - blue.png"
+              alt=""
+              class="h-11 w-15 pb-5 text-green-80"
+          /></a>
+          &nbsp;·&nbsp;
+          <a
+            href="#"
+            class="text-gold hover:text-gold-light transition-colors no-underline"
+            >Privacy Policy</a
+          >
+          &nbsp;·&nbsp;
+          <a
+            href="#"
+            class="text-gold hover:text-gold-light transition-colors no-underline"
+            >Terms</a
+          ></span
+        >
+      </div>
+    </footer>
+
+    <!-- ══════════════════════════════════════════
        JAVASCRIPT
   ══════════════════════════════════════════ -->
-  <script>
-    // ── Dark / Light Toggle ──
-    const themeBtn = document.getElementById('themeBtn');
-    const html = document.documentElement;
-    const isDark = () => html.classList.contains('dark');
-    function applyTheme(dark) {
-      html.classList.toggle('dark', dark);
-      themeBtn.innerHTML = dark ? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path  fill="rgb(255, 212, 59)" d="M303.3 112.7C196.2 121.2 112 210.8 112 320C112 434.9 205.1 528 320 528C353.3 528 384.7 520.2 412.6 506.3C309.2 482.9 232 390.5 232 280C232 214.2 259.4 154.9 303.3 112.7zM64 320C64 178.6 178.6 64 320 64C339.4 64 358.4 66.2 376.7 70.3C386.6 72.5 394 80.8 395.2 90.8C396.4 100.8 391.2 110.6 382.1 115.2C321.5 145.4 280 207.9 280 280C280 381.6 362.4 464 464 464C469 464 473.9 463.8 478.8 463.4C488.9 462.6 498.4 468.2 502.6 477.5C506.8 486.8 504.6 497.6 497.3 504.6C451.3 548.8 388.8 576 320 576C178.6 576 64 461.4 64 320z"/></svg>' : '<svg xmlns="http://www.w3.org/2000/svg" height="23" width="23" viewBox="0 0 640 640"><path fill="rgb(255, 212, 59)" d="M320 32C328 32 335.4 36 339.9 42.6L398.7 130L502.1 109.8C509.9 108.3 518 110.7 523.7 116.4C529.4 122.1 531.8 130.2 530.3 138L510 241.3L597.4 300.1C604 304.5 608 312 608 320C608 328 604 335.4 597.4 339.9L510 398.7L530.2 502C531.7 509.8 529.3 517.9 523.6 523.6C517.9 529.3 509.8 531.7 502 530.2L398.7 510L339.9 597.4C335.4 604 328 608 320 608C312 608 304.6 604 300.1 597.4L241.3 510L137.9 530.2C130.1 531.7 122 529.3 116.3 523.6C110.6 517.9 108.2 509.8 109.7 502L130 398.7L42.6 339.9C36 335.4 32 328 32 320C32 312 36 304.6 42.6 300.1L130 241.3L109.8 137.9C108.3 130.1 110.7 122 116.4 116.3C122.1 110.6 130.2 108.2 138 109.7L241.3 129.9L300.1 42.5L301.9 40.2C306.4 35 313 32 320 32zM272.2 170C266.8 178 257.2 182 247.7 180.2L163.7 163.8L180.1 247.8C181.9 257.3 177.9 266.9 169.9 272.3L99 320L170 367.8C178 373.2 182 382.8 180.2 392.3L163.8 476.3L247.8 459.9L251.3 459.5C259.6 459.1 267.6 463.1 272.3 470.1L320.1 541.1L367.9 470.1L370.1 467.3C375.7 461.2 384.1 458.3 392.4 460L476.4 476.4L460 392.4C458.2 382.9 462.2 373.3 470.2 367.9L541.2 320.1L470.2 272.3C462.2 266.9 458.2 257.3 460 247.8L476.4 163.8L392.4 180.2C382.9 182 373.3 178 367.9 170L320.1 99L272.3 170zM320 440C253.7 440 200 386.3 200 320C200 253.7 253.7 200 320 200C386.3 200 440 253.7 440 320C440 386.3 386.3 440 320 440zM320 248C280.2 248 248 280.2 248 320C248 359.8 280.2 392 320 392C359.8 392 392 359.8 392 320C392 280.2 359.8 248 320 248z"/></svg>';
-      themeBtn.title = dark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
-    }
-    applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
-    themeBtn.addEventListener('click', () => applyTheme(!isDark()));
-    // ── Mobile Menu ──────────────────────────
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-    // ── Mobile Menu ──
-    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
-      document.getElementById('mobileMenu').classList.toggle('hidden');
-    });
-
-    // ── Scroll reveal ──
-    const revealObs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          const delay = e.target.dataset.delay ? parseInt(e.target.dataset.delay) : 0;
-          setTimeout(() => e.target.classList.add('visible'), delay);
-          revealObs.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.08 });
-    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-
-    // ── Testi / pillar card stagger ──
-    const cardObs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.style.opacity = '1';
-          e.target.style.transform = 'translateY(0)';
-          cardObs.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.testi-card, .pillar-card').forEach((el, i) => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(24px)';
-      el.style.transition = `opacity 0.55s ease ${(i % 3) * 0.12}s, transform 0.55s ease ${(i % 3) * 0.12}s`;
-      cardObs.observe(el);
-    });
-
-    // ── Navbar shadow on scroll ──
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('shadow-lg', window.scrollY > 40);
-    });
-
-    // ── FAQ Accordion ──
-    function toggleFaq(btn) {
-      const item = btn.closest('.faq-item');
-      const body = item.querySelector('.faq-body');
-      const isOpen = item.classList.contains('open');
-      // Close all
-      document.querySelectorAll('.faq-item.open').forEach(i => {
-        i.classList.remove('open');
-        i.querySelector('.faq-body').classList.remove('open');
-      });
-      // Open this one if it wasn't already open
-      if (!isOpen) {
-        item.classList.add('open');
-        body.classList.add('open');
+    <script>
+      // ── Dark / Light Toggle ──
+      const themeBtn = document.getElementById("themeBtn");
+      const html = document.documentElement;
+      const isDark = () => html.classList.contains("dark");
+      function applyTheme(dark) {
+        html.classList.toggle("dark", dark);
+        themeBtn.innerHTML = dark
+          ? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path  fill="rgb(255, 212, 59)" d="M303.3 112.7C196.2 121.2 112 210.8 112 320C112 434.9 205.1 528 320 528C353.3 528 384.7 520.2 412.6 506.3C309.2 482.9 232 390.5 232 280C232 214.2 259.4 154.9 303.3 112.7zM64 320C64 178.6 178.6 64 320 64C339.4 64 358.4 66.2 376.7 70.3C386.6 72.5 394 80.8 395.2 90.8C396.4 100.8 391.2 110.6 382.1 115.2C321.5 145.4 280 207.9 280 280C280 381.6 362.4 464 464 464C469 464 473.9 463.8 478.8 463.4C488.9 462.6 498.4 468.2 502.6 477.5C506.8 486.8 504.6 497.6 497.3 504.6C451.3 548.8 388.8 576 320 576C178.6 576 64 461.4 64 320z"/></svg>'
+          : '<svg xmlns="http://www.w3.org/2000/svg" height="23" width="23" viewBox="0 0 640 640"><path fill="rgb(255, 212, 59)" d="M320 32C328 32 335.4 36 339.9 42.6L398.7 130L502.1 109.8C509.9 108.3 518 110.7 523.7 116.4C529.4 122.1 531.8 130.2 530.3 138L510 241.3L597.4 300.1C604 304.5 608 312 608 320C608 328 604 335.4 597.4 339.9L510 398.7L530.2 502C531.7 509.8 529.3 517.9 523.6 523.6C517.9 529.3 509.8 531.7 502 530.2L398.7 510L339.9 597.4C335.4 604 328 608 320 608C312 608 304.6 604 300.1 597.4L241.3 510L137.9 530.2C130.1 531.7 122 529.3 116.3 523.6C110.6 517.9 108.2 509.8 109.7 502L130 398.7L42.6 339.9C36 335.4 32 328 32 320C32 312 36 304.6 42.6 300.1L130 241.3L109.8 137.9C108.3 130.1 110.7 122 116.4 116.3C122.1 110.6 130.2 108.2 138 109.7L241.3 129.9L300.1 42.5L301.9 40.2C306.4 35 313 32 320 32zM272.2 170C266.8 178 257.2 182 247.7 180.2L163.7 163.8L180.1 247.8C181.9 257.3 177.9 266.9 169.9 272.3L99 320L170 367.8C178 373.2 182 382.8 180.2 392.3L163.8 476.3L247.8 459.9L251.3 459.5C259.6 459.1 267.6 463.1 272.3 470.1L320.1 541.1L367.9 470.1L370.1 467.3C375.7 461.2 384.1 458.3 392.4 460L476.4 476.4L460 392.4C458.2 382.9 462.2 373.3 470.2 367.9L541.2 320.1L470.2 272.3C462.2 266.9 458.2 257.3 460 247.8L476.4 163.8L392.4 180.2C382.9 182 373.3 178 367.9 170L320.1 99L272.3 170zM320 440C253.7 440 200 386.3 200 320C200 253.7 253.7 200 320 200C386.3 200 440 253.7 440 320C440 386.3 386.3 440 320 440zM320 248C280.2 248 248 280.2 248 320C248 359.8 280.2 392 320 392C359.8 392 392 359.8 392 320C392 280.2 359.8 248 320 248z"/></svg>';
+        themeBtn.title = dark ? "Switch to Light Mode" : "Switch to Dark Mode";
       }
-    }
+      applyTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
+      themeBtn.addEventListener("click", () => applyTheme(!isDark()));
+      // ── Mobile Menu ──────────────────────────
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
 
-    // ── Application Form Submit ──
-    function submitApplication() {
-      const required = ['parentName', 'phone', 'email', 'childName', 'dob', 'division', 'classApply'];
-      let allFilled = true;
-      required.forEach(id => {
-        const el = document.getElementById(id);
-        if (!el.value.trim()) {
-          el.style.borderColor = '#7B1A2E';
-          allFilled = false;
-        } else {
-          el.style.borderColor = '';
-        }
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
       });
-      if (!allFilled) {
-        alert('Please fill in all required fields marked with *');
-        return;
-      }
-      // Show success
-      document.getElementById('applicationForm').style.opacity = '0';
-      document.getElementById('applicationForm').style.transform = 'translateY(-10px)';
-      document.getElementById('applicationForm').style.transition = 'all 0.3s ease';
-      setTimeout(() => {
-        document.getElementById('applicationForm').style.display = 'none';
-        document.getElementById('formSuccess').classList.remove('hidden');
-        document.getElementById('formSuccess').style.animation = 'fadeUp 0.5s ease both';
-      }, 300);
-    }
-  </script>
+      // ── Mobile Menu ──
+      document.getElementById("mobileMenuBtn").addEventListener("click", () => {
+        document.getElementById("mobileMenu").classList.toggle("hidden");
+      });
 
-</body>
+      // ── Scroll reveal ──
+      const revealObs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              const delay = e.target.dataset.delay
+                ? parseInt(e.target.dataset.delay)
+                : 0;
+              setTimeout(() => e.target.classList.add("visible"), delay);
+              revealObs.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.08 },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => revealObs.observe(el));
+
+      // ── Testi / pillar card stagger ──
+      const cardObs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.style.opacity = "1";
+              e.target.style.transform = "translateY(0)";
+              cardObs.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".testi-card, .pillar-card")
+        .forEach((el, i) => {
+          el.style.opacity = "0";
+          el.style.transform = "translateY(24px)";
+          el.style.transition = `opacity 0.55s ease ${(i % 3) * 0.12}s, transform 0.55s ease ${(i % 3) * 0.12}s`;
+          cardObs.observe(el);
+        });
+
+      // ── Navbar shadow on scroll ──
+      window.addEventListener("scroll", () => {
+        navbar.classList.toggle("shadow-lg", window.scrollY > 40);
+      });
+
+      // ── FAQ Accordion ──
+      function toggleFaq(btn) {
+        const item = btn.closest(".faq-item");
+        const body = item.querySelector(".faq-body");
+        const isOpen = item.classList.contains("open");
+        // Close all
+        document.querySelectorAll(".faq-item.open").forEach((i) => {
+          i.classList.remove("open");
+          i.querySelector(".faq-body").classList.remove("open");
+        });
+        // Open this one if it wasn't already open
+        if (!isOpen) {
+          item.classList.add("open");
+          body.classList.add("open");
+        }
+      }
+
+      // ── Application Form Submit ──
+      function submitApplication() {
+        const required = [
+          "parentName",
+          "phone",
+          "email",
+          "childName",
+          "dob",
+          "division",
+          "classApply",
+        ];
+        let allFilled = true;
+        required.forEach((id) => {
+          const el = document.getElementById(id);
+          if (!el.value.trim()) {
+            el.style.borderColor = "#7B1A2E";
+            allFilled = false;
+          } else {
+            el.style.borderColor = "";
+          }
+        });
+        if (!allFilled) {
+          alert("Please fill in all required fields marked with *");
+          return;
+        }
+        // Show success
+        document.getElementById("applicationForm").style.opacity = "0";
+        document.getElementById("applicationForm").style.transform =
+          "translateY(-10px)";
+        document.getElementById("applicationForm").style.transition =
+          "all 0.3s ease";
+        setTimeout(() => {
+          document.getElementById("applicationForm").style.display = "none";
+          document.getElementById("formSuccess").classList.remove("hidden");
+          document.getElementById("formSuccess").style.animation =
+            "fadeUp 0.5s ease both";
+        }, 300);
+      }
+    </script>
+  </body>
 </html>

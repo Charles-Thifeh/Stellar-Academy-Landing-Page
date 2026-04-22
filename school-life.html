@@ -1,561 +1,1565 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="light scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>School Life | Stellar Scholars Academy</title>
-  <link rel="shortcut icon" href="imgs/logo2.jpg" type="image/x-icon">
+
+  <title>
+    Stellar Scholars Academy | Excellence in Education & Character | Ogun
+    State, Nigeria
+  </title>
+
+  <meta name="description"
+    content="Stellar Scholars Academy offers world-class Pre-School, Grade School, and Secondary School education in Obafemi Owode, Ogun State. Nurturing minds and building futures through academic excellence, pastoral care, and strong values. 2026/2027 Admissions now open." />
+
+  <meta name="keywords"
+    content="Stellar Scholars Academy, best school in Ogun State, private school Nigeria, secondary school Obafemi Owode, grade school Nigeria, pre-school Ogun State, top rated school Nigeria, admissions 2026, Ikoyi daycare, SSA Nigeria" />
+
+  <meta name="author" content="Stellar Scholars Academy" />
+  <meta name="robots" content="school-life, follow" />
+  <link rel="canonical" href="https://stellarscholarsacademy.com.ng/school-life.html" />
+
+  <!-- ✅ OPEN GRAPH (Facebook, WhatsApp, LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://stellarscholarsacademy.com.ng/school-life.html" />
+  <meta property="og:title" content="Stellar Scholars Academy | Every Learner is a Light" />
+  <meta property="og:description"
+    content="A nurturing school community in Ogun State, Nigeria, where every scholar discovers their unique potential. Pre-School, Grade & Secondary School. Admissions open for 2026/2027." />
+  <meta property="og:image" content="https://stellarscholarsacademy.com.ng/imgs/logo2.jpg" />
+  <meta property="og:image:alt" content="Stellar Scholars Academy Logo" />
+  <meta property="og:site_name" content="Stellar Scholars Academy" />
+  <meta property="og:locale" content="en_NG" />
+
+  <!-- ✅ TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Stellar Scholars Academy | Excellence in Education & Character" />
+  <meta name="twitter:description"
+    content="Nurturing scholars in Ogun State, Nigeria with academic excellence, pastoral care, and strong values. Pre-School to Secondary School. 2026/2027 Admissions now open." />
+  <meta name="twitter:image" content="https://stellarscholarsacademy.com.ng/imgs/logo2.jpg" />
+
+  <!-- ✅ GEO / LOCAL SEO -->
+  <meta name="geo.region" content="NG-OG" />
+  <meta name="geo.placename" content="Obafemi Owode, Ogun State, Nigeria" />
+  <meta name="ICBM" content="6.9965, 3.5986" />
+
+  <!-- ✅ STRUCTURED DATA (JSON-LD) — paste inside a <script> tag -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "School",
+        "name": "Stellar Scholars Academy",
+        "url": "https://stellarscholarsacademy.com.ng",
+        "logo": "https://stellarscholarsacademy.com.ng/imgs/logo2.jpg",
+        "description": "Excellence in Education & Character. Stellar Scholars Academy nurtures scholars who lead with knowledge, integrity, and compassion.",
+        "telephone": "+2347067374352",
+        "email": "stellarscholarsacademy@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Obafemi Owode L.G.A",
+          "addressRegion": "Ogun State",
+          "addressCountry": "NG"
+        },
+        "foundingDate": "2026",
+        "slogan": "Every Learner is a Light",
+        "hasMap": "https://stellarscholarsacademy.com.ng",
+        "sameAs": []
+      }
+    </script>
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500;600&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500;600&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet" />
   <script>
     tailwind.config = {
-      darkMode: 'class',
+      darkMode: "class",
       theme: {
         extend: {
           colors: {
-            gold:'#C49A2C','gold-light':'#E8C56A','gold-dark':'#9A7A1E',
-            maroon:'#7B1A2E','maroon-light':'#A02040',
-            navy:'#1A2A4A','navy-light':'#243558',
-            cream:'#FAF6EE','warm-white':'#FFFDF8'
+            gold: "#C49A2C",
+            "gold-light": "#E8C56A",
+            "gold-dark": "#9A7A1E",
+            maroon: "#7B1A2E",
+            "maroon-light": "#A02040",
+            navy: "#1A2A4A",
+            "navy-light": "#243558",
+            cream: "#FAF6EE",
+            "warm-white": "#FFFDF8",
           },
           fontFamily: {
-            playfair:['"Playfair Display"','serif'],
-            cormorant:['"Cormorant Garamond"','serif'],
-            cinzel:['Cinzel','serif'],
-            lato:['Lato','sans-serif']
+            playfair: ['"Playfair Display"', "serif"],
+            cormorant: ['"Cormorant Garamond"', "serif"],
+            cinzel: ["Cinzel", "serif"],
+            lato: ["Lato", "sans-serif"],
           },
           backgroundImage: {
-            'gold-maroon':'linear-gradient(to right,#C49A2C,#7B1A2E)',
-            'maroon-navy':'linear-gradient(135deg,#7B1A2E 0%,#1A2A4A 100%)',
-            'hero-pattern':'repeating-linear-gradient(45deg,rgba(196,154,44,0.04) 0,rgba(196,154,44,0.04) 1px,transparent 0,transparent 24px)'
+            "gold-maroon": "linear-gradient(to right,#C49A2C,#7B1A2E)",
+            "maroon-navy": "linear-gradient(135deg,#7B1A2E 0%,#1A2A4A 100%)",
+            "hero-pattern":
+              "repeating-linear-gradient(45deg,rgba(196,154,44,0.04) 0,rgba(196,154,44,0.04) 1px,transparent 0,transparent 24px)",
           },
           keyframes: {
-            fadeUp:{'0%':{opacity:'0',transform:'translateY(30px)'},'100%':{opacity:'1',transform:'translateY(0)'}}
+            fadeUp: {
+              "0%": { opacity: "0", transform: "translateY(30px)" },
+              "100%": { opacity: "1", transform: "translateY(0)" },
+            },
           },
           animation: {
-            'fade-up':'fadeUp 0.7s ease both',
-            'fade-up-1':'fadeUp 0.7s ease 0.1s both',
-            'fade-up-2':'fadeUp 0.7s ease 0.2s both',
-            'fade-up-3':'fadeUp 0.7s ease 0.3s both',
-            'fade-up-4':'fadeUp 0.7s ease 0.4s both'
-          }
-        }
-      }
-    }
+            "fade-up": "fadeUp 0.7s ease both",
+            "fade-up-1": "fadeUp 0.7s ease 0.1s both",
+            "fade-up-2": "fadeUp 0.7s ease 0.2s both",
+            "fade-up-3": "fadeUp 0.7s ease 0.3s both",
+            "fade-up-4": "fadeUp 0.7s ease 0.4s both",
+          },
+        },
+      },
+    };
   </script>
   <style>
-    ::-webkit-scrollbar{width:6px}
-    ::-webkit-scrollbar-track{background:#f4f0e8}
-    .dark ::-webkit-scrollbar-track{background:#0F1824}
-    ::-webkit-scrollbar-thumb{background:#C49A2C;border-radius:3px}
-    .nav-link{position:relative;padding-bottom:3px}
-    .nav-link::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:#C49A2C;transform:scaleX(0);transition:transform .2s ease;border-radius:1px}
-    .nav-link:hover::after,.nav-link.active::after{transform:scaleX(1)}
-    .section-label-line{position:relative;padding-left:36px}
-    .section-label-line::before{content:'';position:absolute;left:0;top:50%;width:24px;height:1px;background:#C49A2C;transform:translateY(-50%)}
-    .hover-bar{position:relative;overflow:hidden}
-    .hover-bar::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,#C49A2C,#7B1A2E);transform:scaleX(0);transition:transform .3s ease}
-    .hover-bar:hover::before{transform:scaleX(1)}
-    .pillar-card{position:relative;overflow:hidden}
-    .pillar-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,#C49A2C,#7B1A2E);transform:scaleX(0);transition:transform .3s ease}
-    .pillar-card:hover::before{transform:scaleX(1)}
-    .admissions-pattern{background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.03) 0,rgba(255,255,255,.03) 1px,transparent 0,transparent 20px)}
-    .diag-pattern{background-image:repeating-linear-gradient(135deg,rgba(196,154,44,.05) 0,rgba(196,154,44,.05) 1px,transparent 0,transparent 28px)}
-    .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
-    .reveal.visible{opacity:1;transform:translateY(0)}
-    .reveal-left{opacity:0;transform:translateX(-32px);transition:opacity .65s ease,transform .65s ease}
-    .reveal-left.visible{opacity:1;transform:translateX(0)}
-    .reveal-right{opacity:0;transform:translateX(32px);transition:opacity .65s ease,transform .65s ease}
-    .reveal-right.visible{opacity:1;transform:translateX(0)}
-    .pioneer-badge{position:relative;overflow:hidden}
-    .pioneer-badge::after{content:'';position:absolute;top:-50%;left:-60%;width:40%;height:200%;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.25) 50%,transparent 60%);animation:pbshine 3s ease-in-out infinite}
-    @keyframes pbshine{0%{left:-60%}100%{left:120%}}
-    .event-img{background:linear-gradient(135deg,#1A2A4A 0%,#7B1A2E 100%);position:relative;overflow:hidden}
-    .event-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.4) 0%,transparent 60%)}
-    .hostel-feature{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid rgba(196,154,44,.1)}
-    .hostel-feature:last-child{border-bottom:none}
-    .facility-thumb{background:linear-gradient(135deg,#1A2A4A 0%,#243558 60%,#7B1A2E 100%);position:relative;overflow:hidden}
-    .facility-thumb::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.5) 100%)}
-    .pioneer-card{transition:transform .3s,box-shadow .3s}
-    .pioneer-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(196,154,44,.15)}
-    .safety-ring{position:relative}
-    .safety-ring::before{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(196,154,44,.25);animation:ringpulse 2.5s ease-in-out infinite}
-    @keyframes ringpulse{0%,100%{transform:scale(1);opacity:.6}50%{transform:scale(1.12);opacity:.2}}
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f4f0e8;
+    }
+
+    .dark ::-webkit-scrollbar-track {
+      background: #0f1824;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #c49a2c;
+      border-radius: 3px;
+    }
+
+    .nav-link {
+      position: relative;
+      padding-bottom: 3px;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #c49a2c;
+      transform: scaleX(0);
+      transition: transform 0.2s ease;
+      border-radius: 1px;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      transform: scaleX(1);
+    }
+
+    .section-label-line {
+      position: relative;
+      padding-left: 36px;
+    }
+
+    .section-label-line::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 24px;
+      height: 1px;
+      background: #c49a2c;
+      transform: translateY(-50%);
+    }
+
+    .hover-bar {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hover-bar::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(to right, #c49a2c, #7b1a2e);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .hover-bar:hover::before {
+      transform: scaleX(1);
+    }
+
+    .pillar-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pillar-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(to right, #c49a2c, #7b1a2e);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .pillar-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .admissions-pattern {
+      background-image: repeating-linear-gradient(45deg,
+          rgba(255, 255, 255, 0.03) 0,
+          rgba(255, 255, 255, 0.03) 1px,
+          transparent 0,
+          transparent 20px);
+    }
+
+    .diag-pattern {
+      background-image: repeating-linear-gradient(135deg,
+          rgba(196, 154, 44, 0.05) 0,
+          rgba(196, 154, 44, 0.05) 1px,
+          transparent 0,
+          transparent 28px);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-32px);
+      transition:
+        opacity 0.65s ease,
+        transform 0.65s ease;
+    }
+
+    .reveal-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(32px);
+      transition:
+        opacity 0.65s ease,
+        transform 0.65s ease;
+    }
+
+    .reveal-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .pioneer-badge {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pioneer-badge::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(105deg,
+          transparent 40%,
+          rgba(255, 255, 255, 0.25) 50%,
+          transparent 60%);
+      animation: pbshine 3s ease-in-out infinite;
+    }
+
+    @keyframes pbshine {
+      0% {
+        left: -60%;
+      }
+
+      100% {
+        left: 120%;
+      }
+    }
+
+    .event-img {
+      background: linear-gradient(135deg, #1a2a4a 0%, #7b1a2e 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .event-img::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top,
+          rgba(0, 0, 0, 0.4) 0%,
+          transparent 60%);
+    }
+
+    .hostel-feature {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(196, 154, 44, 0.1);
+    }
+
+    .hostel-feature:last-child {
+      border-bottom: none;
+    }
+
+    .facility-thumb {
+      background: linear-gradient(135deg,
+          #1a2a4a 0%,
+          #243558 60%,
+          #7b1a2e 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .facility-thumb::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom,
+          transparent 40%,
+          rgba(0, 0, 0, 0.5) 100%);
+    }
+
+    .pioneer-card {
+      transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+    }
+
+    .pioneer-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(196, 154, 44, 0.15);
+    }
+
+    .safety-ring {
+      position: relative;
+    }
+
+    .safety-ring::before {
+      content: "";
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 2px solid rgba(196, 154, 44, 0.25);
+      animation: ringpulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes ringpulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.6;
+      }
+
+      50% {
+        transform: scale(1.12);
+        opacity: 0.2;
+      }
+    }
   </style>
 </head>
-<body class="font-lato bg-warm-white dark:bg-[#0F1824] text-[#4A4A4A] dark:text-[#C8D4E0] overflow-x-hidden transition-colors duration-300">
 
-<!-- NAVBAR -->
-<nav id="navbar" class="fixed left-0 right-0 z-50 bg-warm-white/90 dark:bg-[#0F1824]/50 backdrop-blur-md border-b border-gold/20 dark:border-gold/10 transition-all duration-300" >
-  <div class="max-w-7xl mx-auto px-5 lg:px-10 h-[72px] flex items-center justify-between gap-5">
-    <a href="index.html" class="flex items-center gap-3 flex-shrink-0 no-underline">
-      <img src="imgs/logo2.jpg" alt="school-logo" class="w-11 h-11">
-      <div class="font-cinzel text-[13px] font-semibold text-navy dark:text-gold-light leading-tight tracking-wide">
-        STELLAR SCHOLARS ACADEMY
-        <span class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5">LUX ET PAX &middot; EST. 2026</span>
-      </div>
-    </a>
-    <ul class="hidden lg:flex items-center gap-7 list-none">
-      <li><a href="index.html"  class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">Home</a></li>
-      <li><a href="about.html"  class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">About Us</a></li>
-      <li><a href="academics.html" class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">Academics</a></li>
-      <li><a href="admissions.html" class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">Admissions</a></li>
-      <li><a href="news.html"  class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">News</a></li>
-      <li><a href="gallery.html"class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">Gallery</a></li>
-    </ul>
-    <div class="flex items-center gap-2.5 flex-shrink-0">
-      <a href="admissions.html#apply" class="hidden sm:inline-block bg-maroon hover:bg-maroon-light text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all hover:-translate-y-px no-underline">Enroll Now</a>
-      <a href="contact.html#contact" class="hidden sm:inline-block border border-gold text-gold hover:bg-gold hover:text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all no-underline">Book a Tour</a>
-      <button id="themeBtn" class="w-9 h-9 rounded-full bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-[15px] transition-all hover:border-gold hover:rotate-12 cursor-pointer flex-shrink-0">&#9728;&#65039;</button>
-      <button id="mobileMenuBtn" class="lg:hidden w-9 h-9 rounded-sm bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-navy dark:text-gold transition-all hover:border-gold cursor-pointer flex-shrink-0">
-      </button>
-    </div>
-  </div>
-  <div id="mobileMenu" class="hidden lg:hidden bg-warm-white dark:bg-[#0F1824] border-t border-gold/20 px-5 py-4">
-    <ul class="flex flex-col gap-1 list-none mb-4">
-      <li><a href="index.html"  class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">Home</a></li>
-      <li><a href="about.html"  class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">About Us</a></li>
-      <li><a href="academics.html"   class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">Academics</a></li>
-      <li><a href="admissions.html"  class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">Admissions</a></li>
-      <li><a href="school-life.html" class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-maroon dark:text-gold no-underline">School Life</a></li>
-      <li><a href="news.html"   class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">News</a></li>
-      <li><a href="gallery.html" class="block font-lato text-[13px] font-bold py-2.5 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">Gallery</a></li>
-    </ul>
-    <div class="flex gap-2.5">
-      <a href="admissions.html#apply" class="flex-1 text-center bg-maroon text-white text-[11px] font-bold font-lato tracking-widest uppercase px-4 py-2.5 rounded-sm no-underline">Enroll Now</a>
-      <a href="contact.html#contact" class="flex-1 text-center border border-gold text-gold text-[11px] font-bold font-lato tracking-widest uppercase px-4 py-2.5 rounded-sm no-underline">Book a Tour</a>
-    </div>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="bg-navy dark:bg-[#080E18] diag-pattern relative overflow-hidden" style="padding-top:calc(36px + 72px)">
-  <div class="absolute inset-0 bg-hero-pattern opacity-60 pointer-events-none"></div>
-  <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-gradient-to-bl from-gold/8 to-transparent pointer-events-none"></div>
-  <div class="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-gradient-to-tr from-maroon/20 to-transparent pointer-events-none"></div>
-  <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 py-20 lg:py-28">
-    <div class="max-w-3xl">
-      <div class="animate-fade-up flex items-center gap-2 mb-8 text-[11px] font-lato tracking-widest uppercase text-white/40">
-        <a href="index.html" class="hover:text-gold transition-colors no-underline text-white/40">Home</a>
-        <span class="text-gold/50">&rsaquo;</span>
-        <span class="text-gold">School Life</span>
-      </div>
-      <div class="animate-fade-up-1 section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">Life at SSA</div>
-      <h1 class="animate-fade-up-2 font-playfair font-bold text-white leading-tight mb-6" style="font-size:clamp(36px,4.5vw,58px)">
-        More Than a School &mdash;<br><em class="italic text-gold-light">A Community of Purpose</em>
-      </h1>
-      <p class="animate-fade-up-3 font-cormorant text-[19px] text-white/65 leading-relaxed max-w-xl mb-10">
-        At Stellar Scholars Academy, education extends beyond the classroom. From vibrant events and a warm boarding family to world-class facilities and an unwavering commitment to every scholar&rsquo;s wellbeing &mdash; this is where character is built.
-      </p>
-      <div class="animate-fade-up-4 flex flex-wrap gap-2">
-        <a href="#events"     class="font-lato text-[11px] font-bold tracking-widest uppercase border border-gold/40 hover:border-gold text-gold px-4 py-2 rounded-sm transition-all no-underline hover:bg-gold/10">Events</a>
-        <a href="#pioneers"   class="font-lato text-[11px] font-bold tracking-widest uppercase border border-white/20 hover:border-gold text-white/70 hover:text-gold px-4 py-2 rounded-sm transition-all no-underline">Pioneers</a>
-        <a href="#boarding"   class="font-lato text-[11px] font-bold tracking-widest uppercase border border-white/20 hover:border-gold text-white/70 hover:text-gold px-4 py-2 rounded-sm transition-all no-underline">Boarding</a>
-        <a href="#classroom"  class="font-lato text-[11px] font-bold tracking-widest uppercase border border-white/20 hover:border-gold text-white/70 hover:text-gold px-4 py-2 rounded-sm transition-all no-underline">Classrooms</a>
-        <a href="#facilities" class="font-lato text-[11px] font-bold tracking-widest uppercase border border-white/20 hover:border-gold text-white/70 hover:text-gold px-4 py-2 rounded-sm transition-all no-underline">Facilities</a>
-        <a href="#wellbeing"  class="font-lato text-[11px] font-bold tracking-widest uppercase border border-white/20 hover:border-gold text-white/70 hover:text-gold px-4 py-2 rounded-sm transition-all no-underline">Wellbeing</a>
+<body
+  class="font-lato bg-warm-white dark:bg-[#0F1824] text-[#4A4A4A] dark:text-[#C8D4E0] overflow-x-hidden transition-colors duration-300">
+  <!-- NAVBAR -->
+  <nav id="navbar"
+    class="fixed left-0 right-0 z-50 bg-warm-white/90 dark:bg-[#0F1824]/50 backdrop-blur-md border-b border-gold/20 dark:border-gold/10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-5 lg:px-10 h-[72px] flex items-center justify-between gap-5">
+      <a href="index.html" class="flex items-center gap-3 flex-shrink-0 no-underline">
+        <img src="imgs/logo2.jpg" alt="school-logo" class="w-11 h-11" />
+        <div
+          class="font-cinzel text-[13px] font-semibold hidden lg:block text-navy dark:text-gold-light leading-tight tracking-wide">
+          STELLAR SCHOLARS ACADEMY
+          <span class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5">LUX ET PAX · EST. 2026</span>
+        </div>
+      </a>
+      <ul class="hidden lg:flex items-center gap-7 list-none">
+        <li>
+          <a href="index.html"
+            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">Home</a>
+        </li>
+        <li>
+          <a href="about.html"
+            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">About
+            Us</a>
+        </li>
+        <li>
+          <a href="academics.html"
+            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">Academics</a>
+        </li>
+        <li>
+          <a href="admissions.html"
+            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">Admissions</a>
+        </li>
+        <li>
+          <a href="news.html"
+            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">News</a>
+        </li>
+        <li>
+          <a href="gallery.html"
+            class="nav-link font-lato text-[12.5px] font-bold tracking-[0.05em] text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon dark:hover:text-gold transition-colors no-underline">Gallery</a>
+        </li>
+      </ul>
+      <div class="flex items-center gap-2.5 flex-shrink-0">
+        <a href="admissions.html#apply"
+          class="hidden sm:inline-block bg-maroon hover:bg-maroon-light text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all hover:-translate-y-px no-underline">Enroll
+          Now</a>
+        <a href="contact.html#contact"
+          class="hidden sm:inline-block border border-gold text-gold hover:bg-gold hover:text-white text-[11px] font-bold font-lato tracking-widest uppercase px-5 py-2.5 rounded-sm transition-all no-underline">Book
+          a Tour</a>
+        <button id="themeBtn"
+          class="w-9 h-9 rounded-full bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-[15px] transition-all hover:border-gold hover:rotate-12 cursor-pointer flex-shrink-0">
+          &#9728;&#65039;
+        </button>
+        <button id="mobileMenuBtn"
+          class="lg:hidden w-9 h-9 rounded-sm bg-[#f4f0e8] dark:bg-[#1A2840] border border-[#ddd] dark:border-gold/30 flex items-center justify-center text-navy dark:text-gold transition-all hover:border-gold cursor-pointer flex-shrink-0"></button>
       </div>
     </div>
-    <div class="mt-16 pt-10 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-6">
-      <div class="animate-fade-up"><div class="font-cinzel text-[28px] font-bold text-gold">18+</div><div class="font-lato text-[10px] tracking-widest uppercase text-white/40 mt-1">Annual Events</div></div>
-      <div class="animate-fade-up-1"><div class="font-cinzel text-[28px] font-bold text-gold">50+</div><div class="font-lato text-[10px] tracking-widest uppercase text-white/40 mt-1">Pioneer Scholars</div></div>
-      <div class="animate-fade-up-2"><div class="font-cinzel text-[28px] font-bold text-gold">&le;20</div><div class="font-lato text-[10px] tracking-widest uppercase text-white/40 mt-1">Per Micro-Class</div></div>
-      <div class="animate-fade-up-3"><div class="font-cinzel text-[28px] font-bold text-gold">24/7</div><div class="font-lato text-[10px] tracking-widest uppercase text-white/40 mt-1">General Care</div></div>
+    <div id="mobileMenu" class="hidden lg:hidden bg-warm-white dark:bg-[#0F1824] border-t border-gold/20 px-5 py-4">
+      <ul class="flex flex-col gap-1 list-none mb-4">
+        <li>
+          <a href="index.html"
+            class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">Home</a>
+        </li>
+        <li>
+          <a href="about.html"
+            class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">About
+            Us</a>
+        </li>
+        <li>
+          <a href="academics.html"
+            class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">Academics</a>
+        </li>
+        <li>
+          <a href="admissions.html"
+            class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">Admissions</a>
+        </li>
+        <li>
+          <a href="school-life.html"
+            class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-maroon dark:text-gold no-underline">School
+            Life</a>
+        </li>
+        <li>
+          <a href="news.html"
+            class="block font-lato text-[13px] font-bold py-2.5 border-b border-gold/10 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">News</a>
+        </li>
+        <li>
+          <a href="gallery.html"
+            class="block font-lato text-[13px] font-bold py-2.5 text-[#2A2A2A] dark:text-[#C8D4E0] hover:text-maroon no-underline">Gallery</a>
+        </li>
+      </ul>
+      <div class="flex gap-2.5">
+        <a href="admissions.html#apply"
+          class="flex-1 text-center bg-maroon text-white text-[11px] font-bold font-lato tracking-widest uppercase px-4 py-2.5 rounded-sm no-underline">Enroll
+          Now</a>
+        <a href="contact.html#contact"
+          class="flex-1 text-center border border-gold text-gold text-[11px] font-bold font-lato tracking-widest uppercase px-4 py-2.5 rounded-sm no-underline">Book
+          a Tour</a>
+      </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- ═══ 1. SCHOOL EVENTS ═══ -->
-<section id="events" class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-24">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-14 reveal">
-      <div class="section-label-line inline-block font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">Mark the Calendar</div>
-      <h2 class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(26px,3vw,40px)] mb-4">School Events</h2>
-      <div class="w-16 h-[3px] bg-gold-maroon mx-auto mb-5"></div>
-      <p class="font-cormorant text-[18px] text-[#5A5A5A] dark:text-[#A0B0C0] max-w-xl mx-auto leading-relaxed">From academic showcases and inter-house competitions to cultural celebrations and community outreach &mdash; there is always something to look forward to at SSA.</p>
+  <!-- HERO -->
+  <section class="bg-navy dark:bg-[#080E18] diag-pattern relative overflow-hidden"
+    style="padding-top: calc(36px + 72px)">
+    <div class="absolute inset-0 bg-hero-pattern opacity-60 pointer-events-none"></div>
+    <div
+      class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-gradient-to-bl from-gold/8 to-transparent pointer-events-none">
     </div>
-    <!-- Featured -->
-    <div class="reveal mb-6 grid grid-cols-1 lg:grid-cols-2 border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden hover:shadow-[0_12px_48px_rgba(196,154,44,0.12)] transition-all group">
-      <div class="event-img min-h-[280px] lg:min-h-[360px] flex items-end p-8 relative">
-        <div class="absolute inset-0 flex items-center justify-center text-[90px] opacity-15 select-none pointer-events-none"></div>
-        <div class="relative z-10">
+    <div
+      class="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-gradient-to-tr from-maroon/20 to-transparent pointer-events-none">
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 py-20 lg:py-28">
+      <div class="max-w-3xl">
+        <div
+          class="animate-fade-up flex items-center gap-2 mb-8 text-[11px] font-lato tracking-widest uppercase text-white/40">
+          <a href="index.html" class="hover:text-gold transition-colors no-underline text-white/40">Home</a>
+          <span class="text-gold/50">&rsaquo;</span>
+          <span class="text-gold">School Life</span>
+        </div>
+        <div
+          class="animate-fade-up-1 section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">
+          Life at SSA
+        </div>
+        <h1 class="animate-fade-up-2 font-playfair font-bold text-white leading-tight mb-6"
+          style="font-size: clamp(36px, 4.5vw, 58px)">
+          More Than a School &mdash;<br /><em class="italic text-gold-light">A Community of Purpose</em>
+        </h1>
+        <p class="animate-fade-up-3 font-cormorant text-[19px] text-white/65 leading-relaxed max-w-xl mb-10">
+          At Stellar Scholars Academy, education extends beyond the classroom.
+          From vibrant events and a warm boarding family to world-class
+          facilities and an unwavering commitment to every scholar&rsquo;s
+          wellbeing &mdash; this is where character is built.
+        </p>
+        <div class="animate-fade-up-4 flex flex-wrap gap-2">
+          <a href="#events"
+            class="font-lato text-[11px] font-bold tracking-widest uppercase border border-gold/40 hover:border-gold text-gold px-4 py-2 rounded-sm transition-all no-underline hover:bg-gold/10">Events</a>
+          <a href="#pioneers"
+            class="font-lato text-[11px] font-bold tracking-widest uppercase border border-white/20 hover:border-gold text-white/70 hover:text-gold px-4 py-2 rounded-sm transition-all no-underline">Pioneers</a>
+          <a href="#boarding"
+            class="font-lato text-[11px] font-bold tracking-widest uppercase border border-white/20 hover:border-gold text-white/70 hover:text-gold px-4 py-2 rounded-sm transition-all no-underline">Boarding</a>
+          <a href="#classroom"
+            class="font-lato text-[11px] font-bold tracking-widest uppercase border border-white/20 hover:border-gold text-white/70 hover:text-gold px-4 py-2 rounded-sm transition-all no-underline">Classrooms</a>
+          <a href="#facilities"
+            class="font-lato text-[11px] font-bold tracking-widest uppercase border border-white/20 hover:border-gold text-white/70 hover:text-gold px-4 py-2 rounded-sm transition-all no-underline">Facilities</a>
+          <a href="#wellbeing"
+            class="font-lato text-[11px] font-bold tracking-widest uppercase border border-white/20 hover:border-gold text-white/70 hover:text-gold px-4 py-2 rounded-sm transition-all no-underline">Wellbeing</a>
         </div>
       </div>
-      <div class="bg-warm-white dark:bg-[#1A2A4A]/50 p-8 lg:p-12 flex flex-col justify-center">
-        <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-3">Flagship Event</div>
-        <h3 class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(20px,2.2vw,28px)] leading-snug mb-4 group-hover:text-maroon dark:group-hover:text-gold transition-colors">Cultural Day &amp; Inter-House Fiesta</h3>
-        <div class="w-10 h-[2px] bg-gold-maroon mb-5"></div>
-        <p class="font-cormorant text-[17px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed mb-6">Our grandest annual celebration &mdash; a full day of cultural performances, traditional attire, food from across Nigeria, inter-house athletics finals, and a spectacular prize-giving ceremony. Every scholar participates; every family is welcome.</p>
-        <div class="flex flex-wrap gap-2">
-          <span class="font-lato text-[11px] bg-gold/10 border border-gold/25 text-gold-dark dark:text-gold px-3 py-1 rounded-sm">&#127925; Performances</span>
-          <span class="font-lato text-[11px] bg-gold/10 border border-gold/25 text-gold-dark dark:text-gold px-3 py-1 rounded-sm">&#127939; Athletics</span>
-          <span class="font-lato text-[11px] bg-gold/10 border border-gold/25 text-gold-dark dark:text-gold px-3 py-1 rounded-sm">&#127858; Food Stalls</span>
-          <span class="font-lato text-[11px] bg-gold/10 border border-gold/25 text-gold-dark dark:text-gold px-3 py-1 rounded-sm">&#127942; Prize Giving</span>
+      <div class="mt-16 pt-10 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-6">
+        <div class="animate-fade-up">
+          <div class="font-cinzel text-[28px] font-bold text-gold">18+</div>
+          <div class="font-lato text-[10px] tracking-widest uppercase text-white/40 mt-1">
+            Annual Events
+          </div>
+        </div>
+        <div class="animate-fade-up-1">
+          <div class="font-cinzel text-[28px] font-bold text-gold">50+</div>
+          <div class="font-lato text-[10px] tracking-widest uppercase text-white/40 mt-1">
+            Pioneer Scholars
+          </div>
+        </div>
+        <div class="animate-fade-up-2">
+          <div class="font-cinzel text-[28px] font-bold text-gold">
+            &le;20
+          </div>
+          <div class="font-lato text-[10px] tracking-widest uppercase text-white/40 mt-1">
+            Per Micro-Class
+          </div>
+        </div>
+        <div class="animate-fade-up-3">
+          <div class="font-cinzel text-[28px] font-bold text-gold">24/7</div>
+          <div class="font-lato text-[10px] tracking-widest uppercase text-white/40 mt-1">
+            General Care
+          </div>
         </div>
       </div>
     </div>
-    <!-- 6-card grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      <div class="reveal hover-bar pillar-card bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]">
-        <div class="event-img h-40 flex items-center justify-center"><div class="relative z-10 text-[48px] opacity-50">&#128300;</div></div>
-        <div class="p-5"><div class="font-lato text-[10px] font-bold tracking-widest uppercase text-gold mb-1">Term 2 &middot; March</div><h4 class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light mb-2">STEM Innovation Fair</h4><p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed">Scholars present original STEM projects to panels of judges including industry professionals from science and technology sectors.</p></div>
-      </div>
-      <div class="reveal hover-bar pillar-card bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]" data-delay="80">
-        <div class="event-img h-40 flex items-center justify-center"><div class="relative z-10 text-[48px] opacity-50">&#128218;</div></div>
-        <div class="p-5"><div class="font-lato text-[10px] font-bold tracking-widest uppercase text-gold mb-1">Term 1 &middot; October</div><h4 class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light mb-2">Lit &amp; Arts Festival</h4><p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed">A week-long celebration of literature, poetry, drama, visual arts, and creative writing with a school-wide exhibition open to parents.</p></div>
-      </div>
-      <div class="reveal hover-bar pillar-card bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]" data-delay="160">
-        <div class="event-img h-40 flex items-center justify-center"><div class="relative z-10 text-[48px] opacity-50">&#9917;</div></div>
-        <div class="p-5"><div class="font-lato text-[10px] font-bold tracking-widest uppercase text-gold mb-1">All Terms</div><h4 class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light mb-2">Inter-House Sports League</h4><p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed">Football, basketball, athletics, and table tennis run across all three terms, with the grand final held on Cultural Day.</p></div>
-      </div>
-      <div class="reveal hover-bar pillar-card bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]" data-delay="80">
-        <div class="event-img h-40 flex items-center justify-center"><div class="relative z-10 text-[48px] opacity-50">&#129309;</div></div>
-        <div class="p-5"><div class="font-lato text-[10px] font-bold tracking-widest uppercase text-gold mb-1">Term 3 &middot; June</div><h4 class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light mb-2">Community Outreach Week</h4><p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed">Scholars visit hospitals, orphanages, and elderly care homes &mdash; putting our values of compassion and service into meaningful action.</p></div>
-      </div>
-      <div class="reveal hover-bar pillar-card bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]" data-delay="160">
-        <div class="event-img h-40 flex items-center justify-center"><div class="relative z-10 text-[48px] opacity-50">&#127941;</div></div>
-        <div class="p-5"><div class="font-lato text-[10px] font-bold tracking-widest uppercase text-gold mb-1">End of Year</div><h4 class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light mb-2">Annual Prize-Giving &amp; Graduation</h4><p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed">A formal ceremony honouring excellence and character &mdash; including SSS 3 graduation and the prestigious Lux et Pax Award.</p></div>
-      </div>
-      <div class="reveal hover-bar pillar-card bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]" data-delay="240">
-        <div class="event-img h-40 flex items-center justify-center"><div class="relative z-10 text-[48px] opacity-50">&#127757;</div></div>
-        <div class="p-5"><div class="font-lato text-[10px] font-bold tracking-widest uppercase text-gold mb-1">Term 1 &middot; September</div><h4 class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light mb-2">New Scholar Induction Day</h4><p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed">New scholars and families are officially welcomed &mdash; meeting staff, touring the campus, and receiving their house colours for the very first time.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- ═══ 2. PIONEER SCHOLARS ═══ -->
-<section id="pioneers" class="bg-navy dark:bg-[#080E18] admissions-pattern px-5 sm:px-10 lg:px-20 py-24">
-  <div class="max-w-7xl mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
-      <div class="reveal-left">
-        <div class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">Founding Generation</div>
-        <h2 class="font-playfair font-bold text-white text-[clamp(26px,3vw,40px)] leading-snug mb-4">Our Pioneer Scholars</h2>
-        <div class="w-16 h-[3px] bg-gold-maroon mb-7"></div>
-        <p class="font-cormorant text-[18px] text-white/70 leading-relaxed mb-5">The 120 scholars who walked through our gates in September 2026 are not just students &mdash; they are the founding generation of Stellar Scholars Academy. They carry the distinction of being the first to set the standard, shape the culture, and define what it means to be an SSA scholar.</p>
-        <p class="font-cormorant text-[18px] text-white/70 leading-relaxed mb-8">Their names will always hold a special place in our history. They arrived before the legacy was written &mdash; and they are writing it now.</p>
-        <div class="space-y-3">
-          <div class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-gold flex items-center justify-center text-navy text-[11px] font-bold flex-shrink-0 mt-0.5">&#10003;</span><p class="font-cormorant text-[17px] text-white/75 leading-snug">Permanently engraved on the <strong class="text-gold">Pioneer Wall of Honour</strong> in the school&rsquo;s main hall</p></div>
-          <div class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-gold flex items-center justify-center text-navy text-[11px] font-bold flex-shrink-0 mt-0.5">&#10003;</span><p class="font-cormorant text-[17px] text-white/75 leading-snug">Issued an exclusive <strong class="text-gold">Pioneer Scholar Certificate</strong> signed by the founding Principal</p></div>
-          <div class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-gold flex items-center justify-center text-navy text-[11px] font-bold flex-shrink-0 mt-0.5">&#10003;</span><p class="font-cormorant text-[17px] text-white/75 leading-snug">Eligible for the <strong class="text-gold">Pioneer Alumni Scholarship</strong> upon SSS 3 graduation</p></div>
-          <div class="flex items-start gap-3"><span class="w-6 h-6 rounded-full bg-gold flex items-center justify-center text-navy text-[11px] font-bold flex-shrink-0 mt-0.5">&#10003;</span><p class="font-cormorant text-[17px] text-white/75 leading-snug">Lifetime <strong class="text-gold">Pioneer Alumni status</strong> &mdash; first invitees to all future school milestones</p></div>
+  <!-- ═══ 1. SCHOOL EVENTS ═══ -->
+  <section id="events" class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-24">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <div class="section-label-line inline-block font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">
+          Mark the Calendar
+        </div>
+        <h2 class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(26px,3vw,40px)] mb-4">
+          School Events
+        </h2>
+        <div class="w-16 h-[3px] bg-gold-maroon mx-auto mb-5"></div>
+        <p class="font-cormorant text-[18px] text-[#5A5A5A] dark:text-[#A0B0C0] max-w-xl mx-auto leading-relaxed">
+          From academic showcases and inter-house competitions to cultural
+          celebrations and community outreach &mdash; there is always
+          something to look forward to at SSA.
+        </p>
+      </div>
+      <!-- Featured -->
+      <div
+        class="reveal mb-6 grid grid-cols-1 lg:grid-cols-2 border border-gold/20 dark:border-gold/10 rounded-sm overflow-hidden hover:shadow-[0_12px_48px_rgba(196,154,44,0.12)] transition-all group">
+        <div class="event-img min-h-[280px] lg:min-h-[360px] flex items-end p-8 relative">
+          <div
+            class="absolute inset-0 flex items-center justify-center text-[90px] opacity-15 select-none pointer-events-none">
+          </div>
+          <div class="relative z-10"></div>
+        </div>
+        <div class="bg-warm-white dark:bg-[#1A2A4A]/50 p-8 lg:p-12 flex flex-col justify-center">
+          <div class="font-cinzel text-[10px] tracking-widest uppercase text-gold mb-3">
+            Flagship Event
+          </div>
+          <h3
+            class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(20px,2.2vw,28px)] leading-snug mb-4 group-hover:text-maroon dark:group-hover:text-gold transition-colors">
+            Cultural Day &amp; Inter-House Fiesta
+          </h3>
+          <div class="w-10 h-[2px] bg-gold-maroon mb-5"></div>
+          <p class="font-cormorant text-[17px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed mb-6">
+            Our grandest annual celebration &mdash; a full day of cultural
+            performances, traditional attire, food from across Nigeria,
+            inter-house athletics finals, and a spectacular prize-giving
+            ceremony. Every scholar participates; every family is welcome.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="font-lato text-[11px] bg-gold/10 border border-gold/25 text-gold-dark dark:text-gold px-3 py-1 rounded-sm">&#127925;
+              Performances</span>
+            <span
+              class="font-lato text-[11px] bg-gold/10 border border-gold/25 text-gold-dark dark:text-gold px-3 py-1 rounded-sm">&#127939;
+              Athletics</span>
+            <span
+              class="font-lato text-[11px] bg-gold/10 border border-gold/25 text-gold-dark dark:text-gold px-3 py-1 rounded-sm">&#127858;
+              Food Stalls</span>
+            <span
+              class="font-lato text-[11px] bg-gold/10 border border-gold/25 text-gold-dark dark:text-gold px-3 py-1 rounded-sm">&#127942;
+              Prize Giving</span>
+          </div>
         </div>
       </div>
-      <div class="reveal-right">
-        <div class="relative">
-          <div class="pioneer-badge bg-gradient-to-br from-gold via-[#D4A830] to-gold-dark rounded-sm p-8 text-center shadow-[0_20px_60px_rgba(196,154,44,0.35)]">
-            <div class="font-cinzel text-[10px] tracking-[0.3em] uppercase text-navy/60 mb-3">Stellar Scholars Academy</div>
-            <div class="text-[50px] mb-3">&#128570;</div>
-            <div class="font-cinzel text-[22px] font-bold text-navy leading-tight mb-1">Pioneer Scholars</div>
-            <div class="font-cinzel text-[13px] font-bold text-navy/70 mb-5">Cohort of 2026 &middot; Founding Generation</div>
-            <div class="w-16 h-[2px] bg-navy/20 mx-auto mb-5"></div>
-            <div class="font-cormorant text-[17px] italic text-navy/80 leading-relaxed mb-6">&ldquo;They came first. They built the foundation.<br>Their light guides every scholar who follows.&rdquo;</div>
-            <div class="grid grid-cols-3 gap-4 border-t border-navy/15 pt-5">
-              <div><div class="font-cinzel text-[24px] font-bold text-navy">120</div><div class="font-lato text-[9px] font-bold tracking-widest uppercase text-navy/55">Pioneers</div></div>
-              <div><div class="font-cinzel text-[24px] font-bold text-navy">4</div><div class="font-lato text-[9px] font-bold tracking-widest uppercase text-navy/55">Divisions</div></div>
-              <div><div class="font-cinzel text-[24px] font-bold text-navy">2026</div><div class="font-lato text-[9px] font-bold tracking-widest uppercase text-navy/55">Founding Year</div></div>
+      <!-- 6-card grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div
+          class="reveal hover-bar pillar-card bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]">
+          <div class="event-img h-40 flex items-center justify-center">
+            <div class="relative z-10 text-[48px] opacity-50">&#128300;</div>
+          </div>
+          <div class="p-5">
+            <div class="font-lato text-[10px] font-bold tracking-widest uppercase text-gold mb-1">
+              Term 2 &middot; March
             </div>
+            <h4 class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light mb-2">
+              STEM Innovation Fair
+            </h4>
+            <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed">
+              Scholars present original STEM projects to panels of judges
+              including industry professionals from science and technology
+              sectors.
+            </p>
+          </div>
+        </div>
+        <div
+          class="reveal hover-bar pillar-card bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]"
+          data-delay="80">
+          <div class="event-img h-40 flex items-center justify-center">
+            <div class="relative z-10 text-[48px] opacity-50">&#128218;</div>
+          </div>
+          <div class="p-5">
+            <div class="font-lato text-[10px] font-bold tracking-widest uppercase text-gold mb-1">
+              Term 1 &middot; October
+            </div>
+            <h4 class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light mb-2">
+              Lit &amp; Arts Festival
+            </h4>
+            <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed">
+              A week-long celebration of literature, poetry, drama, visual
+              arts, and creative writing with a school-wide exhibition open to
+              parents.
+            </p>
+          </div>
+        </div>
+        <div
+          class="reveal hover-bar pillar-card bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]"
+          data-delay="160">
+          <div class="event-img h-40 flex items-center justify-center">
+            <div class="relative z-10 text-[48px] opacity-50">&#9917;</div>
+          </div>
+          <div class="p-5">
+            <div class="font-lato text-[10px] font-bold tracking-widest uppercase text-gold mb-1">
+              All Terms
+            </div>
+            <h4 class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light mb-2">
+              Inter-House Sports League
+            </h4>
+            <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed">
+              Football, basketball, athletics, and table tennis run across all
+              three terms, with the grand final held on Cultural Day.
+            </p>
+          </div>
+        </div>
+        <div
+          class="reveal hover-bar pillar-card bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]"
+          data-delay="80">
+          <div class="event-img h-40 flex items-center justify-center">
+            <div class="relative z-10 text-[48px] opacity-50">&#129309;</div>
+          </div>
+          <div class="p-5">
+            <div class="font-lato text-[10px] font-bold tracking-widest uppercase text-gold mb-1">
+              Term 3 &middot; June
+            </div>
+            <h4 class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light mb-2">
+              Community Outreach Week
+            </h4>
+            <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed">
+              Scholars visit hospitals, orphanages, and elderly care homes
+              &mdash; putting our values of compassion and service into
+              meaningful action.
+            </p>
+          </div>
+        </div>
+        <div
+          class="reveal hover-bar pillar-card bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]"
+          data-delay="160">
+          <div class="event-img h-40 flex items-center justify-center">
+            <div class="relative z-10 text-[48px] opacity-50">&#127941;</div>
+          </div>
+          <div class="p-5">
+            <div class="font-lato text-[10px] font-bold tracking-widest uppercase text-gold mb-1">
+              End of Year
+            </div>
+            <h4 class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light mb-2">
+              Annual Prize-Giving &amp; Graduation
+            </h4>
+            <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed">
+              A formal ceremony honouring excellence and character &mdash;
+              including SSS 3 graduation and the prestigious Lux et Pax Award.
+            </p>
+          </div>
+        </div>
+        <div
+          class="reveal hover-bar pillar-card bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]"
+          data-delay="240">
+          <div class="event-img h-40 flex items-center justify-center">
+            <div class="relative z-10 text-[48px] opacity-50">&#127757;</div>
+          </div>
+          <div class="p-5">
+            <div class="font-lato text-[10px] font-bold tracking-widest uppercase text-gold mb-1">
+              Term 1 &middot; September
+            </div>
+            <h4 class="font-playfair text-[16px] font-bold text-navy dark:text-gold-light mb-2">
+              New Scholar Induction Day
+            </h4>
+            <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] leading-relaxed">
+              New scholars and families are officially welcomed &mdash;
+              meeting staff, touring the campus, and receiving their house
+              colours for the very first time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 2. PIONEER SCHOLARS ═══ -->
+  <section id="pioneers" class="bg-navy dark:bg-[#080E18] admissions-pattern px-5 sm:px-10 lg:px-20 py-24">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+        <div class="reveal-left">
+          <div class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">
+            Founding Generation
+          </div>
+          <h2 class="font-playfair font-bold text-white text-[clamp(26px,3vw,40px)] leading-snug mb-4">
+            Our Pioneer Scholars
+          </h2>
+          <div class="w-16 h-[3px] bg-gold-maroon mb-7"></div>
+          <p class="font-cormorant text-[18px] text-white/70 leading-relaxed mb-5">
+            The 120 scholars who walked through our gates in September 2026
+            are not just students &mdash; they are the founding generation of
+            Stellar Scholars Academy. They carry the distinction of being the
+            first to set the standard, shape the culture, and define what it
+            means to be an SSA scholar.
+          </p>
+          <p class="font-cormorant text-[18px] text-white/70 leading-relaxed mb-8">
+            Their names will always hold a special place in our history. They
+            arrived before the legacy was written &mdash; and they are writing
+            it now.
+          </p>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3">
+              <span
+                class="w-6 h-6 rounded-full bg-gold flex items-center justify-center text-navy text-[11px] font-bold flex-shrink-0 mt-0.5">&#10003;</span>
+              <p class="font-cormorant text-[17px] text-white/75 leading-snug">
+                Permanently engraved on the
+                <strong class="text-gold">Pioneer Wall of Honour</strong> in
+                the school&rsquo;s main hall
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="w-6 h-6 rounded-full bg-gold flex items-center justify-center text-navy text-[11px] font-bold flex-shrink-0 mt-0.5">&#10003;</span>
+              <p class="font-cormorant text-[17px] text-white/75 leading-snug">
+                Issued an exclusive
+                <strong class="text-gold">Pioneer Scholar Certificate</strong>
+                signed by the founding Principal
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="w-6 h-6 rounded-full bg-gold flex items-center justify-center text-navy text-[11px] font-bold flex-shrink-0 mt-0.5">&#10003;</span>
+              <p class="font-cormorant text-[17px] text-white/75 leading-snug">
+                Eligible for the
+                <strong class="text-gold">Pioneer Alumni Scholarship</strong>
+                upon SSS 3 graduation
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="w-6 h-6 rounded-full bg-gold flex items-center justify-center text-navy text-[11px] font-bold flex-shrink-0 mt-0.5">&#10003;</span>
+              <p class="font-cormorant text-[17px] text-white/75 leading-snug">
+                Lifetime
+                <strong class="text-gold">Pioneer Alumni status</strong>
+                &mdash; first invitees to all future school milestones
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <div class="relative">
+            <img src="imgs/students.jpg" alt="pioneer-students">
           </div>
           <div class="absolute -bottom-3 -right-3 -z-10 w-full h-full rounded-sm border-2 border-gold/30"></div>
           <div class="absolute -bottom-6 -right-6 -z-20 w-full h-full rounded-sm border border-gold/15"></div>
         </div>
       </div>
     </div>
-    <!-- House cards -->
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 reveal">
-      <div class="pioneer-card bg-navy-light/60 border border-gold/20 rounded-sm p-5 text-center"><div class="text-3xl mb-3">&#129413;</div><div class="font-cinzel text-[12px] font-bold tracking-widest uppercase text-gold mb-1">Eagle House</div><div class="font-lato text-[11px] text-white/50 mb-2">Boldness &middot; Leadership</div><div class="font-cinzel text-[20px] font-bold text-white">30</div><div class="font-lato text-[9px] tracking-widest uppercase text-white/35">Pioneer Members</div></div>
-      <div class="pioneer-card bg-navy-light/60 border border-gold/20 rounded-sm p-5 text-center"><div class="text-3xl mb-3">&#128293;</div><div class="font-cinzel text-[12px] font-bold tracking-widest uppercase text-gold mb-1">Phoenix House</div><div class="font-lato text-[11px] text-white/50 mb-2">Resilience &middot; Renewal</div><div class="font-cinzel text-[20px] font-bold text-white">30</div><div class="font-lato text-[9px] tracking-widest uppercase text-white/35">Pioneer Members</div></div>
-      <div class="pioneer-card bg-navy-light/60 border border-gold/20 rounded-sm p-5 text-center"><div class="text-3xl mb-3">&#129409;</div><div class="font-cinzel text-[12px] font-bold tracking-widest uppercase text-gold mb-1">Lion House</div><div class="font-lato text-[11px] text-white/50 mb-2">Courage &middot; Strength</div><div class="font-cinzel text-[20px] font-bold text-white">30</div><div class="font-lato text-[9px] tracking-widest uppercase text-white/35">Pioneer Members</div></div>
-      <div class="pioneer-card bg-navy-light/60 border border-gold/20 rounded-sm p-5 text-center"><div class="text-3xl mb-3">&#128570;</div><div class="font-cinzel text-[12px] font-bold tracking-widest uppercase text-gold mb-1">Dove House</div><div class="font-lato text-[11px] text-white/50 mb-2">Peace &middot; Compassion</div><div class="font-cinzel text-[20px] font-bold text-white">30</div><div class="font-lato text-[9px] tracking-widest uppercase text-white/35">Pioneer Members</div></div>
-    </div>
-  </div>
-</section>
 
-<!-- ═══ 3. HOSTEL & BOARDING ═══ -->
-<section id="boarding" class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-24">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-14 reveal">
-      <div class="section-label-line inline-block font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">Home Away From Home</div>
-      <h2 class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(26px,3vw,40px)] mb-4">Hostel &amp; Boarding Facilities</h2>
-      <div class="w-16 h-[3px] bg-gold-maroon mx-auto mb-5"></div>
-      <p class="font-cormorant text-[18px] text-[#5A5A5A] dark:text-[#A0B0C0] max-w-xl mx-auto leading-relaxed">Our boarding programme provides a safe, structured, and nurturing environment where scholars grow in independence, discipline, and community &mdash; under trained residential staff care, 24 hours a day.</p>
-    </div>
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      <!-- Boys hostel -->
-      <div class="reveal hover-bar pillar-card bg-cream dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden">
-        <div class="bg-navy dark:bg-[#0F1824] px-6 py-5 flex items-center gap-3">
-          <span class="text-2xl">&#127968;</span>
-          <div><div class="font-cinzel text-[12px] font-bold tracking-widest uppercase text-gold">Boys&rsquo; Hostel</div><div class="font-lato text-[11px] text-white/45">JSS &amp; SSS &middot; Separate Wings</div></div>
-        </div>
-        <div class="p-6">
-          <div class="hostel-feature"><span class="text-gold text-lg flex-shrink-0">&#128716;</span><div><div class="font-lato text-[12px] font-bold text-navy dark:text-gold-light">4-Scholar Dormitory Rooms</div><p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] mt-0.5">Individual beds, lockable storage, reading lamps, and ceiling fans in every room.</p></div></div>
-          <div class="hostel-feature"><span class="text-gold text-lg flex-shrink-0">&#128703;</span><div><div class="font-lato text-[12px] font-bold text-navy dark:text-gold-light">En-Suite Shower Blocks</div><p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] mt-0.5">Hot water showers available morning and evening. Separate blocks per wing.</p></div></div>
-          <div class="hostel-feature"><span class="text-gold text-lg flex-shrink-0">&#128218;</span><div><div class="font-lato text-[12px] font-bold text-navy dark:text-gold-light">Supervised Study Hall</div><p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] mt-0.5">Structured 2-hour evening prep with teacher supervision, 6&ndash;8 PM daily.</p></div></div>
-          <div class="hostel-feature"><span class="text-gold text-lg flex-shrink-0">&#128100;</span><div><div class="font-lato text-[12px] font-bold text-navy dark:text-gold-light">Male Houseparent on Duty</div><p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] mt-0.5">A dedicated houseparent overnight with emergency contact at all times.</p></div></div>
-        </div>
-      </div>
-      <!-- Girls hostel -->
-      <div class="reveal hover-bar pillar-card bg-cream dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden" data-delay="100">
-        <div class="bg-maroon dark:bg-maroon/70 px-6 py-5 flex items-center gap-3">
-          <span class="text-2xl">&#127969;</span>
-          <div><div class="font-cinzel text-[12px] font-bold tracking-widest uppercase text-gold-light">Girls&rsquo; Hostel</div><div class="font-lato text-[11px] text-white/55">JSS &amp; SSS &middot; Separate Wings</div></div>
-        </div>
-        <div class="p-6">
-          <div class="hostel-feature"><span class="text-gold text-lg flex-shrink-0">&#128716;</span><div><div class="font-lato text-[12px] font-bold text-navy dark:text-gold-light">4-Scholar Dormitory Rooms</div><p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] mt-0.5">Comfortable rooms with individual wardrobes, mirrors, and a dedicated study corner.</p></div></div>
-          <div class="hostel-feature"><span class="text-gold text-lg flex-shrink-0">&#128703;</span><div><div class="font-lato text-[12px] font-bold text-navy dark:text-gold-light">En-Suite Shower Blocks</div><p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] mt-0.5">Privacy-screened shower rooms with continuous hot water supply.</p></div></div>
-          <div class="hostel-feature"><span class="text-gold text-lg flex-shrink-0">&#128218;</span><div><div class="font-lato text-[12px] font-bold text-navy dark:text-gold-light">Supervised Study Hall</div><p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] mt-0.5">Quiet, well-lit evening prep with a qualified teacher present. No-device policy enforced.</p></div></div>
-          <div class="hostel-feature"><span class="text-gold text-lg flex-shrink-0">&#128101;</span><div><div class="font-lato text-[12px] font-bold text-navy dark:text-gold-light">Female Houseparent on Duty</div><p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] mt-0.5">Trained female houseparent on overnight duty in every girls&rsquo; wing.</p></div></div>
-        </div>
-      </div>
-      <!-- Daily schedule -->
-      <div class="reveal bg-navy dark:bg-[#162030] border border-gold/20 rounded-sm p-6" data-delay="200">
-        <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-5">Daily Boarding Schedule</div>
-        <div class="space-y-3">
-          <div class="flex items-center gap-3 border-b border-white/8 pb-3"><span class="font-cinzel text-[12px] font-bold text-gold w-14 flex-shrink-0">5:30</span><span class="font-cormorant text-[16px] text-white/70">Wake-up &amp; Personal Hygiene</span></div>
-          <div class="flex items-center gap-3 border-b border-white/8 pb-3"><span class="font-cinzel text-[12px] font-bold text-gold w-14 flex-shrink-0">6:15</span><span class="font-cormorant text-[16px] text-white/70">Morning Exercise &amp; Devotion</span></div>
-          <div class="flex items-center gap-3 border-b border-white/8 pb-3"><span class="font-cinzel text-[12px] font-bold text-gold w-14 flex-shrink-0">7:00</span><span class="font-cormorant text-[16px] text-white/70">Breakfast in the Dining Hall</span></div>
-          <div class="flex items-center gap-3 border-b border-white/8 pb-3"><span class="font-cinzel text-[12px] font-bold text-gold w-14 flex-shrink-0">7:45</span><span class="font-cormorant text-[16px] text-white/70">Assembly &amp; School Day Begins</span></div>
-          <div class="flex items-center gap-3 border-b border-white/8 pb-3"><span class="font-cinzel text-[12px] font-bold text-gold w-14 flex-shrink-0">2:30</span><span class="font-cormorant text-[16px] text-white/70">Lunch &amp; Rest Period</span></div>
-          <div class="flex items-center gap-3 border-b border-white/8 pb-3"><span class="font-cinzel text-[12px] font-bold text-gold w-14 flex-shrink-0">4:00</span><span class="font-cormorant text-[16px] text-white/70">Sports, Clubs &amp; Activities</span></div>
-          <div class="flex items-center gap-3 border-b border-white/8 pb-3"><span class="font-cinzel text-[12px] font-bold text-gold w-14 flex-shrink-0">6:00</span><span class="font-cormorant text-[16px] text-white/70">Dinner</span></div>
-          <div class="flex items-center gap-3 border-b border-white/8 pb-3"><span class="font-cinzel text-[12px] font-bold text-gold w-14 flex-shrink-0">6:30</span><span class="font-cormorant text-[16px] text-white/70">Supervised Evening Prep</span></div>
-          <div class="flex items-center gap-3"><span class="font-cinzel text-[12px] font-bold text-gold w-14 flex-shrink-0">9:00</span><span class="font-cormorant text-[16px] text-white/70">Lights Out</span></div>
-        </div>
-        <p class="mt-5 pt-4 border-t border-white/10 font-lato text-[11px] text-white/35 text-center">Weekends include leisure time, home visits (with approval) &amp; optional enrichment</p>
-      </div>
-    </div>
-    <div class="mt-8 bg-gold/8 border border-gold/25 dark:border-gold/15 rounded-sm p-5 flex gap-4 items-start reveal">
-      <span class="text-2xl flex-shrink-0">&#128161;</span>
-      <div><div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-1">Boarding Fees</div><p class="font-cormorant text-[17px] text-[#4A4A4A] dark:text-[#C8D4E0] leading-relaxed">Boarding fees are billed separately from tuition and cover accommodation, three meals daily, laundry service, and houseparent supervision. Contact the Finance Office for the current fee schedule. Sibling discounts apply to boarding fees.</p></div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- ═══ 4. MICRO-CLASSROOM SYSTEM ═══ -->
-<section id="classroom" class="bg-cream dark:bg-[#162030] px-5 sm:px-10 lg:px-20 py-24">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-    <div class="reveal-left">
-      <div class="section-label-line font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">Our Teaching Philosophy</div>
-      <h2 class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(26px,3vw,38px)] leading-snug mb-4">The Micro-Classroom System</h2>
-      <div class="w-16 h-[3px] bg-gold-maroon mb-7"></div>
-      <p class="font-cormorant text-[18px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed mb-5">SSA operates a deliberate <strong class="text-navy dark:text-gold">Micro-Classroom Model</strong> &mdash; a maximum of <strong class="text-navy dark:text-gold">20 scholars per class</strong>. This is not a space limitation; it is a pedagogical commitment.</p>
-      <p class="font-cormorant text-[18px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed mb-8">Smaller classes allow teachers to know every scholar by name, learning style, and pace. Instruction becomes personal. No child gets lost. Every voice is heard. Every gap is addressed &mdash; before it becomes a problem.</p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-        <div class="hover-bar pillar-card bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 rounded-sm p-4"><div class="font-cinzel text-[22px] font-bold text-gold mb-1">&le;20</div><div class="font-lato text-[11px] font-bold tracking-widest uppercase text-navy dark:text-gold-light mb-1">Scholars per Class</div><p class="font-cormorant text-[14px] text-[#6A6A6A] dark:text-[#8A9AAA]">Hard cap enforced across all divisions and subjects</p></div>
-        <div class="hover-bar pillar-card bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 rounded-sm p-4"><div class="font-cinzel text-[22px] font-bold text-gold mb-1">1:10</div><div class="font-lato text-[11px] font-bold tracking-widest uppercase text-navy dark:text-gold-light mb-1">Teacher:Scholar Ratio</div><p class="font-cormorant text-[14px] text-[#6A6A6A] dark:text-[#8A9AAA]">Among the lowest ratios of any school in the region</p></div>
-        <div class="hover-bar pillar-card bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 rounded-sm p-4"><div class="font-cinzel text-[22px] font-bold text-gold mb-1">100%</div><div class="font-lato text-[11px] font-bold tracking-widest uppercase text-navy dark:text-gold-light mb-1">Individual Tracking</div><p class="font-cormorant text-[14px] text-[#6A6A6A] dark:text-[#8A9AAA]">Every scholar has a personal academic progress file reviewed termly</p></div>
-        <div class="hover-bar pillar-card bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/15 rounded-sm p-4"><div class="font-cinzel text-[22px] font-bold text-gold mb-1">3&times;</div><div class="font-lato text-[11px] font-bold tracking-widest uppercase text-navy dark:text-gold-light mb-1">Weekly Feedback</div><p class="font-cormorant text-[14px] text-[#6A6A6A] dark:text-[#8A9AAA]">Teachers provide written feedback on work at least 3 times per week</p></div>
+  <!-- ═══ 3. HOSTEL & BOARDING ═══ -->
+  <section id="boarding" class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-24">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <div class="section-label-line inline-block font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">
+          Home Away From Home
+        </div>
+        <h2 class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(26px,3vw,40px)] mb-4">
+          Hostel &amp; Boarding Facilities
+        </h2>
+        <div class="w-16 h-[3px] bg-gold-maroon mx-auto mb-5"></div>
+        <p class="font-cormorant text-[18px] text-[#5A5A5A] dark:text-[#A0B0C0] max-w-xl mx-auto leading-relaxed">
+          Our boarding programme provides a safe, structured, and nurturing
+          environment where scholars grow in independence, discipline, and
+          community &mdash; under trained residential staff care, 24 hours a
+          day.
+        </p>
       </div>
-      <div class="border-l-[3px] border-gold pl-5 font-playfair text-[18px] italic text-gold leading-relaxed">
-        &ldquo;In a micro-classroom, the teacher teaches the child &mdash; not the subject.&rdquo;
-        <div class="font-lato text-[11px] not-italic text-[#8A8A8A] mt-2">&mdash; SSA Academic Charter</div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Boys hostel -->
+        <div
+          class="reveal hover-bar pillar-card bg-cream dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden">
+          <div class="bg-navy dark:bg-[#0F1824] px-6 py-5 flex items-center gap-3">
+            <span class="text-2xl">&#127968;</span>
+            <div>
+              <div class="font-cinzel text-[12px] font-bold tracking-widest uppercase text-gold">
+                Boys&rsquo; Hostel
+              </div>
+              <div class="font-lato text-[11px] text-white/45">
+                JSS &amp; SSS &middot; Separate Wings
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="hostel-feature">
+              <span class="text-gold text-lg flex-shrink-0">&#128716;</span>
+              <div>
+                <div class="font-lato text-[12px] font-bold text-navy dark:text-gold-light">
+                  4-Scholar Dormitory Rooms
+                </div>
+                <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] mt-0.5">
+                  Individual beds, lockable storage, reading lamps, and
+                  ceiling fans in every room.
+                </p>
+              </div>
+            </div>
+            <div class="hostel-feature">
+              <span class="text-gold text-lg flex-shrink-0">&#128703;</span>
+              <div>
+                <div class="font-lato text-[12px] font-bold text-navy dark:text-gold-light">
+                  En-Suite Shower Blocks
+                </div>
+                <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] mt-0.5">
+                  Hot water showers available morning and evening. Separate
+                  blocks per wing.
+                </p>
+              </div>
+            </div>
+            <div class="hostel-feature">
+              <span class="text-gold text-lg flex-shrink-0">&#128218;</span>
+              <div>
+                <div class="font-lato text-[12px] font-bold text-navy dark:text-gold-light">
+                  Supervised Study Hall
+                </div>
+                <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] mt-0.5">
+                  Structured 2-hour evening prep with teacher supervision,
+                  6&ndash;8 PM daily.
+                </p>
+              </div>
+            </div>
+            <div class="hostel-feature">
+              <span class="text-gold text-lg flex-shrink-0">&#128100;</span>
+              <div>
+                <div class="font-lato text-[12px] font-bold text-navy dark:text-gold-light">
+                  Male Houseparent on Duty
+                </div>
+                <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] mt-0.5">
+                  A dedicated houseparent overnight with emergency contact at
+                  all times.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Girls hostel -->
+        <div
+          class="reveal hover-bar pillar-card bg-cream dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm overflow-hidden"
+          data-delay="100">
+          <div class="bg-maroon dark:bg-maroon/70 px-6 py-5 flex items-center gap-3">
+            <span class="text-2xl">&#127969;</span>
+            <div>
+              <div class="font-cinzel text-[12px] font-bold tracking-widest uppercase text-gold-light">
+                Girls&rsquo; Hostel
+              </div>
+              <div class="font-lato text-[11px] text-white/55">
+                JSS &amp; SSS &middot; Separate Wings
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="hostel-feature">
+              <span class="text-gold text-lg flex-shrink-0">&#128716;</span>
+              <div>
+                <div class="font-lato text-[12px] font-bold text-navy dark:text-gold-light">
+                  4-Scholar Dormitory Rooms
+                </div>
+                <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] mt-0.5">
+                  Comfortable rooms with individual wardrobes, mirrors, and a
+                  dedicated study corner.
+                </p>
+              </div>
+            </div>
+            <div class="hostel-feature">
+              <span class="text-gold text-lg flex-shrink-0">&#128703;</span>
+              <div>
+                <div class="font-lato text-[12px] font-bold text-navy dark:text-gold-light">
+                  En-Suite Shower Blocks
+                </div>
+                <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] mt-0.5">
+                  Privacy-screened shower rooms with continuous hot water
+                  supply.
+                </p>
+              </div>
+            </div>
+            <div class="hostel-feature">
+              <span class="text-gold text-lg flex-shrink-0">&#128218;</span>
+              <div>
+                <div class="font-lato text-[12px] font-bold text-navy dark:text-gold-light">
+                  Supervised Study Hall
+                </div>
+                <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] mt-0.5">
+                  Quiet, well-lit evening prep with a qualified teacher
+                  present. No-device policy enforced.
+                </p>
+              </div>
+            </div>
+            <div class="hostel-feature">
+              <span class="text-gold text-lg flex-shrink-0">&#128101;</span>
+              <div>
+                <div class="font-lato text-[12px] font-bold text-navy dark:text-gold-light">
+                  Female Houseparent on Duty
+                </div>
+                <p class="font-cormorant text-[15px] text-[#6A6A6A] dark:text-[#8A9AAA] mt-0.5">
+                  Trained female houseparent on overnight duty in every
+                  girls&rsquo; wing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Daily schedule -->
+        <div class="reveal bg-navy dark:bg-[#162030] border border-gold/20 rounded-sm p-6" data-delay="200">
+          <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-5">
+            Daily Boarding Schedule
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 border-b border-white/8 pb-3">
+              <span class="font-cinzel text-[12px] font-bold text-gold w-14 flex-shrink-0">5:30</span><span
+                class="font-cormorant text-[16px] text-white/70">Wake-up &amp; Personal Hygiene</span>
+            </div>
+            <div class="flex items-center gap-3 border-b border-white/8 pb-3">
+              <span class="font-cinzel text-[12px] font-bold text-gold w-14 flex-shrink-0">6:15</span><span
+                class="font-cormorant text-[16px] text-white/70">Morning Exercise &amp; Devotion</span>
+            </div>
+            <div class="flex items-center gap-3 border-b border-white/8 pb-3">
+              <span class="font-cinzel text-[12px] font-bold text-gold w-14 flex-shrink-0">7:00</span><span
+                class="font-cormorant text-[16px] text-white/70">Breakfast in the Dining Hall</span>
+            </div>
+            <div class="flex items-center gap-3 border-b border-white/8 pb-3">
+              <span class="font-cinzel text-[12px] font-bold text-gold w-14 flex-shrink-0">7:45</span><span
+                class="font-cormorant text-[16px] text-white/70">Assembly &amp; School Day Begins</span>
+            </div>
+            <div class="flex items-center gap-3 border-b border-white/8 pb-3">
+              <span class="font-cinzel text-[12px] font-bold text-gold w-14 flex-shrink-0">2:30</span><span
+                class="font-cormorant text-[16px] text-white/70">Lunch &amp; Rest Period</span>
+            </div>
+            <div class="flex items-center gap-3 border-b border-white/8 pb-3">
+              <span class="font-cinzel text-[12px] font-bold text-gold w-14 flex-shrink-0">4:00</span><span
+                class="font-cormorant text-[16px] text-white/70">Sports, Clubs &amp; Activities</span>
+            </div>
+            <div class="flex items-center gap-3 border-b border-white/8 pb-3">
+              <span class="font-cinzel text-[12px] font-bold text-gold w-14 flex-shrink-0">6:00</span><span
+                class="font-cormorant text-[16px] text-white/70">Dinner</span>
+            </div>
+            <div class="flex items-center gap-3 border-b border-white/8 pb-3">
+              <span class="font-cinzel text-[12px] font-bold text-gold w-14 flex-shrink-0">6:30</span><span
+                class="font-cormorant text-[16px] text-white/70">Supervised Evening Prep</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="font-cinzel text-[12px] font-bold text-gold w-14 flex-shrink-0">9:00</span><span
+                class="font-cormorant text-[16px] text-white/70">Lights Out</span>
+            </div>
+          </div>
+          <p class="mt-5 pt-4 border-t border-white/10 font-lato text-[11px] text-white/35 text-center">
+            Weekends include leisure time, home visits (with approval) &amp;
+            optional enrichment
+          </p>
+        </div>
+      </div>
+      <div
+        class="mt-8 bg-gold/8 border border-gold/25 dark:border-gold/15 rounded-sm p-5 flex gap-4 items-start reveal">
+        <span class="text-2xl flex-shrink-0">&#128161;</span>
+        <div>
+          <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-1">
+            Boarding Fees
+          </div>
+          <p class="font-cormorant text-[17px] text-[#4A4A4A] dark:text-[#C8D4E0] leading-relaxed">
+            Boarding fees are billed separately from tuition and cover
+            accommodation, three meals daily, laundry service, and houseparent
+            supervision. Contact the Finance Office for the current fee
+            schedule. Sibling discounts apply to boarding fees.
+          </p>
+        </div>
       </div>
     </div>
-    <div class="reveal-right">
-      <div class="bg-warm-white dark:bg-[#1A2A4A]/40 border border-gold/20 dark:border-gold/10 rounded-sm p-8">
-        <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-2 text-center">Micro-Classroom Layout</div>
-        <div class="font-lato text-[11px] text-[#8A8A8A] text-center mb-5">20 Scholars &middot; 1 Teacher &middot; 1 Assistant</div>
-        <div class="flex justify-center mb-4"><div class="bg-maroon text-white font-lato text-[10px] font-bold tracking-widest uppercase px-6 py-2 rounded-sm">Teacher&rsquo;s Desk</div></div>
-        <div class="grid grid-cols-4 gap-2 mb-3 max-w-xs mx-auto">
-          <div class="aspect-square bg-gold/20 border border-gold/35 rounded-sm flex items-center justify-center text-sm">&#128102;</div>
-          <div class="aspect-square bg-gold/20 border border-gold/35 rounded-sm flex items-center justify-center text-sm">&#128103;</div>
-          <div class="aspect-square bg-gold/20 border border-gold/35 rounded-sm flex items-center justify-center text-sm">&#128102;</div>
-          <div class="aspect-square bg-gold/20 border border-gold/35 rounded-sm flex items-center justify-center text-sm">&#128103;</div>
-          <div class="aspect-square bg-gold/20 border border-gold/35 rounded-sm flex items-center justify-center text-sm">&#128103;</div>
-          <div class="aspect-square bg-gold/20 border border-gold/35 rounded-sm flex items-center justify-center text-sm">&#128102;</div>
-          <div class="aspect-square bg-gold/20 border border-gold/35 rounded-sm flex items-center justify-center text-sm">&#128103;</div>
-          <div class="aspect-square bg-gold/20 border border-gold/35 rounded-sm flex items-center justify-center text-sm">&#128102;</div>
-          <div class="aspect-square bg-gold/20 border border-gold/35 rounded-sm flex items-center justify-center text-sm">&#128102;</div>
-          <div class="aspect-square bg-gold/20 border border-gold/35 rounded-sm flex items-center justify-center text-sm">&#128103;</div>
-          <div class="aspect-square bg-gold/20 border border-gold/35 rounded-sm flex items-center justify-center text-sm">&#128102;</div>
-          <div class="aspect-square bg-gold/20 border border-gold/35 rounded-sm flex items-center justify-center text-sm">&#128103;</div>
-          <div class="aspect-square bg-gold/20 border border-gold/35 rounded-sm flex items-center justify-center text-sm">&#128103;</div>
-          <div class="aspect-square bg-gold/20 border border-gold/35 rounded-sm flex items-center justify-center text-sm">&#128102;</div>
-          <div class="aspect-square bg-gold/20 border border-gold/35 rounded-sm flex items-center justify-center text-sm">&#128103;</div>
-          <div class="aspect-square bg-gold/20 border border-gold/35 rounded-sm flex items-center justify-center text-sm">&#128102;</div>
-          <div class="aspect-square bg-gold/20 border border-gold/35 rounded-sm flex items-center justify-center text-sm">&#128102;</div>
-          <div class="aspect-square bg-gold/20 border border-gold/35 rounded-sm flex items-center justify-center text-sm">&#128103;</div>
-          <div class="aspect-square bg-gold/20 border border-gold/35 rounded-sm flex items-center justify-center text-sm">&#128102;</div>
-          <div class="aspect-square bg-gold/20 border border-gold/35 rounded-sm flex items-center justify-center text-sm">&#128103;</div>
-        </div>
-        <div class="flex justify-end mb-5 max-w-xs mx-auto"><div class="bg-navy-light dark:bg-[#0F1824] text-gold-light border border-gold/30 font-lato text-[10px] font-bold tracking-widest uppercase px-4 py-1.5 rounded-sm">Classroom Assistant &rarr;</div></div>
-        <div class="border-t border-gold/15 pt-5 space-y-2.5">
-          <div class="flex items-center gap-2.5"><span class="w-2 h-2 rounded-full bg-gold flex-shrink-0"></span><span class="font-cormorant text-[15px] text-[#4A4A4A] dark:text-[#C0CDD8]">Air-conditioned, purpose-built classrooms</span></div>
-          <div class="flex items-center gap-2.5"><span class="w-2 h-2 rounded-full bg-gold flex-shrink-0"></span><span class="font-cormorant text-[15px] text-[#4A4A4A] dark:text-[#C0CDD8]">Interactive smartboard in every classroom</span></div>
-          <div class="flex items-center gap-2.5"><span class="w-2 h-2 rounded-full bg-gold flex-shrink-0"></span><span class="font-cormorant text-[15px] text-[#4A4A4A] dark:text-[#C0CDD8]">Ergonomic desks and posture-correct chairs</span></div>
-          <div class="flex items-center gap-2.5"><span class="w-2 h-2 rounded-full bg-gold flex-shrink-0"></span><span class="font-cormorant text-[15px] text-[#4A4A4A] dark:text-[#C0CDD8]">Dedicated reading corner and resource wall</span></div>
-          <div class="flex items-center gap-2.5"><span class="w-2 h-2 rounded-full bg-gold flex-shrink-0"></span><span class="font-cormorant text-[15px] text-[#4A4A4A] dark:text-[#C0CDD8]">Natural light and acoustic panels for focus</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- ═══ 5. FACILITIES ═══ -->
-<section id="facilities" class="bg-navy dark:bg-[#080E18] admissions-pattern px-5 sm:px-10 lg:px-20 py-24">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-14 reveal">
-      <div class="section-label-line inline-block font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">World-Class Infrastructure</div>
-      <h2 class="font-playfair font-bold text-white text-[clamp(26px,3vw,40px)] mb-4">Our Facilities</h2>
-      <div class="w-16 h-[3px] bg-gold-maroon mx-auto mb-5"></div>
-      <p class="font-cormorant text-[18px] text-white/60 max-w-xl mx-auto leading-relaxed">Purpose-built spaces designed to inspire curiosity, support every kind of learner, and equip scholars for the demands of the modern world.</p>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      <div class="reveal hover-bar pillar-card bg-navy-light/60 border border-gold/20 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_32px_rgba(196,154,44,0.12)]"><div class="facility-thumb h-44 flex items-center justify-center"><div class="relative z-10 text-[55px] opacity-30">&#128300;</div></div><div class="p-5"><div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2">STEM Innovation Lab</div><p class="font-cormorant text-[15px] text-white/65 leading-relaxed">3D printers, robotics kits, 20 coding workstations, and an electronics prototyping bench &mdash; open to all scholars and after-school STEM Club.</p></div></div>
-      <div class="reveal hover-bar pillar-card bg-navy-light/60 border border-gold/20 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_32px_rgba(196,154,44,0.12)]" data-delay="80"><div class="facility-thumb h-44 flex items-center justify-center"><div class="relative z-10 text-[55px] opacity-30">&#128218;</div></div><div class="p-5"><div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2">Library &amp; Resource Centre</div><p class="font-cormorant text-[15px] text-white/65 leading-relaxed">Over 5,000 titles spanning fiction, non-fiction, reference, and academic texts. Digital catalogue, quiet reading pods, and group discussion room.</p></div></div>
-      <div class="reveal hover-bar pillar-card bg-navy-light/60 border border-gold/20 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_32px_rgba(196,154,44,0.12)]" data-delay="160"><div class="facility-thumb h-44 flex items-center justify-center"><div class="relative z-10 text-[55px] opacity-30">&#9917;</div></div><div class="p-5"><div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2">Sports Complex</div><p class="font-cormorant text-[15px] text-white/65 leading-relaxed">Full-size football pitch, basketball court, 200m athletics track, and table tennis room. Coaching staff for football, athletics, and basketball.</p></div></div>
-      <div class="reveal hover-bar pillar-card bg-navy-light/60 border border-gold/20 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_32px_rgba(196,154,44,0.12)]" data-delay="80"><div class="facility-thumb h-44 flex items-center justify-center"><div class="relative z-10 text-[55px] opacity-30">&#127917;</div></div><div class="p-5"><div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2">Performing Arts Studio</div><p class="font-cormorant text-[15px] text-white/65 leading-relaxed">A 120-seat studio theatre with full stage lighting, sound system, and dressing rooms. Hosts drama productions, music recitals, and assemblies.</p></div></div>
-      <div class="reveal hover-bar pillar-card bg-navy-light/60 border border-gold/20 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_32px_rgba(196,154,44,0.12)]" data-delay="160"><div class="facility-thumb h-44 flex items-center justify-center"><div class="relative z-10 text-[55px] opacity-30">&#127869;</div></div><div class="p-5"><div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2">Dining Hall &amp; Kitchen</div><p class="font-cormorant text-[15px] text-white/65 leading-relaxed">Hot, nutritionist-approved meals three times daily for boarders. Day scholars receive a cooked lunch. A canteen operates at break time.</p></div></div>
-      <div class="reveal hover-bar pillar-card bg-navy-light/60 border border-gold/20 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_32px_rgba(196,154,44,0.12)]" data-delay="240"><div class="facility-thumb h-44 flex items-center justify-center"><div class="relative z-10 text-[55px] opacity-30">&#127973;</div></div><div class="p-5"><div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2">School Clinic</div><p class="font-cormorant text-[15px] text-white/65 leading-relaxed">Staffed by a qualified nurse during school hours. First aid, routine health checks, and referrals to partnering hospitals when needed.</p></div></div>
-    </div>
-    <!-- Great Hall -->
-    <div class="reveal mt-5 hover-bar pillar-card bg-navy-light/60 border border-gold/20 rounded-sm overflow-hidden">
-      <div class="grid grid-cols-1 lg:grid-cols-3">
-        <div class="facility-thumb min-h-[200px] lg:col-span-1 flex items-center justify-center"><div class="relative z-10 text-[70px] opacity-25">&#127963;</div></div>
-        <div class="lg:col-span-2 p-8 flex flex-col justify-center">
-          <div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2">The Great Hall &mdash; Main Assembly &amp; Events Hall</div>
-          <p class="font-cormorant text-[18px] text-white/65 leading-relaxed mb-4">The heart of the Academy. A 500-seat multipurpose hall hosting daily assemblies, parent evenings, prize-giving ceremonies, and community events. The <strong class="text-gold">Pioneer Wall of Honour</strong> is mounted here permanently.</p>
-          <div class="flex flex-wrap gap-3">
-            <span class="font-lato text-[11px] bg-white/8 border border-white/15 text-white/55 px-3 py-1 rounded-sm">500-seat capacity</span>
-            <span class="font-lato text-[11px] bg-white/8 border border-white/15 text-white/55 px-3 py-1 rounded-sm">Full AV system</span>
-            <span class="font-lato text-[11px] bg-white/8 border border-white/15 text-white/55 px-3 py-1 rounded-sm">Pioneer Wall of Honour</span>
-            <span class="font-lato text-[11px] bg-white/8 border border-white/15 text-white/55 px-3 py-1 rounded-sm">Air-conditioned</span>
+
+  <!-- ═══ 5. FACILITIES ═══ -->
+  <section id="facilities" class="bg-navy dark:bg-[#080E18] admissions-pattern px-5 sm:px-10 lg:px-20 py-24">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <div class="section-label-line inline-block font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">
+          World-Class Infrastructure
+        </div>
+        <h2 class="font-playfair font-bold text-white text-[clamp(26px,3vw,40px)] mb-4">
+          Our Facilities
+        </h2>
+        <div class="w-16 h-[3px] bg-gold-maroon mx-auto mb-5"></div>
+        <p class="font-cormorant text-[18px] text-white/60 max-w-xl mx-auto leading-relaxed">
+          Purpose-built spaces designed to inspire curiosity, support every
+          kind of learner, and equip scholars for the demands of the modern
+          world.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div
+          class="reveal hover-bar pillar-card bg-navy-light/60 border border-gold/20 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_32px_rgba(196,154,44,0.12)]">
+          <div class="facility-thumb h-44 flex items-center justify-center">
+            <div class="relative z-10 text-[55px] opacity-30">&#128300;</div>
+          </div>
+          <div class="p-5">
+            <div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2">
+              STEM Innovation Lab
+            </div>
+            <p class="font-cormorant text-[15px] text-white/65 leading-relaxed">
+              3D printers, robotics kits, 20 coding workstations, and an
+              electronics prototyping bench &mdash; open to all scholars and
+              after-school STEM Club.
+            </p>
+          </div>
+        </div>
+        <div
+          class="reveal hover-bar pillar-card bg-navy-light/60 border border-gold/20 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_32px_rgba(196,154,44,0.12)]"
+          data-delay="80">
+          <div class="facility-thumb h-44 flex items-center justify-center">
+            <div class="relative z-10 text-[55px] opacity-30">&#128218;</div>
+          </div>
+          <div class="p-5">
+            <div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2">
+              Library &amp; Resource Centre
+            </div>
+            <p class="font-cormorant text-[15px] text-white/65 leading-relaxed">
+              Over 5,000 titles spanning fiction, non-fiction, reference, and
+              academic texts. Digital catalogue, quiet reading pods, and group
+              discussion room.
+            </p>
+          </div>
+        </div>
+        <div
+          class="reveal hover-bar pillar-card bg-navy-light/60 border border-gold/20 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_32px_rgba(196,154,44,0.12)]"
+          data-delay="160">
+          <div class="facility-thumb h-44 flex items-center justify-center">
+            <div class="relative z-10 text-[55px] opacity-30">&#9917;</div>
+          </div>
+          <div class="p-5">
+            <div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2">
+              Sports Complex
+            </div>
+            <p class="font-cormorant text-[15px] text-white/65 leading-relaxed">
+              Full-size football pitch, basketball court, 200m athletics
+              track, and table tennis room. Coaching staff for football,
+              athletics, and basketball.
+            </p>
+          </div>
+        </div>
+        <div
+          class="reveal hover-bar pillar-card bg-navy-light/60 border border-gold/20 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_32px_rgba(196,154,44,0.12)]"
+          data-delay="80">
+          <div class="facility-thumb h-44 flex items-center justify-center">
+            <div class="relative z-10 text-[55px] opacity-30">&#127917;</div>
+          </div>
+          <div class="p-5">
+            <div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2">
+              Performing Arts Studio
+            </div>
+            <p class="font-cormorant text-[15px] text-white/65 leading-relaxed">
+              A 120-seat studio theatre with full stage lighting, sound
+              system, and dressing rooms. Hosts drama productions, music
+              recitals, and assemblies.
+            </p>
+          </div>
+        </div>
+        <div
+          class="reveal hover-bar pillar-card bg-navy-light/60 border border-gold/20 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_32px_rgba(196,154,44,0.12)]"
+          data-delay="160">
+          <div class="facility-thumb h-44 flex items-center justify-center">
+            <div class="relative z-10 text-[55px] opacity-30">&#127869;</div>
+          </div>
+          <div class="p-5">
+            <div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2">
+              Dining Hall &amp; Kitchen
+            </div>
+            <p class="font-cormorant text-[15px] text-white/65 leading-relaxed">
+              Hot, nutritionist-approved meals three times daily for boarders.
+              Day scholars receive a cooked lunch. A canteen operates at break
+              time.
+            </p>
+          </div>
+        </div>
+        <div
+          class="reveal hover-bar pillar-card bg-navy-light/60 border border-gold/20 rounded-sm overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[0_8px_32px_rgba(196,154,44,0.12)]"
+          data-delay="240">
+          <div class="facility-thumb h-44 flex items-center justify-center">
+            <div class="relative z-10 text-[55px] opacity-30">&#127973;</div>
+          </div>
+          <div class="p-5">
+            <div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2">
+              School Clinic
+            </div>
+            <p class="font-cormorant text-[15px] text-white/65 leading-relaxed">
+              Staffed by a qualified nurse during school hours. First aid,
+              routine health checks, and referrals to partnering hospitals
+              when needed.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Great Hall -->
+      <div class="reveal mt-5 hover-bar pillar-card bg-navy-light/60 border border-gold/20 rounded-sm overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-3">
+          <div class="facility-thumb min-h-[200px] lg:col-span-1 flex items-center justify-center">
+            <div class="relative z-10 text-[70px] opacity-25">&#127963;</div>
+          </div>
+          <div class="lg:col-span-2 p-8 flex flex-col justify-center">
+            <div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2">
+              The Great Hall &mdash; Main Assembly &amp; Events Hall
+            </div>
+            <p class="font-cormorant text-[18px] text-white/65 leading-relaxed mb-4">
+              The heart of the Academy. A 500-seat multipurpose hall hosting
+              daily assemblies, parent evenings, prize-giving ceremonies, and
+              community events. The
+              <strong class="text-gold">Pioneer Wall of Honour</strong> is
+              mounted here permanently.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <span
+                class="font-lato text-[11px] bg-white/8 border border-white/15 text-white/55 px-3 py-1 rounded-sm">500-seat
+                capacity</span>
+              <span
+                class="font-lato text-[11px] bg-white/8 border border-white/15 text-white/55 px-3 py-1 rounded-sm">Full
+                AV system</span>
+              <span
+                class="font-lato text-[11px] bg-white/8 border border-white/15 text-white/55 px-3 py-1 rounded-sm">Pioneer
+                Wall of Honour</span>
+              <span
+                class="font-lato text-[11px] bg-white/8 border border-white/15 text-white/55 px-3 py-1 rounded-sm">Air-conditioned</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ═══ 6. SAFETY & WELLBEING ═══ -->
-<section id="wellbeing" class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-24">
-  <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-14 reveal">
-      <div class="section-label-line inline-block font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">Our First Priority</div>
-      <h2 class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(26px,3vw,40px)] mb-4">Safety &amp; Wellbeing</h2>
-      <div class="w-16 h-[3px] bg-gold-maroon mx-auto mb-5"></div>
-      <p class="font-cormorant text-[18px] text-[#5A5A5A] dark:text-[#A0B0C0] max-w-xl mx-auto leading-relaxed">Every decision we make &mdash; from gate protocols to mealtimes to counselling services &mdash; is guided by one unwavering principle: <em>every scholar must feel safe, seen, and supported at all times.</em></p>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-      <div class="reveal hover-bar pillar-card bg-cream dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6 hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]"><div class="w-14 h-14 rounded-full bg-gold/15 border border-gold/25 flex items-center justify-center text-2xl mx-auto mb-4 safety-ring">&#128274;</div><div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2 text-center">Campus Security</div><p class="font-cormorant text-[16px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed text-center">Perimeter fencing, CCTV across all zones, a staffed gatehouse, and a biometric entry register for all staff. No child is released to an unregistered adult.</p></div>
-      <div class="reveal hover-bar pillar-card bg-cream dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6 hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]" data-delay="80"><div class="w-14 h-14 rounded-full bg-gold/15 border border-gold/25 flex items-center justify-center text-2xl mx-auto mb-4 safety-ring">&#129504;</div><div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2 text-center">Mental Health Support</div><p class="font-cormorant text-[16px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed text-center">A qualified school counsellor is available every school day. All sessions are confidential. Scholars can self-refer or be referred by a teacher or parent.</p></div>
-      <div class="reveal hover-bar pillar-card bg-cream dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6 hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]" data-delay="160"><div class="w-14 h-14 rounded-full bg-gold/15 border border-gold/25 flex items-center justify-center text-2xl mx-auto mb-4 safety-ring">&#128657;</div><div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2 text-center">Medical &amp; First Aid</div><p class="font-cormorant text-[16px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed text-center">A qualified nurse is on-site every school day. Emergency kits are stationed in every building. Partnership with a nearby hospital ensures swift referrals when needed.</p></div>
-      <div class="reveal hover-bar pillar-card bg-cream dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6 hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]" data-delay="80"><div class="w-14 h-14 rounded-full bg-gold/15 border border-gold/25 flex items-center justify-center text-2xl mx-auto mb-4 safety-ring">&#128683;</div><div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2 text-center">Zero-Tolerance Bullying Policy</div><p class="font-cormorant text-[16px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed text-center">All forms of bullying &mdash; physical, verbal, and cyber &mdash; are handled through a structured pastoral response. Bystanders are empowered to report safely.</p></div>
-      <div class="reveal hover-bar pillar-card bg-cream dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6 hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]" data-delay="160"><div class="w-14 h-14 rounded-full bg-gold/15 border border-gold/25 flex items-center justify-center text-2xl mx-auto mb-4 safety-ring">&#127822;</div><div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2 text-center">Nutrition &amp; Dietary Care</div><p class="font-cormorant text-[16px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed text-center">Meals are designed by a nutritionist and reviewed termly. Dietary requirements and allergies are recorded at enrolment and communicated to kitchen staff.</p></div>
-      <div class="reveal hover-bar pillar-card bg-cream dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6 hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]" data-delay="240"><div class="w-14 h-14 rounded-full bg-gold/15 border border-gold/25 flex items-center justify-center text-2xl mx-auto mb-4 safety-ring">&#128106;</div><div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2 text-center">Parent Communication</div><p class="font-cormorant text-[16px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed text-center">Weekly SMS updates, termly parent-teacher conferences, and a direct pastoral hotline ensure parents are always informed and involved.</p></div>
-    </div>
-    <!-- Safeguarding banner -->
-    <div class="reveal bg-navy dark:bg-[#1A2A4A]/60 border border-gold/25 rounded-sm admissions-pattern overflow-hidden">
-      <div class="grid grid-cols-1 lg:grid-cols-3">
-        <div class="lg:col-span-2 p-8 lg:p-10">
-          <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-3">Safeguarding Commitment</div>
-          <h3 class="font-playfair text-[clamp(20px,2.2vw,26px)] font-bold text-white mb-4">Every Adult at SSA is a Safeguarding Officer</h3>
-          <p class="font-cormorant text-[17px] text-white/65 leading-relaxed mb-5">All SSA staff &mdash; teaching and non-teaching &mdash; undergo mandatory child safeguarding training before joining and annually thereafter. We operate a clear reporting structure and a Designated Safeguarding Lead (DSL) who liaises with state child protection authorities when required.</p>
-          <a href="ssa-contact.html" class="inline-block border border-gold/50 hover:border-gold text-gold hover:bg-gold/5 font-lato text-[11px] font-bold tracking-widest uppercase px-6 py-2.5 rounded-sm transition-all no-underline">Contact Our Welfare Team &rarr;</a>
+  <!-- ═══ 6. SAFETY & WELLBEING ═══ -->
+  <section id="wellbeing" class="bg-warm-white dark:bg-[#0F1824] px-5 sm:px-10 lg:px-20 py-24">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <div class="section-label-line inline-block font-cinzel text-[11px] tracking-[0.22em] uppercase text-gold mb-4">
+          Our First Priority
         </div>
-        <div class="hidden lg:flex items-center justify-center p-8 text-[80px] opacity-20">&#128737;</div>
+        <h2 class="font-playfair font-bold text-navy dark:text-gold-light text-[clamp(26px,3vw,40px)] mb-4">
+          Safety &amp; Wellbeing
+        </h2>
+        <div class="w-16 h-[3px] bg-gold-maroon mx-auto mb-5"></div>
+        <p class="font-cormorant text-[18px] text-[#5A5A5A] dark:text-[#A0B0C0] max-w-xl mx-auto leading-relaxed">
+          Every decision we make &mdash; from gate protocols to mealtimes to
+          counselling services &mdash; is guided by one unwavering principle:
+          <em>every scholar must feel safe, seen, and supported at all
+            times.</em>
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div
+          class="reveal hover-bar pillar-card bg-cream dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6 hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]">
+          <div
+            class="w-14 h-14 rounded-full bg-gold/15 border border-gold/25 flex items-center justify-center text-2xl mx-auto mb-4 safety-ring">
+            &#128274;
+          </div>
+          <div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2 text-center">
+            Campus Security
+          </div>
+          <p class="font-cormorant text-[16px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed text-center">
+            Perimeter fencing, CCTV across all zones, a staffed gatehouse, and
+            a biometric entry register for all staff. No child is released to
+            an unregistered adult.
+          </p>
+        </div>
+        <div
+          class="reveal hover-bar pillar-card bg-cream dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6 hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]"
+          data-delay="80">
+          <div
+            class="w-14 h-14 rounded-full bg-gold/15 border border-gold/25 flex items-center justify-center text-2xl mx-auto mb-4 safety-ring">
+            &#129504;
+          </div>
+          <div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2 text-center">
+            Mental Health Support
+          </div>
+          <p class="font-cormorant text-[16px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed text-center">
+            A qualified school counsellor is available every school day. All
+            sessions are confidential. Scholars can self-refer or be referred
+            by a teacher or parent.
+          </p>
+        </div>
+        <div
+          class="reveal hover-bar pillar-card bg-cream dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6 hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]"
+          data-delay="160">
+          <div
+            class="w-14 h-14 rounded-full bg-gold/15 border border-gold/25 flex items-center justify-center text-2xl mx-auto mb-4 safety-ring">
+            &#128657;
+          </div>
+          <div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2 text-center">
+            Medical &amp; First Aid
+          </div>
+          <p class="font-cormorant text-[16px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed text-center">
+            A qualified nurse is on-site every school day. Emergency kits are
+            stationed in every building. Partnership with a nearby hospital
+            ensures swift referrals when needed.
+          </p>
+        </div>
+        <div
+          class="reveal hover-bar pillar-card bg-cream dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6 hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]"
+          data-delay="80">
+          <div
+            class="w-14 h-14 rounded-full bg-gold/15 border border-gold/25 flex items-center justify-center text-2xl mx-auto mb-4 safety-ring">
+            &#128683;
+          </div>
+          <div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2 text-center">
+            Zero-Tolerance Bullying Policy
+          </div>
+          <p class="font-cormorant text-[16px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed text-center">
+            All forms of bullying &mdash; physical, verbal, and cyber &mdash;
+            are handled through a structured pastoral response. Bystanders are
+            empowered to report safely.
+          </p>
+        </div>
+        <div
+          class="reveal hover-bar pillar-card bg-cream dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6 hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]"
+          data-delay="160">
+          <div
+            class="w-14 h-14 rounded-full bg-gold/15 border border-gold/25 flex items-center justify-center text-2xl mx-auto mb-4 safety-ring">
+            &#127822;
+          </div>
+          <div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2 text-center">
+            Nutrition &amp; Dietary Care
+          </div>
+          <p class="font-cormorant text-[16px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed text-center">
+            Meals are designed by a nutritionist and reviewed termly. Dietary
+            requirements and allergies are recorded at enrolment and
+            communicated to kitchen staff.
+          </p>
+        </div>
+        <div
+          class="reveal hover-bar pillar-card bg-cream dark:bg-[#1A2A4A]/40 border border-gold/15 dark:border-gold/10 rounded-sm p-6 hover:-translate-y-1 transition-all hover:shadow-[0_8px_28px_rgba(196,154,44,0.1)]"
+          data-delay="240">
+          <div
+            class="w-14 h-14 rounded-full bg-gold/15 border border-gold/25 flex items-center justify-center text-2xl mx-auto mb-4 safety-ring">
+            &#128106;
+          </div>
+          <div class="font-cinzel text-[11px] font-bold tracking-widest uppercase text-gold mb-2 text-center">
+            Parent Communication
+          </div>
+          <p class="font-cormorant text-[16px] text-[#5A5A5A] dark:text-[#A0B0C0] leading-relaxed text-center">
+            Weekly SMS updates, termly parent-teacher conferences, and a
+            direct pastoral hotline ensure parents are always informed and
+            involved.
+          </p>
+        </div>
+      </div>
+      <!-- Safeguarding banner -->
+      <div
+        class="reveal bg-navy dark:bg-[#1A2A4A]/60 border border-gold/25 rounded-sm admissions-pattern overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-3">
+          <div class="lg:col-span-2 p-8 lg:p-10">
+            <div class="font-cinzel text-[11px] tracking-widest uppercase text-gold mb-3">
+              Safeguarding Commitment
+            </div>
+            <h3 class="font-playfair text-[clamp(20px,2.2vw,26px)] font-bold text-white mb-4">
+              Every Adult at SSA is a Safeguarding Officer
+            </h3>
+            <p class="font-cormorant text-[17px] text-white/65 leading-relaxed mb-5">
+              All SSA staff &mdash; teaching and non-teaching &mdash; undergo
+              mandatory child safeguarding training before joining and
+              annually thereafter. We operate a clear reporting structure and
+              a Designated Safeguarding Lead (DSL) who liaises with state
+              child protection authorities when required.
+            </p>
+            <a href="contact.html"
+              class="inline-block border border-gold/50 hover:border-gold text-gold hover:bg-gold/5 font-lato text-[11px] font-bold tracking-widest uppercase px-6 py-2.5 rounded-sm transition-all no-underline">Contact
+              Our Welfare Team &rarr;</a>
+          </div>
+          <div class="hidden lg:flex items-center justify-center p-8 text-[80px] opacity-20">
+            &#128737;
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FINAL CTA -->
-<section class="bg-maroon-navy admissions-pattern relative overflow-hidden px-5 sm:px-10 lg:px-20 py-24">
-  <div class="absolute inset-0 bg-hero-pattern pointer-events-none opacity-40"></div>
-  <div class="relative z-10 max-w-3xl mx-auto text-center reveal">
-    <div class="text-5xl mb-5">&#128570;</div>
-    <div class="font-cinzel text-[11px] tracking-[0.2em] uppercase text-gold mb-4">Experience It for Yourself</div>
-    <h2 class="font-playfair font-bold text-white text-[clamp(26px,3.5vw,44px)] leading-snug mb-5">This Is Where Your Child<br><em class="italic text-gold-light">Belongs</em></h2>
-    <p class="font-cormorant text-[19px] text-white/65 leading-relaxed max-w-xl mx-auto mb-10">From the micro-classrooms to the boarding halls, from the STEM lab to the playing field &mdash; every corner of SSA is built for your child to thrive. Come and see it for yourself.</p>
-    <div class="flex flex-wrap justify-center gap-4">
-      <a href="ssa-admissions.html#apply" class="inline-block bg-gold hover:bg-gold-light text-navy font-lato text-[12px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(196,154,44,0.4)] no-underline">Apply Now</a>
-      <a href="#" class="inline-block border border-white/35 hover:border-gold hover:text-gold text-white font-lato text-[12px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all no-underline">Book a Campus Tour</a>
-      <a href="ssa-contact.html" class="inline-block border border-white/35 hover:border-gold hover:text-gold text-white font-lato text-[12px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all no-underline">Contact Us</a>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-navy dark:bg-[#080E18] px-5 sm:px-10 lg:px-20 pt-16 pb-8">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
-    <div>
-      <div class="flex items-center gap-3 mb-5">
-        <svg width="38" height="44" viewBox="0 0 100 115" fill="none"><path d="M50 4 L94 22 L94 62 Q94 90 50 111 Q6 90 6 62 L6 22 Z" fill="#1A2A4A" stroke="#C49A2C" stroke-width="4"/><text x="50" y="35" text-anchor="middle" font-size="13" fill="#C49A2C" font-family="serif">&#9733; &#9733; &#9733;</text><text x="50" y="62" text-anchor="middle" font-family="serif" font-size="7.5" fill="#C49A2C" font-weight="bold">STELLAR SCHOLARS</text><text x="50" y="107" text-anchor="middle" font-family="serif" font-size="7" fill="#C49A2C" font-weight="bold">2026</text></svg>
-        <div class="font-cinzel text-[12px] font-semibold text-white leading-tight">STELLAR SCHOLARS<span class="block text-[9px] text-gold tracking-[0.1em] mt-0.5">ACADEMY &middot; LUX ET PAX</span></div>
+  <!-- FINAL CTA -->
+  <section class="bg-maroon-navy admissions-pattern relative overflow-hidden px-5 sm:px-10 lg:px-20 py-24">
+    <div class="absolute inset-0 bg-hero-pattern pointer-events-none opacity-40"></div>
+    <div class="relative z-10 max-w-3xl mx-auto text-center reveal">
+      <div class="text-5xl mb-5">&#128570;</div>
+      <div class="font-cinzel text-[11px] tracking-[0.2em] uppercase text-gold mb-4">
+        Experience It for Yourself
       </div>
-      <p class="font-cormorant text-[15px] leading-[1.7] text-white/50 mb-6">Excellence in Education &amp; Character.</p>
-      <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2"><span class="text-gold">&#128205;</span><span>003 Quarantine Dam Road, Anguwan Tasha</span></div>
-      <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2"><span class="text-gold">&#128222;</span><span>(0) 0355 0088</span></div>
-      <div class="flex items-start gap-2 text-[13px] text-white/55 mb-6"><span class="text-gold">&#9993;</span><span>info@stellarscholars.edu.ng</span></div>
-      <div class="flex gap-2.5">
-        <a href="#" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[13px] font-bold transition-all no-underline">f</a>
-        <a href="#" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[13px] font-bold transition-all no-underline">t</a>
-        <a href="#" class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[11px] font-bold transition-all no-underline">in</a>
+      <h2 class="font-playfair font-bold text-white text-[clamp(26px,3.5vw,44px)] leading-snug mb-5">
+        This Is Where Your Child<br /><em class="italic text-gold-light">Belongs</em>
+      </h2>
+      <p class="font-cormorant text-[19px] text-white/65 leading-relaxed max-w-xl mx-auto mb-10">
+        From the micro-classrooms to the boarding halls, from the STEM lab to
+        the playing field &mdash; every corner of SSA is built for your child
+        to thrive. Come and see it for yourself.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="admissions.html#apply"
+          class="inline-block bg-gold hover:bg-gold-light text-navy font-lato text-[12px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(196,154,44,0.4)] no-underline">Apply
+          Now</a>
+        <a href="#"
+          class="inline-block border border-white/35 hover:border-gold hover:text-gold text-white font-lato text-[12px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all no-underline">Book
+          a Campus Tour</a>
+        <a href="contact.html"
+          class="inline-block border border-white/35 hover:border-gold hover:text-gold text-white font-lato text-[12px] font-bold tracking-widest uppercase px-10 py-4 rounded-sm transition-all no-underline">Contact
+          Us</a>
       </div>
     </div>
-    <div>
-      <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">School Life</div>
-      <ul class="list-none space-y-2.5">
-        <li><a href="#events"     class="text-[13px] text-gold hover:text-gold-light transition-colors no-underline">School Events</a></li>
-        <li><a href="#pioneers"   class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Pioneer Scholars</a></li>
-        <li><a href="#boarding"   class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Hostel &amp; Boarding</a></li>
-        <li><a href="#classroom"  class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Micro-Classrooms</a></li>
-        <li><a href="#facilities" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Facilities</a></li>
-        <li><a href="#wellbeing"  class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Safety &amp; Wellbeing</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">Academics</div>
-      <ul class="list-none space-y-2.5">
-        <li><a href="ssa-academics.html"  class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Pre-School</a></li>
-        <li><a href="ssa-academics.html"  class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Primary School</a></li>
-        <li><a href="ssa-academics.html"  class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Secondary School</a></li>
-        <li><a href="ssa-admissions.html" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Admissions</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">Quick Links</div>
-      <ul class="list-none space-y-2.5">
-        <li><a href="ssa-news.html"             class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">News &amp; Events</a></li>
-        <li><a href="ssa-gallery.html"           class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Gallery</a></li>
-        <li><a href="ssa-admissions.html#apply"  class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Apply Now</a></li>
-        <li><a href="ssa-contact.html"           class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Contact Us</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="max-w-7xl mx-auto border-t border-white/8 pt-7 flex flex-col sm:flex-row justify-between items-center gap-3 text-[12px] text-white/35">
-    <span>&copy; 2026 Stellar Scholars Academy. All rights reserved.</span>
-    <span>Powered by <a href="https://ticst.com.ng" target="_blank" class="text-gold hover:text-gold-light no-underline">TICST</a> &nbsp;&middot;&nbsp; <a href="#" class="text-gold hover:text-gold-light no-underline">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="#" class="text-gold hover:text-gold-light no-underline">Terms</a></span>
-  </div>
-</footer>
+  </section>
 
-<script>
-  const themeBtn = document.getElementById('themeBtn');
-  function applyTheme(dark) {
-    document.documentElement.classList.toggle('dark', dark);
-    themeBtn.innerHTML = dark ? '' : 'moon';
-  }
-  applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
-  themeBtn.addEventListener('click', () => applyTheme(!document.documentElement.classList.contains('dark')));
+  <!--FOOTER-->
+  <footer class="bg-navy dark:bg-[#04080F] text-white/65 px-5 sm:px-10 lg:px-20 pt-20 pb-10">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-14">
+      <!-- Brand col -->
+      <div>
+        <div class="flex items-center gap-3 mb-5">
+          <div
+            class="w-11 h-11 rounded-full bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center font-cinzel text-[16px] font-bold text-white flex-shrink-0">
+            <img src="imgs/logo2.jpg" alt="Logo" />
+          </div>
+          <div class="font-cinzel text-[13px] font-semibold tracking-wide text-white leading-tight">
+            STELLAR SCHOLARS ACADEMY
+            <span class="block text-[9px] font-normal text-gold tracking-[0.14em] mt-0.5">LUX ET PAX · EST. 2026</span>
+          </div>
+        </div>
+        <p class="text-[13px] leading-[1.7] text-white/50 mb-6">
+          Excellence in Education &amp; Character. We nurture scholars who
+          lead with knowledge, integrity, and compassion.
+        </p>
+        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2">
+          <svg width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill="white"
+              d="M12 2c-4.4 0-8 3.6-8 8 0 5.4 7 11.5 7.3 11.8.2.1.5.2.7.2.2 0 .5-.1.7-.2.3-.3 7.3-6.4 7.3-11.8 0-4.4-3.6-8-8-8zm0 17.7c-2.1-2-6-6.3-6-9.7 0-3.3 2.7-6 6-6s6 2.7 6 6-3.9 7.7-6 9.7zM12 6c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
+          </svg>
+          <div>
+            <b>Main Site:</b> Stellar Scholars Academy(Pre-school, Grade &
+            Secondary Schools), Obafemi Owode L.G.A, Ogun State.<br /><b>Annex:</b>
+            Stellar Scholars Academy, Ikoyi (Daycare).
+          </div>
 
-  document.getElementById('mobileMenuBtn').addEventListener('click', () => {
-    document.getElementById('mobileMenu').classList.toggle('hidden');
-  });
+          <div class="flex pt-0"></div>
+        </div>
+        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-telephone" viewBox="0 0 16 16">
+            <path fill="white"
+              d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+          </svg>
+          <span> +234 706 737 4352</span>
+        </div>
+        <div class="flex items-start gap-2 text-[13px] text-white/55 mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 640 640">
+            <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+            <path fill="white"
+              d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z" />
+          </svg>
+          <span>stellarscholarsacademy@gmail.com</span>
+        </div>
+        <div class="flex gap-2.5">
+          <a href="#"
+            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[13px] font-bold transition-all duration-200 no-underline"><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook"
+              viewBox="0 0 16 16">
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+            </svg></a>
+          <a href="https://ng.linkedin.com/company/stellar-scholars-academy1"
+            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center text-white/65 hover:text-navy text-[11px] font-bold transition-all duration-200 no-underline"><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin"
+              viewBox="0 0 16 16">
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+            </svg></a>
+          <a href="https://www.instagram.com/stellarscholarsacademyikoyi/"
+            class="w-9 h-9 rounded-full bg-white/8 hover:bg-gold flex items-center justify-center hover:text-navy text-[14px] transition-all duration-200 no-underline"><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+            </svg></a>
+        </div>
+      </div>
 
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        const d = parseInt(e.target.dataset.delay || 0);
-        setTimeout(() => e.target.classList.add('visible'), d);
-        obs.unobserve(e.target);
-      }
+      <!-- Links cols -->
+      <div>
+        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">
+          About Us
+        </div>
+        <ul class="list-none space-y-2.5">
+          <li>
+            <a href="about.html#mission"
+              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Our Mission</a>
+          </li>
+          <li>
+            <a href="about.html#leadership"
+              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Leadership</a>
+          </li>
+          <li>
+            <a href="about.html#timeline"
+              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">History</a>
+          </li>
+          <li>
+            <a href="about.html"
+              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Awards</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">
+          Academics
+        </div>
+        <ul class="list-none space-y-2.5">
+          <li>
+            <a href="academics.html"
+              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Pre-School</a>
+          </li>
+          <li>
+            <a href="academics.html"
+              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Grade School</a>
+          </li>
+          <li>
+            <a href="academics.html"
+              class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Secondary School</a>
+          </li>
+          <li>
+            <a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Admissions</a>
+          </li>
+        </ul>
+      </div>
+      <div class="hidden sm:block md:hiddden">
+        <div class="font-cinzel text-[11px] font-semibold tracking-[0.12em] uppercase text-gold mb-5">
+          School Life
+        </div>
+        <ul class="list-none space-y-2.5">
+          <li>
+            <a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Sports &amp;
+              Athletics</a>
+          </li>
+          <li>
+            <a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Arts &amp;
+              Culture</a>
+          </li>
+          <li>
+            <a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Clubs &amp;
+              Societies</a>
+          </li>
+          <li>
+            <a href="#" class="text-[13px] text-white/55 hover:text-gold transition-colors no-underline">Events
+              Calendar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer bottom -->
+    <div
+      class="max-w-auto mx-auto border-t border-white/8 pt-7 flex flex-col sm:flex-row justify-between items-center text-[14px] text-white/35">
+      <span>© 2026 Stellar Scholars Academy. All rights reserved.</span>
+      <span class="inline-flex">Powered by
+        <a href="https://ticst.com.ng" target="_blank" class="no-underline"><img src="imgs/ticst transparent - blue.png"
+            alt="" class="h-11 w-15 pb-5 text-green-80" /></a>
+        &nbsp;·&nbsp;
+        <a href="#" class="text-gold hover:text-gold-light transition-colors no-underline">Privacy Policy</a>
+        &nbsp;·&nbsp;
+        <a href="#" class="text-gold hover:text-gold-light transition-colors no-underline">Terms</a></span>
+    </div>
+  </footer>
+  <script>
+    const themeBtn = document.getElementById("themeBtn");
+    function applyTheme(dark) {
+      document.documentElement.classList.toggle("dark", dark);
+      themeBtn.innerHTML = dark ? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path  fill="rgb(255, 212, 59)" d="M303.3 112.7C196.2 121.2 112 210.8 112 320C112 434.9 205.1 528 320 528C353.3 528 384.7 520.2 412.6 506.3C309.2 482.9 232 390.5 232 280C232 214.2 259.4 154.9 303.3 112.7zM64 320C64 178.6 178.6 64 320 64C339.4 64 358.4 66.2 376.7 70.3C386.6 72.5 394 80.8 395.2 90.8C396.4 100.8 391.2 110.6 382.1 115.2C321.5 145.4 280 207.9 280 280C280 381.6 362.4 464 464 464C469 464 473.9 463.8 478.8 463.4C488.9 462.6 498.4 468.2 502.6 477.5C506.8 486.8 504.6 497.6 497.3 504.6C451.3 548.8 388.8 576 320 576C178.6 576 64 461.4 64 320z"/></svg>'
+        : '<svg xmlns="http://www.w3.org/2000/svg" height="23" width="23" viewBox="0 0 640 640"><path fill="rgb(255, 212, 59)" d="M320 32C328 32 335.4 36 339.9 42.6L398.7 130L502.1 109.8C509.9 108.3 518 110.7 523.7 116.4C529.4 122.1 531.8 130.2 530.3 138L510 241.3L597.4 300.1C604 304.5 608 312 608 320C608 328 604 335.4 597.4 339.9L510 398.7L530.2 502C531.7 509.8 529.3 517.9 523.6 523.6C517.9 529.3 509.8 531.7 502 530.2L398.7 510L339.9 597.4C335.4 604 328 608 320 608C312 608 304.6 604 300.1 597.4L241.3 510L137.9 530.2C130.1 531.7 122 529.3 116.3 523.6C110.6 517.9 108.2 509.8 109.7 502L130 398.7L42.6 339.9C36 335.4 32 328 32 320C32 312 36 304.6 42.6 300.1L130 241.3L109.8 137.9C108.3 130.1 110.7 122 116.4 116.3C122.1 110.6 130.2 108.2 138 109.7L241.3 129.9L300.1 42.5L301.9 40.2C306.4 35 313 32 320 32zM272.2 170C266.8 178 257.2 182 247.7 180.2L163.7 163.8L180.1 247.8C181.9 257.3 177.9 266.9 169.9 272.3L99 320L170 367.8C178 373.2 182 382.8 180.2 392.3L163.8 476.3L247.8 459.9L251.3 459.5C259.6 459.1 267.6 463.1 272.3 470.1L320.1 541.1L367.9 470.1L370.1 467.3C375.7 461.2 384.1 458.3 392.4 460L476.4 476.4L460 392.4C458.2 382.9 462.2 373.3 470.2 367.9L541.2 320.1L470.2 272.3C462.2 266.9 458.2 257.3 460 247.8L476.4 163.8L392.4 180.2C382.9 182 373.3 178 367.9 170L320.1 99L272.3 170zM320 440C253.7 440 200 386.3 200 320C200 253.7 253.7 200 320 200C386.3 200 440 253.7 440 320C440 386.3 386.3 440 320 440zM320 248C280.2 248 248 280.2 248 320C248 359.8 280.2 392 320 392C359.8 392 392 359.8 392 320C392 280.2 359.8 248 320 248z"/></svg>';
+      themeBtn.title = dark ? "Switch to Light Mode" : "Switch to Dark Mode";
+    }
+    applyTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
+    themeBtn.addEventListener("click", () =>
+      applyTheme(!document.documentElement.classList.contains("dark")),
+    );
+
+    document.getElementById("mobileMenuBtn").addEventListener("click", () => {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
     });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => obs.observe(el));
 
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('shadow-lg', window.scrollY > 40);
-  });
-</script>
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            const d = parseInt(e.target.dataset.delay || 0);
+            setTimeout(() => e.target.classList.add("visible"), d);
+            obs.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.08 },
+    );
+    document
+      .querySelectorAll(".reveal, .reveal-left, .reveal-right")
+      .forEach((el) => obs.observe(el));
+
+    window.addEventListener("scroll", () => {
+      navbar.classList.toggle("shadow-lg", window.scrollY > 40);
+    });
+  </script>
 </body>
+
 </html>
